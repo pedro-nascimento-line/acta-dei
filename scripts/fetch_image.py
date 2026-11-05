@@ -13,7 +13,8 @@ import json, re, sys, urllib.parse
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import commons  # noqa: E402
-import requests
+import io, requests
+from PIL import Image
 
 UA = commons.UA
 
@@ -28,6 +29,11 @@ def lead_image(artigo):
     return f"File:{nome}" if nome else None
 
 
+def tamanho_ok(i, minimo=600):
+    w, h = i.get("width") or 0, i.get("height") or 0
+    return min(w, h) >= minimo and max(w, h) >= 1000
+
+
 def resolver(spec):
     cands = []
     if spec.get("imagem_commons"):
@@ -38,12 +44,31 @@ def resolver(spec):
     for t in cands:
         i = commons.info(t)
         print(f"  candidato (artigo): {t[:70]} -> " + (f"{i['licenca']} | {i['width']}x{i['height']} | ok={i['licenca_ok']}" if i else "não está no Commons"))
-        if i and i["licenca_ok"] and (i["width"] or 0) >= 800:
+        if i and i["licenca_ok"] and tamanho_ok(i):
             return i
-    if spec.get("imagem_busca"):
-        for i in commons.search(spec["imagem_busca"], n=15):
-            if i["licenca_ok"] and (i["width"] or 0) >= 1000:
-                return i
+    termos = spec.get("imagem_busca") or ""
+    termos = termos if isinstance(termos, list) else [termos]
+    # além dos termos dados, tenta versões mais curtas (tira a última palavra) até achar algo
+    fila = []
+    for t in termos:
+        palavras = t.split()
+        while palavras:
+            fila.append(" ".join(palavras)); palavras = palavras[:-1]
+    vistos = set()
+    for t in fila:
+        if not t or t in vistos: continue
+        vistos.add(t)
+        achados = commons.search(t, n=15)
+        print(f"  busca '{t}': {len(achados)} candidatos")
+        bons = [i for i in achados if i["licenca_ok"] and tamanho_ok(i)]
+        if bons:
+            bons.sort(key=lambda i: -(i["width"] or 0) * (i["height"] or 0))
+            return bons[0]
+    # último recurso: a imagem do artigo mesmo pequena (≥ 500 px), melhor que o selo
+    for t in cands:
+        i = commons.info(t)
+        if i and i["licenca_ok"] and tamanho_ok(i, minimo=500):
+            return i
     return None
 
 
@@ -68,7 +93,10 @@ def main(pasta):
                 print(f"[{nome}] nenhuma imagem com licença aceita; capa cairá no selo")
                 spec.pop(campo, None); continue
             destino = pasta / (spec.get(campo) or f"{nome}.jpg")
-            destino.write_bytes(commons._req(i["url"]).content)
+            destino = destino.with_suffix(".jpg")
+            img = Image.open(io.BytesIO(commons._req(i["url"]).content)).convert("RGB")
+            img.thumbnail((1600, 1600))  # nunca guarda o original gigante no repositório
+            img.save(destino, "JPEG", quality=88, optimize=True)
             spec[campo] = destino.name
             if nome == "principal":
                 post["imagem_credito"] = credito(i)

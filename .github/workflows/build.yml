@@ -42,7 +42,7 @@ jobs:
 
       - name: Instalar dependências
         run: |
-          pip install requests playwright
+          pip install requests playwright pillow
           python -m playwright install --with-deps chromium
 
       - name: Baixar imagens e renderizar

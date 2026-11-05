@@ -218,9 +218,9 @@ def render(pasta):
             pg.evaluate("""() => { const t = document.querySelector('.text'); if (!t) return;
                 let fs = 50; const limite = 1350 - 150;
                 while (t.getBoundingClientRect().bottom > limite && fs > 26) { fs -= 1; t.style.fontSize = fs + 'px'; } }""")
-            pg.evaluate("""() => { const t = document.querySelector('.s-wrap'); if (!t) return;
+            pg.evaluate("""() => { const t = document.querySelector('.s-wrap'); if (!t || !t.lastElementChild) return;
                 let z = 1.0; const limite = 1920 - 340;
-                while (t.getBoundingClientRect().bottom > limite && z > 0.6) { z -= 0.02; t.style.zoom = z; } }""")
+                while (t.lastElementChild.getBoundingClientRect().bottom > limite && z > 0.6) { z -= 0.02; t.style.zoom = z; } }""")
             pg.wait_for_timeout(100)
             pg.screenshot(path=str(pasta / nome), type="jpeg", quality=92)
             pg.close()
