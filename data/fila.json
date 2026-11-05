@@ -1,0 +1,245 @@
+{
+ "gerada_em": "2026-11-04",
+ "fila": [
+  {
+   "id": "bolsena",
+   "tipo": "eucaristico",
+   "titulo": "O Milagre de Bolsena e o Corporal de Orvieto",
+   "data_sugerida": null
+  },
+  {
+   "id": "nha_chica",
+   "tipo": "canonizacao",
+   "titulo": "Nhá Chica: a beata mineira",
+   "data_sugerida": "11-28"
+  },
+  {
+   "id": "rue_du_bac",
+   "tipo": "aparicao",
+   "titulo": "Rue du Bac e a Medalha Milagrosa",
+   "data_sugerida": "11-27"
+  },
+  {
+   "id": "galvao_sandra",
+   "tipo": "canonizacao",
+   "titulo": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
+   "data_sugerida": "05-11"
+  },
+  {
+   "id": "dulce_claudia",
+   "tipo": "canonizacao",
+   "titulo": "Cláudia Cristiane: a hemorragia que parou",
+   "data_sugerida": "08-13"
+  },
+  {
+   "id": "cecilia_corpo",
+   "tipo": "incorrupto",
+   "titulo": "Santa Cecília e a escultura de Maderno",
+   "data_sugerida": "11-22"
+  },
+  {
+   "id": "paulo6_pironato",
+   "tipo": "canonizacao",
+   "titulo": "Vanna Pironato e a canonização de Paulo VI",
+   "data_sugerida": "05-29"
+  },
+  {
+   "id": "lourdes_70",
+   "tipo": "lourdes",
+   "titulo": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
+   "data_sugerida": "02-11"
+  },
+  {
+   "id": "santarem",
+   "tipo": "eucaristico",
+   "titulo": "O Milagre Eucarístico de Santarém",
+   "data_sugerida": null
+  },
+  {
+   "id": "escriva_nevado",
+   "tipo": "canonizacao",
+   "titulo": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+   "data_sugerida": "06-26"
+  },
+  {
+   "id": "kibeho",
+   "tipo": "aparicao",
+   "titulo": "Kibeho, 1981: a única aparição aprovada na África",
+   "data_sugerida": "11-28"
+  },
+  {
+   "id": "frassati_gutierrez",
+   "tipo": "canonizacao",
+   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+   "data_sugerida": "07-04"
+  },
+  {
+   "id": "madre_teresa_brasil",
+   "tipo": "canonizacao",
+   "titulo": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
+   "data_sugerida": "09-05"
+  },
+  {
+   "id": "laboure_corpo",
+   "tipo": "incorrupto",
+   "titulo": "Santa Catarina Labouré: 57 anos depois",
+   "data_sugerida": "11-28"
+  },
+  {
+   "id": "martin_carmen",
+   "tipo": "canonizacao",
+   "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
+   "data_sugerida": "07-12"
+  },
+  {
+   "id": "lourdes_69",
+   "tipo": "lourdes",
+   "titulo": "Lourdes, cura nº 69: Danila Castelli",
+   "data_sugerida": null
+  },
+  {
+   "id": "siena",
+   "tipo": "eucaristico",
+   "titulo": "As Hóstias de Siena",
+   "data_sugerida": null
+  },
+  {
+   "id": "stein_mccarthy",
+   "tipo": "canonizacao",
+   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
+   "data_sugerida": "08-09"
+  },
+  {
+   "id": "beauraing",
+   "tipo": "aparicao",
+   "titulo": "Beauraing, 1932–1933",
+   "data_sugerida": "11-29"
+  },
+  {
+   "id": "padre_pio_colella",
+   "tipo": "canonizacao",
+   "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
+   "data_sugerida": "09-23"
+  },
+  {
+   "id": "acutis_mattheus",
+   "tipo": "canonizacao",
+   "titulo": "Mattheus, de Campo Grande: o milagre de Carlo Acutis",
+   "data_sugerida": "10-12"
+  },
+  {
+   "id": "xavier_corpo",
+   "tipo": "incorrupto",
+   "titulo": "São Francisco Xavier em Goa",
+   "data_sugerida": "12-03"
+  },
+  {
+   "id": "faustina_pytel",
+   "tipo": "canonizacao",
+   "titulo": "Ronald Pytel: o coração que se refez",
+   "data_sugerida": "10-05"
+  },
+  {
+   "id": "lourdes_67",
+   "tipo": "lourdes",
+   "titulo": "Lourdes, cura nº 67: Anna Santaniello",
+   "data_sugerida": null
+  },
+  {
+   "id": "amsterdam",
+   "tipo": "eucaristico",
+   "titulo": "O Milagre de Amsterdã",
+   "data_sugerida": null
+  },
+  {
+   "id": "dulce_mauricio",
+   "tipo": "canonizacao",
+   "titulo": "Maurício Bruno: a visão recuperada e a primeira santa brasileira",
+   "data_sugerida": "10-13"
+  },
+  {
+   "id": "guadalupe",
+   "tipo": "aparicao",
+   "titulo": "Nossa Senhora de Guadalupe e a tilma de Juan Diego",
+   "data_sugerida": "12-12"
+  },
+  {
+   "id": "jp2_floribeth",
+   "tipo": "canonizacao",
+   "titulo": "A cura de Floribeth Mora e a canonização de João Paulo II",
+   "data_sugerida": "10-22"
+  },
+  {
+   "id": "aparecida",
+   "tipo": "devocao",
+   "titulo": "Aparecida: a imagem encontrada no rio Paraíba",
+   "data_sugerida": "10-12"
+  },
+  {
+   "id": "bernadette_corpo",
+   "tipo": "incorrupto",
+   "titulo": "O corpo de Santa Bernadette",
+   "data_sugerida": "04-16"
+  },
+  {
+   "id": "jp2_simon_pierre",
+   "tipo": "canonizacao",
+   "titulo": "Irmã Marie Simon-Pierre: Parkinson e a beatificação de João Paulo II",
+   "data_sugerida": null
+  },
+  {
+   "id": "lourdes_66",
+   "tipo": "lourdes",
+   "titulo": "Lourdes, cura nº 66: Jean-Pierre Bély",
+   "data_sugerida": null
+  },
+  {
+   "id": "faverney",
+   "tipo": "eucaristico",
+   "titulo": "O Milagre de Faverney",
+   "data_sugerida": null
+  },
+  {
+   "id": "madre_teresa_besra",
+   "tipo": "canonizacao",
+   "titulo": "Monica Besra e a beatificação de Madre Teresa",
+   "data_sugerida": null
+  },
+  {
+   "id": "banneux",
+   "tipo": "aparicao",
+   "titulo": "Banneux, 1933: a Virgem dos Pobres",
+   "data_sugerida": "01-15"
+  },
+  {
+   "id": "acutis_valeria",
+   "tipo": "canonizacao",
+   "titulo": "Valeria Valverde e a canonização de Carlo Acutis",
+   "data_sugerida": null
+  },
+  {
+   "id": "pontmain",
+   "tipo": "aparicao",
+   "titulo": "Nossa Senhora de Pontmain",
+   "data_sugerida": "01-17"
+  },
+  {
+   "id": "zita_corpo",
+   "tipo": "incorrupto",
+   "titulo": "Santa Zita, 700 anos íntegra",
+   "data_sugerida": "04-27"
+  },
+  {
+   "id": "portillo_ureta",
+   "tipo": "canonizacao",
+   "titulo": "José Ignacio Ureta: o bebê chileno e o Beato Álvaro del Portillo",
+   "data_sugerida": null
+  },
+  {
+   "id": "lourdes_65",
+   "tipo": "lourdes",
+   "titulo": "Lourdes, cura nº 65: Delizia Cirolli",
+   "data_sugerida": null
+  }
+ ]
+}

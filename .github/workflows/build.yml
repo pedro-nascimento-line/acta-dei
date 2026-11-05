@@ -1,0 +1,64 @@
+name: Gerar artes do post
+
+# Dispara quando a tarefa diária faz o commit de um post.json novo ou alterado.
+on:
+  push:
+    paths:
+      - "posts/**/post.json"
+  workflow_dispatch:
+    inputs:
+      dia:
+        description: "Pasta do post (AAAA-MM-DD)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Descobrir posts alterados
+        id: posts
+        run: |
+          if [ -n "${{ github.event.inputs.dia }}" ]; then
+            echo "dias=posts/${{ github.event.inputs.dia }}" >> $GITHUB_OUTPUT
+          else
+            dias=$(git diff --name-only HEAD~1 HEAD | grep -E '^posts/[0-9-]+/post.json$' | xargs -n1 dirname | sort -u | tr '\n' ' ')
+            echo "dias=$dias" >> $GITHUB_OUTPUT
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: |
+          pip install requests playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Baixar imagens e renderizar
+        run: |
+          for d in ${{ steps.posts.outputs.dias }}; do
+            echo "== $d"
+            python scripts/fetch_image.py "$d" || echo "fetch_image falhou em $d (segue com o selo)"
+            python scripts/render.py "$d"
+          done
+          python scripts/build_index.py
+          python scripts/build_fila.py
+
+      - name: Commit das artes
+        run: |
+          git config user.name "acta-dei-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add posts index.html data/fila.json
+          git diff --cached --quiet || git commit -m "artes: ${{ steps.posts.outputs.dias }}"
+          git push

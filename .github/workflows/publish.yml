@@ -1,0 +1,55 @@
+name: Publicar no Instagram
+
+# Horários em UTC. Brasília é UTC-3 o ano todo (sem horário de verão desde 2019).
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 07:00 BRT — carrossel + story da manhã + comentário com hashtags
+    - cron: "0 16 * * *"   # 13:00 BRT — story da tarde
+    - cron: "0 23 * * *"   # 20:00 BRT — story da noite
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "manha | tarde | noite | auto"
+        default: "auto"
+      dia:
+        description: "AAAA-MM-DD (vazio = hoje)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+
+      - name: Publicar
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PAGES_BASE: ${{ vars.PAGES_BASE }}
+          IG_API_HOST: ${{ vars.IG_API_HOST }}
+        run: |
+          args="--slot ${{ github.event.inputs.slot || 'auto' }}"
+          if [ -n "${{ github.event.inputs.dia }}" ]; then args="$args --dia ${{ github.event.inputs.dia }}"; fi
+          python scripts/publish.py $args
+
+      - name: Gravar log e meta
+        if: always()
+        run: |
+          git config user.name "acta-dei-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase || true
+          python scripts/build_index.py || true
+          git add log posts index.html
+          git diff --cached --quiet || git commit -m "log: publicação $(date -u +%F\ %H:%M) UTC"
+          git push || true

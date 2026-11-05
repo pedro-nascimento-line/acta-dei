@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080"><defs>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B9253A"/><stop offset="100%" stop-color="#7A1020"/></linearGradient>
+    <radialGradient id="dark" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#3A3430"/><stop offset="100%" stop-color="#26221E"/></radialGradient>
+  </defs><rect width="1080" height="1080" fill="#F7F2E8"/><circle cx="540.0" cy="540.0" r="470" fill="none" stroke="url(#red)" stroke-width="14"/>
+<circle cx="540.0" cy="540.0" r="440" fill="none" stroke="url(#red)" stroke-width="4"/>
+<circle cx="540.0" cy="540.0" r="318" fill="none" stroke="url(#red)" stroke-width="4"/>
+<circle cx="540.0" cy="540.0" r="300" fill="none" stroke="url(#red)" stroke-width="10"/>
+<path id="aT" d="M 178.0 540.0 A 362 362 0 0 1 902.0 540.0" fill="none"/>
+<path id="aB" d="M 147.2 683.0 A 418 418 0 0 0 932.8 683.0" fill="none"/>
+<text font-family="Cinzel" font-weight="700" font-size="74" letter-spacing="14" fill="url(#red)"><textPath xlink:href="#aT" startOffset="50%" text-anchor="middle">ACTA DEI</textPath></text>
+<text font-family="Cinzel" font-weight="700" font-size="46" letter-spacing="11" fill="url(#red)"><textPath xlink:href="#aB" startOffset="50%" text-anchor="middle">MYSTERIUM FIDEI</textPath></text>
+<circle cx="152.0" cy="540.0" r="9" fill="url(#red)"/>
+<circle cx="928.0" cy="540.0" r="9" fill="url(#red)"/>
+<g transform="translate(540.0 540.0) scale(1.0)">
+<line x1="0.0" y1="-104.0" x2="0.0" y2="-215.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="20.3" y1="-102.0" x2="32.2" y2="-161.8" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="39.8" y1="-96.1" x2="82.3" y2="-198.6" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="57.8" y1="-86.5" x2="91.7" y2="-137.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="73.5" y1="-73.5" x2="152.0" y2="-152.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="86.5" y1="-57.8" x2="137.2" y2="-91.7" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="96.1" y1="-39.8" x2="198.6" y2="-82.3" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="102.0" y1="-20.3" x2="161.8" y2="-32.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="104.0" y1="0.0" x2="215.0" y2="0.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="102.0" y1="20.3" x2="161.8" y2="32.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="96.1" y1="39.8" x2="198.6" y2="82.3" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="86.5" y1="57.8" x2="137.2" y2="91.7" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="73.5" y1="73.5" x2="152.0" y2="152.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="57.8" y1="86.5" x2="91.7" y2="137.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="39.8" y1="96.1" x2="82.3" y2="198.6" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="20.3" y1="102.0" x2="32.2" y2="161.8" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="0.0" y1="104.0" x2="0.0" y2="215.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-20.3" y1="102.0" x2="-32.2" y2="161.8" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-39.8" y1="96.1" x2="-82.3" y2="198.6" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-57.8" y1="86.5" x2="-91.7" y2="137.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-73.5" y1="73.5" x2="-152.0" y2="152.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-86.5" y1="57.8" x2="-137.2" y2="91.7" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-96.1" y1="39.8" x2="-198.6" y2="82.3" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-102.0" y1="20.3" x2="-161.8" y2="32.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-104.0" y1="0.0" x2="-215.0" y2="0.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-102.0" y1="-20.3" x2="-161.8" y2="-32.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-96.1" y1="-39.8" x2="-198.6" y2="-82.3" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-86.5" y1="-57.8" x2="-137.2" y2="-91.7" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-73.5" y1="-73.5" x2="-152.0" y2="-152.0" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-57.8" y1="-86.5" x2="-91.7" y2="-137.2" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<line x1="-39.8" y1="-96.1" x2="-82.3" y2="-198.6" stroke="#A6192E" stroke-width="8" stroke-linecap="round"/>
+<line x1="-20.3" y1="-102.0" x2="-32.2" y2="-161.8" stroke="#A6192E" stroke-width="5" stroke-linecap="round"/>
+<circle cx="0" cy="0" r="82" fill="none" stroke="#A6192E" stroke-width="12"/>
+<path d="M0 -40 V40 M-30 -8 H30" stroke="#A6192E" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+</g></svg>

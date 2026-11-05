@@ -1,0 +1,3011 @@
+{
+ "_nota": "Gera data/santos.json: Calendário Romano Geral + calendário próprio do Brasil + martirológio para os dias vazios.\n\nGraus: S = solenidade · F = festa · M = memória obrigatória · m = memória facultativa · MR = martirológio romano (sem celebração no calendário geral) · BR = calendário próprio do Brasil.\n'wiki' = artigo da Wikipédia (en: ou pt:) usado por fetch_image.py para a imagem principal.\nA tarefa diária confere cada entrada em fonte oficial antes de publicar (datas móveis como Sagrado Coração, Corpus Christi e Cristo Rei são calculadas no dia).",
+ "dias": {
+  "01-01": [
+   {
+    "nome": "Santa Maria, Mãe de Deus",
+    "grau": "S",
+    "wiki": "en:Mary, mother of Jesus",
+    "nota": "Solenidade; oitava do Natal"
+   }
+  ],
+  "01-02": [
+   {
+    "nome": "São Basílio Magno e São Gregório Nazianzeno",
+    "grau": "M",
+    "wiki": "en:Basil of Caesarea",
+    "nota": "Bispos e doutores da Igreja"
+   }
+  ],
+  "01-03": [
+   {
+    "nome": "Santíssimo Nome de Jesus",
+    "grau": "m",
+    "wiki": "en:Holy Name of Jesus",
+    "nota": ""
+   }
+  ],
+  "01-04": [
+   {
+    "nome": "Santa Isabel Ana Seton",
+    "grau": "MR",
+    "wiki": "en:Elizabeth Ann Seton",
+    "nota": "Memória nos EUA"
+   }
+  ],
+  "01-05": [
+   {
+    "nome": "São João Neumann",
+    "grau": "MR",
+    "wiki": "en:John Neumann",
+    "nota": "Memória nos EUA"
+   }
+  ],
+  "01-06": [
+   {
+    "nome": "Epifania do Senhor",
+    "grau": "S",
+    "wiki": "en:Epiphany (holiday)",
+    "nota": "No Brasil, transferida para o domingo entre 2 e 8 de janeiro"
+   }
+  ],
+  "01-07": [
+   {
+    "nome": "São Raimundo de Penyafort",
+    "grau": "m",
+    "wiki": "en:Raymond of Penyafort",
+    "nota": ""
+   }
+  ],
+  "01-08": [
+   {
+    "nome": "São Severino de Nórica",
+    "grau": "MR",
+    "wiki": "en:Severinus of Noricum",
+    "nota": ""
+   }
+  ],
+  "01-09": [
+   {
+    "nome": "Santo Adriano de Canterbury",
+    "grau": "MR",
+    "wiki": "en:Adrian of Canterbury",
+    "nota": ""
+   }
+  ],
+  "01-10": [
+   {
+    "nome": "São Gregório de Nissa",
+    "grau": "MR",
+    "wiki": "en:Gregory of Nyssa",
+    "nota": ""
+   }
+  ],
+  "01-11": [
+   {
+    "nome": "Santo Higino, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Hyginus",
+    "nota": ""
+   }
+  ],
+  "01-12": [
+   {
+    "nome": "Santa Margarida Bourgeoys",
+    "grau": "MR",
+    "wiki": "en:Marguerite Bourgeoys",
+    "nota": "Memória no Canadá"
+   }
+  ],
+  "01-13": [
+   {
+    "nome": "Santo Hilário de Poitiers",
+    "grau": "m",
+    "wiki": "en:Hilary of Poitiers",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "01-14": [
+   {
+    "nome": "São Félix de Nola",
+    "grau": "MR",
+    "wiki": "en:Felix of Nola",
+    "nota": ""
+   }
+  ],
+  "01-15": [
+   {
+    "nome": "Santo Arnaldo Janssen",
+    "grau": "MR",
+    "wiki": "en:Arnold Janssen",
+    "nota": "Fundador dos Verbitas, muito presentes no Brasil"
+   }
+  ],
+  "01-16": [
+   {
+    "nome": "São Marcelo I, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Marcellus I",
+    "nota": ""
+   }
+  ],
+  "01-17": [
+   {
+    "nome": "Santo Antão, abade",
+    "grau": "M",
+    "wiki": "en:Anthony the Great",
+    "nota": ""
+   }
+  ],
+  "01-18": [
+   {
+    "nome": "Santa Margarida da Hungria",
+    "grau": "MR",
+    "wiki": "en:Margaret of Hungary",
+    "nota": ""
+   }
+  ],
+  "01-19": [
+   {
+    "nome": "São Canuto, rei",
+    "grau": "MR",
+    "wiki": "en:Canute IV of Denmark",
+    "nota": ""
+   }
+  ],
+  "01-20": [
+   {
+    "nome": "São Fabião, papa, e São Sebastião, mártir",
+    "grau": "m",
+    "wiki": "en:Saint Sebastian",
+    "nota": "Sebastião é padroeiro da cidade do Rio de Janeiro"
+   }
+  ],
+  "01-21": [
+   {
+    "nome": "Santa Inês, virgem e mártir",
+    "grau": "M",
+    "wiki": "en:Agnes of Rome",
+    "nota": ""
+   }
+  ],
+  "01-22": [
+   {
+    "nome": "São Vicente, diácono e mártir",
+    "grau": "m",
+    "wiki": "en:Vincent of Saragossa",
+    "nota": ""
+   }
+  ],
+  "01-23": [
+   {
+    "nome": "Santa Emerenciana",
+    "grau": "MR",
+    "wiki": "en:Emerentiana",
+    "nota": ""
+   }
+  ],
+  "01-24": [
+   {
+    "nome": "São Francisco de Sales",
+    "grau": "M",
+    "wiki": "en:Francis de Sales",
+    "nota": "Bispo e doutor; padroeiro dos jornalistas"
+   }
+  ],
+  "01-25": [
+   {
+    "nome": "Conversão de São Paulo Apóstolo",
+    "grau": "F",
+    "wiki": "en:Conversion of Paul the Apostle",
+    "nota": ""
+   }
+  ],
+  "01-26": [
+   {
+    "nome": "Santos Timóteo e Tito",
+    "grau": "M",
+    "wiki": "en:Saint Timothy",
+    "nota": ""
+   }
+  ],
+  "01-27": [
+   {
+    "nome": "Santa Ângela Merici",
+    "grau": "m",
+    "wiki": "en:Angela Merici",
+    "nota": ""
+   }
+  ],
+  "01-28": [
+   {
+    "nome": "São Tomás de Aquino",
+    "grau": "M",
+    "wiki": "en:Thomas Aquinas",
+    "nota": "Presbítero e doutor da Igreja"
+   }
+  ],
+  "01-29": [
+   {
+    "nome": "São Gildas",
+    "grau": "MR",
+    "wiki": "en:Gildas",
+    "nota": ""
+   }
+  ],
+  "01-30": [
+   {
+    "nome": "Santa Jacinta Marescotti",
+    "grau": "MR",
+    "wiki": "en:Hyacintha Mariscotti",
+    "nota": ""
+   }
+  ],
+  "01-31": [
+   {
+    "nome": "São João Bosco",
+    "grau": "M",
+    "wiki": "en:John Bosco",
+    "nota": ""
+   }
+  ],
+  "02-01": [
+   {
+    "nome": "Santa Brígida de Kildare",
+    "grau": "MR",
+    "wiki": "en:Brigid of Kildare",
+    "nota": ""
+   }
+  ],
+  "02-02": [
+   {
+    "nome": "Apresentação do Senhor",
+    "grau": "F",
+    "wiki": "en:Presentation of Jesus at the Temple",
+    "nota": "Candelária; Dia da Vida Consagrada"
+   }
+  ],
+  "02-03": [
+   {
+    "nome": "São Brás, bispo e mártir",
+    "grau": "m",
+    "wiki": "en:Blaise",
+    "nota": "Bênção das gargantas"
+   }
+  ],
+  "02-04": [
+   {
+    "nome": "Santa Joana de Valois",
+    "grau": "MR",
+    "wiki": "en:Joan of France, Duchess of Berry",
+    "nota": ""
+   }
+  ],
+  "02-05": [
+   {
+    "nome": "Santa Águeda, virgem e mártir",
+    "grau": "M",
+    "wiki": "en:Agatha of Sicily",
+    "nota": ""
+   }
+  ],
+  "02-06": [
+   {
+    "nome": "São Paulo Miki e companheiros, mártires",
+    "grau": "M",
+    "wiki": "en:Paul Miki",
+    "nota": "Mártires de Nagasaki, 1597"
+   }
+  ],
+  "02-07": [
+   {
+    "nome": "São Ricardo, rei",
+    "grau": "MR",
+    "wiki": "en:Richard the Pilgrim",
+    "nota": ""
+   }
+  ],
+  "02-08": [
+   {
+    "nome": "Santa Josefina Bakhita",
+    "grau": "m",
+    "wiki": "en:Josephine Bakhita",
+    "nota": "Dia de oração contra o tráfico de pessoas"
+   }
+  ],
+  "02-09": [
+   {
+    "nome": "Santa Apolônia",
+    "grau": "MR",
+    "wiki": "en:Apollonia",
+    "nota": ""
+   }
+  ],
+  "02-10": [
+   {
+    "nome": "Santa Escolástica, virgem",
+    "grau": "M",
+    "wiki": "en:Scholastica",
+    "nota": ""
+   }
+  ],
+  "02-11": [
+   {
+    "nome": "Nossa Senhora de Lourdes",
+    "grau": "m",
+    "wiki": "en:Our Lady of Lourdes",
+    "nota": "Dia Mundial do Enfermo; aparições de 1858"
+   }
+  ],
+  "02-12": [
+   {
+    "nome": "Santa Eulália de Barcelona",
+    "grau": "MR",
+    "wiki": "en:Eulalia of Barcelona",
+    "nota": ""
+   }
+  ],
+  "02-13": [
+   {
+    "nome": "Beato Jordão da Saxônia",
+    "grau": "MR",
+    "wiki": "en:Jordan of Saxony",
+    "nota": ""
+   }
+  ],
+  "02-14": [
+   {
+    "nome": "São Cirilo, monge, e São Metódio, bispo",
+    "grau": "M",
+    "wiki": "en:Saints Cyril and Methodius",
+    "nota": "Copadroeiros da Europa"
+   }
+  ],
+  "02-15": [
+   {
+    "nome": "São Cláudio de la Colombière",
+    "grau": "MR",
+    "wiki": "en:Claude de la Colombière",
+    "nota": ""
+   }
+  ],
+  "02-16": [
+   {
+    "nome": "Santa Juliana de Nicomédia",
+    "grau": "MR",
+    "wiki": "en:Juliana of Nicomedia",
+    "nota": ""
+   }
+  ],
+  "02-17": [
+   {
+    "nome": "Sete Santos Fundadores dos Servitas",
+    "grau": "m",
+    "wiki": "en:Servite Order",
+    "nota": ""
+   }
+  ],
+  "02-18": [
+   {
+    "nome": "Santa Bernadette Soubirous",
+    "grau": "MR",
+    "wiki": "en:Bernadette Soubirous",
+    "nota": "Memória na França em 18/2; vidente de Lourdes, corpo incorrupto"
+   }
+  ],
+  "02-19": [
+   {
+    "nome": "São Conrado de Placência",
+    "grau": "MR",
+    "wiki": "en:Conrad of Piacenza",
+    "nota": ""
+   }
+  ],
+  "02-20": [
+   {
+    "nome": "Santos Francisco e Jacinta Marto",
+    "grau": "MR",
+    "wiki": "en:Francisco and Jacinta Marto",
+    "nota": "Videntes de Fátima; memória em Portugal"
+   }
+  ],
+  "02-21": [
+   {
+    "nome": "São Pedro Damião",
+    "grau": "m",
+    "wiki": "en:Peter Damian",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "02-22": [
+   {
+    "nome": "Cátedra de São Pedro Apóstolo",
+    "grau": "F",
+    "wiki": "en:Chair of Saint Peter",
+    "nota": ""
+   }
+  ],
+  "02-23": [
+   {
+    "nome": "São Policarpo, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Polycarp",
+    "nota": ""
+   }
+  ],
+  "02-24": [
+   {
+    "nome": "Santa Etelberta",
+    "grau": "MR",
+    "wiki": "en:Æthelberht of Kent",
+    "nota": ""
+   }
+  ],
+  "02-25": [
+   {
+    "nome": "Beato Sebastião de Aparício",
+    "grau": "MR",
+    "wiki": "en:Sebastian of Aparicio",
+    "nota": ""
+   }
+  ],
+  "02-26": [
+   {
+    "nome": "Santa Paula Montal",
+    "grau": "MR",
+    "wiki": "en:Paula Montal Fornés",
+    "nota": ""
+   }
+  ],
+  "02-27": [
+   {
+    "nome": "São Gregório de Narek",
+    "grau": "m",
+    "wiki": "en:Gregory of Narek",
+    "nota": "Doutor da Igreja desde 2015"
+   }
+  ],
+  "02-28": [
+   {
+    "nome": "Santo Osvaldo de Worcester",
+    "grau": "MR",
+    "wiki": "en:Oswald of Worcester",
+    "nota": ""
+   }
+  ],
+  "02-29": [
+   {
+    "nome": "Santo Osvaldo (ano bissexto)",
+    "grau": "MR",
+    "wiki": "en:Oswald of Worcester",
+    "nota": ""
+   }
+  ],
+  "03-01": [
+   {
+    "nome": "Santo Albino de Angers",
+    "grau": "MR",
+    "wiki": "en:Albinus of Angers",
+    "nota": ""
+   }
+  ],
+  "03-02": [
+   {
+    "nome": "Santa Inês de Praga",
+    "grau": "MR",
+    "wiki": "en:Agnes of Bohemia",
+    "nota": ""
+   }
+  ],
+  "03-03": [
+   {
+    "nome": "Santa Catarina Drexel",
+    "grau": "MR",
+    "wiki": "en:Katharine Drexel",
+    "nota": "Memória nos EUA"
+   }
+  ],
+  "03-04": [
+   {
+    "nome": "São Casimiro",
+    "grau": "m",
+    "wiki": "en:Casimir Jagiellon",
+    "nota": ""
+   }
+  ],
+  "03-05": [
+   {
+    "nome": "São João José da Cruz",
+    "grau": "MR",
+    "wiki": "en:John Joseph of the Cross",
+    "nota": ""
+   }
+  ],
+  "03-06": [
+   {
+    "nome": "Santa Coleta",
+    "grau": "MR",
+    "wiki": "en:Colette of Corbie",
+    "nota": ""
+   }
+  ],
+  "03-07": [
+   {
+    "nome": "Santas Perpétua e Felicidade, mártires",
+    "grau": "M",
+    "wiki": "en:Perpetua and Felicity",
+    "nota": ""
+   }
+  ],
+  "03-08": [
+   {
+    "nome": "São João de Deus",
+    "grau": "m",
+    "wiki": "en:John of God",
+    "nota": "Padroeiro dos hospitais e enfermeiros"
+   }
+  ],
+  "03-09": [
+   {
+    "nome": "Santa Francisca Romana",
+    "grau": "m",
+    "wiki": "en:Frances of Rome",
+    "nota": ""
+   }
+  ],
+  "03-10": [
+   {
+    "nome": "São Simplício, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Simplicius",
+    "nota": ""
+   }
+  ],
+  "03-11": [
+   {
+    "nome": "Santo Eulógio de Córdova",
+    "grau": "MR",
+    "wiki": "en:Eulogius of Córdoba",
+    "nota": ""
+   }
+  ],
+  "03-12": [
+   {
+    "nome": "São Luís Orione",
+    "grau": "MR",
+    "wiki": "en:Luigi Orione",
+    "nota": ""
+   }
+  ],
+  "03-13": [
+   {
+    "nome": "Santa Eufrásia",
+    "grau": "MR",
+    "wiki": "en:Euphrasia of Constantinople",
+    "nota": ""
+   }
+  ],
+  "03-14": [
+   {
+    "nome": "Santa Matilde",
+    "grau": "MR",
+    "wiki": "en:Matilda of Ringelheim",
+    "nota": ""
+   }
+  ],
+  "03-15": [
+   {
+    "nome": "Santa Luísa de Marillac",
+    "grau": "MR",
+    "wiki": "en:Louise de Marillac",
+    "nota": ""
+   }
+  ],
+  "03-16": [
+   {
+    "nome": "São Heriberto de Colônia",
+    "grau": "MR",
+    "wiki": "en:Heribert of Cologne",
+    "nota": ""
+   }
+  ],
+  "03-17": [
+   {
+    "nome": "São Patrício, bispo",
+    "grau": "m",
+    "wiki": "en:Saint Patrick",
+    "nota": ""
+   }
+  ],
+  "03-18": [
+   {
+    "nome": "São Cirilo de Jerusalém",
+    "grau": "m",
+    "wiki": "en:Cyril of Jerusalem",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "03-19": [
+   {
+    "nome": "São José, Esposo da Virgem Maria",
+    "grau": "S",
+    "wiki": "en:Saint Joseph",
+    "nota": ""
+   }
+  ],
+  "03-20": [
+   {
+    "nome": "Santa Claudia e companheiras",
+    "grau": "MR",
+    "wiki": "en:Claudia (martyr)",
+    "nota": ""
+   }
+  ],
+  "03-21": [
+   {
+    "nome": "São Nicolau de Flüe",
+    "grau": "MR",
+    "wiki": "en:Nicholas of Flüe",
+    "nota": "Padroeiro da Suíça"
+   }
+  ],
+  "03-22": [
+   {
+    "nome": "Santa Léa de Roma",
+    "grau": "MR",
+    "wiki": "en:Lea of Rome",
+    "nota": ""
+   }
+  ],
+  "03-23": [
+   {
+    "nome": "São Turíbio de Mogrovejo",
+    "grau": "m",
+    "wiki": "en:Turibius of Mogrovejo",
+    "nota": "Padroeiro do episcopado latino-americano"
+   }
+  ],
+  "03-24": [
+   {
+    "nome": "Santa Catarina da Suécia",
+    "grau": "MR",
+    "wiki": "en:Catherine of Vadstena",
+    "nota": ""
+   }
+  ],
+  "03-25": [
+   {
+    "nome": "Anunciação do Senhor",
+    "grau": "S",
+    "wiki": "en:Annunciation",
+    "nota": ""
+   }
+  ],
+  "03-26": [
+   {
+    "nome": "São Ludgero",
+    "grau": "MR",
+    "wiki": "en:Ludger",
+    "nota": ""
+   }
+  ],
+  "03-27": [
+   {
+    "nome": "São Ruperto de Salzburgo",
+    "grau": "MR",
+    "wiki": "en:Rupert of Salzburg",
+    "nota": ""
+   }
+  ],
+  "03-28": [
+   {
+    "nome": "Santo Estêvão Harding",
+    "grau": "MR",
+    "wiki": "en:Stephen Harding",
+    "nota": ""
+   }
+  ],
+  "03-29": [
+   {
+    "nome": "São Bertoldo do Carmelo",
+    "grau": "MR",
+    "wiki": "en:Berthold of Mount Carmel",
+    "nota": ""
+   }
+  ],
+  "03-30": [
+   {
+    "nome": "São João Clímaco",
+    "grau": "MR",
+    "wiki": "en:John Climacus",
+    "nota": ""
+   }
+  ],
+  "03-31": [
+   {
+    "nome": "São Benjamim, diácono e mártir",
+    "grau": "MR",
+    "wiki": "en:Benjamin the Deacon",
+    "nota": ""
+   }
+  ],
+  "04-01": [
+   {
+    "nome": "São Hugo de Grenoble",
+    "grau": "MR",
+    "wiki": "en:Hugh of Châteauneuf",
+    "nota": ""
+   }
+  ],
+  "04-02": [
+   {
+    "nome": "São Francisco de Paula",
+    "grau": "m",
+    "wiki": "en:Francis of Paola",
+    "nota": ""
+   }
+  ],
+  "04-03": [
+   {
+    "nome": "São Ricardo de Chichester",
+    "grau": "MR",
+    "wiki": "en:Richard of Chichester",
+    "nota": ""
+   }
+  ],
+  "04-04": [
+   {
+    "nome": "Santo Isidoro de Sevilha",
+    "grau": "m",
+    "wiki": "en:Isidore of Seville",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "04-05": [
+   {
+    "nome": "São Vicente Ferrer",
+    "grau": "m",
+    "wiki": "en:Vincent Ferrer",
+    "nota": ""
+   }
+  ],
+  "04-06": [
+   {
+    "nome": "São Guilherme de Eskilsø",
+    "grau": "MR",
+    "wiki": "en:William of Æbelholt",
+    "nota": ""
+   }
+  ],
+  "04-07": [
+   {
+    "nome": "São João Batista de La Salle",
+    "grau": "M",
+    "wiki": "en:Jean-Baptiste de La Salle",
+    "nota": "Padroeiro dos educadores"
+   }
+  ],
+  "04-08": [
+   {
+    "nome": "Santa Júlia Billiart",
+    "grau": "MR",
+    "wiki": "en:Julie Billiart",
+    "nota": ""
+   }
+  ],
+  "04-09": [
+   {
+    "nome": "Santa Casilda",
+    "grau": "MR",
+    "wiki": "en:Casilda of Toledo",
+    "nota": ""
+   }
+  ],
+  "04-10": [
+   {
+    "nome": "São Fulberto de Chartres",
+    "grau": "MR",
+    "wiki": "en:Fulbert of Chartres",
+    "nota": ""
+   }
+  ],
+  "04-11": [
+   {
+    "nome": "Santo Estanislau, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Stanislaus of Szczepanów",
+    "nota": ""
+   }
+  ],
+  "04-12": [
+   {
+    "nome": "São Júlio I, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Julius I",
+    "nota": ""
+   }
+  ],
+  "04-13": [
+   {
+    "nome": "São Martinho I, papa e mártir",
+    "grau": "m",
+    "wiki": "en:Pope Martin I",
+    "nota": ""
+   }
+  ],
+  "04-14": [
+   {
+    "nome": "Santa Lídvina",
+    "grau": "MR",
+    "wiki": "en:Lidwina",
+    "nota": ""
+   }
+  ],
+  "04-15": [
+   {
+    "nome": "São Damião de Molokai",
+    "grau": "MR",
+    "wiki": "en:Father Damien",
+    "nota": "Memória em 10/5 nos EUA; apóstolo dos leprosos"
+   }
+  ],
+  "04-16": [
+   {
+    "nome": "Santa Bernadette Soubirous",
+    "grau": "MR",
+    "wiki": "en:Bernadette Soubirous",
+    "nota": "Dia da morte (1879); memória no calendário geral em alguns lugares"
+   }
+  ],
+  "04-17": [
+   {
+    "nome": "Santa Catarina Tekakwitha",
+    "grau": "MR",
+    "wiki": "en:Kateri Tekakwitha",
+    "nota": "Memória em 14/7 nos EUA"
+   }
+  ],
+  "04-18": [
+   {
+    "nome": "Beata Maria da Encarnação",
+    "grau": "MR",
+    "wiki": "en:Marie of the Incarnation (Ursuline)",
+    "nota": ""
+   }
+  ],
+  "04-19": [
+   {
+    "nome": "São Leão IX, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Leo IX",
+    "nota": ""
+   }
+  ],
+  "04-20": [
+   {
+    "nome": "Santa Inês de Montepulciano",
+    "grau": "MR",
+    "wiki": "en:Agnes of Montepulciano",
+    "nota": ""
+   }
+  ],
+  "04-21": [
+   {
+    "nome": "Santo Anselmo",
+    "grau": "m",
+    "wiki": "en:Anselm of Canterbury",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "04-22": [
+   {
+    "nome": "Santos Sotero e Caio, papas",
+    "grau": "MR",
+    "wiki": "en:Pope Soter",
+    "nota": ""
+   }
+  ],
+  "04-23": [
+   {
+    "nome": "São Jorge, mártir",
+    "grau": "m",
+    "wiki": "en:Saint George",
+    "nota": "Padroeiro de Portugal e da Inglaterra; muito popular no Brasil"
+   }
+  ],
+  "04-24": [
+   {
+    "nome": "São Fidélis de Sigmaringen",
+    "grau": "m",
+    "wiki": "en:Fidelis of Sigmaringen",
+    "nota": ""
+   }
+  ],
+  "04-25": [
+   {
+    "nome": "São Marcos, evangelista",
+    "grau": "F",
+    "wiki": "en:Mark the Evangelist",
+    "nota": ""
+   }
+  ],
+  "04-26": [
+   {
+    "nome": "Nossa Senhora do Bom Conselho",
+    "grau": "MR",
+    "wiki": "en:Our Lady of Good Counsel",
+    "nota": ""
+   }
+  ],
+  "04-27": [
+   {
+    "nome": "Santa Zita",
+    "grau": "MR",
+    "wiki": "en:Zita",
+    "nota": "Corpo incorrupto em Lucca"
+   }
+  ],
+  "04-28": [
+   {
+    "nome": "São Pedro Chanel e São Luís Maria Grignion de Montfort",
+    "grau": "m",
+    "wiki": "en:Louis de Montfort",
+    "nota": ""
+   }
+  ],
+  "04-29": [
+   {
+    "nome": "Santa Catarina de Sena",
+    "grau": "M",
+    "wiki": "en:Catherine of Siena",
+    "nota": "Virgem e doutora; copadroeira da Europa"
+   }
+  ],
+  "04-30": [
+   {
+    "nome": "São Pio V, papa",
+    "grau": "m",
+    "wiki": "en:Pope Pius V",
+    "nota": ""
+   },
+   {
+    "nome": "Beata Albertina Berkenbrock",
+    "grau": "BR",
+    "wiki": "pt:Albertina Berkenbrock",
+    "nota": "Mártir catarinense, 12 anos; beatificada em 2007"
+   }
+  ],
+  "05-01": [
+   {
+    "nome": "São José Operário",
+    "grau": "m",
+    "wiki": "en:Saint Joseph",
+    "nota": ""
+   }
+  ],
+  "05-02": [
+   {
+    "nome": "Santo Atanásio",
+    "grau": "M",
+    "wiki": "en:Athanasius of Alexandria",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "05-03": [
+   {
+    "nome": "São Filipe e São Tiago, apóstolos",
+    "grau": "F",
+    "wiki": "en:Philip the Apostle",
+    "nota": ""
+   }
+  ],
+  "05-04": [
+   {
+    "nome": "São Floriano",
+    "grau": "MR",
+    "wiki": "en:Saint Florian",
+    "nota": ""
+   }
+  ],
+  "05-05": [
+   {
+    "nome": "Santa Judite de Prússia",
+    "grau": "MR",
+    "wiki": "en:Jutta of Kulmsee",
+    "nota": ""
+   }
+  ],
+  "05-06": [
+   {
+    "nome": "São Domingos Sávio",
+    "grau": "MR",
+    "wiki": "en:Dominic Savio",
+    "nota": ""
+   }
+  ],
+  "05-07": [
+   {
+    "nome": "Santa Flávia Domitila",
+    "grau": "MR",
+    "wiki": "en:Flavia Domitilla (saint)",
+    "nota": ""
+   }
+  ],
+  "05-08": [
+   {
+    "nome": "Nossa Senhora de Luján",
+    "grau": "MR",
+    "wiki": "en:Our Lady of Luján",
+    "nota": "Padroeira da Argentina"
+   }
+  ],
+  "05-09": [
+   {
+    "nome": "São Jorge Preca",
+    "grau": "MR",
+    "wiki": "en:George Preca",
+    "nota": ""
+   }
+  ],
+  "05-10": [
+   {
+    "nome": "São João de Ávila",
+    "grau": "m",
+    "wiki": "en:John of Ávila",
+    "nota": "Doutor da Igreja desde 2012"
+   }
+  ],
+  "05-11": [
+   {
+    "nome": "São Francisco de Jerônimo",
+    "grau": "MR",
+    "wiki": "en:Francis de Geronimo",
+    "nota": ""
+   },
+   {
+    "nome": "Santo Antônio de Sant'Ana Galvão (Frei Galvão)",
+    "grau": "BR",
+    "wiki": "pt:Frei Galvão",
+    "nota": "Primeiro santo nascido no Brasil; canonizado em 11/5/2007; memória em 25/10 em algumas dioceses"
+   }
+  ],
+  "05-12": [
+   {
+    "nome": "Santos Nereu e Aquiles, mártires; São Pancrácio",
+    "grau": "m",
+    "wiki": "en:Pancras of Rome",
+    "nota": ""
+   }
+  ],
+  "05-13": [
+   {
+    "nome": "Nossa Senhora de Fátima",
+    "grau": "m",
+    "wiki": "en:Our Lady of Fátima",
+    "nota": "Aparições de 1917; Milagre do Sol em 13/10"
+   }
+  ],
+  "05-14": [
+   {
+    "nome": "São Matias, apóstolo",
+    "grau": "F",
+    "wiki": "en:Saint Matthias",
+    "nota": ""
+   }
+  ],
+  "05-15": [
+   {
+    "nome": "Santo Isidoro Lavrador",
+    "grau": "MR",
+    "wiki": "en:Isidore the Laborer",
+    "nota": "Padroeiro dos agricultores"
+   }
+  ],
+  "05-16": [
+   {
+    "nome": "Santa Margarida de Cortona",
+    "grau": "MR",
+    "wiki": "en:Margaret of Cortona",
+    "nota": ""
+   }
+  ],
+  "05-17": [
+   {
+    "nome": "São Pascoal Bailão",
+    "grau": "MR",
+    "wiki": "en:Paschal Baylón",
+    "nota": "Patrono dos congressos eucarísticos"
+   }
+  ],
+  "05-18": [
+   {
+    "nome": "São João I, papa e mártir",
+    "grau": "m",
+    "wiki": "en:Pope John I",
+    "nota": ""
+   },
+   {
+    "nome": "Beata Irmã Lindalva Justo de Oliveira",
+    "grau": "BR",
+    "wiki": "pt:Lindalva Justo de Oliveira",
+    "nota": "Mártir em Salvador, 1993; beatificada em 2007"
+   }
+  ],
+  "05-19": [
+   {
+    "nome": "São Celestino V, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Celestine V",
+    "nota": ""
+   }
+  ],
+  "05-20": [
+   {
+    "nome": "São Bernardino de Sena",
+    "grau": "m",
+    "wiki": "en:Bernardino of Siena",
+    "nota": ""
+   }
+  ],
+  "05-21": [
+   {
+    "nome": "São Cristóvão Magalhães e companheiros, mártires",
+    "grau": "m",
+    "wiki": "en:Cristóbal Magallanes Jara",
+    "nota": "Mártires mexicanos da Guerra Cristera"
+   }
+  ],
+  "05-22": [
+   {
+    "nome": "Santa Rita de Cássia",
+    "grau": "m",
+    "wiki": "en:Rita of Cascia",
+    "nota": "Padroeira das causas impossíveis"
+   }
+  ],
+  "05-23": [
+   {
+    "nome": "São João Batista de Rossi",
+    "grau": "MR",
+    "wiki": "en:John Baptist de Rossi",
+    "nota": ""
+   }
+  ],
+  "05-24": [
+   {
+    "nome": "Nossa Senhora Auxiliadora",
+    "grau": "MR",
+    "wiki": "en:Mary Help of Christians",
+    "nota": ""
+   }
+  ],
+  "05-25": [
+   {
+    "nome": "São Beda, o Venerável; São Gregório VII; Santa Maria Madalena de Pazzi",
+    "grau": "m",
+    "wiki": "en:Bede",
+    "nota": ""
+   }
+  ],
+  "05-26": [
+   {
+    "nome": "São Filipe Néri",
+    "grau": "M",
+    "wiki": "en:Philip Neri",
+    "nota": ""
+   }
+  ],
+  "05-27": [
+   {
+    "nome": "Santo Agostinho de Canterbury",
+    "grau": "m",
+    "wiki": "en:Augustine of Canterbury",
+    "nota": ""
+   }
+  ],
+  "05-28": [
+   {
+    "nome": "São Germano de Paris",
+    "grau": "MR",
+    "wiki": "en:Germain of Paris",
+    "nota": ""
+   }
+  ],
+  "05-29": [
+   {
+    "nome": "São Paulo VI, papa",
+    "grau": "m",
+    "wiki": "en:Pope Paul VI",
+    "nota": ""
+   }
+  ],
+  "05-30": [
+   {
+    "nome": "Santa Joana d'Arc",
+    "grau": "MR",
+    "wiki": "en:Joan of Arc",
+    "nota": ""
+   }
+  ],
+  "05-31": [
+   {
+    "nome": "Visitação de Nossa Senhora",
+    "grau": "F",
+    "wiki": "en:Visitation (Christianity)",
+    "nota": ""
+   }
+  ],
+  "06-01": [
+   {
+    "nome": "São Justino, mártir",
+    "grau": "M",
+    "wiki": "en:Justin Martyr",
+    "nota": ""
+   }
+  ],
+  "06-02": [
+   {
+    "nome": "Santos Marcelino e Pedro, mártires",
+    "grau": "m",
+    "wiki": "en:Marcellinus and Peter",
+    "nota": ""
+   }
+  ],
+  "06-03": [
+   {
+    "nome": "São Carlos Lwanga e companheiros, mártires",
+    "grau": "M",
+    "wiki": "en:Charles Lwanga",
+    "nota": "Mártires de Uganda"
+   }
+  ],
+  "06-04": [
+   {
+    "nome": "São Francisco Caracciolo",
+    "grau": "MR",
+    "wiki": "en:Francis Caracciolo",
+    "nota": ""
+   }
+  ],
+  "06-05": [
+   {
+    "nome": "São Bonifácio, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Saint Boniface",
+    "nota": "Apóstolo da Alemanha"
+   }
+  ],
+  "06-06": [
+   {
+    "nome": "São Norberto, bispo",
+    "grau": "m",
+    "wiki": "en:Norbert of Xanten",
+    "nota": ""
+   }
+  ],
+  "06-07": [
+   {
+    "nome": "Santa Ana de São Bartolomeu",
+    "grau": "MR",
+    "wiki": "en:Anne of Saint Bartholomew",
+    "nota": ""
+   }
+  ],
+  "06-08": [
+   {
+    "nome": "São Medardo",
+    "grau": "MR",
+    "wiki": "en:Medardus",
+    "nota": ""
+   }
+  ],
+  "06-09": [
+   {
+    "nome": "Santo Efrém, diácono e doutor",
+    "grau": "m",
+    "wiki": "en:Ephrem the Syrian",
+    "nota": ""
+   },
+   {
+    "nome": "Beato José de Anchieta (São José de Anchieta)",
+    "grau": "BR",
+    "wiki": "en:José de Anchieta",
+    "nota": "Apóstolo do Brasil; canonizado em 2014 (equipolente); memória em 9/6"
+   }
+  ],
+  "06-10": [
+   {
+    "nome": "Beato Henrique de Bolzano",
+    "grau": "MR",
+    "wiki": "en:Henry of Bolzano",
+    "nota": ""
+   }
+  ],
+  "06-11": [
+   {
+    "nome": "São Barnabé, apóstolo",
+    "grau": "M",
+    "wiki": "en:Barnabas",
+    "nota": ""
+   }
+  ],
+  "06-12": [
+   {
+    "nome": "São João de Sahagún",
+    "grau": "MR",
+    "wiki": "en:John of Sahagún",
+    "nota": ""
+   },
+   {
+    "nome": "Beato Padre Eustáquio van Lieshout",
+    "grau": "BR",
+    "wiki": "pt:Padre Eustáquio",
+    "nota": "Beatificado em Belo Horizonte, 2006"
+   }
+  ],
+  "06-13": [
+   {
+    "nome": "Santo Antônio de Pádua (de Lisboa)",
+    "grau": "M",
+    "wiki": "en:Anthony of Padua",
+    "nota": "Presbítero e doutor; um dos santos mais populares do Brasil"
+   }
+  ],
+  "06-14": [
+   {
+    "nome": "Santo Eliseu, profeta",
+    "grau": "MR",
+    "wiki": "en:Elisha",
+    "nota": ""
+   }
+  ],
+  "06-15": [
+   {
+    "nome": "Santa Germana Cousin",
+    "grau": "MR",
+    "wiki": "en:Germaine Cousin",
+    "nota": "Corpo incorrupto encontrado em 1644"
+   }
+  ],
+  "06-16": [
+   {
+    "nome": "São João Francisco Régis",
+    "grau": "MR",
+    "wiki": "en:John Francis Regis",
+    "nota": ""
+   }
+  ],
+  "06-17": [
+   {
+    "nome": "Santo Alberto Chmielowski",
+    "grau": "MR",
+    "wiki": "en:Albert Chmielowski",
+    "nota": ""
+   }
+  ],
+  "06-18": [
+   {
+    "nome": "Santa Marina",
+    "grau": "MR",
+    "wiki": "en:Marina the Monk",
+    "nota": ""
+   }
+  ],
+  "06-19": [
+   {
+    "nome": "São Romualdo, abade",
+    "grau": "m",
+    "wiki": "en:Romuald",
+    "nota": ""
+   }
+  ],
+  "06-20": [
+   {
+    "nome": "Beata Margarida Ebner",
+    "grau": "MR",
+    "wiki": "en:Margareta Ebner",
+    "nota": ""
+   }
+  ],
+  "06-21": [
+   {
+    "nome": "São Luís Gonzaga, religioso",
+    "grau": "M",
+    "wiki": "en:Aloysius Gonzaga",
+    "nota": "Padroeiro da juventude"
+   }
+  ],
+  "06-22": [
+   {
+    "nome": "São Paulino de Nola; Santos João Fisher e Tomás More, mártires",
+    "grau": "m",
+    "wiki": "en:Thomas More",
+    "nota": ""
+   }
+  ],
+  "06-23": [
+   {
+    "nome": "São José Cafasso",
+    "grau": "MR",
+    "wiki": "en:Joseph Cafasso",
+    "nota": ""
+   }
+  ],
+  "06-24": [
+   {
+    "nome": "Natividade de São João Batista",
+    "grau": "S",
+    "wiki": "en:Nativity of John the Baptist",
+    "nota": "Festa junina mais importante do Brasil"
+   }
+  ],
+  "06-25": [
+   {
+    "nome": "São Guilherme de Vercelli",
+    "grau": "MR",
+    "wiki": "en:William of Montevergine",
+    "nota": ""
+   }
+  ],
+  "06-26": [
+   {
+    "nome": "São Josemaria Escrivá",
+    "grau": "MR",
+    "wiki": "en:Josemaría Escrivá",
+    "nota": "Fundador do Opus Dei; canonizado em 2002"
+   }
+  ],
+  "06-27": [
+   {
+    "nome": "São Cirilo de Alexandria",
+    "grau": "m",
+    "wiki": "en:Cyril of Alexandria",
+    "nota": "Bispo e doutor; Nossa Senhora do Perpétuo Socorro"
+   }
+  ],
+  "06-28": [
+   {
+    "nome": "Santo Irineu de Lyon, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Irenaeus",
+    "nota": "Doutor da Igreja desde 2022"
+   }
+  ],
+  "06-29": [
+   {
+    "nome": "São Pedro e São Paulo, apóstolos",
+    "grau": "S",
+    "wiki": "en:Feast of Saints Peter and Paul",
+    "nota": ""
+   }
+  ],
+  "06-30": [
+   {
+    "nome": "Primeiros Mártires da Igreja de Roma",
+    "grau": "m",
+    "wiki": "en:Martyrs of Rome under Nero",
+    "nota": ""
+   }
+  ],
+  "07-01": [
+   {
+    "nome": "Santo Aarão; Beato Antônio Rosmini",
+    "grau": "MR",
+    "wiki": "en:Antonio Rosmini",
+    "nota": ""
+   }
+  ],
+  "07-02": [
+   {
+    "nome": "São Bernardino Realino",
+    "grau": "MR",
+    "wiki": "en:Bernardino Realino",
+    "nota": ""
+   }
+  ],
+  "07-03": [
+   {
+    "nome": "São Tomé, apóstolo",
+    "grau": "F",
+    "wiki": "en:Thomas the Apostle",
+    "nota": ""
+   }
+  ],
+  "07-04": [
+   {
+    "nome": "Santa Isabel de Portugal",
+    "grau": "m",
+    "wiki": "en:Elizabeth of Aragon",
+    "nota": "Rainha Santa; corpo incorrupto em Coimbra"
+   }
+  ],
+  "07-05": [
+   {
+    "nome": "Santo Antônio Maria Zaccaria",
+    "grau": "m",
+    "wiki": "en:Anthony Maria Zaccaria",
+    "nota": ""
+   }
+  ],
+  "07-06": [
+   {
+    "nome": "Santa Maria Goretti, virgem e mártir",
+    "grau": "m",
+    "wiki": "en:Maria Goretti",
+    "nota": ""
+   }
+  ],
+  "07-07": [
+   {
+    "nome": "Beato Pedro To Rot",
+    "grau": "MR",
+    "wiki": "en:Peter To Rot",
+    "nota": ""
+   }
+  ],
+  "07-08": [
+   {
+    "nome": "Santos Áquila e Priscila",
+    "grau": "MR",
+    "wiki": "en:Priscilla and Aquila",
+    "nota": ""
+   }
+  ],
+  "07-09": [
+   {
+    "nome": "Santo Agostinho Zhao Rong e companheiros, mártires",
+    "grau": "m",
+    "wiki": "en:Augustine Zhao Rong",
+    "nota": "Mártires da China; Nossa Senhora Rainha da Paz"
+   }
+  ],
+  "07-10": [
+   {
+    "nome": "Santa Verônica Giuliani",
+    "grau": "MR",
+    "wiki": "en:Veronica Giuliani",
+    "nota": ""
+   }
+  ],
+  "07-11": [
+   {
+    "nome": "São Bento, abade",
+    "grau": "M",
+    "wiki": "en:Benedict of Nursia",
+    "nota": "Padroeiro da Europa"
+   }
+  ],
+  "07-12": [
+   {
+    "nome": "Santos Luís e Zélia Martin",
+    "grau": "MR",
+    "wiki": "en:Louis and Zélie Martin",
+    "nota": "Pais de Santa Teresinha; canonizados em 2015"
+   }
+  ],
+  "07-13": [
+   {
+    "nome": "Santo Henrique, imperador",
+    "grau": "m",
+    "wiki": "en:Henry II, Holy Roman Emperor",
+    "nota": ""
+   }
+  ],
+  "07-14": [
+   {
+    "nome": "São Camilo de Lellis",
+    "grau": "m",
+    "wiki": "en:Camillus de Lellis",
+    "nota": "Padroeiro dos doentes e hospitais"
+   }
+  ],
+  "07-15": [
+   {
+    "nome": "São Boaventura",
+    "grau": "M",
+    "wiki": "en:Bonaventure",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "07-16": [
+   {
+    "nome": "Nossa Senhora do Carmo",
+    "grau": "m",
+    "wiki": "en:Our Lady of Mount Carmel",
+    "nota": "Escapulário; padroeira de várias cidades brasileiras"
+   },
+   {
+    "nome": "Beato Padre Ibiapina",
+    "grau": "BR",
+    "wiki": "pt:Padre Ibiapina",
+    "nota": "Apóstolo do Nordeste; beatificação em processo (verificar status no dia)"
+   }
+  ],
+  "07-17": [
+   {
+    "nome": "Beatas Carmelitas de Compiègne, mártires",
+    "grau": "MR",
+    "wiki": "en:Martyrs of Compiègne",
+    "nota": "Canonizadas em 2024"
+   }
+  ],
+  "07-18": [
+   {
+    "nome": "São Frederico de Utrecht",
+    "grau": "MR",
+    "wiki": "en:Frederick of Utrecht",
+    "nota": ""
+   }
+  ],
+  "07-19": [
+   {
+    "nome": "Santa Macrina, a Jovem",
+    "grau": "MR",
+    "wiki": "en:Macrina the Younger",
+    "nota": ""
+   }
+  ],
+  "07-20": [
+   {
+    "nome": "Santo Apolinário, bispo e mártir",
+    "grau": "m",
+    "wiki": "en:Apollinaris of Ravenna",
+    "nota": ""
+   }
+  ],
+  "07-21": [
+   {
+    "nome": "São Lourenço de Brindisi",
+    "grau": "m",
+    "wiki": "en:Lawrence of Brindisi",
+    "nota": "Doutor da Igreja"
+   }
+  ],
+  "07-22": [
+   {
+    "nome": "Santa Maria Madalena",
+    "grau": "F",
+    "wiki": "en:Mary Magdalene",
+    "nota": ""
+   }
+  ],
+  "07-23": [
+   {
+    "nome": "Santa Brígida da Suécia",
+    "grau": "m",
+    "wiki": "en:Bridget of Sweden",
+    "nota": "Copadroeira da Europa"
+   }
+  ],
+  "07-24": [
+   {
+    "nome": "São Charbel Makhlouf",
+    "grau": "m",
+    "wiki": "en:Charbel Makhlouf",
+    "nota": "Monge maronita; corpo exsudou líquido por décadas"
+   }
+  ],
+  "07-25": [
+   {
+    "nome": "São Tiago Maior, apóstolo",
+    "grau": "F",
+    "wiki": "en:James the Great",
+    "nota": "Santiago de Compostela"
+   }
+  ],
+  "07-26": [
+   {
+    "nome": "Santos Joaquim e Ana",
+    "grau": "M",
+    "wiki": "en:Saints Anne and Joachim",
+    "nota": "Pais de Nossa Senhora; Dia dos Avós"
+   }
+  ],
+  "07-27": [
+   {
+    "nome": "São Pantaleão",
+    "grau": "MR",
+    "wiki": "en:Pantaleon",
+    "nota": "Sangue que se liquefaz em Ravello"
+   }
+  ],
+  "07-28": [
+   {
+    "nome": "Santos Nazário e Celso",
+    "grau": "MR",
+    "wiki": "en:Nazarius and Celsus",
+    "nota": ""
+   }
+  ],
+  "07-29": [
+   {
+    "nome": "Santas Marta, Maria e Lázaro",
+    "grau": "M",
+    "wiki": "en:Martha",
+    "nota": "Memória conjunta desde 2021"
+   }
+  ],
+  "07-30": [
+   {
+    "nome": "São Pedro Crisólogo",
+    "grau": "m",
+    "wiki": "en:Peter Chrysologus",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "07-31": [
+   {
+    "nome": "Santo Inácio de Loyola",
+    "grau": "M",
+    "wiki": "en:Ignatius of Loyola",
+    "nota": ""
+   }
+  ],
+  "08-01": [
+   {
+    "nome": "Santo Afonso Maria de Ligório",
+    "grau": "M",
+    "wiki": "en:Alphonsus Liguori",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "08-02": [
+   {
+    "nome": "Santo Eusébio de Vercelli; São Pedro Julião Eymard",
+    "grau": "m",
+    "wiki": "en:Peter Julian Eymard",
+    "nota": "Eymard: apóstolo da Eucaristia"
+   }
+  ],
+  "08-03": [
+   {
+    "nome": "Santa Lídia de Tiatira",
+    "grau": "MR",
+    "wiki": "en:Lydia of Thyatira",
+    "nota": ""
+   }
+  ],
+  "08-04": [
+   {
+    "nome": "São João Maria Vianney",
+    "grau": "M",
+    "wiki": "en:John Vianney",
+    "nota": "Cura d'Ars; padroeiro dos párocos; corpo incorrupto"
+   }
+  ],
+  "08-05": [
+   {
+    "nome": "Dedicação da Basílica de Santa Maria Maior",
+    "grau": "m",
+    "wiki": "en:Santa Maria Maggiore",
+    "nota": "Nossa Senhora das Neves"
+   }
+  ],
+  "08-06": [
+   {
+    "nome": "Transfiguração do Senhor",
+    "grau": "F",
+    "wiki": "en:Feast of the Transfiguration",
+    "nota": ""
+   }
+  ],
+  "08-07": [
+   {
+    "nome": "São Sisto II e companheiros; São Caetano",
+    "grau": "m",
+    "wiki": "en:Cajetan",
+    "nota": ""
+   }
+  ],
+  "08-08": [
+   {
+    "nome": "São Domingos de Gusmão",
+    "grau": "M",
+    "wiki": "en:Saint Dominic",
+    "nota": ""
+   }
+  ],
+  "08-09": [
+   {
+    "nome": "Santa Teresa Benedita da Cruz (Edith Stein)",
+    "grau": "m",
+    "wiki": "en:Edith Stein",
+    "nota": "Copadroeira da Europa; mártir em Auschwitz"
+   }
+  ],
+  "08-10": [
+   {
+    "nome": "São Lourenço, diácono e mártir",
+    "grau": "F",
+    "wiki": "en:Lawrence of Rome",
+    "nota": ""
+   }
+  ],
+  "08-11": [
+   {
+    "nome": "Santa Clara de Assis",
+    "grau": "M",
+    "wiki": "en:Clare of Assisi",
+    "nota": ""
+   }
+  ],
+  "08-12": [
+   {
+    "nome": "Santa Joana Francisca de Chantal",
+    "grau": "m",
+    "wiki": "en:Jane Frances de Chantal",
+    "nota": ""
+   }
+  ],
+  "08-13": [
+   {
+    "nome": "Santos Ponciano e Hipólito, mártires",
+    "grau": "m",
+    "wiki": "en:Pope Pontian",
+    "nota": ""
+   },
+   {
+    "nome": "Santa Dulce dos Pobres",
+    "grau": "BR",
+    "wiki": "pt:Irmã Dulce",
+    "nota": "Primeira santa brasileira; canonizada em 13/10/2019; memória em 13/8"
+   }
+  ],
+  "08-14": [
+   {
+    "nome": "São Maximiliano Maria Kolbe",
+    "grau": "M",
+    "wiki": "en:Maximilian Kolbe",
+    "nota": "Mártir da caridade em Auschwitz"
+   }
+  ],
+  "08-15": [
+   {
+    "nome": "Assunção de Nossa Senhora",
+    "grau": "S",
+    "wiki": "en:Assumption of Mary",
+    "nota": "Dogma proclamado em 1950"
+   }
+  ],
+  "08-16": [
+   {
+    "nome": "Santo Estêvão da Hungria",
+    "grau": "m",
+    "wiki": "en:Stephen I of Hungary",
+    "nota": ""
+   },
+   {
+    "nome": "Beatos Mártires de Cunhaú e Uruaçu (Santos desde 2017)",
+    "grau": "BR",
+    "wiki": "pt:Mártires de Cunhaú e Uruaçu",
+    "nota": "Canonizados em 15/10/2017 por Francisco; memória em 3/10 na diocese"
+   }
+  ],
+  "08-17": [
+   {
+    "nome": "Santa Beatriz da Silva",
+    "grau": "MR",
+    "wiki": "en:Beatrice of Silva",
+    "nota": ""
+   }
+  ],
+  "08-18": [
+   {
+    "nome": "Santa Helena, imperatriz",
+    "grau": "MR",
+    "wiki": "en:Helena, mother of Constantine I",
+    "nota": "Achado da Vera Cruz"
+   }
+  ],
+  "08-19": [
+   {
+    "nome": "São João Eudes",
+    "grau": "m",
+    "wiki": "en:John Eudes",
+    "nota": ""
+   }
+  ],
+  "08-20": [
+   {
+    "nome": "São Bernardo de Claraval",
+    "grau": "M",
+    "wiki": "en:Bernard of Clairvaux",
+    "nota": "Abade e doutor da Igreja"
+   }
+  ],
+  "08-21": [
+   {
+    "nome": "São Pio X, papa",
+    "grau": "M",
+    "wiki": "en:Pope Pius X",
+    "nota": "Corpo incorrupto na Basílica de São Pedro"
+   }
+  ],
+  "08-22": [
+   {
+    "nome": "Nossa Senhora Rainha",
+    "grau": "M",
+    "wiki": "en:Queen of Heaven",
+    "nota": ""
+   }
+  ],
+  "08-23": [
+   {
+    "nome": "Santa Rosa de Lima",
+    "grau": "m",
+    "wiki": "en:Rose of Lima",
+    "nota": "Padroeira da América Latina"
+   }
+  ],
+  "08-24": [
+   {
+    "nome": "São Bartolomeu, apóstolo",
+    "grau": "F",
+    "wiki": "en:Bartholomew the Apostle",
+    "nota": ""
+   }
+  ],
+  "08-25": [
+   {
+    "nome": "São Luís IX, rei; São José de Calasanz",
+    "grau": "m",
+    "wiki": "en:Louis IX of France",
+    "nota": ""
+   }
+  ],
+  "08-26": [
+   {
+    "nome": "Beata Maria de Jesus Crucificado",
+    "grau": "MR",
+    "wiki": "en:Mariam Baouardy",
+    "nota": ""
+   }
+  ],
+  "08-27": [
+   {
+    "nome": "Santa Mônica",
+    "grau": "M",
+    "wiki": "en:Monica of Hippo",
+    "nota": ""
+   }
+  ],
+  "08-28": [
+   {
+    "nome": "Santo Agostinho",
+    "grau": "M",
+    "wiki": "en:Augustine of Hippo",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "08-29": [
+   {
+    "nome": "Martírio de São João Batista",
+    "grau": "M",
+    "wiki": "en:Beheading of John the Baptist",
+    "nota": ""
+   }
+  ],
+  "08-30": [
+   {
+    "nome": "Santa Joana Jugan",
+    "grau": "MR",
+    "wiki": "en:Jeanne Jugan",
+    "nota": ""
+   }
+  ],
+  "08-31": [
+   {
+    "nome": "São Raimundo Nonato",
+    "grau": "MR",
+    "wiki": "en:Raymond Nonnatus",
+    "nota": ""
+   }
+  ],
+  "09-01": [
+   {
+    "nome": "Santa Teresa Margarida Redi",
+    "grau": "MR",
+    "wiki": "en:Teresa Margaret of the Sacred Heart",
+    "nota": ""
+   }
+  ],
+  "09-02": [
+   {
+    "nome": "Beatos Mártires de Setembro (Paris, 1792)",
+    "grau": "MR",
+    "wiki": "en:September Massacres",
+    "nota": ""
+   }
+  ],
+  "09-03": [
+   {
+    "nome": "São Gregório Magno, papa",
+    "grau": "M",
+    "wiki": "en:Pope Gregory I",
+    "nota": "Doutor da Igreja"
+   }
+  ],
+  "09-04": [
+   {
+    "nome": "Santa Rosália",
+    "grau": "MR",
+    "wiki": "en:Saint Rosalia",
+    "nota": "Padroeira de Palermo; fim da peste de 1624"
+   }
+  ],
+  "09-05": [
+   {
+    "nome": "Santa Teresa de Calcutá",
+    "grau": "m",
+    "wiki": "en:Mother Teresa",
+    "nota": "Canonizada em 2016; um dos milagres ocorreu no Brasil"
+   }
+  ],
+  "09-06": [
+   {
+    "nome": "São Zacarias, profeta",
+    "grau": "MR",
+    "wiki": "en:Zechariah (New Testament figure)",
+    "nota": ""
+   }
+  ],
+  "09-07": [
+   {
+    "nome": "Santa Regina",
+    "grau": "MR",
+    "wiki": "en:Regina (martyr)",
+    "nota": "Independência do Brasil"
+   }
+  ],
+  "09-08": [
+   {
+    "nome": "Natividade de Nossa Senhora",
+    "grau": "F",
+    "wiki": "en:Nativity of Mary",
+    "nota": ""
+   }
+  ],
+  "09-09": [
+   {
+    "nome": "São Pedro Claver",
+    "grau": "m",
+    "wiki": "en:Peter Claver",
+    "nota": "Apóstolo dos escravizados em Cartagena"
+   }
+  ],
+  "09-10": [
+   {
+    "nome": "São Nicolau de Tolentino",
+    "grau": "MR",
+    "wiki": "en:Nicholas of Tolentino",
+    "nota": ""
+   }
+  ],
+  "09-11": [
+   {
+    "nome": "São João Gabriel Perboyre",
+    "grau": "MR",
+    "wiki": "en:Jean-Gabriel Perboyre",
+    "nota": ""
+   }
+  ],
+  "09-12": [
+   {
+    "nome": "Santíssimo Nome de Maria",
+    "grau": "m",
+    "wiki": "en:Feast of the Holy Name of Mary",
+    "nota": ""
+   }
+  ],
+  "09-13": [
+   {
+    "nome": "São João Crisóstomo",
+    "grau": "M",
+    "wiki": "en:John Chrysostom",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "09-14": [
+   {
+    "nome": "Exaltação da Santa Cruz",
+    "grau": "F",
+    "wiki": "en:Feast of the Cross",
+    "nota": ""
+   }
+  ],
+  "09-15": [
+   {
+    "nome": "Nossa Senhora das Dores",
+    "grau": "M",
+    "wiki": "en:Our Lady of Sorrows",
+    "nota": ""
+   }
+  ],
+  "09-16": [
+   {
+    "nome": "Santos Cornélio, papa, e Cipriano, bispo, mártires",
+    "grau": "M",
+    "wiki": "en:Cyprian",
+    "nota": ""
+   }
+  ],
+  "09-17": [
+   {
+    "nome": "São Roberto Belarmino; Santa Hildegarda de Bingen",
+    "grau": "m",
+    "wiki": "en:Hildegard of Bingen",
+    "nota": "Ambos doutores da Igreja"
+   }
+  ],
+  "09-18": [
+   {
+    "nome": "São José de Cupertino",
+    "grau": "MR",
+    "wiki": "en:Joseph of Cupertino",
+    "nota": "Levitações documentadas no processo de canonização"
+   }
+  ],
+  "09-19": [
+   {
+    "nome": "São Januário (San Gennaro), bispo e mártir",
+    "grau": "m",
+    "wiki": "en:Januarius",
+    "nota": "Liquefação do sangue em Nápoles"
+   }
+  ],
+  "09-20": [
+   {
+    "nome": "Santos André Kim Taegon, Paulo Chong Hasang e companheiros",
+    "grau": "M",
+    "wiki": "en:Andrew Kim Taegon",
+    "nota": "Mártires da Coreia"
+   }
+  ],
+  "09-21": [
+   {
+    "nome": "São Mateus, apóstolo e evangelista",
+    "grau": "F",
+    "wiki": "en:Matthew the Apostle",
+    "nota": ""
+   }
+  ],
+  "09-22": [
+   {
+    "nome": "São Maurício e companheiros, mártires",
+    "grau": "MR",
+    "wiki": "en:Saint Maurice",
+    "nota": ""
+   }
+  ],
+  "09-23": [
+   {
+    "nome": "São Pio de Pietrelcina (Padre Pio)",
+    "grau": "M",
+    "wiki": "en:Padre Pio",
+    "nota": "Estigmas; canonizado em 2002"
+   }
+  ],
+  "09-24": [
+   {
+    "nome": "Nossa Senhora das Mercês",
+    "grau": "MR",
+    "wiki": "en:Our Lady of Mercy",
+    "nota": ""
+   }
+  ],
+  "09-25": [
+   {
+    "nome": "Santos Cléofas; Sérgio de Radonej",
+    "grau": "MR",
+    "wiki": "en:Cleopas",
+    "nota": ""
+   }
+  ],
+  "09-26": [
+   {
+    "nome": "Santos Cosme e Damião, mártires",
+    "grau": "m",
+    "wiki": "en:Saints Cosmas and Damian",
+    "nota": "Dia das crianças no Brasil popular"
+   }
+  ],
+  "09-27": [
+   {
+    "nome": "São Vicente de Paulo",
+    "grau": "M",
+    "wiki": "en:Vincent de Paul",
+    "nota": ""
+   }
+  ],
+  "09-28": [
+   {
+    "nome": "São Venceslau; São Lourenço Ruiz e companheiros",
+    "grau": "m",
+    "wiki": "en:Lorenzo Ruiz",
+    "nota": ""
+   }
+  ],
+  "09-29": [
+   {
+    "nome": "Santos Miguel, Gabriel e Rafael, arcanjos",
+    "grau": "F",
+    "wiki": "en:Michael (archangel)",
+    "nota": ""
+   },
+   {
+    "nome": "Beatos Manuel e Adílio (mártires de Nonoai)",
+    "grau": "BR",
+    "wiki": "pt:Manuel Gómez González e Adílio Daronch",
+    "nota": "Beatificados em 2007, Rio Grande do Sul"
+   }
+  ],
+  "09-30": [
+   {
+    "nome": "São Jerônimo",
+    "grau": "M",
+    "wiki": "en:Jerome",
+    "nota": "Presbítero e doutor da Igreja"
+   }
+  ],
+  "10-01": [
+   {
+    "nome": "Santa Teresinha do Menino Jesus",
+    "grau": "M",
+    "wiki": "en:Thérèse of Lisieux",
+    "nota": "Virgem e doutora; padroeira das missões"
+   }
+  ],
+  "10-02": [
+   {
+    "nome": "Santos Anjos da Guarda",
+    "grau": "M",
+    "wiki": "en:Guardian angel",
+    "nota": ""
+   }
+  ],
+  "10-03": [
+   {
+    "nome": "São Francisco de Borja",
+    "grau": "MR",
+    "wiki": "en:Francis Borgia",
+    "nota": ""
+   }
+  ],
+  "10-04": [
+   {
+    "nome": "São Francisco de Assis",
+    "grau": "M",
+    "wiki": "en:Francis of Assisi",
+    "nota": ""
+   }
+  ],
+  "10-05": [
+   {
+    "nome": "Santa Faustina Kowalska",
+    "grau": "m",
+    "wiki": "en:Faustina Kowalska",
+    "nota": "Divina Misericórdia; Beato Francisco Xavier Seelos"
+   }
+  ],
+  "10-06": [
+   {
+    "nome": "São Bruno, presbítero",
+    "grau": "m",
+    "wiki": "en:Bruno of Cologne",
+    "nota": ""
+   }
+  ],
+  "10-07": [
+   {
+    "nome": "Nossa Senhora do Rosário",
+    "grau": "M",
+    "wiki": "en:Our Lady of the Rosary",
+    "nota": "Batalha de Lepanto, 1571"
+   }
+  ],
+  "10-08": [
+   {
+    "nome": "Santa Pelágia",
+    "grau": "MR",
+    "wiki": "en:Pelagia of Antioch",
+    "nota": ""
+   }
+  ],
+  "10-09": [
+   {
+    "nome": "São Dionísio e companheiros; São João Leonardi",
+    "grau": "m",
+    "wiki": "en:Denis",
+    "nota": ""
+   }
+  ],
+  "10-10": [
+   {
+    "nome": "São Daniel Comboni",
+    "grau": "MR",
+    "wiki": "en:Daniele Comboni",
+    "nota": ""
+   }
+  ],
+  "10-11": [
+   {
+    "nome": "São João XXIII, papa",
+    "grau": "m",
+    "wiki": "en:Pope John XXIII",
+    "nota": "Corpo exposto na Basílica de São Pedro"
+   }
+  ],
+  "10-12": [
+   {
+    "nome": "Nossa Senhora da Conceição Aparecida",
+    "grau": "S",
+    "wiki": "pt:Nossa Senhora Aparecida",
+    "nota": "Padroeira do Brasil; imagem encontrada no rio Paraíba em 1717"
+   },
+   {
+    "nome": "Nossa Senhora Aparecida",
+    "grau": "BR",
+    "wiki": "pt:Nossa Senhora Aparecida",
+    "nota": "Solenidade e feriado nacional"
+   }
+  ],
+  "10-13": [
+   {
+    "nome": "Santo Eduardo, o Confessor",
+    "grau": "MR",
+    "wiki": "en:Edward the Confessor",
+    "nota": "Milagre do Sol em Fátima, 1917"
+   }
+  ],
+  "10-14": [
+   {
+    "nome": "São Calisto I, papa e mártir",
+    "grau": "m",
+    "wiki": "en:Pope Callixtus I",
+    "nota": ""
+   }
+  ],
+  "10-15": [
+   {
+    "nome": "Santa Teresa de Jesus (de Ávila)",
+    "grau": "M",
+    "wiki": "en:Teresa of Ávila",
+    "nota": "Virgem e doutora; corpo incorrupto em Alba de Tormes"
+   }
+  ],
+  "10-16": [
+   {
+    "nome": "Santa Edviges; Santa Margarida Maria Alacoque",
+    "grau": "m",
+    "wiki": "en:Margaret Mary Alacoque",
+    "nota": "Alacoque: aparições do Sagrado Coração"
+   }
+  ],
+  "10-17": [
+   {
+    "nome": "Santo Inácio de Antioquia, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Ignatius of Antioch",
+    "nota": ""
+   }
+  ],
+  "10-18": [
+   {
+    "nome": "São Lucas, evangelista",
+    "grau": "F",
+    "wiki": "en:Luke the Evangelist",
+    "nota": ""
+   }
+  ],
+  "10-19": [
+   {
+    "nome": "Santos João de Brébeuf, Isaac Jogues e companheiros; São Paulo da Cruz",
+    "grau": "m",
+    "wiki": "en:Isaac Jogues",
+    "nota": ""
+   },
+   {
+    "nome": "São Pedro de Alcântara",
+    "grau": "BR",
+    "wiki": "en:Peter of Alcantara",
+    "nota": "Padroeiro do Brasil (Império)"
+   }
+  ],
+  "10-20": [
+   {
+    "nome": "Santa Maria Bertilla Boscardin",
+    "grau": "MR",
+    "wiki": "en:Maria Bertilla Boscardin",
+    "nota": ""
+   }
+  ],
+  "10-21": [
+   {
+    "nome": "Santa Úrsula e companheiras",
+    "grau": "MR",
+    "wiki": "en:Saint Ursula",
+    "nota": ""
+   }
+  ],
+  "10-22": [
+   {
+    "nome": "São João Paulo II, papa",
+    "grau": "m",
+    "wiki": "en:Pope John Paul II",
+    "nota": "Canonizado em 2014"
+   }
+  ],
+  "10-23": [
+   {
+    "nome": "São João de Capistrano",
+    "grau": "m",
+    "wiki": "en:John of Capistrano",
+    "nota": ""
+   }
+  ],
+  "10-24": [
+   {
+    "nome": "Santo Antônio Maria Claret",
+    "grau": "m",
+    "wiki": "en:Anthony Mary Claret",
+    "nota": ""
+   }
+  ],
+  "10-25": [
+   {
+    "nome": "Santos Crispim e Crispiniano",
+    "grau": "MR",
+    "wiki": "en:Crispin and Crispinian",
+    "nota": "Frei Galvão: canonizado em 11/5/2007; ver 10-25 no calendário do Brasil"
+   }
+  ],
+  "10-26": [
+   {
+    "nome": "Santo Evaristo, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Evaristus",
+    "nota": ""
+   }
+  ],
+  "10-27": [
+   {
+    "nome": "Santa Sabina de Ávila",
+    "grau": "MR",
+    "wiki": "en:Vincent, Sabina and Christeta",
+    "nota": ""
+   }
+  ],
+  "10-28": [
+   {
+    "nome": "São Simão e São Judas Tadeu, apóstolos",
+    "grau": "F",
+    "wiki": "en:Jude the Apostle",
+    "nota": "Judas Tadeu: causas desesperadas"
+   }
+  ],
+  "10-29": [
+   {
+    "nome": "Beato Miguel Rua",
+    "grau": "MR",
+    "wiki": "en:Michael Rua",
+    "nota": ""
+   }
+  ],
+  "10-30": [
+   {
+    "nome": "Santo Afonso Rodrigues",
+    "grau": "MR",
+    "wiki": "en:Alphonsus Rodriguez",
+    "nota": ""
+   }
+  ],
+  "10-31": [
+   {
+    "nome": "Santo Afonso Rodríguez; Beato Angelo d'Acri",
+    "grau": "MR",
+    "wiki": "en:Angelo of Acri",
+    "nota": ""
+   }
+  ],
+  "11-01": [
+   {
+    "nome": "Todos os Santos",
+    "grau": "S",
+    "wiki": "en:All Saints' Day",
+    "nota": ""
+   }
+  ],
+  "11-02": [
+   {
+    "nome": "Comemoração de Todos os Fiéis Defuntos",
+    "grau": "S",
+    "wiki": "en:All Souls' Day",
+    "nota": "Finados"
+   }
+  ],
+  "11-03": [
+   {
+    "nome": "São Martinho de Lima (de Porres)",
+    "grau": "m",
+    "wiki": "en:Martin de Porres",
+    "nota": "Primeiro santo negro das Américas"
+   }
+  ],
+  "11-04": [
+   {
+    "nome": "São Carlos Borromeu, bispo",
+    "grau": "M",
+    "wiki": "en:Charles Borromeo",
+    "nota": ""
+   }
+  ],
+  "11-05": [
+   {
+    "nome": "Santos Zacarias e Isabel",
+    "grau": "MR",
+    "wiki": "en:Elizabeth (biblical figure)",
+    "nota": ""
+   }
+  ],
+  "11-06": [
+   {
+    "nome": "São Leonardo de Noblac",
+    "grau": "MR",
+    "wiki": "en:Leonard of Noblac",
+    "nota": ""
+   }
+  ],
+  "11-07": [
+   {
+    "nome": "São Vilibrordo",
+    "grau": "MR",
+    "wiki": "en:Willibrord",
+    "nota": ""
+   }
+  ],
+  "11-08": [
+   {
+    "nome": "Beato João Duns Scotus; Santa Isabel da Trindade",
+    "grau": "MR",
+    "wiki": "en:Elizabeth of the Trinity",
+    "nota": ""
+   }
+  ],
+  "11-09": [
+   {
+    "nome": "Dedicação da Basílica de Latrão",
+    "grau": "F",
+    "wiki": "en:Archbasilica of Saint John Lateran",
+    "nota": ""
+   }
+  ],
+  "11-10": [
+   {
+    "nome": "São Leão Magno, papa",
+    "grau": "M",
+    "wiki": "en:Pope Leo I",
+    "nota": "Doutor da Igreja"
+   }
+  ],
+  "11-11": [
+   {
+    "nome": "São Martinho de Tours, bispo",
+    "grau": "M",
+    "wiki": "en:Martin of Tours",
+    "nota": ""
+   }
+  ],
+  "11-12": [
+   {
+    "nome": "São Josafá, bispo e mártir",
+    "grau": "M",
+    "wiki": "en:Josaphat Kuntsevych",
+    "nota": ""
+   }
+  ],
+  "11-13": [
+   {
+    "nome": "Santa Francisca Xavier Cabrini",
+    "grau": "MR",
+    "wiki": "en:Frances Xavier Cabrini",
+    "nota": "Primeira cidadã dos EUA canonizada"
+   }
+  ],
+  "11-14": [
+   {
+    "nome": "São Lourenço O'Toole",
+    "grau": "MR",
+    "wiki": "en:Lorcán Ua Tuathail",
+    "nota": ""
+   }
+  ],
+  "11-15": [
+   {
+    "nome": "Santo Alberto Magno",
+    "grau": "m",
+    "wiki": "en:Albertus Magnus",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "11-16": [
+   {
+    "nome": "Santa Margarida da Escócia; Santa Gertrudes",
+    "grau": "m",
+    "wiki": "en:Gertrude the Great",
+    "nota": ""
+   }
+  ],
+  "11-17": [
+   {
+    "nome": "Santa Isabel da Hungria",
+    "grau": "M",
+    "wiki": "en:Elizabeth of Hungary",
+    "nota": ""
+   }
+  ],
+  "11-18": [
+   {
+    "nome": "Dedicação das Basílicas de São Pedro e São Paulo",
+    "grau": "m",
+    "wiki": "en:St. Peter's Basilica",
+    "nota": ""
+   }
+  ],
+  "11-19": [
+   {
+    "nome": "São Rafael Kalinowski",
+    "grau": "MR",
+    "wiki": "en:Raphael Kalinowski",
+    "nota": ""
+   },
+   {
+    "nome": "Santo Roque González e companheiros, mártires",
+    "grau": "BR",
+    "wiki": "en:Roque González de Santa Cruz",
+    "nota": "Mártires das Reduções, Rio Grande do Sul, 1628"
+   }
+  ],
+  "11-20": [
+   {
+    "nome": "Santo Edmundo, rei e mártir",
+    "grau": "MR",
+    "wiki": "en:Edmund the Martyr",
+    "nota": ""
+   }
+  ],
+  "11-21": [
+   {
+    "nome": "Apresentação de Nossa Senhora",
+    "grau": "M",
+    "wiki": "en:Presentation of Mary",
+    "nota": ""
+   }
+  ],
+  "11-22": [
+   {
+    "nome": "Santa Cecília, virgem e mártir",
+    "grau": "M",
+    "wiki": "en:Saint Cecilia",
+    "nota": "Padroeira dos músicos; corpo encontrado incorrupto em 1599"
+   }
+  ],
+  "11-23": [
+   {
+    "nome": "São Clemente I, papa; São Columbano",
+    "grau": "m",
+    "wiki": "en:Pope Clement I",
+    "nota": ""
+   }
+  ],
+  "11-24": [
+   {
+    "nome": "Santo André Dung-Lac e companheiros, mártires",
+    "grau": "M",
+    "wiki": "en:Andrew Dung-Lac",
+    "nota": "Mártires do Vietnã"
+   }
+  ],
+  "11-25": [
+   {
+    "nome": "Santa Catarina de Alexandria",
+    "grau": "m",
+    "wiki": "en:Catherine of Alexandria",
+    "nota": ""
+   }
+  ],
+  "11-26": [
+   {
+    "nome": "São Leonardo de Porto Maurício",
+    "grau": "MR",
+    "wiki": "en:Leonard of Port Maurice",
+    "nota": ""
+   }
+  ],
+  "11-27": [
+   {
+    "nome": "Nossa Senhora da Medalha Milagrosa",
+    "grau": "MR",
+    "wiki": "en:Miraculous Medal",
+    "nota": "Aparições a Santa Catarina Labouré, 1830"
+   }
+  ],
+  "11-28": [
+   {
+    "nome": "Santa Catarina Labouré",
+    "grau": "MR",
+    "wiki": "en:Catherine Labouré",
+    "nota": "Corpo incorrupto na Rue du Bac"
+   },
+   {
+    "nome": "Beata Nhá Chica (Francisca de Paula de Jesus)",
+    "grau": "BR",
+    "wiki": "pt:Nhá Chica",
+    "nota": "Beatificada em 2013; Baependi, MG"
+   }
+  ],
+  "11-29": [
+   {
+    "nome": "Todos os Santos da Ordem Franciscana",
+    "grau": "MR",
+    "wiki": "en:Franciscans",
+    "nota": ""
+   }
+  ],
+  "11-30": [
+   {
+    "nome": "Santo André, apóstolo",
+    "grau": "F",
+    "wiki": "en:Andrew the Apostle",
+    "nota": ""
+   }
+  ],
+  "12-01": [
+   {
+    "nome": "Santo Eloi; Beato Carlos de Foucauld (canonizado 2022)",
+    "grau": "MR",
+    "wiki": "en:Charles de Foucauld",
+    "nota": ""
+   }
+  ],
+  "12-02": [
+   {
+    "nome": "Santa Bibiana",
+    "grau": "MR",
+    "wiki": "en:Bibiana",
+    "nota": ""
+   }
+  ],
+  "12-03": [
+   {
+    "nome": "São Francisco Xavier",
+    "grau": "M",
+    "wiki": "en:Francis Xavier",
+    "nota": "Padroeiro das missões; corpo incorrupto em Goa"
+   }
+  ],
+  "12-04": [
+   {
+    "nome": "São João Damasceno",
+    "grau": "m",
+    "wiki": "en:John of Damascus",
+    "nota": "Doutor da Igreja; Santa Bárbara"
+   }
+  ],
+  "12-05": [
+   {
+    "nome": "São Sabas, abade",
+    "grau": "MR",
+    "wiki": "en:Sabbas the Sanctified",
+    "nota": ""
+   }
+  ],
+  "12-06": [
+   {
+    "nome": "São Nicolau, bispo",
+    "grau": "m",
+    "wiki": "en:Saint Nicholas",
+    "nota": "Maná de Bari"
+   }
+  ],
+  "12-07": [
+   {
+    "nome": "Santo Ambrósio",
+    "grau": "M",
+    "wiki": "en:Ambrose",
+    "nota": "Bispo e doutor da Igreja"
+   }
+  ],
+  "12-08": [
+   {
+    "nome": "Imaculada Conceição de Nossa Senhora",
+    "grau": "S",
+    "wiki": "en:Immaculate Conception",
+    "nota": "Dogma de 1854; confirmado em Lourdes em 1858"
+   }
+  ],
+  "12-09": [
+   {
+    "nome": "São Juan Diego Cuauhtlatoatzin",
+    "grau": "m",
+    "wiki": "en:Juan Diego",
+    "nota": "Vidente de Guadalupe"
+   }
+  ],
+  "12-10": [
+   {
+    "nome": "Nossa Senhora de Loreto",
+    "grau": "m",
+    "wiki": "en:Basilica della Santa Casa",
+    "nota": ""
+   }
+  ],
+  "12-11": [
+   {
+    "nome": "São Dâmaso I, papa",
+    "grau": "m",
+    "wiki": "en:Pope Damasus I",
+    "nota": ""
+   }
+  ],
+  "12-12": [
+   {
+    "nome": "Nossa Senhora de Guadalupe",
+    "grau": "m",
+    "wiki": "en:Our Lady of Guadalupe",
+    "nota": "Festa nas Américas; a tilma de 1531"
+   }
+  ],
+  "12-13": [
+   {
+    "nome": "Santa Luzia, virgem e mártir",
+    "grau": "M",
+    "wiki": "en:Saint Lucy",
+    "nota": ""
+   }
+  ],
+  "12-14": [
+   {
+    "nome": "São João da Cruz",
+    "grau": "M",
+    "wiki": "en:John of the Cross",
+    "nota": "Presbítero e doutor da Igreja"
+   }
+  ],
+  "12-15": [
+   {
+    "nome": "Santa Maria Crocifissa di Rosa",
+    "grau": "MR",
+    "wiki": "en:Maria Crocifissa Di Rosa",
+    "nota": ""
+   }
+  ],
+  "12-16": [
+   {
+    "nome": "Santa Adelaide",
+    "grau": "MR",
+    "wiki": "en:Adelaide of Italy",
+    "nota": ""
+   }
+  ],
+  "12-17": [
+   {
+    "nome": "São Lázaro de Betânia (tradição)",
+    "grau": "MR",
+    "wiki": "en:Lazarus of Bethany",
+    "nota": ""
+   }
+  ],
+  "12-18": [
+   {
+    "nome": "São Gaciano de Tours",
+    "grau": "MR",
+    "wiki": "en:Gatianus of Tours",
+    "nota": ""
+   }
+  ],
+  "12-19": [
+   {
+    "nome": "Beato Urbano V, papa",
+    "grau": "MR",
+    "wiki": "en:Pope Urban V",
+    "nota": ""
+   }
+  ],
+  "12-20": [
+   {
+    "nome": "São Domingos de Silos",
+    "grau": "MR",
+    "wiki": "en:Dominic of Silos",
+    "nota": ""
+   }
+  ],
+  "12-21": [
+   {
+    "nome": "São Pedro Canísio",
+    "grau": "m",
+    "wiki": "en:Peter Canisius",
+    "nota": "Doutor da Igreja"
+   }
+  ],
+  "12-22": [
+   {
+    "nome": "Santa Francisca Xavier Cabrini (dia da morte)",
+    "grau": "MR",
+    "wiki": "en:Frances Xavier Cabrini",
+    "nota": ""
+   }
+  ],
+  "12-23": [
+   {
+    "nome": "São João Câncio",
+    "grau": "m",
+    "wiki": "en:John Cantius",
+    "nota": ""
+   }
+  ],
+  "12-24": [
+   {
+    "nome": "Santos Antepassados de Jesus",
+    "grau": "MR",
+    "wiki": "en:Genealogy of Jesus",
+    "nota": "Véspera de Natal"
+   }
+  ],
+  "12-25": [
+   {
+    "nome": "Natal do Senhor",
+    "grau": "S",
+    "wiki": "en:Nativity of Jesus",
+    "nota": ""
+   }
+  ],
+  "12-26": [
+   {
+    "nome": "Santo Estêvão, primeiro mártir",
+    "grau": "F",
+    "wiki": "en:Saint Stephen",
+    "nota": ""
+   }
+  ],
+  "12-27": [
+   {
+    "nome": "São João, apóstolo e evangelista",
+    "grau": "F",
+    "wiki": "en:John the Apostle",
+    "nota": ""
+   }
+  ],
+  "12-28": [
+   {
+    "nome": "Santos Inocentes, mártires",
+    "grau": "F",
+    "wiki": "en:Massacre of the Innocents",
+    "nota": ""
+   }
+  ],
+  "12-29": [
+   {
+    "nome": "São Tomás Becket, bispo e mártir",
+    "grau": "m",
+    "wiki": "en:Thomas Becket",
+    "nota": ""
+   }
+  ],
+  "12-30": [
+   {
+    "nome": "Sagrada Família (quando não há domingo na oitava)",
+    "grau": "MR",
+    "wiki": "en:Holy Family",
+    "nota": ""
+   }
+  ],
+  "12-31": [
+   {
+    "nome": "São Silvestre I, papa",
+    "grau": "m",
+    "wiki": "en:Pope Sylvester I",
+    "nota": ""
+   }
+  ]
+ }
+}

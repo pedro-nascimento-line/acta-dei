@@ -1,0 +1,62 @@
+{
+  "tipo": "milagre",
+  "id_milagre": "lanciano",
+  "titulo": "O Milagre Eucarístico de Lanciano",
+  "titulo_en": "The Eucharistic Miracle of Lanciano",
+  "subtitulo": "Lanciano, Itália · século VIII",
+  "status": "reconhecido",
+  "imagem": "imagem.jpg",
+  "imagem_busca": "Lanciano eucharistic miracle reliquary",
+  "imagem_credito": "Relicário do milagre, igreja de São Francisco, Lanciano (Wikimedia Commons, domínio público)",
+  "cards": [
+    {
+      "kicker": "O FATO · THE EVENT",
+      "texto": "Um monge basiliano, durante a missa, duvidou da presença real de Cristo na Eucaristia. No momento da consagração, segundo a tradição registrada em Lanciano, a hóstia tornou-se carne e o vinho tornou-se sangue, coagulado em cinco porções.\n\nO relato mais antigo que chegou até nós é de 1574, quando as relíquias passaram pela primeira verificação documentada.",
+      "texto_en": "During Mass, a Basilian monk doubted the real presence of Christ in the Eucharist. At the consecration, according to the tradition recorded in Lanciano, the host became flesh and the wine became blood, clotted in five pieces. The earliest surviving account dates from 1574, when the relics underwent their first documented examination."
+    },
+    {
+      "kicker": "A INVESTIGAÇÃO · THE INVESTIGATION",
+      "texto": "Entre 1970 e 1971, por encargo da autoridade eclesiástica, o professor Odoardo Linoli, médico e anatomopatologista do hospital de Arezzo, analisou as relíquias.\n\nO laudo descreveu a carne como tecido muscular do coração humano (miocárdio) e o sangue como humano, do grupo AB. Críticos apontam que o estudo foi conduzido por um único investigador, sem painel multidisciplinar.",
+      "texto_en": "In 1970–71, at the request of Church authorities, Professor Odoardo Linoli, a physician and pathologist at the Arezzo hospital, analysed the relics. His report described the flesh as human heart muscle (myocardium) and the blood as human, type AB. Critics note the study was carried out by a single investigator, without a multidisciplinary panel."
+    },
+    {
+      "kicker": "AS RELÍQUIAS HOJE · THE RELICS TODAY",
+      "texto": "A carne e os cinco coágulos ficam expostos em um relicário de prata e cristal na igreja de São Francisco, em Lanciano, na região dos Abruzos, sob custódia dos frades menores conventuais desde 1252.\n\nO santuário recebe peregrinos de todo o mundo e é o ponto de partida habitual dos roteiros de milagres eucarísticos na Itália.",
+      "texto_en": "The flesh and the five clots are displayed in a silver-and-crystal reliquary in the church of St. Francis in Lanciano, Abruzzo, in the custody of the Conventual Franciscans since 1252. The shrine draws pilgrims from around the world."
+    }
+  ],
+  "decisao": "A Igreja reconhece o milagre e autoriza o culto público às relíquias desde a Idade Média. Em carta de 4 de outubro de 2004 ao arcebispo de Lanciano-Ortona, João Paulo II recordou ter venerado as relíquias quando ainda era cardeal e chamou Lanciano de lugar de graça para a fé eucarística.",
+  "decisao_en": "The Church recognizes the miracle and has allowed public veneration of the relics since the Middle Ages. In a letter dated 4 October 2004 to the Archbishop of Lanciano-Ortona, John Paul II recalled venerating the relics as a cardinal and called Lanciano a place of grace for Eucharistic faith.",
+  "fontes": [
+    "Vatican.va — Carta de João Paulo II ao arcebispo Carlo Ghidelli, 4 out 2004",
+    "O. Linoli, Quaderni Sclavo di Diagnostica, 1971 (laudo histológico)",
+    "Santuário do Milagre Eucarístico de Lanciano — miracoloeucaristico.eu",
+    "EWTN — Physician tells of Eucharistic miracle of Lanciano"
+  ],
+  "legenda_pt": "",
+  "stories": {
+    "manha": {
+      "nome": "São Leão Magno",
+      "anos": "† 461 · PAPA E DOUTOR DA IGREJA",
+      "padroeiro": "Memória litúrgica: 10 de novembro",
+      "linhas": [
+        "Papa de 440 a 461, defendeu a unidade da fé contra as heresias do seu tempo.",
+        "Em 452, foi ao encontro de Átila e convenceu-o a poupar Roma.",
+        "Sua carta ao Concílio de Calcedônia (451) definiu a doutrina das duas naturezas de Cristo."
+      ],
+      "imagem": "santo.jpg",
+      "imagem_wikipedia": "en:Pope Leo I"
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "Os cinco coágulos de sangue têm tamanhos diferentes, mas, segundo a verificação de 1574, qualquer um deles pesava o mesmo que os cinco juntos.",
+      "texto_en": "The five blood clots differ in size, yet according to the 1574 examination any one of them weighed the same as all five together."
+    },
+    "noite": {
+      "citacao": "Reconhece, ó cristão, a tua dignidade.",
+      "autor": "SÃO LEÃO MAGNO · SERMÃO 21",
+      "citacao_en": "Christian, recognize your dignity."
+    }
+  },
+  "imagem_wikipedia": "en:Eucharistic miracle of Lanciano"
+}
