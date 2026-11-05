@@ -6,3 +6,6 @@ data,hora_brt,slot,tipo,id_instagram,status,erro
 2026-11-05,01:27,manha,carrossel,18118744670095234,ok,
 2026-11-05,01:27,manha,story,17907463191657139,ok,
 2026-11-05,01:37,tarde,story,17973708168187105,ok,
+2026-11-05,20:31,noite,-,,tentativa_1,"17841430130677253/media: {'message': 'API access blocked.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A54Vegoe-WBzO8u8YWS910R'}"
+2026-11-05,20:36,noite,-,,tentativa_2,"17841430130677253/media: {'message': 'API access blocked.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AKhk61k_JcylpJOOMEN_xyH'}"
+2026-11-05,20:41,noite,-,,tentativa_3,"17841430130677253/media: {'message': 'API access blocked.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AZAdPgsXATzIv0Xjw6KkNlv'}"
