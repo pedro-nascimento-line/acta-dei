@@ -48,6 +48,7 @@ jobs:
       - name: Baixar imagens e renderizar
         run: |
           for d in ${{ steps.posts.outputs.dias }}; do
+            if [ ! -f "$d/post.json" ]; then echo "== $d sem post.json (removido?) - ignorando"; continue; fi
             echo "== $d"
             python scripts/fetch_image.py "$d" || echo "fetch_image falhou em $d (segue com o selo)"
             python scripts/render.py "$d"
@@ -61,4 +62,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add posts index.html data/fila.json
           git diff --cached --quiet || git commit -m "artes: ${{ steps.posts.outputs.dias }}"
+          git pull --rebase || true
           git push
