@@ -68,7 +68,7 @@ html, body {{ width: 1080px; background: {CREAM}; color: {CHAR}; font-family: 'C
          color: {CREAM}; background: {RED}; padding: 14px 22px 12px; border-radius: 6px; text-align: center; line-height: 1.25; }}
 .badge small {{ display: block; font-size: 15px; letter-spacing: 2px; opacity: .85; }}
 .hero {{ position: absolute; top: 0; left: 0; width: 1080px; height: 820px; overflow: hidden; }}
-.hero img {{ width: 100%; height: 100%; object-fit: cover; display: block; }}
+.hero img {{ width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }}
 .hero::after {{ content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,34,30,0) 60%, rgba(38,34,30,.55) 100%); }}
 .filete {{ position: absolute; left: 44px; right: 44px; top: 44px; height: 732px; border: 3px solid {RED}; z-index: 2; pointer-events: none; }}
 .band {{ position: absolute; top: 820px; left: 0; width: 1080px; height: 530px; padding: 56px 72px 0; }}
@@ -93,9 +93,9 @@ h1.small {{ font-size: 52px; }}
 .fontes li::before {{ content: '·'; position: absolute; left: 8px; color: {RED}; font-weight: 700; }}
 .selo-final {{ position: absolute; right: 80px; bottom: 150px; width: 260px; opacity: .95; }}
 /* stories */
-.s-wrap {{ position: absolute; inset: 0; padding: 200px 90px 0; }}
+.s-wrap {{ position: absolute; inset: 0; padding: 270px 90px 0; }}
 .s-avatar {{ position: absolute; top: 84px; left: 50%; transform: translateX(-50%); width: 150px; }}
-.s-hero {{ width: 900px; height: 900px; margin: 0 auto; overflow: hidden; border: 3px solid {RED}; }}
+.s-hero {{ width: 900px; height: 860px; margin: 0 auto; overflow: hidden; border: 3px solid {RED}; }}
 .s-hero img {{ width: 100%; height: 100%; object-fit: cover; display: block; }}
 .s-name {{ font-family: 'Cinzel'; font-weight: 700; font-size: 66px; line-height: 1.15; text-align: center; margin-top: 56px; }}
 .s-years {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 16px; }}
@@ -108,8 +108,8 @@ h1.small {{ font-size: 52px; }}
 .s-text_en {{ font-size: 40px; line-height: 1.35; text-align: center; color: #CFC7B8; margin-top: 50px; padding-top: 40px; border-top: 2px solid {RED}; }}
 .s-quote {{ font-size: 68px; line-height: 1.3; font-style: italic; text-align: center; margin-top: 140px; }}
 .s-author {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 70px; }}
-.s-foot {{ position: absolute; left: 0; right: 0; bottom: 120px; text-align: center; font-family: 'Cinzel'; font-size: 26px; letter-spacing: 6px; color: {RED}; }}
-.s-cta {{ position: absolute; left: 0; right: 0; bottom: 230px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
+.s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-size: 26px; letter-spacing: 6px; color: {RED}; }}
+.s-cta {{ position: absolute; left: 0; right: 0; bottom: 410px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
 """
 
 
@@ -170,7 +170,7 @@ def story_manha(s, pasta):
     tem = s.get("imagem") and (pasta / s["imagem"]).exists()
     hero = f'<div class="s-hero"><img src="{data_uri(pasta / s["imagem"])}"></div>' if tem else '<div style="height:380px"></div>'
     linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
-    return f"""<div class="page story"><img class="s-avatar" src="{AVATAR_DARK}">
+    return f"""<div class="page story">
       <div class="s-wrap">{hero}
         <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
         <div class="s-patron">{esc(s.get('padroeiro',''))}</div><div class="s-lines">{linhas}</div></div>
@@ -179,16 +179,16 @@ def story_manha(s, pasta):
 
 def story_tarde(s):
     en = f'<div class="s-text_en">{esc(s["texto_en"])}</div>' if s.get("texto_en") else ""
-    return f"""<div class="page story"><img class="s-avatar" src="{AVATAR_DARK}">
-      <div class="s-wrap" style="padding-top:340px"><div class="s-kicker">{esc(s.get('kicker','UM DETALHE A MAIS'))}</div>
+    return f"""<div class="page story">
+      <div class="s-wrap" style="padding-top:420px"><div class="s-kicker">{esc(s.get('kicker','UM DETALHE A MAIS'))}</div>
         <div class="s-text">{esc(s['texto'])}</div>{en}</div>
       <div class="s-cta">O relato completo está no post de hoje · Full story in today's post</div>
       <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
 
 
 def story_noite(s):
-    return f"""<div class="page story"><img class="s-avatar" src="{AVATAR_DARK}">
-      <div class="s-wrap" style="padding-top:420px"><div class="s-quote">“{esc(s['citacao'])}”</div>
+    return f"""<div class="page story">
+      <div class="s-wrap" style="padding-top:520px"><div class="s-quote">“{esc(s['citacao'])}”</div>
         <div class="s-author">{esc(s.get('autor',''))}</div>
         {f'<div class="s-text_en" style="font-style:italic">“{esc(s["citacao_en"])}”</div>' if s.get('citacao_en') else ''}</div>
       <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
@@ -219,7 +219,7 @@ def render(pasta):
                 let fs = 50; const limite = 1350 - 150;
                 while (t.getBoundingClientRect().bottom > limite && fs > 26) { fs -= 1; t.style.fontSize = fs + 'px'; } }""")
             pg.evaluate("""() => { const t = document.querySelector('.s-wrap'); if (!t || !t.lastElementChild) return;
-                let z = 1.0; const limite = 1920 - 340;
+                let z = 1.0; const limite = 1920 - 380;
                 while (t.lastElementChild.getBoundingClientRect().bottom > limite && z > 0.6) { z -= 0.02; t.style.zoom = z; } }""")
             pg.wait_for_timeout(100)
             pg.screenshot(path=str(pasta / nome), type="jpeg", quality=92)
