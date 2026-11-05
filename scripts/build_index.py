@@ -54,7 +54,7 @@ def main():
 <title>Acta Dei · Mysterium Fidei — índice de fontes</title><style>{CSS}</style></head><body>
 <header><img src="brand/logo_avatar_claro_1080.png" alt="Acta Dei"><h1>ACTA DEI</h1><p>Mysterium Fidei · Milagres reconhecidos pela Igreja, com data, lugar e testemunhas · {len(posts)} registros</p></header>
 <main>{''.join(itens) or '<p style="text-align:center;color:var(--grey)">Os primeiros registros entram em breve.</p>'}</main>
-<footer>Cada registro cita as fontes oficiais consultadas. Imagens de domínio público ou Creative Commons (Wikimedia Commons), com crédito. · @actadei</footer>
+<footer>Cada registro cita as fontes oficiais consultadas. Imagens de domínio público ou Creative Commons (Wikimedia Commons), com crédito. · @actadei.oficial</footer>
 </body></html>"""
     (RAIZ / "index.html").write_text(doc)
     print(f"index.html: {len(posts)} posts, {n_ok} publicados")
