@@ -1,2 +1,5 @@
 data,hora_brt,slot,tipo,id_instagram,status,erro
 2026-11-05,00:39,manha,-,,sem_post,pasta posts/2026-11-05 não existe
+2026-11-05,01:12,manha,carrossel,18031542770859796,ok,
+2026-11-05,01:12,manha,comentario,,falha,"18031542770859796/comments: {'message': '(#10) Application does not have permission for this action', 'type': 'OAuthException', 'code': 10, 'fbtrace_id': 'Ark4cbm4s7_VkC2JxBWyoGK'}"
+2026-11-05,01:12,manha,story,17904076026375559,ok,
