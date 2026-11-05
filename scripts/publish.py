@@ -14,6 +14,8 @@ Variáveis de ambiente (Secrets do repositório):
   IG_USER_ID       ID numérico da conta profissional do Instagram
   IG_API_HOST      opcional: "graph.instagram.com" (padrão) ou "graph.facebook.com" (token de usuário do sistema)
   PAGES_BASE       ex.: https://actadei.github.io/acta-dei   (URL pública do GitHub Pages)
+  HASHTAGS_COMENTARIO  opcional: "true" publica as hashtags no primeiro comentário (exige a permissão
+                   instagram_manage_comments no token). Padrão: hashtags no fim da legenda.
 
 Regras: nunca publica duas vezes o mesmo slot do mesmo dia (confere meta.json); espera as imagens
 estarem acessíveis no Pages; tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
@@ -80,6 +82,16 @@ def publicar_carrossel(dia, pasta, meta):
     if not cards:
         raise RuntimeError("nenhum card_*.jpg na pasta do post")
     legenda = (pasta / "legenda.txt").read_text().strip()
+    hashtags_p = pasta / "hashtags.txt"
+    hashtags = hashtags_p.read_text().strip() if hashtags_p.exists() else ""
+    no_comentario = os.environ.get("HASHTAGS_COMENTARIO", "").lower() == "true"
+    if hashtags and not no_comentario:
+        # hashtags no fim da legenda; se estourar 2.200, corta as últimas
+        tags = hashtags.split()
+        while tags and len(legenda) + 4 + len(" ".join(tags)) > 2200:
+            tags.pop()
+        if tags:
+            legenda = legenda + "\n\n·\n" + " ".join(tags)
     if len(legenda) > 2200:
         raise RuntimeError(f"legenda com {len(legenda)} caracteres (limite 2200)")
     urls = [f"{BASE}/posts/{dia}/{c}" for c in cards]
@@ -98,10 +110,9 @@ def publicar_carrossel(dia, pasta, meta):
     pub = api("POST", f"{USER}/media_publish", creation_id=cont["id"])
     meta["feed_id"] = pub["id"]
     log("manha", "carrossel", pub["id"], "ok")
-    hashtags = (pasta / "hashtags.txt")
-    if hashtags.exists():
+    if hashtags and no_comentario:
         try:
-            com = api("POST", f"{pub['id']}/comments", message=hashtags.read_text().strip())
+            com = api("POST", f"{pub['id']}/comments", message=hashtags)
             meta["comentario_id"] = com["id"]; log("manha", "comentario", com["id"], "ok")
         except Exception as e:  # o post já saiu; o comentário não é crítico
             log("manha", "comentario", "", "falha", str(e))

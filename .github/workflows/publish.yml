@@ -38,6 +38,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           PAGES_BASE: ${{ vars.PAGES_BASE }}
           IG_API_HOST: ${{ vars.IG_API_HOST }}
+          HASHTAGS_COMENTARIO: ${{ vars.HASHTAGS_COMENTARIO }}
         run: |
           args="--slot ${{ github.event.inputs.slot || 'auto' }}"
           if [ -n "${{ github.event.inputs.dia }}" ]; then args="$args --dia ${{ github.event.inputs.dia }}"; fi
