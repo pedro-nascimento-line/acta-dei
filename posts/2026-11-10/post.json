@@ -6,7 +6,7 @@
   "subtitulo": "Lanciano, Itália · século VIII",
   "status": "reconhecido",
   "imagem_busca": "Lanciano eucharistic miracle reliquary",
-  "imagem_credito": "Relicário do milagre, igreja de São Francisco, Lanciano (Wikimedia Commons, domínio público)",
+  "imagem_credito": "AFC photo · Wikimedia Commons · CC BY-SA 3.0",
   "cards": [
     {
       "kicker": "O FATO · THE EVENT",
@@ -57,5 +57,6 @@
       "citacao_en": "Christian, recognize your dignity."
     }
   },
-  "imagem_wikipedia": "en:Eucharistic miracle of Lanciano"
+  "imagem_wikipedia": "en:Eucharistic miracle of Lanciano",
+  "imagem": "principal.jpg"
 }
