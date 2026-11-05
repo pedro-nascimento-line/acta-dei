@@ -4,7 +4,7 @@ import csv, html, json
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-STATUS = {"reconhecido": "Reconhecido pela Igreja", "investigacao": "Em investigação"}
+STATUS = {"reconhecido": "Reconhecido pela Santa Igreja Católica", "investigacao": "Em investigação pela Santa Igreja Católica"}
 
 CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
@@ -52,7 +52,7 @@ def main():
 
     doc = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Acta Dei · Mysterium Fidei — índice de fontes</title><style>{CSS}</style></head><body>
-<header><img src="brand/logo_avatar_claro_1080.png" alt="Acta Dei"><h1>ACTA DEI</h1><p>Mysterium Fidei · Milagres reconhecidos pela Igreja, com data, lugar e testemunhas · {len(posts)} registros</p></header>
+<header><img src="brand/logo_avatar_claro_1080.png" alt="Acta Dei"><h1>ACTA DEI</h1><p>Mysterium Fidei · Milagres reconhecidos pela Santa Igreja Católica, com data, lugar e testemunhas · {len(posts)} registros</p></header>
 <main>{''.join(itens) or '<p style="text-align:center;color:var(--grey)">Os primeiros registros entram em breve.</p>'}</main>
 <footer>Cada registro cita as fontes oficiais consultadas. Imagens de domínio público ou Creative Commons (Wikimedia Commons), com crédito. · @actadei.oficial</footer>
 </body></html>"""

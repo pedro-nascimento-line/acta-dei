@@ -14,7 +14,7 @@ Formato do post.json (campos principais):
   "imagem": "imagem.jpg",                       # relativo à pasta do post (baixada por fetch_image.py)
   "imagem_credito": "Pintura de … (domínio público, Wikimedia Commons)",
   "cards": [ {"kicker": "O fato", "texto": "…"}, {"kicker": "A investigação", "texto": "…"}, … ],
-  "decisao": "…",                                # último card: "O que a Igreja decidiu"
+  "decisao": "…",                                # último card: "O que a Santa Igreja Católica decidiu"
   "fontes": ["Vatican.va — carta de João Paulo II, 2004", "…"],
   "stories": {
      "manha": {"nome": "São Leão Magno", "anos": "† 461", "padroeiro": "Padroeiro dos …", "linhas": ["…","…","…"], "imagem": "santo.jpg"},
@@ -51,8 +51,8 @@ AVATAR_DARK = data_uri(BRAND / "logo_avatar_transparente.svg")
 SELO = data_uri(BRAND / "logo_selo_claro.svg")
 
 STATUS = {
-    "reconhecido": ("RECONHECIDO PELA IGREJA", "CHURCH-RECOGNIZED"),
-    "investigacao": ("EM INVESTIGAÇÃO", "UNDER INVESTIGATION"),
+    "reconhecido": ("RECONHECIDO PELA SANTA IGREJA CATÓLICA", "RECOGNIZED BY THE HOLY CATHOLIC CHURCH"),
+    "investigacao": ("EM INVESTIGAÇÃO PELA SANTA IGREJA CATÓLICA", "UNDER INVESTIGATION BY THE HOLY CATHOLIC CHURCH"),
 }
 
 CSS = f"""
@@ -64,9 +64,9 @@ html, body {{ width: 1080px; background: {CREAM}; color: {CHAR}; font-family: 'C
 .story {{ height: 1920px; background: {CHAR}; color: {CREAM}; }}
 .cinzel {{ font-family: 'Cinzel', serif; }}
 .red {{ color: {RED}; }}
-.badge {{ position: absolute; top: 44px; right: 44px; z-index: 3; font-family: 'Cinzel'; font-weight: 700; font-size: 22px; letter-spacing: 3px;
-         color: {CREAM}; background: {RED}; padding: 14px 22px 12px; border-radius: 6px; text-align: center; line-height: 1.25; }}
-.badge small {{ display: block; font-size: 15px; letter-spacing: 2px; opacity: .85; }}
+.badge {{ position: absolute; top: 44px; right: 44px; z-index: 3; font-family: 'Cinzel'; font-weight: 700; font-size: 19px; letter-spacing: 2.5px;
+         color: {CREAM}; background: {RED}; padding: 14px 20px 12px; border-radius: 6px; text-align: center; line-height: 1.25; }}
+.badge small {{ display: block; font-size: 13px; letter-spacing: 1.5px; opacity: .85; margin-top: 4px; }}
 .hero {{ position: absolute; top: 0; left: 0; width: 1080px; height: 820px; overflow: hidden; }}
 .hero img {{ width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }}
 .hero::after {{ content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,34,30,0) 60%, rgba(38,34,30,.55) 100%); }}
@@ -160,7 +160,7 @@ def card_decisao(post, n, total):
     fontes = "".join(f"<li>{esc(f)}</li>" for f in post.get("fontes", []))
     en = f'<div class="body_en">{paras(post["decisao_en"])}</div>' if post.get("decisao_en") else ""
     return f"""<div class="page card"><div class="num">{n:02d}</div>
-      <div class="text"><div class="kicker">O QUE A IGREJA DECIDIU · THE CHURCH'S DECISION</div>
+      <div class="text"><div class="kicker">O QUE A SANTA IGREJA CATÓLICA DECIDIU · THE HOLY CATHOLIC CHURCH'S DECISION</div>
         <div class="decisao">{paras(post['decisao'])}</div>{en}
         <ul class="fontes"><li style="font-family:Cinzel;letter-spacing:3px;font-size:.8em;color:{RED}">FONTES · SOURCES</li>{fontes}</ul></div>
       {foot(n, total)}</div>"""
