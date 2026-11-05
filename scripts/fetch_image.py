@@ -21,7 +21,7 @@ UA = commons.UA
 def lead_image(artigo):
     """Imagem principal de um artigo da Wikipédia (en: ou pt: prefixo)."""
     lang, titulo = ("pt", artigo[3:]) if artigo.startswith("pt:") else ("en", artigo.replace("en:", ""))
-    d = requests.get(f"https://{lang}.wikipedia.org/w/api.php", headers={"User-Agent": UA}, timeout=60,
+    d = commons._req(f"https://{lang}.wikipedia.org/w/api.php",
                      params={"action": "query", "titles": titulo, "prop": "pageimages", "piprop": "name", "format": "json", "redirects": 1}).json()
     page = next(iter(d["query"]["pages"].values()))
     nome = page.get("pageimage")
@@ -37,6 +37,7 @@ def resolver(spec):
         if t: cands.append(t)
     for t in cands:
         i = commons.info(t)
+        print(f"  candidato (artigo): {t[:70]} -> " + (f"{i['licenca']} | {i['width']}x{i['height']} | ok={i['licenca_ok']}" if i else "não está no Commons"))
         if i and i["licenca_ok"] and (i["width"] or 0) >= 800:
             return i
     if spec.get("imagem_busca"):
@@ -61,18 +62,21 @@ def main(pasta):
     if manha:
         alvos.append(("santo", manha, "imagem"))
     for nome, spec, campo in alvos:
-        i = resolver(spec)
-        if not i:
-            print(f"[{nome}] nenhuma imagem com licença aceita; capa cairá no selo")
-            spec.pop(campo, None); continue
-        destino = pasta / (spec.get(campo) or f"{nome}.jpg")
-        r = requests.get(i["url"], headers={"User-Agent": UA}, timeout=120); r.raise_for_status()
-        destino.write_bytes(r.content)
-        spec[campo] = destino.name
-        if nome == "principal":
-            post["imagem_credito"] = credito(i)
-        usadas[nome] = {k: i[k] for k in ("title", "licenca", "autor", "pagina", "url_original")}
-        print(f"[{nome}] {i['title']} · {i['licenca']}")
+        try:
+            i = resolver(spec)
+            if not i:
+                print(f"[{nome}] nenhuma imagem com licença aceita; capa cairá no selo")
+                spec.pop(campo, None); continue
+            destino = pasta / (spec.get(campo) or f"{nome}.jpg")
+            destino.write_bytes(commons._req(i["url"]).content)
+            spec[campo] = destino.name
+            if nome == "principal":
+                post["imagem_credito"] = credito(i)
+            usadas[nome] = {k: i[k] for k in ("title", "licenca", "autor", "pagina", "url_original")}
+            print(f"[{nome}] {i['title']} · {i['licenca']}")
+        except Exception as e:  # segue para o próximo alvo; o render usa o fallback
+            print(f"[{nome}] falha: {e}")
+            spec.pop(campo, None)
     (pasta / "post.json").write_text(json.dumps(post, ensure_ascii=False, indent=2))
     (pasta / "imagens.json").write_text(json.dumps(usadas, ensure_ascii=False, indent=2))
 

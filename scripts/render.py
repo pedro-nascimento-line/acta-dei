@@ -167,10 +167,11 @@ def card_decisao(post, n, total):
 
 
 def story_manha(s, pasta):
-    img = data_uri(pasta / s["imagem"]) if s.get("imagem") and (pasta / s["imagem"]).exists() else AVATAR_DARK
+    tem = s.get("imagem") and (pasta / s["imagem"]).exists()
+    hero = f'<div class="s-hero"><img src="{data_uri(pasta / s["imagem"])}"></div>' if tem else '<div style="height:380px"></div>'
     linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
     return f"""<div class="page story"><img class="s-avatar" src="{AVATAR_DARK}">
-      <div class="s-wrap"><div class="s-hero"><img src="{img}"></div>
+      <div class="s-wrap">{hero}
         <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
         <div class="s-patron">{esc(s.get('padroeiro',''))}</div><div class="s-lines">{linhas}</div></div>
       <div class="s-foot">SANTO DO DIA · SAINT OF THE DAY</div></div>"""
