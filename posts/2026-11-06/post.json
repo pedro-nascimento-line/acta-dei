@@ -43,7 +43,6 @@
         "Recusou o episcopado e viveu como eremita na floresta do Limousin, onde fundou a abadia de Noblac.",
         "Obteve do rei a libertação de muitos presos. Seu culto se espalhou pela Europa a partir do século XI."
       ],
-      "imagem": "santo.jpg",
       "imagem_wikipedia": "en:Leonard of Noblac"
     },
     "tarde": {
@@ -56,5 +55,6 @@
       "autor": "URBANO IV · BULA TRANSITURUS DE HOC MUNDO, 1264",
       "citacao_en": "This is a most sweet memorial, a most holy memorial, a saving memorial."
     }
-  }
+  },
+  "imagem_credito": "RoyFokker · Wikimedia Commons · Public domain"
 }

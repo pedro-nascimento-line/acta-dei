@@ -2,9 +2,9 @@
  "gerada_em": "2026-11-06",
  "fila": [
   {
-   "id": "bolsena",
+   "id": "santarem",
    "tipo": "eucaristico",
-   "titulo": "O Milagre de Bolsena e o Corporal de Orvieto",
+   "titulo": "O Milagre Eucarístico de Santarém",
    "data_sugerida": null
   },
   {
@@ -50,9 +50,9 @@
    "data_sugerida": "02-11"
   },
   {
-   "id": "santarem",
+   "id": "siena",
    "tipo": "eucaristico",
-   "titulo": "O Milagre Eucarístico de Santarém",
+   "titulo": "As Hóstias de Siena",
    "data_sugerida": null
   },
   {
@@ -98,9 +98,9 @@
    "data_sugerida": null
   },
   {
-   "id": "siena",
+   "id": "amsterdam",
    "tipo": "eucaristico",
-   "titulo": "As Hóstias de Siena",
+   "titulo": "O Milagre de Amsterdã",
    "data_sugerida": null
   },
   {
@@ -146,9 +146,9 @@
    "data_sugerida": null
   },
   {
-   "id": "amsterdam",
+   "id": "faverney",
    "tipo": "eucaristico",
-   "titulo": "O Milagre de Amsterdã",
+   "titulo": "O Milagre de Faverney",
    "data_sugerida": null
   },
   {
@@ -194,9 +194,9 @@
    "data_sugerida": null
   },
   {
-   "id": "faverney",
+   "id": "buenos_aires",
    "tipo": "eucaristico",
-   "titulo": "O Milagre de Faverney",
+   "titulo": "Buenos Aires, 1996: a hóstia analisada",
    "data_sugerida": null
   },
   {
