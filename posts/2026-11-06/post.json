@@ -1,0 +1,60 @@
+{
+  "tipo": "milagre",
+  "id_milagre": "bolsena",
+  "titulo": "O Milagre de Bolsena e o Corporal de Orvieto",
+  "titulo_en": "The Miracle of Bolsena and the Corporal of Orvieto",
+  "subtitulo": "Bolsena e Orvieto, Itália · 1263",
+  "status": "reconhecido",
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Miracle of Bolsena",
+  "imagem_busca": "Orvieto corporal Bolsena miracle reliquary",
+  "cards": [
+    {
+      "kicker": "O FATO · THE EVENT",
+      "texto": "Em 1263, um sacerdote chamado Pedro, que a tradição diz vindo de Praga, parou em Bolsena a caminho de Roma. Levava uma dúvida sobre a presença real de Cristo na Eucaristia. Celebrou a missa sobre o túmulo da mártir Santa Cristina.\n\nSegundo o relato guardado pela basílica, no momento da elevação a hóstia verteu sangue sobre o corporal. Algumas gotas caíram no mármore do piso e nos degraus do altar. O dia exato do fato não é conhecido.",
+      "texto_en": "In 1263, a priest named Peter, said by tradition to come from Prague, stopped at Bolsena on his way to Rome, troubled by doubts about the real presence of Christ in the Eucharist. He celebrated Mass over the tomb of the martyr Saint Christina. According to the account kept by the basilica, at the elevation the host shed blood onto the corporal; drops fell on the marble floor and the altar steps. The exact day is not known."
+    },
+    {
+      "kicker": "A INVESTIGAÇÃO · THE INVESTIGATION",
+      "texto": "O papa Urbano IV residia então em Orvieto, a poucos quilômetros dali. O sacerdote confessou-lhe a dúvida e o fato. O papa enviou a Bolsena o bispo de Orvieto, Giacomo Maltraga, para verificar o ocorrido e trazer o corporal e a hóstia.\n\nUrbano IV saiu da cidade ao encontro da procissão, recebeu as relíquias de joelhos e as depositou na catedral de Santa Maria. O registro escrito mais antigo é uma crônica orvietana do início do século XIV, que chama o fato de Milagre do Corpus Christi.",
+      "texto_en": "Pope Urban IV was then residing in Orvieto, a few kilometres away. The priest confessed his doubt and the event to him. The pope sent the bishop of Orvieto, Giacomo Maltraga, to Bolsena to verify the facts and bring back the corporal and the host. Urban IV went out of the city to meet the procession, received the relics kneeling and placed them in the cathedral of Santa Maria. The earliest written record is an Orvietan chronicle from the early 14th century."
+    },
+    {
+      "kicker": "AS RELÍQUIAS HOJE · THE RELICS TODAY",
+      "texto": "O corporal fica na Capela do Corporal, erguida entre 1350 e 1356 no transepto da catedral de Orvieto, dentro do tabernáculo de mármore feito entre 1358 e 1363. Os afrescos da capela, concluídos em 1364, narram o fato.\n\nO relicário de prata dourada e esmaltes, encomendado em 1338 ao ourives sienês Ugolino di Vieri, tem trinta e dois painéis com a história do corporal. Em Bolsena, as pedras manchadas são veneradas na basílica de Santa Cristina.",
+      "texto_en": "The corporal rests in the Chapel of the Corporal, built between 1350 and 1356 in the transept of Orvieto Cathedral, inside a marble tabernacle made between 1358 and 1363. The chapel's frescoes, completed in 1364, tell the story. The gilded silver and enamel reliquary, commissioned in 1338 from the Sienese goldsmith Ugolino di Vieri, has thirty-two panels on the history of the corporal. In Bolsena, the stained stones are venerated in the basilica of Saint Christina."
+    }
+  ],
+  "decisao": "Em Orvieto, em 11 de agosto de 1264, Urbano IV instituiu a festa de Corpus Christi para toda a Santa Igreja Católica, pela bula Transiturus de hoc mundo. A bula não cita Bolsena. Em 11 de agosto de 1964, no sétimo centenário, Paulo VI celebrou missa em Orvieto diante do corporal. Em 1976, ao elevar Santa Cristina a basílica, o mesmo papa recordou em decreto o célebre Milagre Eucarístico ocorrido naquela igreja em 1263.",
+  "decisao_en": "In Orvieto, on 11 August 1264, Urban IV instituted the feast of Corpus Christi for the whole Holy Catholic Church by the bull Transiturus de hoc mundo; the bull does not mention Bolsena. On 11 August 1964, for the seventh centenary, Paul VI celebrated Mass in Orvieto before the corporal. In 1976, raising Saint Christina's to a basilica, the same pope recalled by decree the renowned Eucharistic Miracle that took place in that church in 1263.",
+  "fontes": [
+    "Basílica de Santa Cristina, Bolsena — O Milagre Eucarístico (basilicasantacristina.it)",
+    "Vatican.va — Discurso de Paulo VI em Orvieto, 11 ago 1964 (VII centenário da Transiturus)",
+    "Urbano IV — bula Transiturus de hoc mundo, Orvieto, 11 ago 1264",
+    "Key to Umbria — Il Sacro Corporale e la Cappella del Corporale, Duomo di Orvieto"
+  ],
+  "stories": {
+    "manha": {
+      "nome": "São Leonardo de Noblac",
+      "anos": "† c. 559 · EREMITA E ABADE",
+      "padroeiro": "Padroeiro dos presos e das parturientes",
+      "linhas": [
+        "Nobre franco da corte de Clóvis, teve São Remígio de Reims como padrinho de batismo.",
+        "Recusou o episcopado e viveu como eremita na floresta do Limousin, onde fundou a abadia de Noblac.",
+        "Obteve do rei a libertação de muitos presos. Seu culto se espalhou pela Europa a partir do século XI."
+      ],
+      "imagem": "santo.jpg",
+      "imagem_wikipedia": "en:Leonard of Noblac"
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "Júlio II rezou diante do corporal em Orvieto em 1506. Dois anos depois, encomendou a Rafael o afresco da Missa de Bolsena, nas Estâncias do Vaticano.",
+      "texto_en": "Julius II prayed before the corporal in Orvieto in 1506. Two years later he commissioned Raphael's fresco of the Mass of Bolsena in the Vatican Stanze."
+    },
+    "noite": {
+      "citacao": "Este é um memorial dulcíssimo, memorial santíssimo, memorial salvífico.",
+      "autor": "URBANO IV · BULA TRANSITURUS DE HOC MUNDO, 1264",
+      "citacao_en": "This is a most sweet memorial, a most holy memorial, a saving memorial."
+    }
+  }
+}
