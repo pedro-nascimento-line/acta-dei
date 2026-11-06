@@ -17,8 +17,9 @@ Variáveis de ambiente (Secrets do repositório):
   HASHTAGS_COMENTARIO  opcional: "true" publica as hashtags no primeiro comentário (exige a permissão
                    instagram_manage_comments no token). Padrão: hashtags no fim da legenda.
 
-Regras: nunca publica duas vezes o mesmo slot do mesmo dia (confere meta.json); espera as imagens
-estarem acessíveis no Pages; tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
+Regras: nunca publica duas vezes a mesma peça do mesmo dia (confere meta.json); cada execução publica o slot
+pedido e o que ficou pendente dos slots anteriores do dia; espera as imagens estarem acessíveis no Pages;
+tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
 """
 import argparse, csv, datetime as dt, json, os, sys, time
 from pathlib import Path
@@ -134,6 +135,20 @@ def publicar_story(dia, pasta, meta, slot):
     return pub["id"]
 
 
+def publicar_slot(s, dia, pasta, meta):
+    """Publica as peças de um slot que ainda não têm id no meta.json (nada sai duas vezes)."""
+    if s == "manha":
+        if not meta.get("feed_id"):
+            publicar_carrossel(dia, pasta, meta)
+        if not meta.get("story_manha_id"):
+            try:
+                publicar_story(dia, pasta, meta, "manha")
+            except Exception as e:  # o carrossel já saiu; o story não derruba a execução
+                log("manha", "story", "", "falha", str(e))
+    elif not meta.get(f"story_{s}_id"):
+        publicar_story(dia, pasta, meta, s)
+
+
 def slot_auto():
     h = dt.datetime.now(BRT).hour
     return "manha" if h < 11 else "tarde" if h < 17 else "noite"
@@ -165,23 +180,20 @@ def main():
         log(slot, "-", "", "sem_post", f"pasta posts/{a.dia} não existe"); sys.exit("sem post para hoje")
     meta_p = pasta / "meta.json"
     meta = json.loads(meta_p.read_text()) if meta_p.exists() else {}
-    chaves = ["feed_id", "story_manha_id"] if slot == "manha" else [f"story_{slot}_id"]
-    if all(meta.get(k) for k in chaves):
-        print(f"{slot} já publicado ({', '.join(meta[k] for k in chaves)})"); return
+    # cada execução publica o slot pedido E o que ficou pendente dos slots anteriores do dia
+    # (se o cron das 7h atrasar ou falhar, o das 13h publica o carrossel antes do story da tarde)
+    ordem = ["manha", "tarde", "noite"]
+    alvo = ordem[: ordem.index(slot) + 1]
+    pecas = {"manha": ["feed_id", "story_manha_id"], "tarde": ["story_tarde_id"], "noite": ["story_noite_id"]}
+    pendentes = [k for s_ in alvo for k in pecas[s_] if not meta.get(k)]
+    if not pendentes:
+        print(f"{slot}: tudo já publicado"); return
+    print(f"{slot}: pendente -> {', '.join(pendentes)}")
     erro = ""
     for tentativa in range(1, 4):
         try:
-            if slot == "manha":
-                # cada peça só sai uma vez: numa repetição (ou republicação) o que já tem id é pulado
-                if not meta.get("feed_id"):
-                    publicar_carrossel(a.dia, pasta, meta)
-                if not meta.get("story_manha_id"):
-                    try:
-                        publicar_story(a.dia, pasta, meta, "manha")
-                    except Exception as e:
-                        log("manha", "story", "", "falha", str(e))
-            else:
-                publicar_story(a.dia, pasta, meta, slot)
+            for s_ in alvo:
+                publicar_slot(s_, a.dia, pasta, meta)
             erro = ""; break
         except Exception as e:
             erro = str(e); log(slot, "-", "", f"tentativa_{tentativa}", erro)
