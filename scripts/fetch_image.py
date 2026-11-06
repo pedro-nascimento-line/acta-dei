@@ -88,6 +88,10 @@ def main(pasta):
         alvos.append(("santo", manha, "imagem"))
     for nome, spec, campo in alvos:
         try:
+            if nome == "santo" and not spec.get("imagem_busca"):
+                # sem termo de busca para o santo: usa o título do artigo e o nome como reserva
+                wiki = (spec.get("imagem_wikipedia") or "").split(":", 1)[-1]
+                spec["imagem_busca"] = [t for t in (wiki, spec.get("nome", "")) if t]
             i = resolver(spec)
             if not i:
                 print(f"[{nome}] nenhuma imagem com licença aceita; capa cairá no selo")
