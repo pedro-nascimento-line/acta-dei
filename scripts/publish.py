@@ -165,18 +165,21 @@ def main():
         log(slot, "-", "", "sem_post", f"pasta posts/{a.dia} não existe"); sys.exit("sem post para hoje")
     meta_p = pasta / "meta.json"
     meta = json.loads(meta_p.read_text()) if meta_p.exists() else {}
-    chave = "feed_id" if slot == "manha" else f"story_{slot}_id"
-    if meta.get(chave):
-        print(f"{slot} já publicado ({meta[chave]})"); return
+    chaves = ["feed_id", "story_manha_id"] if slot == "manha" else [f"story_{slot}_id"]
+    if all(meta.get(k) for k in chaves):
+        print(f"{slot} já publicado ({', '.join(meta[k] for k in chaves)})"); return
     erro = ""
     for tentativa in range(1, 4):
         try:
             if slot == "manha":
-                publicar_carrossel(a.dia, pasta, meta)
-                try:
-                    publicar_story(a.dia, pasta, meta, "manha")
-                except Exception as e:
-                    log("manha", "story", "", "falha", str(e))
+                # cada peça só sai uma vez: numa repetição (ou republicação) o que já tem id é pulado
+                if not meta.get("feed_id"):
+                    publicar_carrossel(a.dia, pasta, meta)
+                if not meta.get("story_manha_id"):
+                    try:
+                        publicar_story(a.dia, pasta, meta, "manha")
+                    except Exception as e:
+                        log("manha", "story", "", "falha", str(e))
             else:
                 publicar_story(a.dia, pasta, meta, slot)
             erro = ""; break
