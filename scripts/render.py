@@ -116,17 +116,20 @@ h1.small {{ font-size: 52px; }}
 """
 
 
-def img_tag(path, box_ratio, limiar):
-    """Imagem inteira sobre fundo desfocado quando a proporção (largura/altura) fica abaixo de `limiar`
-    (retrato/quadrado, que o recorte `cover` mutilaria); senão, recorte normal. `box_ratio` = proporção da moldura."""
+def img_tag(path, box_ratio, perda_max=0.15):
+    """Regra de enquadramento: se o recorte `cover` descartasse mais de `perda_max` (15%) da imagem,
+    ela entra inteira sobre um fundo desfocado dela mesma; senão, recorte normal. Vale para retrato,
+    quadrado e panorâmica. `box_ratio` = largura/altura da moldura."""
     try:
         from PIL import Image
         with Image.open(path) as im:
             w, h = im.size
     except Exception:
         w, h = 1, 1
+    r = w / h
+    perda = 1 - min(r / box_ratio, box_ratio / r)
     uri = data_uri(path)
-    if w / h < limiar:
+    if perda > perda_max:
         return f'<img class="bg" src="{uri}"><img class="fg" src="{uri}">'
     return f'<img src="{uri}">'
 
@@ -152,7 +155,7 @@ def foot(n, total):
 
 def card_capa(post, total, pasta):
     tem_img = post.get("imagem") and (pasta / post["imagem"]).exists()
-    img = img_tag(pasta / post["imagem"], 1080 / 820, 1.15) if tem_img else f'<img src="{SELO}" style="object-fit:contain;padding:90px;background:#EFE8DA">'
+    img = img_tag(pasta / post["imagem"], 1080 / 820) if tem_img else f'<img src="{SELO}" style="object-fit:contain;padding:90px;background:#EFE8DA">'
     small = " small" if len(post["titulo"]) > 34 else ""
     return f"""<div class="page card">
       {badge(post.get("status"))}
@@ -185,7 +188,7 @@ def card_decisao(post, n, total):
 
 def story_manha(s, pasta):
     tem = s.get("imagem") and (pasta / s["imagem"]).exists()
-    hero = f'<div class="s-hero">{img_tag(pasta / s["imagem"], 900 / 860, 0.8)}</div>' if tem else '<div style="height:380px"></div>'
+    hero = f'<div class="s-hero">{img_tag(pasta / s["imagem"], 900 / 860)}</div>' if tem else '<div style="height:380px"></div>'
     linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
     return f"""<div class="page story">
       <div class="s-wrap">{hero}
