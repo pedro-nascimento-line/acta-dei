@@ -69,6 +69,8 @@ html, body {{ width: 1080px; background: {CREAM}; color: {CHAR}; font-family: 'C
 .badge small {{ display: block; font-size: 13px; letter-spacing: 1.5px; opacity: .85; margin-top: 4px; }}
 .hero {{ position: absolute; top: 0; left: 0; width: 1080px; height: 820px; overflow: hidden; }}
 .hero img {{ width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }}
+.hero img.bg, .s-hero img.bg {{ position: absolute; inset: -60px; width: calc(100% + 120px); height: calc(100% + 120px); object-fit: cover; object-position: center; filter: blur(34px) brightness(.62) saturate(.9); }}
+.hero img.fg, .s-hero img.fg {{ position: relative; z-index: 1; object-fit: contain; object-position: center; }}
 .hero::after {{ content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,34,30,0) 60%, rgba(38,34,30,.55) 100%); }}
 .filete {{ position: absolute; left: 44px; right: 44px; top: 44px; height: 732px; border: 3px solid {RED}; z-index: 2; pointer-events: none; }}
 .band {{ position: absolute; top: 820px; left: 0; width: 1080px; height: 530px; padding: 56px 72px 0; }}
@@ -96,7 +98,8 @@ h1.small {{ font-size: 52px; }}
 .s-wrap {{ position: absolute; inset: 0; padding: 270px 90px 0; }}
 .s-avatar {{ position: absolute; top: 84px; left: 50%; transform: translateX(-50%); width: 150px; }}
 .s-hero {{ width: 900px; height: 860px; margin: 0 auto; overflow: hidden; border: 3px solid {RED}; }}
-.s-hero img {{ width: 100%; height: 100%; object-fit: cover; display: block; }}
+.s-hero {{ position: relative; }}
+.s-hero img {{ width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }}
 .s-name {{ font-family: 'Cinzel'; font-weight: 700; font-size: 66px; line-height: 1.15; text-align: center; margin-top: 56px; }}
 .s-years {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 16px; }}
 .s-patron {{ font-size: 40px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 18px; }}
@@ -111,6 +114,21 @@ h1.small {{ font-size: 52px; }}
 .s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-size: 26px; letter-spacing: 6px; color: {RED}; }}
 .s-cta {{ position: absolute; left: 0; right: 0; bottom: 410px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
 """
+
+
+def img_tag(path, box_ratio, limiar):
+    """Imagem inteira sobre fundo desfocado quando a proporção (largura/altura) fica abaixo de `limiar`
+    (retrato/quadrado, que o recorte `cover` mutilaria); senão, recorte normal. `box_ratio` = proporção da moldura."""
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            w, h = im.size
+    except Exception:
+        w, h = 1, 1
+    uri = data_uri(path)
+    if w / h < limiar:
+        return f'<img class="bg" src="{uri}"><img class="fg" src="{uri}">'
+    return f'<img src="{uri}">'
 
 
 def esc(s):
@@ -134,12 +152,11 @@ def foot(n, total):
 
 def card_capa(post, total, pasta):
     tem_img = post.get("imagem") and (pasta / post["imagem"]).exists()
-    img = data_uri(pasta / post["imagem"]) if tem_img else SELO
-    fit = "" if tem_img else ' style="object-fit:contain;padding:90px;background:#EFE8DA"'
+    img = img_tag(pasta / post["imagem"], 1080 / 820, 1.15) if tem_img else f'<img src="{SELO}" style="object-fit:contain;padding:90px;background:#EFE8DA">'
     small = " small" if len(post["titulo"]) > 34 else ""
     return f"""<div class="page card">
       {badge(post.get("status"))}
-      <div class="hero"><img src="{img}"{fit}></div><div class="filete"></div>
+      <div class="hero">{img}</div><div class="filete"></div>
       <div class="band"><div class="rule"></div>
         <h1 class="{small}">{esc(post['titulo'])}</h1>
         <div class="sub">{esc(post.get('subtitulo',''))}</div>
@@ -168,7 +185,7 @@ def card_decisao(post, n, total):
 
 def story_manha(s, pasta):
     tem = s.get("imagem") and (pasta / s["imagem"]).exists()
-    hero = f'<div class="s-hero"><img src="{data_uri(pasta / s["imagem"])}"></div>' if tem else '<div style="height:380px"></div>'
+    hero = f'<div class="s-hero">{img_tag(pasta / s["imagem"], 900 / 860, 0.8)}</div>' if tem else '<div style="height:380px"></div>'
     linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
     return f"""<div class="page story">
       <div class="s-wrap">{hero}
