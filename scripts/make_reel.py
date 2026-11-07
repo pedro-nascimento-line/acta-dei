@@ -57,6 +57,14 @@ html.legenda, body.legenda {{ background: transparent !important; }}
 body.legenda .reel {{ background: transparent; }}
 body.legenda .r-hero, body.legenda .r-top, body.legenda .r-shade, body.legenda .r-title, body.legenda .r-foot {{ visibility: hidden; }}
 body.legenda .r-kicker, body.legenda .r-author {{ visibility: hidden; }}
+body.cover .r-cap, body.cover .r-foot, body.cover .r-top {{ display: none; }}
+body.cover .r-shade {{ height: 100%; background: linear-gradient(180deg, rgba(38,34,30,.15) 0%, rgba(38,34,30,.15) 45%, rgba(38,34,30,.88) 75%); }}
+body.cover .r-title {{ top: auto; bottom: 560px; }}
+body.cover .r-title h1 {{ font-size: 96px; line-height: 1.08; text-shadow: 0 3px 24px rgba(0,0,0,.95); }}
+body.cover .r-title .sub {{ font-size: 40px; margin-top: 22px; }}
+body.cover .r-title::before {{ content: ''; display: block; width: 140px; height: 5px; background: {render.RED}; margin: 0 auto 34px; }}
+body.cover .r-badge {{ font-size: 24px; padding: 14px 22px 12px; margin-bottom: 30px; }}
+body.cover .capa .r-hero img.fg {{ object-position: center 35%; }}
 """
 
 
@@ -261,6 +269,15 @@ def renderizar_slide(br, body, tmp, i, tempos, passos=3, passo_s=0.07):
     return base, seq
 
 
+def gerar_capa(br, html, destino):
+    """Imagem de capa do Reel (1080×1920): a imagem da capa com o título no centro, sem legenda.
+    A Meta recorta o centro para a miniatura do feed, por isso o título fica no meio."""
+    pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
+    pg.set_content(html); pg.wait_for_timeout(150)
+    pg.evaluate("() => document.body.classList.add('base', 'cover')")
+    pg.screenshot(path=str(destino), type="jpeg", quality=90); pg.close()
+
+
 # ---------------------------------------------------------------- áudio
 def narrar(texto, destino):
     """edge-tts pela API: grava o mp3 e devolve a lista de instantes (s) em que cada palavra começa.
@@ -347,7 +364,7 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
     plano = []
     for i, ((k, t), e) in enumerate(zip(slides, imgs)):
         if i == 0:
-            badge = f'<div class="r-badge">{st[0]}</div>' if st else ""
+            badge = f'<div class="r-badge">{st[0]}</div>' if st else ('<div class="r-badge">SANTO DO DIA</div>' if post.get("tipo") == "santo" else "")
             topo = f'<div class="r-title">{badge}<h1>{render.esc(post["titulo"])}</h1><div class="sub">{render.esc(post.get("subtitulo", ""))}</div></div>'
             plano.append((slide(pasta, e, palavras_html(t, "r-body"), topo), [(post["titulo"] + ".", False), (t, True)]))
         elif k == "CITACAO":
@@ -381,6 +398,8 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
     segs, total = [], 0.0
     with sync_playwright() as pw:
         br = pw.chromium.launch()
+        html_capa = f"<html><head><style>{render.CSS}{CSS_REEL}</style></head><body style='margin:0'>{plano[0][0]}</body></html>"
+        gerar_capa(br, html_capa, pasta / "reel_capa.jpg")
         for i, (html, partes) in enumerate(plano):
             audios, tempos, com_voz, t_cursor = narr[i]
             d = max(3.0, t_cursor + 0.6)

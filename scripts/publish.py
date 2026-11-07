@@ -154,8 +154,14 @@ def publicar_reel(dia, pasta, meta):
             tags.pop()
         if tags:
             legenda = legenda + "\n\n·\n" + " ".join(tags)
+    extra = {"thumb_offset": "1500"}
+    capa = pasta / "reel_capa.jpg"
+    if capa.exists():
+        cu = f"{BASE}/posts/{dia}/reel_capa.jpg"
+        if url_ok(cu, tentativas=4):
+            extra = {"cover_url": cu}
     c = api("POST", f"{USER}/media", media_type="REELS", video_url=u, caption=legenda[:2200],
-            share_to_feed="true", thumb_offset="0")
+            share_to_feed="true", **extra)
     esperar_container(c["id"], timeout=900)  # vídeo: a Meta transcodifica antes de liberar
     pub = api("POST", f"{USER}/media_publish", creation_id=c["id"])
     meta["reel_id"] = pub["id"]
