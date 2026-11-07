@@ -5,14 +5,15 @@ on:
   schedule:
     - cron: "6 10 * * *"   # 07:06 BRT — reserva
     - cron: "6 16 * * *"   # 13:06 BRT — reserva
+    - cron: "6 21 * * *"   # 18:06 BRT — reserva (reel)
     - cron: "6 23 * * *"   # 20:06 BRT — reserva
   push:
     paths:
-      - "gatilho/**"       # disparado pelas tarefas agendadas do Cowork às 7h, 13h e 20h
+      - "gatilho/**"       # disparado pelas tarefas agendadas do Cowork
   workflow_dispatch:
     inputs:
       slot:
-        description: "manha | tarde | noite | auto"
+        description: "manha | tarde | reel | noite | auto"
         default: "auto"
       dia:
         description: "AAAA-MM-DD (vazio = hoje)"
@@ -43,7 +44,7 @@ jobs:
           IG_API_HOST: ${{ vars.IG_API_HOST }}
           HASHTAGS_COMENTARIO: ${{ vars.HASHTAGS_COMENTARIO }}
         run: |
-          args="--slot ${{ github.event.inputs.slot || 'auto' }}"
+          args="--slot ${{ github.event.inputs.slot || (github.event_name == 'push' && 'gatilho' || 'auto') }}"
           if [ -n "${{ github.event.inputs.dia }}" ]; then args="$args --dia ${{ github.event.inputs.dia }}"; fi
           python scripts/publish.py $args
 
