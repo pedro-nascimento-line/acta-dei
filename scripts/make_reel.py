@@ -51,11 +51,17 @@ CSS_REEL = f"""
 .r-quote {{ font-family: 'Cormorant'; font-size: 66px; line-height: 1.25; font-style: italic; font-weight: 600; color: {render.CREAM}; text-shadow: 0 2px 18px rgba(0,0,0,.85); }}
 .r-author {{ font-family: 'Cinzel'; font-size: 28px; letter-spacing: 5px; color: {render.RED}; margin-top: 40px; text-shadow: 0 1px 8px rgba(0,0,0,.8); }}
 .r-foot {{ position: absolute; left: 0; right: 0; bottom: 380px; text-align: center; font-family: 'Cinzel'; font-size: 20px; letter-spacing: 6px; color: {render.RED}; opacity: .85; }}
+.w {{ opacity: 0; transition: none; }}
+body.base .w {{ visibility: hidden; }}
+html.legenda, body.legenda {{ background: transparent !important; }}
+body.legenda .reel {{ background: transparent; }}
+body.legenda .r-hero, body.legenda .r-top, body.legenda .r-shade, body.legenda .r-title, body.legenda .r-foot {{ visibility: hidden; }}
+body.legenda .r-kicker, body.legenda .r-author {{ visibility: hidden; }}
 """
 
 
 # ---------------------------------------------------------------- roteiro
-def frases(txt, n=1, max_len=190):
+def frases(txt, n=1, max_len=130):
     partes = [p.strip() for p in re.split(r"(?<=[.!?])\s+", (txt or "").replace("\n", " ")) if p.strip()]
     out, acc = [], ""
     for p in partes:
@@ -203,40 +209,93 @@ def hero_html(pasta, e):
     return f'<img class="cv" src="{uri}">'
 
 
+def palavras_html(texto, classe, aspas=False):
+    ws = texto.split()
+    spans = " ".join(f'<span class="w" data-i="{i}">{render.esc(w)}</span>' for i, w in enumerate(ws))
+    if aspas:
+        spans = f'<span class="w" data-i="0">“</span>{spans}<span class="w" data-i="{len(ws) - 1}">”</span>'
+    return f'<div class="{classe}">{spans}</div>'
+
+
 def slide(pasta, e, corpo, topo=""):
     return f"""<div class="reel{' capa' if topo else ''}"><div class="r-hero">{hero_html(pasta, e)}</div><div class="r-top"></div><div class="r-shade"></div>
       {topo}<div class="r-cap">{corpo}</div><div class="r-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
 
 
-def renderizar_slides(htmls, tmp):
-    from playwright.sync_api import sync_playwright
-    pngs = []
-    with sync_playwright() as pw:
-        br = pw.chromium.launch()
-        for i, body in enumerate(htmls):
-            pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=ESCALA)
-            pg.set_content(f"<html><head><style>{render.CSS}{CSS_REEL}</style></head><body style='margin:0'>{body}</body></html>")
-            pg.wait_for_timeout(200)
-            pg.evaluate("""() => { for (const sel of ['.r-body', '.r-quote']) { const t = document.querySelector(sel); if (!t) continue;
-                let fs = parseFloat(getComputedStyle(t).fontSize); while (t.getBoundingClientRect().height > 560 && fs > 34) { fs -= 2; t.style.fontSize = fs + 'px'; } } }""")
-            p = tmp / f"slide_{i:02d}.png"
-            pg.screenshot(path=str(p)); pg.close(); pngs.append(p)
-        br.close()
-    return pngs
+AJUSTE_JS = """() => { for (const sel of ['.r-body', '.r-quote']) { const t = document.querySelector(sel); if (!t) continue;
+    let fs = parseFloat(getComputedStyle(t).fontSize); while (t.getBoundingClientRect().height > 560 && fs > 34) { fs -= 2; t.style.fontSize = fs + 'px'; } } }"""
+
+
+def renderizar_slide(br, body, tmp, i, tempos, passos=3, passo_s=0.07):
+    """Gera o PNG base (sem as palavras) e a sequência de PNGs transparentes da legenda,
+    uma por estado (cada palavra surge em `passos` degraus de opacidade). Devolve (base, [(png, duração)])."""
+    html = f"<html><head><style>{render.CSS}{CSS_REEL}</style></head><body style='margin:0'>{body}</body></html>"
+    pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=ESCALA)
+    pg.set_content(html); pg.wait_for_timeout(150); pg.evaluate(AJUSTE_JS)
+    pg.evaluate("() => document.body.classList.add('base')")
+    base = tmp / f"slide_{i:02d}.png"
+    pg.screenshot(path=str(base)); pg.close()
+    # legenda (escala 1 = tamanho do vídeo final)
+    pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
+    pg.set_content(html); pg.wait_for_timeout(150); pg.evaluate(AJUSTE_JS)
+    pg.evaluate("() => { document.documentElement.classList.add('legenda'); document.body.classList.add('legenda'); }")
+    n = pg.evaluate("() => { const s = new Set(); document.querySelectorAll('.w').forEach(e => s.add(e.dataset.i)); return s.size; }")
+    seq, t_ant = [], 0.0
+    estados = []  # (instante, índice da palavra, opacidade)
+    for k in range(n):
+        t0 = tempos[k] if k < len(tempos) else (tempos[-1] + 0.3 if tempos else 0.3 * k)
+        for q in range(1, passos + 1):
+            estados.append((t0 + (q - 1) * passo_s, k, q / passos))
+    estados.sort()
+    # primeiro quadro: nada visível, dura até a primeira palavra
+    vazio = tmp / f"cap_{i:02d}_000.png"
+    pg.screenshot(path=str(vazio), omit_background=True)
+    seq.append([vazio, max(estados[0][0], 0.05) if estados else 1.0])
+    for j, (t, k, op) in enumerate(estados):
+        pg.evaluate("([k, op]) => document.querySelectorAll(`.w[data-i='${k}']`).forEach(e => e.style.opacity = op)", [k, op])
+        png = tmp / f"cap_{i:02d}_{j + 1:03d}.png"
+        pg.screenshot(path=str(png), omit_background=True)
+        prox = estados[j + 1][0] if j + 1 < len(estados) else t + 1.0
+        seq.append([png, max(prox - t, 0.03)])
+    pg.close()
+    return base, seq
 
 
 # ---------------------------------------------------------------- áudio
 def narrar(texto, destino):
+    """edge-tts pela API: grava o mp3 e devolve a lista de instantes (s) em que cada palavra começa.
+    Devolve None se a voz falhar."""
     try:
-        r = subprocess.run([sys.executable, "-m", "edge_tts", "--voice", VOZ, "--rate=-6%", "--text", texto,
-                            "--write-media", str(destino)], capture_output=True, text=True, timeout=120)
-        ok = r.returncode == 0 and destino.exists() and destino.stat().st_size > 1000
-        if not ok:
-            print(f"  narração falhou: {(r.stderr or r.stdout)[-300:].strip()}")
-        return ok
+        import asyncio, edge_tts
+
+        async def _run():
+            com = edge_tts.Communicate(texto, VOZ, rate="-6%")
+            marcas = []
+            with open(destino, "wb") as f:
+                async for ch in com.stream():
+                    if ch["type"] == "audio":
+                        f.write(ch["data"])
+                    elif ch["type"] == "WordBoundary":
+                        marcas.append(ch["offset"] / 1e7)
+            return marcas
+        marcas = asyncio.run(_run())
+        if not destino.exists() or destino.stat().st_size < 1000:
+            print("  narração falhou: áudio vazio"); return None
+        return marcas
     except Exception as e:
-        print(f"  narração falhou: {e}")
-        return False
+        print(f"  narração falhou: {str(e)[:200]}")
+        return None
+
+
+def tempos_palavras(marcas, n_palavras, inicio, dur_total):
+    """Mapeia as marcas da voz (M) nas palavras exibidas (N) por posição; sem marcas, ritmo uniforme."""
+    if marcas and n_palavras:
+        M = len(marcas)
+        if M == n_palavras:
+            return [inicio + m for m in marcas]
+        return [inicio + marcas[min(M - 1, round(k * (M - 1) / max(n_palavras - 1, 1)))] for k in range(n_palavras)]
+    passo = dur_total / max(n_palavras, 1)
+    return [inicio + k * passo for k in range(n_palavras)]
 
 
 def musica(dia):
@@ -282,55 +341,84 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
     if cit:
         slides.append(("CITACAO", cit))
     imgs = montar_imagens(post, pasta, slides, sem_ia)
-    htmls, falas = [], []
     st = render.STATUS.get(post.get("status") or "")
+    tmp = Path(tempfile.mkdtemp(prefix="reel_"))
+    # cada slide: html, partes da narração [(texto, mostra_legenda)]
+    plano = []
     for i, ((k, t), e) in enumerate(zip(slides, imgs)):
         if i == 0:
             badge = f'<div class="r-badge">{st[0]}</div>' if st else ""
             topo = f'<div class="r-title">{badge}<h1>{render.esc(post["titulo"])}</h1><div class="sub">{render.esc(post.get("subtitulo", ""))}</div></div>'
-            htmls.append(slide(pasta, e, f'<div class="r-body">{render.esc(t)}</div>', topo))
-            falas.append(f"{post['titulo']}. {t}")
+            plano.append((slide(pasta, e, palavras_html(t, "r-body"), topo), [(post["titulo"] + ".", False), (t, True)]))
         elif k == "CITACAO":
-            htmls.append(slide(pasta, e, f'<div class="r-quote">“{render.esc(t)}”</div><div class="r-author">{render.esc(autor)}</div>'))
-            falas.append(f"{t}. {autor.replace('·', ',')}" if autor else t)
+            corpo = palavras_html(t, "r-quote", aspas=True) + f'<div class="r-author">{render.esc(autor)}</div>'
+            partes = [(t, True)] + ([(autor.replace("·", ","), False)] if autor else [])
+            plano.append((slide(pasta, e, corpo), partes))
         else:
             kick = f'<div class="r-kicker">{render.esc(k)}</div>' if k else ""
-            htmls.append(slide(pasta, e, f'{kick}<div class="r-body">{render.esc(t)}</div>'))
-            falas.append(t)
-    tmp = Path(tempfile.mkdtemp(prefix="reel_"))
-    pngs = renderizar_slides(htmls, tmp)
+            plano.append((slide(pasta, e, kick + palavras_html(t, "r-body")), [(t, True)]))
+
+    ATRASO = 0.45  # silêncio antes da voz em cada slide
+    # fase 1: narração (fora do Playwright, que mantém seu próprio loop de eventos)
+    narr = []
+    for i, (html, partes) in enumerate(plano):
+        audios, t_cursor, tempos, com_voz = [], ATRASO, [], not sem_voz
+        for j, (texto, mostra) in enumerate(partes):
+            voz = tmp / f"voz_{i:02d}_{j}.mp3"
+            marcas = narrar(texto, voz) if com_voz else None
+            if marcas is None:
+                com_voz = False
+                d_parte = max(2.0, 0.07 * len(texto))
+            else:
+                d_parte = dur(voz)
+                audios.append(voz)
+            if mostra:
+                tempos = tempos_palavras(marcas, len(texto.split()), t_cursor, d_parte)
+            t_cursor += d_parte + 0.35
+        narr.append((audios, tempos, com_voz, t_cursor))
+    # fase 2: quadros e montagem
+    from playwright.sync_api import sync_playwright
     segs, total = [], 0.0
-    for i, (png, fala) in enumerate(zip(pngs, falas)):
-        voz = tmp / f"voz_{i:02d}.mp3"
-        tem_voz = (not sem_voz) and narrar(fala, voz)
-        d = (dur(voz) + 1.0) if tem_voz else max(3.2, 0.07 * len(fala))
-        d = max(3.0, min(d, 14.0))
-        frames = int(round(d * FPS))
-        if i % 2 == 0:
-            z = "min(zoom+0.0006,1.09)"
-        else:
-            z = "if(eq(on,1),1.09,max(zoom-0.0006,1.0))"
-        zoom = f"zoompan=z='{z}':d={frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
-        vf = f"[0:v]{zoom},fade=t=in:st=0:d=0.4,fade=t=out:st={d-0.4:.2f}:d=0.4,format=yuv420p[v]"
-        seg = tmp / f"seg_{i:02d}.mp4"
-        if tem_voz:
-            ff("-loop", "1", "-framerate", FPS, "-i", png, "-i", voz,
-               "-filter_complex", f"{vf};[1:a]adelay=450|450,apad[a]", "-map", "[v]", "-map", "[a]",
-               "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
-        else:
-            ff("-loop", "1", "-framerate", FPS, "-i", png, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-               "-filter_complex", vf, "-map", "[v]", "-map", "1:a",
-               "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
-        segs.append(seg); total += d
-        print(f"  slide {i}: {d:.1f}s {'voz' if tem_voz else 'sem voz'} · {imgs[i].get('arquivo') or 'selo'} · {fala[:50]}")
+    with sync_playwright() as pw:
+        br = pw.chromium.launch()
+        for i, (html, partes) in enumerate(plano):
+            audios, tempos, com_voz, t_cursor = narr[i]
+            d = max(3.0, t_cursor + 0.6)
+            base, seq = renderizar_slide(br, html, tmp, i, tempos)
+            # fecha a sequência da legenda exatamente na duração do slide
+            soma = sum(x[1] for x in seq)
+            if soma < d:
+                seq[-1][1] += d - soma
+            lista_cap = tmp / f"caps_{i:02d}.txt"
+            lista_cap.write_text("".join(f"file '{png}'\nduration {du:.3f}\n" for png, du in seq) + f"file '{seq[-1][0]}'\n")
+            frames = int(round(d * FPS))
+            z = "min(zoom+0.0006,1.09)" if i % 2 == 0 else "if(eq(on,1),1.09,max(zoom-0.0006,1.0))"
+            zoom = f"zoompan=z='{z}':d={frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
+            vf = (f"[0:v]{zoom}[zb];[1:v]format=rgba,fps={FPS}[cap];[zb][cap]overlay=0:0:shortest=1,"
+                  f"fade=t=in:st=0:d=0.4,fade=t=out:st={d-0.4:.2f}:d=0.4,format=yuv420p[v]")
+            seg = tmp / f"seg_{i:02d}.mp4"
+            if com_voz and audios:
+                lista_voz = tmp / f"vozes_{i:02d}.txt"
+                lista_voz.write_text("".join(f"file '{a}'\n" for a in audios))
+                voz_i = tmp / f"voz_{i:02d}.mp3"
+                ff("-f", "concat", "-safe", "0", "-i", lista_voz, "-c", "copy", voz_i)
+                ff("-loop", "1", "-framerate", FPS, "-i", base, "-f", "concat", "-safe", "0", "-i", lista_cap, "-i", voz_i,
+                   "-filter_complex", f"{vf};[2:a]adelay={int(ATRASO*1000)}|{int(ATRASO*1000)},apad[a]", "-map", "[v]", "-map", "[a]",
+                   "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
+            else:
+                ff("-loop", "1", "-framerate", FPS, "-i", base, "-f", "concat", "-safe", "0", "-i", lista_cap, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+                   "-filter_complex", vf, "-map", "[v]", "-map", "2:a",
+                   "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
+            segs.append(seg); total += d
+            print(f"  slide {i}: {d:.1f}s {'voz' if com_voz else 'sem voz'} · {imgs[i].get('arquivo') or 'selo'} · {len(seq)} quadros de legenda · {partes[0][0][:40]}")
+        br.close()
     lista = tmp / "lista.txt"
-    lista.write_text("".join(f"file '{s}'\n" for s in segs))
+    lista.write_text("".join(f"file '{s_}'\n" for s_ in segs))
     concat = tmp / "concat.mp4"
     ff("-f", "concat", "-safe", "0", "-i", lista, "-c", "copy", concat)
     saida = pasta / "reel.mp4"
     m = None if sem_musica else musica(pasta.name)
-    creditos = []
-    vistos = set()
+    creditos, vistos = [], set()
     for e in imgs:
         c = e.get("credito") or ""
         if c and c not in vistos:
