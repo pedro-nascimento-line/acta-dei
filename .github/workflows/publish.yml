@@ -3,9 +3,12 @@ name: Publicar no Instagram
 # Horários em UTC. Brasília é UTC-3 o ano todo (sem horário de verão desde 2019).
 on:
   schedule:
-    - cron: "0 10 * * *"   # 07:00 BRT — carrossel + story da manhã + comentário com hashtags
-    - cron: "0 16 * * *"   # 13:00 BRT — story da tarde
-    - cron: "0 23 * * *"   # 20:00 BRT — story da noite
+    - cron: "6 10 * * *"   # 07:06 BRT — reserva
+    - cron: "6 16 * * *"   # 13:06 BRT — reserva
+    - cron: "6 23 * * *"   # 20:06 BRT — reserva
+  push:
+    paths:
+      - "gatilho/**"       # disparado pelas tarefas agendadas do Cowork às 7h, 13h e 20h
   workflow_dispatch:
     inputs:
       slot:
