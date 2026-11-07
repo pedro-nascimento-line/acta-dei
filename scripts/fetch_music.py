@@ -10,6 +10,7 @@ import json, subprocess, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import commons  # noqa: E402
+from av import duracao  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PASTA = RAIZ / "posts" / "_musica"
@@ -21,15 +22,6 @@ TERMOS = [
     "Te Deum chant", "Magnificat gregorian", "Ave Maris Stella chant", "Adoro te devote",
 ]
 MIN_S, MAX_S = 40, 900
-
-
-def duracao(arq):
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(arq)],
-                         capture_output=True, text=True).stdout.strip()
-    try:
-        return float(out)
-    except ValueError:
-        return 0.0
 
 
 def buscar_audio(termo, n=20):

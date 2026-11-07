@@ -13,6 +13,7 @@ import json, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import render  # noqa: E402  (CSS, fontes, data_uri, esc, STATUS, SELO)
+from av import ff, duracao as dur  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 VOZ = "pt-BR-AntonioNeural"
@@ -129,20 +130,13 @@ def narrar(texto, destino):
     try:
         r = subprocess.run([sys.executable, "-m", "edge_tts", "--voice", VOZ, "--rate=-6%", "--text", texto,
                             "--write-media", str(destino)], capture_output=True, text=True, timeout=120)
-        return r.returncode == 0 and destino.exists() and destino.stat().st_size > 1000
+        ok = r.returncode == 0 and destino.exists() and destino.stat().st_size > 1000
+        if not ok:
+            print(f"  narração falhou: {(r.stderr or r.stdout)[-300:].strip()}")
+        return ok
     except Exception as e:
         print(f"  narração falhou: {e}")
         return False
-
-
-def dur(arq):
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(arq)],
-                         capture_output=True, text=True).stdout.strip()
-    return float(out) if out else 0.0
-
-
-def ff(*args):
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *map(str, args)], check=True)
 
 
 def musica(dia):
