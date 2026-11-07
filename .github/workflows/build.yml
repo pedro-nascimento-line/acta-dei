@@ -42,16 +42,18 @@ jobs:
 
       - name: Instalar dependências
         run: |
-          pip install requests playwright pillow
+          pip install requests playwright pillow edge-tts
           python -m playwright install --with-deps chromium
 
-      - name: Baixar imagens e renderizar
+      - name: Baixar imagens, renderizar e gerar o reel
         run: |
+          python scripts/fetch_music.py || echo "música: estante incompleta (segue sem música)"
           for d in ${{ steps.posts.outputs.dias }}; do
             if [ ! -f "$d/post.json" ]; then echo "== $d sem post.json (removido?) - ignorando"; continue; fi
             echo "== $d"
             python scripts/fetch_image.py "$d" || echo "fetch_image falhou em $d (segue com o selo)"
             python scripts/render.py "$d"
+            python scripts/make_reel.py "$d" || echo "reel falhou em $d (o dia sai sem reel)"
           done
           python scripts/build_index.py
           python scripts/build_fila.py
