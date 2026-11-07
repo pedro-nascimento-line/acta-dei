@@ -1,0 +1,59 @@
+{
+  "tipo": "santo",
+  "titulo": "São Vilibrordo, apóstolo dos frísios",
+  "titulo_en": "Saint Willibrord, Apostle of the Frisians",
+  "subtitulo": "Echternach, Luxemburgo · † 7 de novembro de 739",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Willibrord",
+  "imagem_busca": "Willibrord Echternach",
+  "cards": [
+    {
+      "kicker": "QUEM FOI · WHO HE WAS",
+      "texto": "Vilibrordo nasceu na Nortúmbria, no norte da atual Inglaterra, por volta de 658. Ainda menino, o pai, Vilgilso, o entregou ao mosteiro de Ripon, dirigido por São Vilfrido. Aos vinte anos partiu para a Irlanda e passou doze anos no mosteiro de Rathmelsigi, sob a direção de Santo Egberto.\n\nOrdenado sacerdote, atravessou o mar em 690 com onze companheiros para evangelizar os frísios, povo pagão da foz do Reno. Pepino de Herstal, senhor dos francos, acolheu a missão. Vilibrordo foi a Roma pedir a autorização do papa Sérgio I.",
+      "texto_en": "Willibrord was born in Northumbria, in the north of present-day England, around 658. As a boy his father, Wilgils, placed him in the monastery of Ripon, governed by Saint Wilfrid. At twenty he left for Ireland and spent twelve years at the monastery of Rathmelsigi under Saint Egbert. Ordained a priest, he crossed the sea in 690 with eleven companions to evangelize the Frisians, a pagan people at the mouth of the Rhine. Pepin of Herstal, ruler of the Franks, welcomed the mission, and Willibrord went to Rome to ask Pope Sergius I for authorization."
+    },
+    {
+      "kicker": "O QUE FEZ · WHAT HE DID",
+      "texto": "Na segunda viagem a Roma, em novembro de 695, o papa Sérgio I o sagrou arcebispo dos frísios na igreja de Santa Cecília, deu-lhe o pálio e o nome de Clemente. Vilibrordo fixou a sede em Utreque e ali ergueu a igreja do Salvador.\n\nEm 698, com a doação da abadessa Irmina, fundou a abadia de Echternach, hoje em Luxemburgo, base de suas viagens. Pregou até a Dinamarca. Em 716, o rei frísio Radbodo destruiu igrejas e expulsou os missionários. Após a morte dele, em 719, Vilibrordo voltou, ajudado por quase três anos por Vinfrido, o futuro São Bonifácio.",
+      "texto_en": "On his second journey to Rome, in November 695, Pope Sergius I consecrated him archbishop of the Frisians in the church of Saint Cecilia, gave him the pallium and the name Clement. Willibrord made Utrecht his see and built there the church of the Holy Saviour. In 698, with a donation from the abbess Irmina, he founded the abbey of Echternach, now in Luxembourg, the base of his missionary journeys; he preached as far as Denmark. In 716 the Frisian king Radbod destroyed churches and drove out the missionaries. After Radbod's death in 719 Willibrord returned, helped for nearly three years by Winfrid, the future Saint Boniface."
+    },
+    {
+      "kicker": "O CULTO · THE VENERATION",
+      "texto": "Em 728, no calendário de Echternach, Vilibrordo anotou de próprio punho que agora vivia feliz em nome de Deus. Morreu ali em 7 de novembro de 739, com cerca de 81 anos, e foi sepultado na abadia, como pedira. Alcuíno de York escreveu sua Vida poucas décadas depois. Peregrinos visitam o túmulo desde então.\n\nEm 19 de outubro de 1031, as relíquias foram colocadas sob o altar-mor da nova basílica. Hoje repousam num sarcófago merovíngio, na cripta da basílica de Echternach, reconstruída e consagrada em 1953 após a destruição de dezembro de 1944.",
+      "texto_en": "In 728, in the calendar of Echternach, Willibrord noted in his own hand that he was now living happily in the name of God. He died there on 7 November 739, aged about 81, and was buried in the abbey as he had wished. Alcuin of York wrote his Life a few decades later, and pilgrims began visiting the tomb soon after his death. On 19 October 1031 the relics were placed under the high altar of the new basilica. Today they rest in a Merovingian sarcophagus in the crypt of the basilica of Echternach, rebuilt and consecrated in 1953 after its destruction in December 1944."
+    }
+  ],
+  "decisao": "Santo de culto antigo, anterior aos processos formais de canonização: honrado como santo logo após a morte, tem o nome inscrito no Martirológio Romano em 7 de novembro. Padroeiro dos Países Baixos e de Luxemburgo. Em 8 de novembro de 1990, João Paulo II celebrou a missa de encerramento do Ano de São Vilibrordo, treze séculos após o início da missão, e o declarou apóstolo dos holandeses. Em 2 de abril de 2008, Bento XVI nomeou o cardeal Godfried Danneels enviado especial às celebrações dos 1350 anos de seu nascimento, em Luxemburgo.",
+  "decisao_en": "A saint of ancient cult, before the formal canonization processes: honoured as a saint soon after his death, his name is inscribed in the Roman Martyrology on 7 November. Patron of the Netherlands and of Luxembourg. On 8 November 1990 John Paul II celebrated the closing Mass of the Year of Saint Willibrord, thirteen centuries after the mission began, and called him the apostle of the Dutch. On 2 April 2008 Benedict XVI appointed Cardinal Godfried Danneels special envoy to the celebrations of the 1350th anniversary of his birth, in Luxembourg.",
+  "fontes": [
+    "Catholic Encyclopedia (New Advent) — St. Willibrord",
+    "Vatican.va — Homilia de João Paulo II, encerramento do Ano de São Vilibrordo, 8 nov 1990",
+    "Arquidiocese de Luxemburgo (cathol.lu) — Saint Willibrord",
+    "Basílica de Echternach (basilika.lu) — folheto da basílica e da cripta"
+  ],
+  "stories": {
+    "manha": {
+      "nome": "São Vilibrordo",
+      "anos": "† 739 · BISPO E MISSIONÁRIO",
+      "padroeiro": "Padroeiro dos Países Baixos e de Luxemburgo",
+      "linhas": [
+        "Monge da Nortúmbria, formou-se em Ripon e na Irlanda. Em 690 partiu com onze companheiros para a Frísia.",
+        "Sagrado arcebispo dos frísios pelo papa Sérgio I em 695, fixou a sede em Utreque e fundou Echternach em 698.",
+        "Morreu em Echternach em 7 de novembro de 739. Seu túmulo, na cripta da basílica, recebe peregrinos até hoje."
+      ],
+      "imagem_wikipedia": "en:Willibrord",
+      "imagem": "santo.jpg"
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "Na terça-feira de Pentecostes, Echternach celebra São Vilibrordo com a Procissão Dançante. Em 2010, a UNESCO a inscreveu como Patrimônio Cultural Imaterial.",
+      "texto_en": "On Whit Tuesday, Echternach honours Saint Willibrord with the Hopping Procession. In 2010 UNESCO inscribed it as Intangible Cultural Heritage."
+    },
+    "noite": {
+      "citacao": "Ele abandonou tudo para difundir a fé em Cristo, para levar o feliz anúncio a povos desconhecidos.",
+      "autor": "JOÃO PAULO II · HOMILIA DO ANO DE SÃO VILIBRORDO, 1990",
+      "citacao_en": "He left everything behind to spread faith in Christ, to bring the glad tidings to unknown peoples."
+    }
+  }
+}
