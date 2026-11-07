@@ -4,7 +4,9 @@
 Uso (no GitHub Actions):
   python3 scripts/publish.py --slot manha   # 7h BRT: carrossel + story da manhã + comentário com hashtags
   python3 scripts/publish.py --slot tarde   # 13h BRT: story da tarde
+  python3 scripts/publish.py --slot reel    # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
   python3 scripts/publish.py --slot noite   # 20h BRT: story da noite
+  python3 scripts/publish.py --slot gatilho # slot lido de gatilho/publicar.txt (tarefas agendadas do Cowork)
   python3 scripts/publish.py --slot auto    # decide pelo horário UTC
   python3 scripts/publish.py --refresh-token
 
@@ -21,7 +23,7 @@ Regras: nunca publica duas vezes a mesma peça do mesmo dia (confere meta.json);
 pedido e o que ficou pendente dos slots anteriores do dia; espera as imagens estarem acessíveis no Pages;
 tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
 """
-import argparse, csv, datetime as dt, json, os, sys, time
+import argparse, csv, datetime as dt, json, os, re, sys, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 import requests
@@ -135,6 +137,32 @@ def publicar_story(dia, pasta, meta, slot):
     return pub["id"]
 
 
+def publicar_reel(dia, pasta, meta):
+    arq = pasta / "reel.mp4"
+    if not arq.exists():
+        raise RuntimeError("reel.mp4 não existe")
+    u = f"{BASE}/posts/{dia}/reel.mp4"
+    if not url_ok(u):
+        raise RuntimeError(f"reel não acessível no Pages: {u}")
+    leg_p = pasta / "legenda_reel.txt"
+    legenda = leg_p.read_text().strip() if leg_p.exists() else (pasta / "legenda.txt").read_text().strip()
+    hashtags_p = pasta / "hashtags.txt"
+    hashtags = hashtags_p.read_text().strip() if hashtags_p.exists() else ""
+    if hashtags:
+        tags = hashtags.split()
+        while tags and len(legenda) + 4 + len(" ".join(tags)) > 2200:
+            tags.pop()
+        if tags:
+            legenda = legenda + "\n\n·\n" + " ".join(tags)
+    c = api("POST", f"{USER}/media", media_type="REELS", video_url=u, caption=legenda[:2200],
+            share_to_feed="true", thumb_offset="0")
+    esperar_container(c["id"], timeout=900)  # vídeo: a Meta transcodifica antes de liberar
+    pub = api("POST", f"{USER}/media_publish", creation_id=c["id"])
+    meta["reel_id"] = pub["id"]
+    log("reel", "reel", pub["id"], "ok")
+    return pub["id"]
+
+
 def publicar_slot(s, dia, pasta, meta):
     """Publica as peças de um slot que ainda não têm id no meta.json (nada sai duas vezes)."""
     if s == "manha":
@@ -145,13 +173,27 @@ def publicar_slot(s, dia, pasta, meta):
                 publicar_story(dia, pasta, meta, "manha")
             except Exception as e:  # o carrossel já saiu; o story não derruba a execução
                 log("manha", "story", "", "falha", str(e))
+    elif s == "reel":
+        if not meta.get("reel_id"):
+            if (pasta / "reel.mp4").exists():
+                publicar_reel(dia, pasta, meta)
+            else:
+                print("  sem reel.mp4 hoje; pulando o reel")
     elif not meta.get(f"story_{s}_id"):
         publicar_story(dia, pasta, meta, s)
 
 
 def slot_auto():
     h = dt.datetime.now(BRT).hour
-    return "manha" if h < 11 else "tarde" if h < 17 else "noite"
+    return "manha" if h < 11 else "tarde" if h < 16 else "reel" if h < 19 else "noite"
+
+
+def slot_gatilho():
+    """Slot escrito pelo gatilho (gatilho/publicar.txt: '... slot manha ...'); 'apenas' desliga a recuperação."""
+    g = RAIZ / "gatilho/publicar.txt"
+    txt = g.read_text() if g.exists() else ""
+    m = re.search(r"slot\s+(manha|tarde|reel|noite)", txt)
+    return (m.group(1) if m else slot_auto()), ("apenas" in txt)
 
 
 def refresh_token():
@@ -174,7 +216,11 @@ def main():
         return refresh_token()
     if not (TOKEN and USER and BASE):
         sys.exit("faltam IG_ACCESS_TOKEN, IG_USER_ID ou PAGES_BASE")
-    slot = slot_auto() if a.slot == "auto" else a.slot
+    apenas = False
+    if a.slot == "gatilho":
+        slot, apenas = slot_gatilho()
+    else:
+        slot = slot_auto() if a.slot == "auto" else a.slot
     pasta = RAIZ / "posts" / a.dia
     if not pasta.exists():
         log(slot, "-", "", "sem_post", f"pasta posts/{a.dia} não existe"); sys.exit("sem post para hoje")
@@ -182,9 +228,9 @@ def main():
     meta = json.loads(meta_p.read_text()) if meta_p.exists() else {}
     # cada execução publica o slot pedido E o que ficou pendente dos slots anteriores do dia
     # (se o cron das 7h atrasar ou falhar, o das 13h publica o carrossel antes do story da tarde)
-    ordem = ["manha", "tarde", "noite"]
-    alvo = ordem[: ordem.index(slot) + 1]
-    pecas = {"manha": ["feed_id", "story_manha_id"], "tarde": ["story_tarde_id"], "noite": ["story_noite_id"]}
+    ordem = ["manha", "tarde", "reel", "noite"]
+    alvo = [slot] if apenas else ordem[: ordem.index(slot) + 1]
+    pecas = {"manha": ["feed_id", "story_manha_id"], "tarde": ["story_tarde_id"], "reel": ["reel_id"], "noite": ["story_noite_id"]}
     pendentes = [k for s_ in alvo for k in pecas[s_] if not meta.get(k)]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return

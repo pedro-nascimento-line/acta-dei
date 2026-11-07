@@ -32,6 +32,7 @@ Siga o formato documentado em `scripts/render.py`. Campos obrigatórios:
 - Pistas de imagem para o Actions: `imagem_wikipedia` (artigo `en:` ou `pt:` do assunto — o Actions usa a imagem principal do artigo), `imagem_busca` (termo para o Commons) e `imagem: "imagem.jpg"`. Para o story da manhã, dentro de `stories.manha`, `imagem_wikipedia` do santo (campo `wiki` de `santos.json`) e `imagem: "santo.jpg"`.
 - `cards`: 3 a 4 cards, cada um com `kicker` (PT · EN, caixa alta), `texto` (PT, 2 parágrafos, 380 a 560 caracteres) e `texto_en` (1 parágrafo). Estrutura para milagre: O FATO → A INVESTIGAÇÃO → (AS RELÍQUIAS HOJE ou AS TESTEMUNHAS) → último card gerado por `decisao`. Estrutura para santo: QUEM FOI → O QUE FEZ → A CANONIZAÇÃO (ou O MARTÍRIO) → `decisao` = "O que a Santa Igreja Católica declarou" (decreto, data, autoridade, padroado).
 - `decisao` e `decisao_en`: documento, data e autoridade. `fontes`: 3 a 4 nomes de fontes realmente abertas, no formato "Site/órgão — documento, data".
+- `reel`: lista de 4 a 5 frases curtas em português (até 170 caracteres cada), que contam o caso do começo ao fim nesta ordem: gancho (o fato mais forte ou mais estranho, para prender nos 3 primeiros segundos), contexto, investigação (ou o que o santo fez), decisão da Santa Igreja Católica. Cada frase vira um slide narrado em voz no Reel do dia, então escreva como se fala: frases diretas, sem parênteses, siglas ou citações longas; datas e números em forma que soe natural lida em voz alta. Pode ser lista de strings ou de objetos `{"kicker": "...", "texto": "..."}` (kicker opcional, curto, caixa alta).
 - `stories.manha` (santo do dia: `nome`, `anos` ("† ano · título"), `padroeiro`, `linhas` com 3 frases de até 110 caracteres); `stories.tarde` (um fato que não coube no carrossel, `texto` ≤ 160 caracteres + `texto_en`); `stories.noite` (`citacao` ≤ 120 caracteres, `autor` em caixa alta com a obra/ano, `citacao_en`). Sem enquetes, perguntas ou pedidos de interação.
 
 ## 4. Escrever `posts/HOJE/legenda.txt` e `posts/HOJE/hashtags.txt`
@@ -50,7 +51,7 @@ Um único `push_files` na branch `main` com: `posts/HOJE/post.json`, `posts/HOJE
 
 ## 6. Conferir e encerrar
 
-Depois do commit, aguarde 5 minutos e confira em `posts/HOJE/` se o Actions gerou `card_01.jpg` e `story_manha.jpg` (get_file_contents no diretório). Se não gerou em 15 minutos, registre em `log/avisos.md` e encerre: o workflow de publicação tentará mesmo assim e registrará a falha.
+Depois do commit, aguarde 5 minutos e confira em `posts/HOJE/` se o Actions gerou `card_01.jpg`, `story_manha.jpg` e `reel.mp4` (get_file_contents no diretório). Se não gerou em 15 minutos, registre em `log/avisos.md` e encerre: o workflow de publicação tentará mesmo assim e registrará a falha.
 
 Se for domingo, escreva também `log/semana-AAAA-MM-DD.md` com: posts da semana, falhas, casos marcados para revisar, e quantos itens restam na fila. Esse arquivo é o relatório semanal.
 
