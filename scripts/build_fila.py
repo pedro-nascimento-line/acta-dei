@@ -42,3 +42,10 @@ while len(fila) < 40 and len(usados) < len(cand):
 
 (RAIZ / "data/fila.json").write_text(json.dumps({"gerada_em": hoje.isoformat(), "fila": fila}, ensure_ascii=False, indent=1))
 print(f"fila com {len(fila)} itens; primeiros:", [f["id"] for f in fila[:8]])
+
+# projeção dos próximos 30 dias (posts/_cronograma.json), usada na agenda do Pedro
+try:
+    import build_cronograma
+    build_cronograma.main(30)
+except Exception as e:  # nunca derruba o build por causa da previsão
+    print(f"cronograma falhou: {e}")
