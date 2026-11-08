@@ -1,0 +1,279 @@
+{
+  "gerado_em": "2026-11-08",
+  "dias": [
+    {
+      "data": "2026-11-08",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "Beato João Duns Scotus; Santa Isabel da Trindade",
+      "id_milagre": null,
+      "santo_story": "Beato João Duns Scotus; Santa Isabel da Trindade",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-09",
+      "dia_semana": "seg",
+      "tipo": "santo",
+      "feed": "Dedicação da Basílica de Latrão",
+      "id_milagre": null,
+      "santo_story": "Dedicação da Basílica de Latrão",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-10",
+      "dia_semana": "ter",
+      "tipo": "milagre",
+      "feed": "O Milagre Eucarístico de Santarém",
+      "id_milagre": "santarem",
+      "santo_story": "São Leão Magno, papa",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-11",
+      "dia_semana": "qua",
+      "tipo": "santo",
+      "feed": "São Martinho de Tours, bispo",
+      "id_milagre": null,
+      "santo_story": "São Martinho de Tours, bispo",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-12",
+      "dia_semana": "qui",
+      "tipo": "milagre",
+      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
+      "id_milagre": "galvao_sandra",
+      "santo_story": "São Josafá, bispo e mártir",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-13",
+      "dia_semana": "sex",
+      "tipo": "santo",
+      "feed": "Santa Francisca Xavier Cabrini",
+      "id_milagre": null,
+      "santo_story": "Santa Francisca Xavier Cabrini",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-14",
+      "dia_semana": "sáb",
+      "tipo": "milagre",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
+      "santo_story": "São Lourenço O'Toole",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-15",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "Santo Alberto Magno",
+      "id_milagre": null,
+      "santo_story": "Santo Alberto Magno",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-16",
+      "dia_semana": "seg",
+      "tipo": "milagre",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
+      "santo_story": "Santa Margarida da Escócia; Santa Gertrudes",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-17",
+      "dia_semana": "ter",
+      "tipo": "santo",
+      "feed": "Santa Isabel da Hungria",
+      "id_milagre": null,
+      "santo_story": "Santa Isabel da Hungria",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-18",
+      "dia_semana": "qua",
+      "tipo": "milagre",
+      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
+      "id_milagre": "lourdes_70",
+      "santo_story": "Dedicação das Basílicas de São Pedro e São Paulo",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-19",
+      "dia_semana": "qui",
+      "tipo": "santo",
+      "feed": "Santo Roque González e companheiros, mártires",
+      "id_milagre": null,
+      "santo_story": "Santo Roque González e companheiros, mártires",
+      "tambem_hoje": [
+        "São Rafael Kalinowski"
+      ]
+    },
+    {
+      "data": "2026-11-20",
+      "dia_semana": "sex",
+      "tipo": "milagre",
+      "feed": "Santa Cecília e a escultura de Maderno",
+      "id_milagre": "cecilia_corpo",
+      "santo_story": "Santo Edmundo, rei e mártir",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-21",
+      "dia_semana": "sáb",
+      "tipo": "santo",
+      "feed": "Apresentação de Nossa Senhora",
+      "id_milagre": null,
+      "santo_story": "Apresentação de Nossa Senhora",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-22",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "Santa Cecília, virgem e mártir",
+      "id_milagre": null,
+      "santo_story": "Santa Cecília, virgem e mártir",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-23",
+      "dia_semana": "seg",
+      "tipo": "santo",
+      "feed": "São Clemente I, papa; São Columbano",
+      "id_milagre": null,
+      "santo_story": "São Clemente I, papa; São Columbano",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-24",
+      "dia_semana": "ter",
+      "tipo": "milagre",
+      "feed": "As Hóstias de Siena",
+      "id_milagre": "siena",
+      "santo_story": "Santo André Dung-Lac e companheiros, mártires",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-25",
+      "dia_semana": "qua",
+      "tipo": "santo",
+      "feed": "Santa Catarina de Alexandria",
+      "id_milagre": null,
+      "santo_story": "Santa Catarina de Alexandria",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-26",
+      "dia_semana": "qui",
+      "tipo": "milagre",
+      "feed": "Rue du Bac e a Medalha Milagrosa",
+      "id_milagre": "rue_du_bac",
+      "santo_story": "São Leonardo de Porto Maurício",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-27",
+      "dia_semana": "sex",
+      "tipo": "santo",
+      "feed": "Nossa Senhora da Medalha Milagrosa",
+      "id_milagre": null,
+      "santo_story": "Nossa Senhora da Medalha Milagrosa",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-28",
+      "dia_semana": "sáb",
+      "tipo": "milagre",
+      "feed": "Nhá Chica: a beata mineira",
+      "id_milagre": "nha_chica",
+      "santo_story": "Beata Nhá Chica (Francisca de Paula de Jesus)",
+      "tambem_hoje": [
+        "Santa Catarina Labouré"
+      ]
+    },
+    {
+      "data": "2026-11-29",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "Todos os Santos da Ordem Franciscana",
+      "id_milagre": null,
+      "santo_story": "Todos os Santos da Ordem Franciscana",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-11-30",
+      "dia_semana": "seg",
+      "tipo": "milagre",
+      "feed": "Kibeho, 1981: a única aparição aprovada na África",
+      "id_milagre": "kibeho",
+      "santo_story": "Santo André, apóstolo",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-01",
+      "dia_semana": "ter",
+      "tipo": "santo",
+      "feed": "Santo Eloi; Beato Carlos de Foucauld (canonizado 2022)",
+      "id_milagre": null,
+      "santo_story": "Santo Eloi; Beato Carlos de Foucauld (canonizado 2022)",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-02",
+      "dia_semana": "qua",
+      "tipo": "milagre",
+      "feed": "Beauraing, 1932–1933",
+      "id_milagre": "beauraing",
+      "santo_story": "Santa Bibiana",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-03",
+      "dia_semana": "qui",
+      "tipo": "santo",
+      "feed": "São Francisco Xavier",
+      "id_milagre": null,
+      "santo_story": "São Francisco Xavier",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-04",
+      "dia_semana": "sex",
+      "tipo": "milagre",
+      "feed": "São Francisco Xavier em Goa",
+      "id_milagre": "xavier_corpo",
+      "santo_story": "São João Damasceno",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-05",
+      "dia_semana": "sáb",
+      "tipo": "santo",
+      "feed": "São Sabas, abade",
+      "id_milagre": null,
+      "santo_story": "São Sabas, abade",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-06",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "São Nicolau, bispo",
+      "id_milagre": null,
+      "santo_story": "São Nicolau, bispo",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-07",
+      "dia_semana": "seg",
+      "tipo": "santo",
+      "feed": "Santo Ambrósio",
+      "id_milagre": null,
+      "santo_story": "Santo Ambrósio",
+      "tambem_hoje": []
+    }
+  ]
+}
