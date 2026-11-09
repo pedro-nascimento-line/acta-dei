@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-08",
+  "gerado_em": "2026-11-09",
   "dias": [
-    {
-      "data": "2026-11-08",
-      "dia_semana": "dom",
-      "tipo": "celebracao",
-      "feed": "Beato João Duns Scotus; Santa Isabel da Trindade",
-      "id_milagre": null,
-      "santo_story": "Beato João Duns Scotus; Santa Isabel da Trindade",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-09",
       "dia_semana": "seg",
@@ -273,6 +264,15 @@
       "feed": "Santo Ambrósio",
       "id_milagre": null,
       "santo_story": "Santo Ambrósio",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-08",
+      "dia_semana": "ter",
+      "tipo": "celebracao",
+      "feed": "Imaculada Conceição de Nossa Senhora",
+      "id_milagre": null,
+      "santo_story": "Imaculada Conceição de Nossa Senhora",
       "tambem_hoje": []
     }
   ]
