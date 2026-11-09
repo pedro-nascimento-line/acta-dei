@@ -1,0 +1,69 @@
+{
+  "tipo": "santo",
+  "titulo": "Dedicação da Basílica de Latrão",
+  "titulo_en": "Dedication of the Lateran Basilica",
+  "subtitulo": "Roma, Itália · 9 de novembro de 324",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Archbasilica of Saint John Lateran",
+  "imagem_busca": "Archbasilica of Saint John Lateran facade",
+  "cards": [
+    {
+      "kicker": "A ORIGEM · THE ORIGIN",
+      "texto": "Em 313, o imperador Constantino concedeu liberdade de culto aos cristãos. Pouco depois, entregou ao papa Melquíades a antiga propriedade da família dos Lateranos, no monte Célio, em Roma. Ali mandou erguer uma basílica, um batistério e a residência do bispo de Roma.\n\nSegundo a tradição, o papa Silvestre I dedicou a basílica em 9 de novembro de 324, sob o título do Santíssimo Salvador. Foi a primeira grande basílica construída em Roma depois das perseguições. O palácio ao lado serviu de residência aos papas por cerca de mil anos, até o período de Avinhão.",
+      "texto_en": "In 313 the emperor Constantine granted freedom of worship to Christians. Shortly afterwards he gave Pope Miltiades the ancient estate of the Laterani family on the Caelian Hill in Rome, and there he had a basilica, a baptistery and the residence of the Bishop of Rome built. According to tradition, Pope Sylvester I dedicated the basilica on 9 November 324 under the title of the Most Holy Saviour. It was the first great basilica built in Rome after the persecutions. The palace beside it was the residence of the popes for about a thousand years, until the Avignon period."
+    },
+    {
+      "kicker": "OS NOMES · THE NAMES",
+      "texto": "A basílica carrega três títulos. O primeiro é o do Santíssimo Salvador, dado na dedicação. No século IX, o papa Sérgio III acrescentou São João Batista, ligado ao batistério vizinho. No século XII, o papa Lúcio II acrescentou São João Evangelista. Daí o nome corrente: São João de Latrão.\n\nNa fachada, uma inscrição em latim a define: omnium urbis et orbis ecclesiarum mater et caput, mãe e cabeça de todas as igrejas da cidade e do mundo. É a catedral de Roma, a sede do bispo de Roma, e não a Basílica de São Pedro, que fica no Vaticano.",
+      "texto_en": "The basilica bears three titles. The first, the Most Holy Saviour, was given at the dedication. In the ninth century Pope Sergius III added Saint John the Baptist, linked to the baptistery beside it; in the twelfth century Pope Lucius II added Saint John the Evangelist. Hence the usual name: Saint John Lateran. A Latin inscription on the façade defines it: Sacrosancta Lateranensis ecclesia, omnium urbis et orbis ecclesiarum mater et caput, mother and head of all the churches of the city and of the world. It is the cathedral of Rome, the seat of the Bishop of Rome, and not Saint Peter's Basilica, which stands in the Vatican."
+    },
+    {
+      "kicker": "AS QUEDAS E AS RECONSTRUÇÕES · FALLS AND REBUILDINGS",
+      "texto": "O edifício caiu e foi reerguido várias vezes. Um terremoto no fim do século IX o destruiu quase por inteiro. Incêndios em 1308 e 1361 consumiram telhado e nave. Clemente V e João XXII o reconstruíram; depois do segundo incêndio, Urbano V o reergueu de novo.\n\nEntre 1646 e 1649, sob Inocêncio X, Francesco Borromini renovou o interior. Entre 1702 e 1718, sob Clemente XI, foram concluídas as estátuas dos doze apóstolos da nave. A fachada de Alessandro Galilei foi terminada em 1735, sob Clemente XII. Cinco concílios ecumênicos se reuniram ali, de 1123 a 1517.",
+      "texto_en": "The building fell and was raised again several times. An earthquake at the end of the ninth century almost destroyed it. Fires in 1308 and 1361 consumed the roof and the nave; Popes Clement V and John XXII rebuilt it, and after the second fire Urban V raised it once more. Between 1646 and 1649, under Pope Innocent X, the architect Francesco Borromini renovated the interior. Between 1702 and 1718, under Clement XI, the statues of the twelve apostles in the nave were completed. The present façade, by Alessandro Galilei, was finished in 1735 under Clement XII. Five ecumenical councils met there, from 1123 to 1517."
+    }
+  ],
+  "decisao": "A festa da Dedicação da Basílica de Latrão, em 9 de novembro, nasceu em Roma e, a partir de 1565, foi estendida a todas as igrejas de rito romano, como recordou Bento XVI no Angelus de 9 de novembro de 2008. Em 1724, o papa Bento XIII reconsagrou a basílica. No Calendário Romano Geral, a data tem grau de festa e prevalece sobre a memória dos santos do dia. A basílica é a catedral da diocese de Roma e traz na fachada o título de mãe e cabeça de todas as igrejas da cidade e do mundo.",
+  "decisao_en": "The feast of the Dedication of the Lateran Basilica, on 9 November, was born in Rome and, from 1565 onwards, was extended to all the churches of the Roman rite, as Benedict XVI recalled at the Angelus of 9 November 2008. In 1724 Pope Benedict XIII reconsecrated the basilica. In the General Roman Calendar the date ranks as a feast and takes precedence over the memorial of the day's saints. The basilica is the cathedral of the Diocese of Rome and bears on its façade the title of mother and head of all the churches of the city and of the world.",
+  "fontes": [
+    "Vatican.va — Bento XVI, Angelus de 9 de novembro de 2008",
+    "Vatican News — Dedicação da Basílica de São João de Latrão, festa de 9 de novembro",
+    "Estado da Cidade do Vaticano (vaticanstate.va) — 9 de novembro, Dedicação da Basílica Lateranense, catedral de Roma",
+    "Catholic Encyclopedia (New Advent) — Saint John Lateran"
+  ],
+  "reel": [
+    "A catedral do papa não é São Pedro. É uma basílica de mil e setecentos anos, erguida sobre o palácio de uma família nobre.",
+    "Em 313, Constantino deu liberdade aos cristãos. Pouco depois doou ao papa Melquíades as terras dos Lateranos, em Roma.",
+    "O papa Silvestre a dedicou em 324 ao Santíssimo Salvador. Terremoto e dois incêndios a derrubaram. Foi sempre reerguida.",
+    "A Santa Igreja Católica celebra a dedicação em 9 de novembro, festa estendida a todo o rito romano em 1565."
+  ],
+  "stories": {
+    "manha": {
+      "nome": "Dedicação da Basílica de Latrão",
+      "anos": "324 · CATEDRAL DE ROMA",
+      "padroeiro": "Mãe e cabeça de todas as igrejas da cidade e do mundo · Festa no Calendário Romano Geral",
+      "linhas": [
+        "Constantino doou ao papa Melquíades o terreno dos Lateranos. Silvestre I a dedicou em 9 de novembro de 324.",
+        "Dedicada ao Santíssimo Salvador; depois a São João Batista (século IX) e a São João Evangelista (século XII).",
+        "Terremoto, dois incêndios e reconstruções. Borromini renovou o interior em 1646 a 1649; a fachada é de 1735."
+      ],
+      "imagem_wikipedia": "en:Archbasilica of Saint John Lateran",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Archbasilica of Saint John Lateran",
+        "San Giovanni in Laterano"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "Em 313, antes da dedicação, um concílio contra os donatistas já se reuniu no palácio de Latrão, doado por Constantino ao papa Melquíades.",
+      "texto_en": "In 313, before the dedication, a council against the Donatists already met in the Lateran palace, given by Constantine to Pope Miltiades."
+    },
+    "noite": {
+      "citacao": "Hoje é o aniversário desta igreja. Mas nós mesmos devemos ser o templo vivo e verdadeiro de Deus.",
+      "autor": "SÃO CESÁRIO DE ARLES · SERMÃO, OFÍCIO DAS LEITURAS DE 9 DE NOVEMBRO",
+      "citacao_en": "Today is the birthday of this church. We, however, ought to be the true and living temple of God."
+    }
+  }
+}
