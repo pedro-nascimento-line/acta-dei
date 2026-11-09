@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
-"""Gera os cards do carrossel (1080×1350) e os stories (1080×1920) de um post.
+"""Gera os cards do carrossel (1080×1350), os cards do Evangelho do dia (1080×1350) e os stories (1080×1920) de um post.
 
 Uso: python3 scripts/render.py posts/2026-11-10
-Lê  posts/<dia>/post.json  e grava card_01.jpg … card_NN.jpg, story_manha.jpg, story_tarde.jpg, story_noite.jpg.
+Lê  posts/<dia>/post.json  e grava card_01.jpg … card_NN.jpg, story_manha.jpg, story_tarde.jpg, story_noite.jpg e,
+quando o post tem o bloco "evangelho": evangelho_01.jpg (versículo), evangelho_02.jpg (o fato), legenda_evangelho.txt
+e hashtags_evangelho.txt (se ainda não existir).
+
+Bloco "evangelho" (post das 6h):
+  "evangelho": {
+    "referencia": "João 2,13-22", "referencia_en": "John 2:13-22",
+    "versiculo": "Destruí este templo, e em três dias eu o reerguerei.",       # 1 versículo, ≤ 140 caracteres
+    "versiculo_en": "Destroy this temple, and in three days I will raise it up.",
+    "celebracao": "Dedicação da Basílica de Latrão · Festa",                      # opcional; padrão: título do post
+    "leituras": "Ez 47,1-2.8-9.12 · 1Cor 3,9c-11.16-17 · Jo 2,13-22",            # opcional
+    "fato": "3 a 4 linhas que ancoram o Evangelho em data, lugar e história (≤ 480 caracteres)",
+    "fato_en": "…", "fato_fonte": "Vatican.va — …"
+  }
 
 Formato do post.json (campos principais):
 {
@@ -113,7 +126,45 @@ h1.small {{ font-size: 52px; }}
 .s-author {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 70px; }}
 .s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-size: 26px; letter-spacing: 6px; color: {RED}; }}
 .s-cta {{ position: absolute; left: 0; right: 0; bottom: 410px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
+/* story da manhã v2: "Hoje na Igreja" */
+.s-date {{ font-size: 36px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 14px; }}
+.s-ev {{ width: 900px; margin: 44px auto 0; padding-top: 34px; border-top: 2px solid {RED}; text-align: center; }}
+.s-ev-k {{ font-family: 'Cinzel'; font-weight: 700; font-size: 28px; letter-spacing: 5px; color: {RED}; }}
+.s-ev-v {{ font-size: 46px; line-height: 1.3; font-style: italic; margin-top: 18px; }}
+.s-next {{ font-family: 'Cinzel'; font-size: 24px; letter-spacing: 4px; text-align: center; color: #CFC7B8; margin-top: 44px; }}
+.s-next b {{ color: {CREAM}; font-weight: 700; }}
+/* Evangelho do dia (1080×1350) */
+.ev {{ height: 1350px; padding: 0 96px; display: flex; flex-direction: column; align-items: center; text-align: center; }}
+.ev-avatar {{ width: 118px; height: 118px; margin-top: 70px; }}
+.ev-kicker {{ font-family: 'Cinzel'; font-weight: 700; font-size: 26px; letter-spacing: 7px; color: {RED}; margin-top: 34px; }}
+.ev-date {{ font-size: 36px; font-style: italic; color: {GREY}; margin-top: 12px; }}
+.ev-cel {{ font-family: 'Cinzel'; font-size: 23px; letter-spacing: 3px; color: {CHAR}; margin-top: 12px; line-height: 1.4; }}
+.ev-main {{ flex: 1; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 16px 0; }}
+.ev-mark {{ font-family: 'Cinzel'; font-size: 150px; line-height: .55; color: {RED}; opacity: .9; margin-bottom: 18px; }}
+.ev-verse {{ font-size: 86px; line-height: 1.16; font-style: italic; font-weight: 500; }}
+.ev-rule {{ width: 120px; height: 4px; background: {RED}; margin: 46px auto 26px; }}
+.ev-ref {{ font-family: 'Cinzel'; font-weight: 700; font-size: 34px; letter-spacing: 5px; color: {RED}; }}
+.ev-ref-en {{ font-family: 'Cinzel'; font-size: 22px; letter-spacing: 3px; color: {GREY}; margin-top: 10px; }}
+.ev-en {{ font-size: 34px; font-style: italic; color: {GREY}; line-height: 1.3; margin-bottom: 150px; max-width: 860px; }}
+.ev-sub {{ font-size: 32px; font-style: italic; color: {GREY}; margin: -14px 0 36px; }}
+.ev-fonte {{ margin-top: .9em; font-size: .52em; color: {GREY}; line-height: 1.4; }}
+.ev-fonte b {{ font-family: 'Cinzel'; font-weight: 700; letter-spacing: 3px; color: {RED}; font-size: .85em; }}
 """
+
+DIAS_PT = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
+MESES_PT = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+HASHTAGS_EVANGELHO = ("#evangelhododia #evangelho #liturgiadiaria #palavradedeus #santaigrejacatolica "
+                      "#gospeloftheday #dailygospel #catholic #catholicfaith #holycatholicchurch #actadei #mysteriumfidei")
+
+
+def data_extenso(pasta):
+    """'segunda-feira, 9 de novembro de 2026' a partir do nome da pasta (AAAA-MM-DD)."""
+    import datetime as _dt
+    try:
+        d = _dt.date.fromisoformat(Path(pasta).name)
+    except ValueError:
+        d = _dt.date.today()
+    return f"{DIAS_PT[d.weekday()]}, {d.day} de {MESES_PT[d.month - 1]} de {d.year}", d
 
 
 def img_tag(path, box_ratio, perda_max=0.15):
@@ -186,15 +237,85 @@ def card_decisao(post, n, total):
       {foot(n, total)}</div>"""
 
 
-def story_manha(s, pasta):
+def story_manha(s, pasta, post=None):
+    """Story das 7h. Sem bloco "evangelho": o story clássico do santo do dia. Com ele: "Hoje na Igreja" —
+    santo do dia + referência e versículo do Evangelho + o que vem ao meio-dia (ponte entre as peças da manhã)."""
     tem = s.get("imagem") and (pasta / s["imagem"]).exists()
-    hero = f'<div class="s-hero">{img_tag(pasta / s["imagem"], 900 / 860)}</div>' if tem else '<div style="height:380px"></div>'
-    linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
+    ev = (post or {}).get("evangelho")
+    if not ev:
+        hero = f'<div class="s-hero">{img_tag(pasta / s["imagem"], 900 / 860)}</div>' if tem else '<div style="height:380px"></div>'
+        linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", []))
+        return f"""<div class="page story">
+          <div class="s-wrap">{hero}
+            <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
+            <div class="s-patron">{esc(s.get('padroeiro',''))}</div><div class="s-lines">{linhas}</div></div>
+          <div class="s-foot">SANTO DO DIA · SAINT OF THE DAY</div></div>"""
+    data_pt, _ = data_extenso(pasta)
+    hero = f'<div class="s-hero" style="height:600px;margin-top:40px">{img_tag(pasta / s["imagem"], 900 / 600)}</div>' if tem else '<div style="height:120px"></div>'
+    linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", [])[:2])
+    feed = (post or {}).get("titulo", "")
+    proximo = f'<div class="s-next">AO MEIO-DIA · <b>{esc(feed).upper()}</b></div>' if feed and feed != s.get("nome") else \
+              '<div class="s-next">AO MEIO-DIA · <b>A HISTÓRIA COMPLETA NO FEED</b></div>'
     return f"""<div class="page story">
-      <div class="s-wrap">{hero}
+      <div class="s-wrap" style="padding-top:80px">
+        <img src="{AVATAR_DARK}" style="display:block;width:150px;margin:0 auto">
+        <div class="s-kicker" style="margin-top:30px">HOJE NA IGREJA · TODAY IN THE CHURCH</div>
+        <div class="s-date">{esc(data_pt.rsplit(' de ', 1)[0])}</div>
+        {hero}
         <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
-        <div class="s-patron">{esc(s.get('padroeiro',''))}</div><div class="s-lines">{linhas}</div></div>
-      <div class="s-foot">SANTO DO DIA · SAINT OF THE DAY</div></div>"""
+        <div class="s-lines" style="margin-top:28px;font-size:38px">{linhas}</div>
+        <div class="s-ev"><div class="s-ev-k">EVANGELHO · {esc(ev.get('referencia','')).upper()}</div>
+          <div class="s-ev-v">“{esc(ev.get('versiculo',''))}”</div></div>
+        {proximo}</div>
+      <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
+
+
+def evangelho_versiculo(ev, post, pasta):
+    """Card 1 do Evangelho: o que a pessoa encaminha. Um versículo, a referência, a data e a celebração."""
+    data_pt, _ = data_extenso(pasta)
+    cel = ev.get("celebracao") or post.get("titulo", "")
+    en = f'<div class="ev-en">“{esc(ev["versiculo_en"])}”</div>' if ev.get("versiculo_en") else '<div style="height:150px"></div>'
+    ref_en = f'<div class="ev-ref-en">{esc(ev["referencia_en"]).upper()}</div>' if ev.get("referencia_en") else ""
+    return f"""<div class="page card ev">
+      <img class="ev-avatar" src="{AVATAR}">
+      <div class="ev-kicker">EVANGELHO DO DIA · GOSPEL OF THE DAY</div>
+      <div class="ev-date">{esc(data_pt)}</div>
+      <div class="ev-cel">{esc(cel).upper()}</div>
+      <div class="ev-main"><div class="ev-mark">“</div>
+        <div class="ev-verse">{esc(ev['versiculo'])}</div>
+        <div class="ev-rule"></div><div class="ev-ref">{esc(ev.get('referencia','')).upper()}</div>{ref_en}</div>
+      {en}
+      {foot(1, 2)}</div>"""
+
+
+def evangelho_fato(ev, post, pasta):
+    """Card 2 do Evangelho: "O fato" — data, lugar e história que ancoram a leitura. Não é homilia."""
+    cel = ev.get("celebracao") or post.get("titulo", "")
+    en = f'<div class="body_en">{paras(ev["fato_en"])}</div>' if ev.get("fato_en") else ""
+    fonte = f'<div class="ev-fonte"><b>FONTE · SOURCE</b><br>{esc(ev["fato_fonte"])}</div>' if ev.get("fato_fonte") else ""
+    return f"""<div class="page card"><div class="num">02</div>
+      <div class="text"><div class="kicker">O FATO · THE FACT</div>
+        <div class="ev-sub">Evangelho de hoje: {esc(ev.get('referencia',''))} · {esc(cel)}</div>
+        <div class="body">{paras(ev['fato'])}</div>{en}{fonte}</div>
+      {foot(2, 2)}</div>"""
+
+
+def legenda_evangelho(ev, post, pasta):
+    data_pt, _ = data_extenso(pasta)
+    cel = ev.get("celebracao") or post.get("titulo", "")
+    partes = [f"EVANGELHO DO DIA · {data_pt}", cel, "",
+              f"“{ev['versiculo']}”", ev.get("referencia", ""), "",
+              "O FATO", ev["fato"].strip()]
+    if ev.get("fato_fonte"):
+        partes += ["", f"Fonte: {ev['fato_fonte']}"]
+    leitura = f"Leitura completa: {ev.get('referencia','')}" + (f" · Leituras do dia: {ev['leituras']}" if ev.get("leituras") else "")
+    partes += [leitura, "Índice de fontes no link da bio", "", "· · ·", ""]
+    if ev.get("versiculo_en"):
+        partes += [f"GOSPEL OF THE DAY · {ev.get('referencia_en') or ev.get('referencia','')}", f"“{ev['versiculo_en']}”"]
+    if ev.get("fato_en"):
+        partes += ["", ev["fato_en"].strip()]
+    partes += ["Sources index in the bio link"]
+    return "\n".join(partes).strip()
 
 
 def story_tarde(s):
@@ -224,8 +345,15 @@ def render(pasta):
         htmls.append((f"card_{i:02d}.jpg", card_texto(c, i, total), 1350))
     if post.get("decisao"):
         htmls.append((f"card_{total:02d}.jpg", card_decisao(post, total, total), 1350))
+    ev = post.get("evangelho")
+    if ev and ev.get("versiculo") and ev.get("fato"):
+        htmls.append(("evangelho_01.jpg", evangelho_versiculo(ev, post, pasta), 1350))
+        htmls.append(("evangelho_02.jpg", evangelho_fato(ev, post, pasta), 1350))
+        (pasta / "legenda_evangelho.txt").write_text(legenda_evangelho(ev, post, pasta)[:2000])
+        if not (pasta / "hashtags_evangelho.txt").exists():
+            (pasta / "hashtags_evangelho.txt").write_text(HASHTAGS_EVANGELHO)
     st = post.get("stories", {})
-    if st.get("manha"): htmls.append(("story_manha.jpg", story_manha(st["manha"], pasta), 1920))
+    if st.get("manha"): htmls.append(("story_manha.jpg", story_manha(st["manha"], pasta, post), 1920))
     if st.get("tarde"): htmls.append(("story_tarde.jpg", story_tarde(st["tarde"]), 1920))
     if st.get("noite"): htmls.append(("story_noite.jpg", story_noite(st["noite"]), 1920))
 
@@ -238,6 +366,9 @@ def render(pasta):
             pg.evaluate("""() => { const t = document.querySelector('.text'); if (!t) return;
                 let fs = 50; const limite = 1350 - 150;
                 while (t.getBoundingClientRect().bottom > limite && fs > 26) { fs -= 1; t.style.fontSize = fs + 'px'; } }""")
+            pg.evaluate("""() => { const v = document.querySelector('.ev-verse'), m = document.querySelector('.ev-main'); if (!v || !m) return;
+                let fs = parseFloat(getComputedStyle(v).fontSize);
+                while (m.scrollHeight > m.clientHeight + 2 && fs > 40) { fs -= 2; v.style.fontSize = fs + 'px'; } }""")
             pg.evaluate("""() => { const t = document.querySelector('.s-wrap'); if (!t || !t.lastElementChild) return;
                 let z = 1.0; const limite = 1920 - 380;
                 while (t.lastElementChild.getBoundingClientRect().bottom > limite && z > 0.6) { z -= 0.02; t.style.zoom = z; } }""")
