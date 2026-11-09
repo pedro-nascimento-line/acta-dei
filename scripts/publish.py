@@ -2,10 +2,12 @@
 """Publica o conteúdo do dia no Instagram pela API oficial (Instagram API with Instagram Login).
 
 Uso (no GitHub Actions):
-  python3 scripts/publish.py --slot manha   # 7h BRT: carrossel + story da manhã + comentário com hashtags
-  python3 scripts/publish.py --slot tarde   # 13h BRT: story da tarde
-  python3 scripts/publish.py --slot reel    # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
-  python3 scripts/publish.py --slot noite   # 20h BRT: story da noite
+  python3 scripts/publish.py --slot evangelho  # 6h BRT: Evangelho do dia (evangelho_01.jpg + evangelho_02.jpg, feed)
+  python3 scripts/publish.py --slot manha      # 7h BRT: story da manhã ("Hoje na Igreja")
+  python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags
+  python3 scripts/publish.py --slot tarde      # 13h BRT: story da tarde
+  python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
+  python3 scripts/publish.py --slot noite      # 20h BRT: story da noite
   python3 scripts/publish.py --slot gatilho # slot lido de gatilho/publicar.txt (tarefas agendadas do Cowork)
   python3 scripts/publish.py --slot auto    # decide pelo horário UTC
   python3 scripts/publish.py --refresh-token
@@ -20,7 +22,8 @@ Variáveis de ambiente (Secrets do repositório):
                    instagram_manage_comments no token). Padrão: hashtags no fim da legenda.
 
 Regras: nunca publica duas vezes a mesma peça do mesmo dia (confere meta.json); cada execução publica o slot
-pedido e o que ficou pendente dos slots anteriores do dia; espera as imagens estarem acessíveis no Pages;
+pedido e o que ficou pendente dos slots anteriores do dia (ordem: evangelho → manha → carrossel → tarde → reel → noite);
+peças sem arquivo (sem evangelho_*.jpg, sem reel.mp4) são puladas; espera as imagens estarem acessíveis no Pages;
 tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
 """
 import argparse, csv, datetime as dt, json, os, re, sys, time
@@ -81,11 +84,21 @@ def url_ok(url, tentativas=30, intervalo=30):
 
 
 def publicar_carrossel(dia, pasta, meta):
-    cards = sorted(p.name for p in pasta.glob("card_*.jpg"))
+    return publicar_imagens(dia, pasta, meta, "card_*.jpg", "legenda.txt", "hashtags.txt", "feed_id", "carrossel", "carrossel")
+
+
+def publicar_evangelho(dia, pasta, meta):
+    return publicar_imagens(dia, pasta, meta, "evangelho_*.jpg", "legenda_evangelho.txt", "hashtags_evangelho.txt",
+                            "evangelho_id", "evangelho", "evangelho")
+
+
+def publicar_imagens(dia, pasta, meta, padrao, legenda_arq, hashtags_arq, chave, slot, tipo):
+    """Publica no feed um conjunto de imagens (1 = foto única; 2+ = carrossel) com legenda e hashtags."""
+    cards = sorted(p.name for p in pasta.glob(padrao))
     if not cards:
-        raise RuntimeError("nenhum card_*.jpg na pasta do post")
-    legenda = (pasta / "legenda.txt").read_text().strip()
-    hashtags_p = pasta / "hashtags.txt"
+        raise RuntimeError(f"nenhum {padrao} na pasta do post")
+    legenda = (pasta / legenda_arq).read_text().strip()
+    hashtags_p = pasta / hashtags_arq
     hashtags = hashtags_p.read_text().strip() if hashtags_p.exists() else ""
     no_comentario = os.environ.get("HASHTAGS_COMENTARIO", "").lower() == "true"
     if hashtags and not no_comentario:
@@ -111,14 +124,14 @@ def publicar_carrossel(dia, pasta, meta):
         cont = api("POST", f"{USER}/media", media_type="CAROUSEL", children=",".join(filhos), caption=legenda)
     esperar_container(cont["id"])
     pub = api("POST", f"{USER}/media_publish", creation_id=cont["id"])
-    meta["feed_id"] = pub["id"]
-    log("manha", "carrossel", pub["id"], "ok")
+    meta[chave] = pub["id"]
+    log(slot, tipo, pub["id"], "ok")
     if hashtags and no_comentario:
         try:
             com = api("POST", f"{pub['id']}/comments", message=hashtags)
-            meta["comentario_id"] = com["id"]; log("manha", "comentario", com["id"], "ok")
+            meta[f"{chave}_comentario"] = com["id"]; log(slot, "comentario", com["id"], "ok")
         except Exception as e:  # o post já saiu; o comentário não é crítico
-            log("manha", "comentario", "", "falha", str(e))
+            log(slot, "comentario", "", "falha", str(e))
     return pub["id"]
 
 
@@ -171,14 +184,15 @@ def publicar_reel(dia, pasta, meta):
 
 def publicar_slot(s, dia, pasta, meta):
     """Publica as peças de um slot que ainda não têm id no meta.json (nada sai duas vezes)."""
-    if s == "manha":
+    if s == "evangelho":
+        if not meta.get("evangelho_id"):
+            if list(pasta.glob("evangelho_*.jpg")):
+                publicar_evangelho(dia, pasta, meta)
+            else:
+                print("  sem evangelho_*.jpg hoje; pulando o Evangelho")
+    elif s == "carrossel":
         if not meta.get("feed_id"):
             publicar_carrossel(dia, pasta, meta)
-        if not meta.get("story_manha_id"):
-            try:
-                publicar_story(dia, pasta, meta, "manha")
-            except Exception as e:  # o carrossel já saiu; o story não derruba a execução
-                log("manha", "story", "", "falha", str(e))
     elif s == "reel":
         if not meta.get("reel_id"):
             if (pasta / "reel.mp4").exists():
@@ -189,16 +203,22 @@ def publicar_slot(s, dia, pasta, meta):
         publicar_story(dia, pasta, meta, s)
 
 
+ORDEM = ["evangelho", "manha", "carrossel", "tarde", "reel", "noite"]
+PECAS = {"evangelho": ["evangelho_id"], "manha": ["story_manha_id"], "carrossel": ["feed_id"],
+         "tarde": ["story_tarde_id"], "reel": ["reel_id"], "noite": ["story_noite_id"]}
+
+
 def slot_auto():
     h = dt.datetime.now(BRT).hour
-    return "manha" if h < 11 else "tarde" if h < 16 else "reel" if h < 19 else "noite"
+    return ("evangelho" if h < 7 else "manha" if h < 11 else "carrossel" if h < 13 else
+            "tarde" if h < 16 else "reel" if h < 19 else "noite")
 
 
 def slot_gatilho():
     """Slot escrito pelo gatilho (gatilho/publicar.txt: '... slot manha ...'); 'apenas' desliga a recuperação."""
     g = RAIZ / "gatilho/publicar.txt"
     txt = g.read_text() if g.exists() else ""
-    m = re.search(r"slot\s+(manha|tarde|reel|noite)", txt)
+    m = re.search(r"slot\s+(" + "|".join(ORDEM) + r")\b", txt)
     return (m.group(1) if m else slot_auto()), ("apenas" in txt)
 
 
@@ -233,11 +253,11 @@ def main():
     meta_p = pasta / "meta.json"
     meta = json.loads(meta_p.read_text()) if meta_p.exists() else {}
     # cada execução publica o slot pedido E o que ficou pendente dos slots anteriores do dia
-    # (se o cron das 7h atrasar ou falhar, o das 13h publica o carrossel antes do story da tarde)
-    ordem = ["manha", "tarde", "reel", "noite"]
-    alvo = [slot] if apenas else ordem[: ordem.index(slot) + 1]
-    pecas = {"manha": ["feed_id", "story_manha_id"], "tarde": ["story_tarde_id"], "reel": ["reel_id"], "noite": ["story_noite_id"]}
-    pendentes = [k for s_ in alvo for k in pecas[s_] if not meta.get(k)]
+    # (se o disparo do meio-dia atrasar ou falhar, o das 13h publica o carrossel antes do story da tarde).
+    # Peças sem arquivo (sem evangelho_*.jpg ou sem reel.mp4) não contam como pendentes.
+    alvo = [slot] if apenas else ORDEM[: ORDEM.index(slot) + 1]
+    existe = {"evangelho_id": bool(list(pasta.glob("evangelho_*.jpg"))), "reel_id": (pasta / "reel.mp4").exists()}
+    pendentes = [k for s_ in alvo for k in PECAS[s_] if not meta.get(k) and existe.get(k, True)]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return
     print(f"{slot}: pendente -> {', '.join(pendentes)}")
