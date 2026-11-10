@@ -1,21 +1,12 @@
 {
-  "gerado_em": "2026-11-09",
+  "gerado_em": "2026-11-10",
   "dias": [
-    {
-      "data": "2026-11-09",
-      "dia_semana": "seg",
-      "tipo": "santo",
-      "feed": "Dedicação da Basílica de Latrão",
-      "id_milagre": null,
-      "santo_story": "Dedicação da Basílica de Latrão",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-10",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "O Milagre Eucarístico de Santarém",
-      "id_milagre": "santarem",
+      "feed": "As Hóstias de Siena",
+      "id_milagre": "siena",
       "santo_story": "São Leão Magno, papa",
       "tambem_hoje": []
     },
@@ -142,8 +133,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "As Hóstias de Siena",
-      "id_milagre": "siena",
+      "feed": "O Milagre de Amsterdã",
+      "id_milagre": "amsterdam",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Imaculada Conceição de Nossa Senhora",
       "id_milagre": null,
       "santo_story": "Imaculada Conceição de Nossa Senhora",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-09",
+      "dia_semana": "qua",
+      "tipo": "santo",
+      "feed": "São Juan Diego Cuauhtlatoatzin",
+      "id_milagre": null,
+      "santo_story": "São Juan Diego Cuauhtlatoatzin",
       "tambem_hoje": []
     }
   ]
