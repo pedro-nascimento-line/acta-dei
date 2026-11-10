@@ -40,8 +40,10 @@ CSS_REEL = f"""
 .capa .r-hero img.fg {{ object-position: center 58%; }}
 .capa .r-hero img.cv {{ object-position: center 40%; }}
 .r-shade {{ position: absolute; left: 0; right: 0; bottom: 0; height: 1000px; background: linear-gradient(180deg, rgba(38,34,30,0) 0%, rgba(38,34,30,.55) 40%, rgba(38,34,30,.95) 100%); }}
-.r-top {{ position: absolute; left: 0; right: 0; top: 0; height: 420px; background: linear-gradient(180deg, rgba(38,34,30,.75) 0%, rgba(38,34,30,0) 100%); }}
-.r-cap {{ position: absolute; left: 84px; right: 84px; bottom: 470px; text-align: center; }}
+.r-top {{ position: absolute; left: 0; right: 0; top: 0; height: 700px; background: linear-gradient(180deg, rgba(38,34,30,.88) 0%, rgba(38,34,30,.55) 50%, rgba(38,34,30,0) 100%); }}
+/* painel escuro atrás da legenda: o texto é legível sobre qualquer imagem */
+.r-cap {{ position: absolute; left: 72px; right: 72px; bottom: 470px; text-align: center; background: rgba(38,34,30,.80);
+          padding: 40px 44px 46px; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,0,0,.45); }}
 .r-kicker {{ display: inline-block; font-family: 'Cinzel'; font-weight: 700; font-size: 24px; letter-spacing: 5px; color: {render.CREAM}; background: rgba(166,25,46,.92); padding: 12px 20px 10px; border-radius: 6px; margin-bottom: 30px; }}
 .r-body {{ font-family: 'Cormorant'; font-size: 58px; line-height: 1.28; font-weight: 600; color: {render.CREAM}; text-shadow: 0 2px 18px rgba(0,0,0,.8); }}
 .r-title {{ position: absolute; left: 84px; right: 84px; top: 300px; text-align: center; }}
@@ -49,14 +51,20 @@ CSS_REEL = f"""
 .r-title .sub {{ font-size: 36px; font-style: italic; color: #E6DFD2; margin-top: 16px; text-shadow: 0 2px 12px rgba(0,0,0,.8); }}
 .r-badge {{ display: inline-block; font-family: 'Cinzel'; font-weight: 700; font-size: 19px; letter-spacing: 3px; color: {render.CREAM}; background: {render.RED}; padding: 12px 18px 10px; border-radius: 6px; margin-bottom: 26px; }}
 .r-quote {{ font-family: 'Cormorant'; font-size: 66px; line-height: 1.25; font-style: italic; font-weight: 600; color: {render.CREAM}; text-shadow: 0 2px 18px rgba(0,0,0,.85); }}
-.r-author {{ font-family: 'Cinzel'; font-size: 28px; letter-spacing: 5px; color: {render.RED}; margin-top: 40px; text-shadow: 0 1px 8px rgba(0,0,0,.8); }}
-.r-foot {{ position: absolute; left: 0; right: 0; bottom: 380px; text-align: center; font-family: 'Cinzel'; font-size: 20px; letter-spacing: 6px; color: {render.RED}; opacity: .85; }}
+.r-author {{ font-family: 'Cinzel'; font-size: 28px; letter-spacing: 5px; color: #E6DFD2; margin-top: 40px; }}
+.r-author::before {{ content: ''; display: block; width: 90px; height: 3px; background: {render.RED}; margin: 0 auto 26px; }}
+.r-foot {{ position: absolute; left: 0; right: 0; bottom: 380px; text-align: center; font-family: 'Cinzel'; font-size: 20px; letter-spacing: 6px; color: {render.CREAM}; opacity: .6; }}
 .w {{ opacity: 0; transition: none; }}
-body.base .w {{ visibility: hidden; }}
-html.legenda, body.legenda {{ background: transparent !important; }}
-body.legenda .reel {{ background: transparent; }}
+/* três camadas por slide: base = só a foto (recebe o zoom); ui = degradês, painel, título, kicker, autor, rodapé
+   (fixos); legenda = só as palavras (sequência de PNGs transparentes). Assim nada "anda" sob o texto. */
+body.base .r-top, body.base .r-shade, body.base .r-title, body.base .r-cap, body.base .r-foot {{ visibility: hidden; }}
+html.ui, body.ui, html.legenda, body.legenda {{ background: transparent !important; }}
+body.ui .reel, body.legenda .reel {{ background: transparent; }}
+body.ui .r-hero {{ visibility: hidden; }}
+body.ui .w {{ visibility: hidden; }}
 body.legenda .r-hero, body.legenda .r-top, body.legenda .r-shade, body.legenda .r-title, body.legenda .r-foot {{ visibility: hidden; }}
 body.legenda .r-kicker, body.legenda .r-author {{ visibility: hidden; }}
+body.legenda .r-cap {{ background: transparent; box-shadow: none; }}
 body.cover .r-cap, body.cover .r-foot, body.cover .r-top {{ display: none; }}
 body.cover .r-shade {{ height: 100%; background: linear-gradient(180deg, rgba(38,34,30,.15) 0%, rgba(38,34,30,.15) 45%, rgba(38,34,30,.88) 75%); }}
 body.cover .r-title {{ top: auto; bottom: 560px; }}
@@ -235,15 +243,22 @@ AJUSTE_JS = """() => { for (const sel of ['.r-body', '.r-quote']) { const t = do
 
 
 def renderizar_slide(br, body, tmp, i, tempos, passos=3, passo_s=0.07):
-    """Gera o PNG base (sem as palavras) e a sequência de PNGs transparentes da legenda,
-    uma por estado (cada palavra surge em `passos` degraus de opacidade). Devolve (base, [(png, duração)])."""
+    """Gera três camadas: o PNG base (só a foto, que recebe o zoom), o PNG da interface (degradês, painel da
+    legenda, título, kicker, autor, rodapé — fixo) e a sequência de PNGs transparentes das palavras, uma por
+    estado (cada palavra surge em `passos` degraus de opacidade). Devolve (base, ui, [(png, duração)])."""
     html = f"<html><head><style>{render.CSS}{CSS_REEL}</style></head><body style='margin:0'>{body}</body></html>"
     pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=ESCALA)
     pg.set_content(html); pg.wait_for_timeout(150); pg.evaluate(AJUSTE_JS)
     pg.evaluate("() => document.body.classList.add('base')")
     base = tmp / f"slide_{i:02d}.png"
     pg.screenshot(path=str(base)); pg.close()
-    # legenda (escala 1 = tamanho do vídeo final)
+    # interface fixa (escala 1 = tamanho do vídeo final)
+    pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
+    pg.set_content(html); pg.wait_for_timeout(150); pg.evaluate(AJUSTE_JS)
+    pg.evaluate("() => { document.documentElement.classList.add('ui'); document.body.classList.add('ui'); }")
+    ui = tmp / f"ui_{i:02d}.png"
+    pg.screenshot(path=str(ui), omit_background=True); pg.close()
+    # legenda (escala 1)
     pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
     pg.set_content(html); pg.wait_for_timeout(150); pg.evaluate(AJUSTE_JS)
     pg.evaluate("() => { document.documentElement.classList.add('legenda'); document.body.classList.add('legenda'); }")
@@ -266,7 +281,7 @@ def renderizar_slide(br, body, tmp, i, tempos, passos=3, passo_s=0.07):
         prox = estados[j + 1][0] if j + 1 < len(estados) else t + 1.0
         seq.append([png, max(prox - t, 0.03)])
     pg.close()
-    return base, seq
+    return base, ui, seq
 
 
 def gerar_capa(br, html, destino):
@@ -403,7 +418,7 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
         for i, (html, partes) in enumerate(plano):
             audios, tempos, com_voz, t_cursor = narr[i]
             d = max(3.0, t_cursor + 0.6)
-            base, seq = renderizar_slide(br, html, tmp, i, tempos)
+            base, ui, seq = renderizar_slide(br, html, tmp, i, tempos)
             # fecha a sequência da legenda exatamente na duração do slide
             soma = sum(x[1] for x in seq)
             if soma < d:
@@ -413,20 +428,23 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
             frames = int(round(d * FPS))
             z = "min(zoom+0.0006,1.09)" if i % 2 == 0 else "if(eq(on,1),1.09,max(zoom-0.0006,1.0))"
             zoom = f"zoompan=z='{z}':d={frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
-            vf = (f"[0:v]{zoom}[zb];[1:v]format=rgba,fps={FPS}[cap];[zb][cap]overlay=0:0:shortest=1,"
-                  f"fade=t=in:st=0:d=0.4,fade=t=out:st={d-0.4:.2f}:d=0.4,format=yuv420p[v]")
+            # entradas: 0 = foto (zoom), 1 = interface fixa, 2 = sequência das palavras, 3 = áudio
+            vf = (f"[0:v]{zoom}[zb];[1:v]format=rgba[ui];[zb][ui]overlay=0:0[zu];[2:v]format=rgba,fps={FPS}[cap];"
+                  f"[zu][cap]overlay=0:0:shortest=1,fade=t=in:st=0:d=0.4,fade=t=out:st={d-0.4:.2f}:d=0.4,format=yuv420p[v]")
             seg = tmp / f"seg_{i:02d}.mp4"
+            entradas = ["-loop", "1", "-framerate", FPS, "-i", base, "-loop", "1", "-framerate", FPS, "-i", ui,
+                        "-f", "concat", "-safe", "0", "-i", lista_cap]
             if com_voz and audios:
                 lista_voz = tmp / f"vozes_{i:02d}.txt"
                 lista_voz.write_text("".join(f"file '{a}'\n" for a in audios))
                 voz_i = tmp / f"voz_{i:02d}.mp3"
                 ff("-f", "concat", "-safe", "0", "-i", lista_voz, "-c", "copy", voz_i)
-                ff("-loop", "1", "-framerate", FPS, "-i", base, "-f", "concat", "-safe", "0", "-i", lista_cap, "-i", voz_i,
-                   "-filter_complex", f"{vf};[2:a]adelay={int(ATRASO*1000)}|{int(ATRASO*1000)},apad[a]", "-map", "[v]", "-map", "[a]",
+                ff(*entradas, "-i", voz_i,
+                   "-filter_complex", f"{vf};[3:a]adelay={int(ATRASO*1000)}|{int(ATRASO*1000)},apad[a]", "-map", "[v]", "-map", "[a]",
                    "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
             else:
-                ff("-loop", "1", "-framerate", FPS, "-i", base, "-f", "concat", "-safe", "0", "-i", lista_cap, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-                   "-filter_complex", vf, "-map", "[v]", "-map", "2:a",
+                ff(*entradas, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+                   "-filter_complex", vf, "-map", "[v]", "-map", "3:a",
                    "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
             segs.append(seg); total += d
             print(f"  slide {i}: {d:.1f}s {'voz' if com_voz else 'sem voz'} · {imgs[i].get('arquivo') or 'selo'} · {len(seq)} quadros de legenda · {partes[0][0][:40]}")
