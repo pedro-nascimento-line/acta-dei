@@ -1,0 +1,81 @@
+{
+  "tipo": "milagre",
+  "id_milagre": "santarem",
+  "titulo": "O Milagre Eucarístico de Santarém",
+  "titulo_en": "The Eucharistic Miracle of Santarém",
+  "subtitulo": "Santarém, Portugal · século XIII (c. 1247)",
+  "status": "reconhecido",
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Eucharistic miracle of Santarém",
+  "imagem_busca": "Igreja do Santíssimo Milagre Santarém",
+  "cards": [
+    {
+      "kicker": "O FATO · THE FACT",
+      "texto": "Século XIII, Santarém, ao norte de Lisboa. Uma mulher, desprezada pelo marido, procura uma feiticeira. O preço do feitiço é uma hóstia consagrada. Ela comunga na igreja de Santo Estêvão, retira a partícula da boca e a esconde num lenço de linho.\n\nNo caminho, o lenço se mancha de sangue. Em casa, ela guarda a hóstia numa arca. De noite, uma luz sai da arca e ilumina o quarto. O casal passa a noite em oração. Ao amanhecer, o pároco leva a hóstia em procissão de volta à igreja. Segundo o relato, ela sangrou por três dias.",
+      "texto_en": "Thirteenth century, Santarém, north of Lisbon. A woman, scorned by her husband, goes to a sorceress. The price of the spell is a consecrated Host. She receives Communion in the church of Saint Stephen, takes the Host from her mouth and hides it in a linen cloth. On the way, the cloth is stained with blood. At home she locks the Host in a chest. That night a light comes out of the chest and fills the room. The couple spend the night in prayer. At dawn the parish priest carries the Host back to the church in procession. According to the account, it bled for three days."
+    },
+    {
+      "kicker": "A INVESTIGAÇÃO · THE INVESTIGATION",
+      "texto": "A hóstia foi guardada num relicário de cera. Em 1340, o sacerdote encontrou a cera partida e, no lugar, uma ampola de cristal com o sangue ressecado. O registro mais antigo conhecido do caso é de 1346, feito por ordem do rei Afonso IV de Portugal.\n\nAs crônicas divergem sobre o ano do prodígio: 1226, 1247 e 1266 aparecem nos documentos. Duas investigações canônicas, em 1340 e em 1612, consideraram o caso autêntico. Os papas Pio IV, São Pio V, Pio VI e Gregório XIV concederam indulgências plenárias ligadas ao santuário.",
+      "texto_en": "The Host was kept in a wax reliquary. In 1340 the priest found the wax broken and, in its place, a crystal ampoule holding the dried blood. The oldest known record of the case dates from 1346, commissioned by King Afonso IV of Portugal. The chronicles disagree on the year of the event: 1226, 1247 and 1266 all appear in the documents. Two canonical investigations, in 1340 and in 1612, judged the case authentic. Popes Pius IV, Saint Pius V, Pius VI and Gregory XIV granted plenary indulgences connected with the shrine."
+    },
+    {
+      "kicker": "AS RELÍQUIAS HOJE · THE RELICS TODAY",
+      "texto": "A ampola de cristal continua sobre o altar-mor da igreja de Santo Estêvão, num trono eucarístico do século XVIII. Dentro, a hóstia com marcas de sangue ressecado. A igreja recebeu o título de Santuário do Santíssimo Milagre e pertence à Diocese de Santarém.\n\nA casa do casal, a poucas ruas dali, tornou-se capela em 1684. Todos os anos, no segundo domingo de abril, a relíquia sai em procissão da casa até a igreja. Antes de embarcar para o Oriente, São Francisco Xavier peregrinou ao santuário para venerar a hóstia.",
+      "texto_en": "The crystal ampoule still stands above the high altar of the church of Saint Stephen, in an eighteenth-century Eucharistic throne. Inside is the Host with marks of dried blood. The church bears the title of Shrine of the Most Holy Miracle and belongs to the Diocese of Santarém. The couple's house, a few streets away, became a chapel in 1684. Every year, on the second Sunday of April, the relic is carried in procession from the house to the church. Before sailing for the East, Saint Francis Xavier made a pilgrimage to the shrine to venerate the Host."
+    }
+  ],
+  "decisao": "A Santa Igreja Católica mantém o culto público da relíquia de Santarém há mais de sete séculos. Investigações canônicas de 1340 e 1612 consideraram o caso autêntico; os papas Pio IV, São Pio V, Pio VI e Gregório XIV concederam indulgências plenárias ligadas ao santuário. A igreja de Santo Estêvão, na Diocese de Santarém, tem hoje o título de Santuário do Santíssimo Milagre, e o caso integra o catálogo de milagres eucarísticos organizado por São Carlo Acutis.",
+  "decisao_en": "The Holy Catholic Church has kept the public cult of the relic of Santarém for more than seven centuries. Canonical investigations in 1340 and 1612 judged the case authentic; Popes Pius IV, Saint Pius V, Pius VI and Gregory XIV granted plenary indulgences connected with the shrine. The church of Saint Stephen, in the Diocese of Santarém, now bears the title of Shrine of the Most Holy Miracle, and the case is listed in the catalogue of Eucharistic miracles compiled by Saint Carlo Acutis.",
+  "fontes": [
+    "Catálogo dos Milagres Eucarísticos (miracolieucaristici.org) — ficha Santarém, Portugal",
+    "Arautos do Evangelho — Milagre Eucarístico de Santarém",
+    "Aleteia — Esta hóstia ainda contém sangue mais de 770 anos depois, 2019 (atualizado 2025)",
+    "Via Peregrina — Igreja do Milagre Eucarístico, Santarém"
+  ],
+  "reel": [
+    "Uma hóstia roubada para um feitiço começou a sangrar no caminho. Foi em Santarém, Portugal, no século treze.",
+    "A mulher a escondeu numa arca. De noite, uma luz saiu da arca. Ao amanhecer, o pároco levou a hóstia de volta à igreja.",
+    "Em 1340, o relicário de cera apareceu partido e, dentro, uma ampola de cristal. Duas investigações o julgaram autêntico.",
+    "A Santa Igreja Católica mantém o culto há mais de setecentos anos. Quatro papas concederam indulgências ao santuário."
+  ],
+  "evangelho": {
+    "referencia": "Lucas 17,7-10",
+    "referencia_en": "Luke 17:7-10",
+    "versiculo": "Somos servos inúteis; fizemos o que devíamos fazer.",
+    "versiculo_en": "We are unprofitable servants; we have done that which we ought to do.",
+    "celebracao": "São Leão Magno, papa e doutor da Igreja · Memória",
+    "leituras": "Tt 2,1-8.11-14 · Sl 36(37) · Lc 17,7-10",
+    "fato": "Jesus fala de servos que apenas cumpriram o que lhes foi mandado. O santo de hoje governou a Santa Igreja Católica por 21 anos. Leão nasceu na Túscia e foi eleito papa em 440. Em 452, foi ao encontro de Átila, perto de Mântua, e o rei dos hunos recuou. Em 455, saiu ao encontro de Genserico e poupou Roma do incêndio.\n\nMorreu em Roma em 10 de novembro de 461. Suas relíquias repousam num altar da Basílica Vaticana. Bento XIV o declarou Doutor da Igreja em 1754.",
+    "fato_en": "Jesus speaks of servants who only did what they were told. Today's saint governed the Holy Catholic Church for 21 years. Leo was born in Tuscia and elected pope in 440. In 452 he went out to meet Attila near Mantua, and the king of the Huns withdrew. In 455 he went out to meet Genseric and spared Rome from fire. He died in Rome on 10 November 461 and was buried near the tomb of Saint Peter; his relics rest in an altar of the Vatican Basilica. Benedict XIV declared him a Doctor of the Church in 1754.",
+    "fato_fonte": "Vatican.va — Bento XVI, Audiência Geral de 5 de março de 2008"
+  },
+  "stories": {
+    "manha": {
+      "nome": "São Leão Magno",
+      "anos": "† 461 · PAPA E DOUTOR DA IGREJA",
+      "padroeiro": "Papa de 440 a 461 · Doutor da Igreja desde 1754 · Memória",
+      "linhas": [
+        "Em 452, foi ao encontro de Átila, perto de Mântua, e o convenceu a não marchar sobre Roma.",
+        "Sua carta a Flaviano foi aclamada no Concílio de Calcedônia, em 451: Cristo, verdadeiro Deus e homem.",
+        "Nascido na Túscia, eleito papa em 440, morreu em Roma em 10 de novembro de 461. Doutor da Igreja desde 1754."
+      ],
+      "imagem_wikipedia": "en:Pope Leo I",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Pope Leo I",
+        "Leo the Great Attila Algardi"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "Antes de embarcar para a Índia, São Francisco Xavier peregrinou a Santarém para venerar a hóstia. O catálogo dos milagres eucarísticos o cita como testemunha.",
+      "texto_en": "Before sailing for India, Saint Francis Xavier made a pilgrimage to Santarém to venerate the Host. The catalogue of Eucharistic miracles lists him as a witness."
+    },
+    "noite": {
+      "citacao": "A participação no Corpo e Sangue de Cristo outra coisa não faz do que transformar-nos naquilo que recebemos.",
+      "autor": "SÃO LEÃO MAGNO · SERMÃO 63 · CITADO EM LUMEN GENTIUM 26",
+      "citacao_en": "The partaking of the Body and Blood of Christ does nothing other than make us become what we receive."
+    }
+  }
+}
