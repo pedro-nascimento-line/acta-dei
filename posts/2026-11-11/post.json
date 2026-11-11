@@ -1,0 +1,81 @@
+{
+  "tipo": "santo",
+  "titulo": "São Martinho de Tours, o soldado do manto",
+  "titulo_en": "Saint Martin of Tours, the Soldier of the Cloak",
+  "subtitulo": "Candes, França · † 8 de novembro de 397",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Martin of Tours",
+  "imagem_busca": "Saint Martin of Tours El Greco",
+  "cards": [
+    {
+      "kicker": "QUEM FOI · WHO HE WAS",
+      "texto": "Martinho nasceu por volta de 316 em Sabária, na Panônia, hoje Szombathely, na Hungria, filho de um oficial do exército romano. Aos quinze anos foi alistado na cavalaria. Ainda catecúmeno, serviu na Gália.\n\nÀ porta de Amiens, num inverno, encontrou um pobre quase nu. Cortou o próprio manto ao meio com a espada e lhe deu metade. Na noite seguinte, segundo seu biógrafo Sulpício Severo, viu Cristo vestido com aquela metade. Pouco depois recebeu o batismo. Deixou o exército com a frase: \"Sou soldado de Cristo; não me é lícito combater.\"",
+      "texto_en": "Martin was born around 316 in Sabaria, in Pannonia, today Szombathely in Hungary, the son of an officer of the Roman army. At fifteen he was enrolled in the cavalry and, still a catechumen, served in Gaul. At the gate of Amiens, one winter, he met a poor man almost naked. He cut his own cloak in two with his sword and gave him half. The following night, according to his biographer Sulpicius Severus, he saw Christ wearing that half. Soon afterwards he was baptized. He left the army with the words: \"I am a soldier of Christ; it is not lawful for me to fight.\""
+    },
+    {
+      "kicker": "O QUE FEZ · WHAT HE DID",
+      "texto": "Em Poitiers, pôs-se sob a direção do bispo Santo Hilário. Por volta de 360, numa terra dada por Hilário, fundou em Ligugé o mosteiro mais antigo que se conhece na Europa. Em 371, com a morte do bispo Lidório, o povo de Tours o aclamou bispo, contra a vontade de parte dos bispos vizinhos.\n\nComo bispo, continuou monge: fundou Marmoutier, às margens do Loire, e de lá percorreu o campo da Gália a pé, de barco e de jumento, derrubando templos pagãos e erguendo igrejas. Foi o primeiro grande evangelizador do meio rural no Ocidente.",
+      "texto_en": "In Poitiers he placed himself under the guidance of the bishop, Saint Hilary. Around 360, on land given by Hilary, he founded at Ligugé the oldest known monastery in Europe. In 371, on the death of Bishop Lidorius, the people of Tours acclaimed him bishop, against the wishes of some neighbouring bishops. As bishop he remained a monk: he founded Marmoutier, on the banks of the Loire, and from there travelled the countryside of Gaul on foot, by boat and by donkey, pulling down pagan temples and raising churches. He was the first great evangelizer of the rural West."
+    },
+    {
+      "kicker": "A MORTE E O CULTO · DEATH AND VENERATION",
+      "texto": "Em Candes, numa visita para pacificar o clero local, adoeceu. Morreu ali em 8 de novembro de 397. O corpo desceu o Loire até Tours e foi sepultado em 11 de novembro, data que se tornou a sua festa. Sobre o túmulo ergueram-se uma capela, em 437, e uma basílica, consagrada em 4 de julho de 471.\n\nA basílica foi saqueada em 1562 e demolida em 1797. Em 14 de dezembro de 1860, Léon Papin-Dupont reencontrou o túmulo sob uma casa. A basílica atual, projeto de Victor Laloux, foi iniciada em 1887 e consagrada em 1925. O túmulo está na cripta, coberto de ex-votos.",
+      "texto_en": "At Candes, on a visit to settle a dispute among the local clergy, he fell ill. He died there on 8 November 397. His body was carried down the Loire to Tours and buried on 11 November, the date that became his feast. Over the tomb a chapel was raised in 437 and a basilica, consecrated on 4 July 471. The basilica was sacked in 1562 and demolished in 1797. On 14 December 1860 Léon Papin-Dupont found the tomb again beneath a house. The present basilica, designed by Victor Laloux, was begun in 1887 and consecrated in 1925. The tomb lies in the crypt, covered with ex-votos."
+    }
+  ],
+  "decisao": "Santo de culto antigo, anterior aos processos formais de canonização: foi um dos primeiros não mártires venerados como santos no Ocidente, e seu nome está inscrito no Martirológio Romano em 11 de novembro. O Calendário Romano Geral celebra sua memória obrigatória nessa data. Padroeiro da França, é invocado também como padroeiro dos soldados. Em 11 de novembro de 2007, no Angelus, Bento XVI o chamou \"um dos santos mais célebres e venerados da Europa\".",
+  "decisao_en": "A saint of ancient cult, before the formal canonization processes: he was one of the first non-martyrs venerated as saints in the West, and his name is inscribed in the Roman Martyrology on 11 November. The General Roman Calendar keeps his obligatory memorial on that date. Patron of France, he is also invoked as patron of soldiers. On 11 November 2007, at the Angelus, Benedict XVI called him \"one of the most celebrated and venerated saints of Europe\".",
+  "fontes": [
+    "Vatican.va — Bento XVI, Angelus de 11 de novembro de 2007",
+    "Butler's Lives of the Saints (EWTN) — St. Martin, Confessor, Bishop of Tours",
+    "Basílica de São Martinho de Tours (basiliquesaintmartin.fr) — visita guiada da basílica e da cripta",
+    "EWTN — St. Martin of Tours, verbete de santos"
+  ],
+  "reel": [
+    "Um soldado romano cortou o próprio manto ao meio e deu metade a um mendigo. Naquela noite, viu Cristo vestido com ela.",
+    "Martinho nasceu na Panônia por volta de 316. Deixou o exército, foi monge em Ligugé e em 371 Tours o fez bispo.",
+    "Percorreu os campos da Gália a pé e de barco, derrubando templos pagãos e erguendo igrejas. Morreu em Candes, em 397.",
+    "A Santa Igreja Católica o celebra em 11 de novembro, dia do seu sepultamento em Tours. É padroeiro da França."
+  ],
+  "evangelho": {
+    "referencia": "Lucas 17,11-19",
+    "referencia_en": "Luke 17:11-19",
+    "versiculo": "Não foram dez os curados? E os outros nove, onde estão?",
+    "versiculo_en": "Were not ten made clean? And where are the nine?",
+    "celebracao": "São Martinho de Tours, bispo · Memória",
+    "leituras": "Tt 3,1-7 · Sl 22(23) · Lc 17,11-19",
+    "fato": "Jesus cura dez leprosos a caminho de Jerusalém, entre a Samaria e a Galileia. O santo de hoje também encontrou um leproso. Sulpício Severo, seu biógrafo e contemporâneo, registra que Martinho, à porta de Paris, beijou e abençoou um homem coberto de lepra; segundo o relato, o homem ficou curado.\n\nMartinho nasceu na Panônia por volta de 316, foi soldado, monge e bispo de Tours desde 371. Morreu em Candes em 8 de novembro de 397 e foi sepultado em Tours em 11 de novembro.",
+    "fato_en": "Jesus heals ten lepers on the way to Jerusalem, between Samaria and Galilee. Today's saint also met a leper. Sulpicius Severus, his biographer and contemporary, records that Martin, at the gate of Paris, kissed and blessed a man covered with leprosy; according to the account, the man was healed. Martin was born in Pannonia around 316, was a soldier, a monk and bishop of Tours from 371. He died at Candes on 8 November 397 and was buried at Tours on 11 November.",
+    "fato_fonte": "Sulpício Severo — Vida de São Martinho, cap. 18 (c. 397) · Vatican.va — Bento XVI, Angelus de 11 de novembro de 2007"
+  },
+  "stories": {
+    "manha": {
+      "nome": "São Martinho de Tours",
+      "anos": "† 397 · BISPO E MONGE",
+      "padroeiro": "Padroeiro da França · Memória",
+      "linhas": [
+        "Soldado romano, cortou o manto ao meio em Amiens e deu metade a um pobre. De noite, viu Cristo com ele.",
+        "Fundou em Ligugé o mosteiro mais antigo conhecido da Europa. Em 371, o povo de Tours o aclamou bispo.",
+        "Morreu em Candes em 8 de novembro de 397. Sepultado em Tours no dia 11, data que se tornou a sua festa."
+      ],
+      "imagem_wikipedia": "en:Martin of Tours",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Martin of Tours",
+        "El Greco Saint Martin and the Beggar"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS · ONE MORE DETAIL",
+      "texto": "A metade do manto de Martinho, a \"cappa\", foi guardada pelos reis francos como relíquia. Do lugar onde a guardavam veio a palavra \"capela\".",
+      "texto_en": "The half of Martin's cloak, the \"cappa\", was kept by the Frankish kings as a relic. From the place where they kept it came the word \"chapel\"."
+    },
+    "noite": {
+      "citacao": "Senhor, se ainda sou necessário ao teu povo, não recuso o trabalho. Faça-se a tua vontade.",
+      "autor": "SÃO MARTINHO DE TOURS · SULPÍCIO SEVERO, CARTA 3, 397",
+      "citacao_en": "Lord, if I am still necessary to thy people, I refuse no labour. Thy will be done."
+    }
+  },
+  "imagem_credito": "Wikimedia Commons · Public domain"
+}
