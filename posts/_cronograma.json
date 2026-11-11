@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-10",
+  "gerado_em": "2026-11-11",
   "dias": [
-    {
-      "data": "2026-11-10",
-      "dia_semana": "ter",
-      "tipo": "milagre",
-      "feed": "As Hóstias de Siena",
-      "id_milagre": "siena",
-      "santo_story": "São Leão Magno, papa",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-11",
       "dia_semana": "qua",
@@ -23,8 +14,8 @@
       "data": "2026-11-12",
       "dia_semana": "qui",
       "tipo": "milagre",
-      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
-      "id_milagre": "galvao_sandra",
+      "feed": "As Hóstias de Siena",
+      "id_milagre": "siena",
       "santo_story": "São Josafá, bispo e mártir",
       "tambem_hoje": []
     },
@@ -41,8 +32,8 @@
       "data": "2026-11-14",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
+      "id_milagre": "galvao_sandra",
       "santo_story": "São Lourenço O'Toole",
       "tambem_hoje": []
     },
@@ -59,8 +50,8 @@
       "data": "2026-11-16",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "Santa Margarida da Escócia; Santa Gertrudes",
       "tambem_hoje": []
     },
@@ -77,8 +68,8 @@
       "data": "2026-11-18",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
-      "id_milagre": "lourdes_70",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
       "santo_story": "Dedicação das Basílicas de São Pedro e São Paulo",
       "tambem_hoje": []
     },
@@ -133,8 +124,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "O Milagre de Amsterdã",
-      "id_milagre": "amsterdam",
+      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
+      "id_milagre": "lourdes_70",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "São Juan Diego Cuauhtlatoatzin",
       "id_milagre": null,
       "santo_story": "São Juan Diego Cuauhtlatoatzin",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-10",
+      "dia_semana": "qui",
+      "tipo": "milagre",
+      "feed": "Nossa Senhora de Guadalupe e a tilma de Juan Diego",
+      "id_milagre": "guadalupe",
+      "santo_story": "Nossa Senhora de Loreto",
       "tambem_hoje": []
     }
   ]
