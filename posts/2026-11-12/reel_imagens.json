@@ -1,29 +1,46 @@
 [
   {
     "arquivo": "reel_img_01.jpg",
-    "title": "File:Christ giving the Sacred Host to the kneeling Saint Catherine of Siena, surrounded by various angels MET DP883262.jpg",
-    "licenca": "CC0",
-    "autor": "Creator:Giuliano Traballesi",
-    "pagina": "https://commons.wikimedia.org/wiki/File%3AChrist%20giving%20the%20Sacred%20Host%20to%20the%20kneeling%20Saint%20Catherine%20of%20Siena%2C%20surrounded%20by%20various%20angels%20MET%20DP883262.jpg",
+    "title": "File:Cappella estiva delle sacre particole, del marrina, 1504 (rifatta nel xix secolo, tranne il pavimento) 01.jpg",
+    "licenca": "CC BY 3.0",
+    "autor": "Sailko",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ACappella%20estiva%20delle%20sacre%20particole%2C%20del%20marrina%2C%201504%20%28rifatta%20nel%20xix%20secolo%2C%20tranne%20il%20pavimento%29%2001.jpg",
+    "credito": "Sailko · Wikimedia Commons · CC BY 3.0",
     "origem": "commons",
-    "credito": "Creator:Giuliano Traballesi · Wikimedia Commons · CC0"
+    "cena": 1,
+    "termo": "Santa Maria in Provenzano"
   },
   {
     "arquivo": "reel_img_02.jpg",
-    "title": "File:Siena cimitero pannilini 3.jpg",
-    "licenca": "Public domain",
-    "autor": "Giuseppe Domenico Felli (1839-1897)",
-    "pagina": "https://commons.wikimedia.org/wiki/File%3ASiena%20cimitero%20pannilini%203.jpg",
+    "title": "File:Siena, basilica di S. Francesco. Cappella invernale delle Sacre Particole (transetto destro).jpg",
+    "licenca": "CC0",
+    "autor": "Nikozw",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ASiena%2C%20basilica%20di%20S.%20Francesco.%20Cappella%20invernale%20delle%20Sacre%20Particole%20%28transetto%20destro%29.jpg",
+    "credito": "Nikozw · Wikimedia Commons · CC0",
     "origem": "commons",
-    "credito": "Giuseppe Domenico Felli (1839-1897) · Wikimedia Commons · Public domain"
+    "cena": 2,
+    "termo": "Sacre Particole"
   },
   {
     "arquivo": "reel_img_03.jpg",
-    "title": "File:Siena cimitero sarrocchi gani 1.jpg",
+    "title": "File:Sacre Particole.jpg",
     "licenca": "Public domain",
-    "autor": "Tito Sarrocchi (1824-1900)",
-    "pagina": "https://commons.wikimedia.org/wiki/File%3ASiena%20cimitero%20sarrocchi%20gani%201.jpg",
+    "autor": "Tholus",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ASacre%20Particole.jpg",
+    "credito": "Tholus · Wikimedia Commons · Public domain",
     "origem": "commons",
-    "credito": "Tito Sarrocchi (1824-1900) · Wikimedia Commons · Public domain"
+    "cena": 3,
+    "termo": "Cappella delle Sacre Particole"
+  },
+  {
+    "arquivo": "reel_img_04.jpg",
+    "title": "File:Cappella estiva delle sacre particole, del marrina, 1504 (rifatta nel xix secolo, tranne il pavimento) 02.jpg",
+    "licenca": "CC BY 3.0",
+    "autor": "Sailko",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ACappella%20estiva%20delle%20sacre%20particole%2C%20del%20marrina%2C%201504%20%28rifatta%20nel%20xix%20secolo%2C%20tranne%20il%20pavimento%29%2002.jpg",
+    "credito": "Sailko · Wikimedia Commons · CC BY 3.0",
+    "origem": "commons",
+    "cena": 4,
+    "termo": "Cappella delle Sacre Particole"
   }
 ]

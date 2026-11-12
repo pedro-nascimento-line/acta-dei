@@ -1,18 +1,47 @@
 [
   {
-    "arquivo": "faixa_01.mp3",
-    "segundos": 194.1,
-    "title": "File:Gregorian Chant (ISRC USUAN1600052).mp3",
+    "arquivo": "gregoriano_01.ogg",
+    "segundos": 300.4,
+    "title": "File:The Tudor Consort - 02 - Introit - Resurrexi et Adhuc Tecum Sum.ogg",
     "licenca": "CC BY 3.0",
-    "autor": "Kevin MacLeod",
-    "pagina": "https://commons.wikimedia.org/wiki/File%3AGregorian%20Chant%20%28ISRC%20USUAN1600052%29.mp3"
+    "autor": "The Tudor Consort",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AThe%20Tudor%20Consort%20-%2002%20-%20Introit%20-%20Resurrexi%20et%20Adhuc%20Tecum%20Sum.ogg",
+    "nome": "Introito Resurrexi · The Tudor Consort"
   },
   {
-    "arquivo": "faixa_02.wav",
-    "segundos": 138.8,
-    "title": "File:Paul Breisch & Marc Dostert - Metz 15-08-2022 - Correa de Arauxo - Cantique à l'Immaculée-Conception - 1.wav",
-    "licenca": "CC BY-SA 4.0",
-    "autor": "Fredamas",
-    "pagina": "https://commons.wikimedia.org/wiki/File%3APaul%20Breisch%20%26%20Marc%20Dostert%20-%20Metz%2015-08-2022%20-%20Correa%20de%20Arauxo%20-%20Cantique%20%C3%A0%20l%27Immacul%C3%A9e-Conception%20-%201.wav"
+    "arquivo": "gregoriano_02.ogg",
+    "segundos": 109.4,
+    "title": "File:The Tudor Consort - 07 - Gradual - Haec Dies.ogg",
+    "licenca": "CC BY 3.0",
+    "autor": "The Tudor Consort",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AThe%20Tudor%20Consort%20-%2007%20-%20Gradual%20-%20Haec%20Dies.ogg",
+    "nome": "Gradual Haec dies · The Tudor Consort"
+  },
+  {
+    "arquivo": "gregoriano_03.ogg",
+    "segundos": 120.3,
+    "title": "File:The Tudor Consort - 08 - Alleluia - Pascha Nostrum.ogg",
+    "licenca": "CC BY 3.0",
+    "autor": "The Tudor Consort",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AThe%20Tudor%20Consort%20-%2008%20-%20Alleluia%20-%20Pascha%20Nostrum.ogg",
+    "nome": "Aleluia Pascha nostrum · The Tudor Consort"
+  },
+  {
+    "arquivo": "gregoriano_04.ogg",
+    "segundos": 217.0,
+    "title": "File:Schola Gregoriana-Antiphona et Magnificat.ogg",
+    "licenca": "CC BY-SA 3.0",
+    "autor": "Schola Gregoriana",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ASchola%20Gregoriana-Antiphona%20et%20Magnificat.ogg",
+    "nome": "Antífona e Magnificat · Schola Gregoriana (Ołtarzew)"
+  },
+  {
+    "arquivo": "gregoriano_05.ogg",
+    "segundos": 205.2,
+    "title": "File:Pange Lingua Latin in Latin.ogg",
+    "licenca": "CC BY-SA 3.0",
+    "autor": "",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3APange%20Lingua%20Latin%20in%20Latin.ogg",
+    "nome": "Pange lingua · Gareth Hughes"
   }
 ]
