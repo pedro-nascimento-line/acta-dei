@@ -17,7 +17,7 @@ por IA (Pollinations, sem chave) com o contexto da frase, sempre creditadas como
 por IA" na legenda — nunca apresentadas como fotografia.
 
 Roteiro: `post["reel"]` (4 a 5 frases curtas escritas pela tarefa diária) ou, na falta, a primeira
-frase de cada card. Narração: edge-tts (pt-BR). Música: posts/_musica (fetch_music.py), em -14 dB.
+frase de cada card. Narração: edge-tts (pt-BR). Música: 5 cantos gregorianos de posts/_musica (fetch_music.py), um por dia, em volume baixo.
 Sem voz, sem música ou sem IA o vídeo sai do mesmo jeito (o log avisa).
 """
 import hashlib, io, json, re, shutil, subprocess, sys, tempfile, urllib.parse
@@ -299,7 +299,11 @@ def musica(dia):
            if (RAIZ / "posts/_musica" / e["arquivo"]).exists() and not VETO_MUSICA.search(e["title"])]
     if not est:
         return None
-    n = sum(int(c) for c in re.sub(r"\D", "", dia))  # escolha estável por dia
+    import datetime as _dt
+    try:
+        n = _dt.date.fromisoformat(dia).toordinal()   # dias seguidos nunca repetem a faixa
+    except ValueError:
+        n = sum(int(c) for c in re.sub(r"\D", "", dia))
     e = est[n % len(est)]
     return RAIZ / "posts/_musica" / e["arquivo"], e
 
@@ -420,12 +424,13 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
             vistos.add(c); creditos.append(c)
     if m:
         arq, e = m
-        ini = 0 if e["segundos"] <= total + 5 else (sum(int(c) for c in re.sub(r"\D", "", pasta.name)) * 7) % int(e["segundos"] - total - 3)
-        ff("-i", concat, "-ss", ini, "-i", arq,
-           "-filter_complex", f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=0.2,afade=t=in:d=2,atrim=0:{total:.2f},afade=t=out:st={max(total-3,0):.2f}:d=3[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95[a]",
+        # começa do início do canto (sem cortar a entrada da schola); se o canto for mais curto que o Reel, repete
+        ff("-i", concat, "-stream_loop", "-1", "-i", arq,
+           "-filter_complex", f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=0.18,afade=t=in:d=2,atrim=0:{total:.2f},afade=t=out:st={max(total-3,0):.2f}:d=3[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95[a]",
            "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", saida)
-        print(f"  música: {e['title'][:60]} · {e['licenca']}")
-        creditos.append(f"Música: {e['title'].replace('File:', '')[:70]} · Wikimedia Commons · {e['licenca']}")
+        nome = e.get("nome") or e["title"].replace("File:", "").rsplit(".", 1)[0][:70]
+        print(f"  música: {nome} · {e['licenca']}")
+        creditos.append(f"Música: {nome} · Wikimedia Commons · {e['licenca']}")
     else:
         ff("-i", concat, "-c", "copy", "-movflags", "+faststart", saida)
         print("  sem música (estante vazia: rode scripts/fetch_music.py)")
