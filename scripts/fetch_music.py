@@ -5,12 +5,13 @@ do Wikimedia Commons, com a licença registrada. Fica em posts/_musica/ (version
 Uso: python3 scripts/fetch_music.py            # completa a estante até ALVO faixas
      python3 scripts/fetch_music.py --lista    # mostra o que há
 Só aceita as mesmas licenças das imagens (commons.py). Rejeita NC, ND e 'fair use'.
+Nunca aceita sinos nem carrilhões (av.VETO_MUSICA): faixa vetada sai da estante e não volta.
 """
 import json, subprocess, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import commons  # noqa: E402
-from av import duracao  # noqa: E402
+from av import duracao, VETO_MUSICA  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PASTA = RAIZ / "posts" / "_musica"
@@ -28,13 +29,14 @@ def buscar_audio(termo, n=20):
     d = commons._get({"action": "query", "list": "search", "srsearch": f"{termo} filetype:audio",
                       "srnamespace": 6, "srlimit": n})
     titulos = [h["title"] for h in d["query"]["search"]]
-    return [i for i in commons.info_batch(titulos) if (i.get("mime") or "").startswith("audio/") and i["licenca_ok"]]
+    return [i for i in commons.info_batch(titulos)
+            if (i.get("mime") or "").startswith("audio/") and i["licenca_ok"] and not VETO_MUSICA.search(i["title"])]
 
 
 def main(listar=False):
     PASTA.mkdir(parents=True, exist_ok=True)
     estante = json.loads(INDICE.read_text()) if INDICE.exists() else []
-    estante = [e for e in estante if (PASTA / e["arquivo"]).exists()]
+    estante = [e for e in estante if (PASTA / e["arquivo"]).exists() and not VETO_MUSICA.search(e["title"])]
     if listar or len(estante) >= ALVO:
         for e in estante:
             print(f"{e['arquivo']:28} {e['segundos']:6.0f}s  {e['licenca']:14} {e['title'][:60]}")
@@ -53,7 +55,9 @@ def main(listar=False):
             if len(estante) >= ALVO or i["title"] in ja:
                 continue
             ext = Path(i["title"]).suffix.lower() or ".ogg"
-            destino = PASTA / f"faixa_{len(estante) + 1:02d}{ext}"
+            usados = {Path(e["arquivo"]).stem for e in estante}
+            num = next(n for n in range(1, 100) if f"faixa_{n:02d}" not in usados)
+            destino = PASTA / f"faixa_{num:02d}{ext}"
             try:
                 destino.write_bytes(commons._req(i["url_original"]).content)
             except Exception as e:

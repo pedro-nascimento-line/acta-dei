@@ -3,6 +3,10 @@ import re, shutil, subprocess, sys
 
 _FFMPEG = None
 
+# Faixas que nunca entram como fundo dos Reels: sinos, carrilhões e gravações de campo do arquivo da
+# Rádio Tcheca (série CRA…, que são sinos de igreja). Vale para a busca (fetch_music) e para a escolha (make_reel).
+VETO_MUSICA = re.compile(r"\b(bells?|zvony?|sinos?|glocken?|gel[aä]ut\w*|campan\w*|carillon\w*|cloches?)\b|CRA\d{4,}", re.I)
+
 
 def ffmpeg_bin():
     """Caminho do ffmpeg. Se não houver no sistema (ex.: imagem nova do runner), usa o binário do imageio-ffmpeg."""
