@@ -6,8 +6,8 @@
   "subtitulo": "Siena, Itália · 14 a 17 de agosto de 1730",
   "status": "reconhecido",
   "imagem": "imagem.jpg",
-  "imagem_wikipedia": "en:Hosts of Siena",
-  "imagem_busca": "Basilica di San Francesco Siena",
+  "imagem_wikipedia": "it:Basilica di San Francesco (Siena)",
+  "imagem_busca": "Basilica di San Francesco Siena facciata",
   "cards": [
     {
       "kicker": "O FATO · THE FACT",
@@ -77,6 +77,5 @@
       "autor": "SÃO JOÃO PAULO II · CATEDRAL DE SIENA, 14 DE SETEMBRO DE 1980",
       "citacao_en": "Where Eucharistic life flourishes, there ecclesial life flourishes too."
     }
-  },
-  "imagem_credito": "Pufui PcPifpef · Wikimedia Commons · CC BY-SA 4.0"
+  }
 }
