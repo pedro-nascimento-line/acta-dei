@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-11-11",
+ "gerada_em": "2026-11-12",
  "fila": [
   {
-   "id": "siena",
+   "id": "amsterdam",
    "tipo": "eucaristico",
-   "titulo": "As Hóstias de Siena",
+   "titulo": "O Milagre de Amsterdã",
    "data_sugerida": null
   },
   {
@@ -50,9 +50,9 @@
    "data_sugerida": "02-11"
   },
   {
-   "id": "amsterdam",
+   "id": "faverney",
    "tipo": "eucaristico",
-   "titulo": "O Milagre de Amsterdã",
+   "titulo": "O Milagre de Faverney",
    "data_sugerida": null
   },
   {
@@ -98,9 +98,9 @@
    "data_sugerida": null
   },
   {
-   "id": "faverney",
+   "id": "buenos_aires",
    "tipo": "eucaristico",
-   "titulo": "O Milagre de Faverney",
+   "titulo": "Buenos Aires, 1996: a hóstia analisada",
    "data_sugerida": null
   },
   {
@@ -146,9 +146,9 @@
    "data_sugerida": null
   },
   {
-   "id": "buenos_aires",
+   "id": "tixtla",
    "tipo": "eucaristico",
-   "titulo": "Buenos Aires, 1996: a hóstia analisada",
+   "titulo": "Tixtla, 2006",
    "data_sugerida": null
   },
   {
@@ -194,9 +194,9 @@
    "data_sugerida": null
   },
   {
-   "id": "tixtla",
+   "id": "sokolka",
    "tipo": "eucaristico",
-   "titulo": "Tixtla, 2006",
+   "titulo": "Sokółka, 2008",
    "data_sugerida": null
   },
   {

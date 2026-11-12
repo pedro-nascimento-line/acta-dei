@@ -1,21 +1,12 @@
 {
-  "gerado_em": "2026-11-11",
+  "gerado_em": "2026-11-12",
   "dias": [
-    {
-      "data": "2026-11-11",
-      "dia_semana": "qua",
-      "tipo": "santo",
-      "feed": "São Martinho de Tours, bispo",
-      "id_milagre": null,
-      "santo_story": "São Martinho de Tours, bispo",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-12",
       "dia_semana": "qui",
       "tipo": "milagre",
-      "feed": "As Hóstias de Siena",
-      "id_milagre": "siena",
+      "feed": "O Milagre de Amsterdã",
+      "id_milagre": "amsterdam",
       "santo_story": "São Josafá, bispo e mártir",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Nossa Senhora de Guadalupe e a tilma de Juan Diego",
       "id_milagre": "guadalupe",
       "santo_story": "Nossa Senhora de Loreto",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-11",
+      "dia_semana": "sex",
+      "tipo": "santo",
+      "feed": "São Dâmaso I, papa",
+      "id_milagre": null,
+      "santo_story": "São Dâmaso I, papa",
       "tambem_hoje": []
     }
   ]
