@@ -11,10 +11,12 @@ Legenda: um bloco só (painel escuro + texto inteiro), pequeno e junto à base, 
 (transparente → cheio) no instante em que a voz começa a ler aquele texto. No primeiro slide a tela
 fica limpa — só a imagem e o título — até o título terminar de ser lido. Nada de palavra a palavra.
 
-Imagens, nesta ordem: as já baixadas para o post (imagem.jpg, santo.jpg); depois o Wikimedia Commons
-(mesmo filtro de licença das artes: PD, CC0, CC BY, CC BY-SA); se ainda faltar, ilustrações geradas
-por IA (Pollinations, sem chave) com o contexto da frase, sempre creditadas como "ilustração gerada
-por IA" na legenda — nunca apresentadas como fotografia.
+Imagens: uma por cena, sempre do TEMA. Slide 0 = imagem principal do post. Os demais vêm do garimpo no
+Wikimedia Commons (imagens_tema.py: arquivos e categorias indicados pela tarefa, categoria do artigo no
+Wikidata, imagens dos artigos da Wikipédia, busca por frase exata), escolhidos pelo termo `imagem` de cada
+item do roteiro, com o mesmo filtro de licença das artes (PD, CC0, CC BY, CC BY-SA). Cena sem imagem
+relevante: ilustração daquela cena por IA (Pollinations), creditada como "Ilustração gerada por IA" —
+nunca apresentada como fotografia. O santo do dia só entra quando o post é sobre ele.
 
 Roteiro: `post["reel"]` (4 a 5 frases curtas escritas pela tarefa diária) ou, na falta, a primeira
 frase de cada card. Narração: edge-tts (pt-BR). Música: 5 cantos gregorianos de posts/_musica (fetch_music.py), um por dia, em volume baixo.
@@ -25,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import render  # noqa: E402  (CSS, fontes, data_uri, esc, STATUS)
 import commons  # noqa: E402
+import imagens_tema  # noqa: E402
 from av import ff, duracao as dur, VETO_MUSICA  # noqa: E402
 import requests  # noqa: E402
 from PIL import Image  # noqa: E402
@@ -129,36 +132,6 @@ def _salvar(img_bytes, destino):
     im.save(destino, "JPEG", quality=88, optimize=True)
 
 
-def imagens_commons(post, pasta, faltam, ja_titulos):
-    termos = []
-    for spec in (post, (post.get("stories") or {}).get("manha") or {}):
-        w = (spec.get("imagem_wikipedia") or "").split(":", 1)[-1]
-        if w: termos.append(w)
-    b = post.get("imagem_busca") or []
-    termos += b if isinstance(b, list) else [b]
-    termos.append(post.get("titulo", ""))
-    out, vistos = [], set(ja_titulos)
-    for termo in [t for t in termos if t]:
-        if len(out) >= faltam: break
-        try:
-            cands = commons.search(termo, n=12)
-        except Exception as e:
-            print(f"  busca '{termo}' falhou: {e}"); continue
-        for i in cands:
-            if len(out) >= faltam: break
-            if not i["licenca_ok"] or i["title"] in vistos: continue
-            if re.search(r"(map|mapa|coat of arms|bras[aã]o|flag|bandeira|logo|seal|stamp|selo|diagram|plan\b)", i["title"], re.I): continue
-            destino = pasta / f"reel_img_{len(ja_titulos) + len(out) + 1:02d}.jpg"
-            try:
-                _salvar(commons._req(i["url"]).content, destino)
-            except Exception as e:
-                print(f"  descartada {i['title'][:50]}: {e}"); continue
-            vistos.add(i["title"])
-            out.append({"arquivo": destino.name, "title": i["title"], "licenca": i["licenca"], "autor": i["autor"], "pagina": i["pagina"], "origem": "commons"})
-            print(f"  + commons: {i['title'][:60]} · {i['licenca']}")
-    return out
-
-
 def imagem_ia(prompt, destino, seed):
     url = IA_URL + urllib.parse.quote(prompt[:600]) + f"?width=1080&height=1920&nologo=true&seed={seed}&model=flux"
     r = requests.get(url, headers={"User-Agent": commons.UA}, timeout=180)
@@ -172,45 +145,95 @@ def prompt_ia(post, texto):
             f"Solemn, reverent, dramatic chiaroscuro, warm candlelight, muted palette. No text, no letters, no watermark, no modern objects.")
 
 
+def termos_cenas(post, slides):
+    """Termo de imagem de cada slide: `reel[i].imagem` escrito pela tarefa diária (ex.: "Sacre Particole");
+    a citação final usa `imagens_reel.citacao`, se houver."""
+    reel = [i for i in (post.get("reel") or []) if (i.get("texto") if isinstance(i, dict) else i)]
+    out = []
+    for k, (kick, _) in enumerate(slides):
+        if kick == "CITACAO":
+            out.append((post.get("imagens_reel") or {}).get("citacao", ""))
+        else:
+            it = reel[k] if k < len(reel) else None
+            out.append(it.get("imagem", "") if isinstance(it, dict) else "")
+    return out
+
+
+def _credito_commons(i):
+    autor = re.sub(r"\s+", " ", (i.get("autor") or "").replace("Creator:", "")).strip()[:40]
+    return f"{autor + ' · ' if autor else ''}Wikimedia Commons · {i['licenca']}"
+
+
 def montar_imagens(post, pasta, slides, sem_ia):
-    """Uma imagem por slide. Devolve lista de dicts com arquivo + crédito (ordem dos slides)."""
+    """Uma imagem POR CENA, ligada ao tema. Slide 0 = imagem principal do post; os outros = garimpo no Commons
+    (imagens_tema.py) pela cena; sem nada relevante, ilustração da cena por IA (creditada). Nunca o santo do dia
+    num post de milagre, nem foto católica genérica."""
     n = len(slides)
-    lista, md5s = [], set()
-    cred_principal = post.get("imagem_credito", "")
-    for nome, cred in ((post.get("imagem"), cred_principal), (((post.get("stories") or {}).get("manha") or {}).get("imagem"), "Wikimedia Commons")):
-        if nome and (pasta / nome).exists():
-            h = _md5(pasta / nome)
-            if h not in md5s:
-                md5s.add(h); lista.append({"arquivo": nome, "credito": cred, "origem": "post"})
-    # reaproveita imagens de execuções anteriores (reel_imagens.json)
+    termos = termos_cenas(post, slides)
+    escolha, md5s = [None] * n, set()
+
+    def usar(k, e):
+        h = _md5(pasta / e["arquivo"])
+        if h in md5s:
+            return False
+        md5s.add(h); escolha[k] = e
+        return True
+
+    if post.get("imagem") and (pasta / post["imagem"]).exists():
+        usar(0, {"arquivo": post["imagem"], "credito": post.get("imagem_credito", ""), "origem": "post"})
+    # reaproveita o que já foi escolhido para esta cena numa geração anterior (só do formato novo, com "cena")
     idx = pasta / "reel_imagens.json"
     if idx.exists():
-        for e in json.loads(idx.read_text()):
-            if (pasta / e["arquivo"]).exists() and _md5(pasta / e["arquivo"]) not in md5s and len(lista) < n:
-                md5s.add(_md5(pasta / e["arquivo"])); lista.append(e)
-    if len(lista) < n:
-        ja = [e.get("title") for e in lista if e.get("title")]
-        for e in imagens_commons(post, pasta, n - len(lista), ja):
-            h = _md5(pasta / e["arquivo"])
-            if h in md5s:
-                (pasta / e["arquivo"]).unlink(missing_ok=True); continue
-            md5s.add(h); e["credito"] = f"{(e['autor'] or '').strip()[:40] + ' · ' if e['autor'] else ''}Wikimedia Commons · {e['licenca']}"
-            lista.append(e)
-    if len(lista) < n and not sem_ia:
-        for k, (_, texto) in enumerate(slides):
-            if len(lista) >= n: break
-            destino = pasta / f"reel_ia_{len(lista) + 1:02d}.jpg"
-            try:
-                imagem_ia(prompt_ia(post, texto), destino, seed=1000 + k)
-                lista.append({"arquivo": destino.name, "credito": "Ilustração gerada por IA", "origem": "ia"})
-                print(f"  + IA: {destino.name} ← {texto[:50]}")
-            except Exception as e:
-                print(f"  IA falhou ({texto[:40]}): {e}")
-    idx.write_text(json.dumps([e for e in lista if e.get("origem") != "post"], ensure_ascii=False, indent=2))
-    if not lista:
-        lista = [{"arquivo": None, "credito": "", "origem": "selo"}]
-    # distribui: uma por slide, repetindo em ciclo se faltar
-    return [lista[i % len(lista)] for i in range(n)]
+        try:
+            for e in json.loads(idx.read_text()):
+                k = e.get("cena")
+                if isinstance(k, int) and k < n and escolha[k] is None and (pasta / e["arquivo"]).exists() \
+                        and e.get("termo", "") == termos[k]:
+                    usar(k, e)
+        except Exception as ex:
+            print(f"  reel_imagens.json ignorado: {ex}")
+    faltam = [k for k in range(n) if escolha[k] is None]
+    if faltam:
+        extras = []
+        manha = (post.get("stories") or {}).get("manha") or {}
+        if post.get("tipo") == "santo" and manha.get("imagem") and (pasta / manha["imagem"]).exists():
+            extras.append({"arquivo": manha["imagem"], "credito": "Wikimedia Commons", "origem": "post"})
+        try:
+            cands = imagens_tema.coletar(post, termos)
+        except Exception as ex:
+            print(f"  garimpo no Commons falhou: {ex}"); cands = []
+        usados = set()
+        for k in faltam:
+            if extras and usar(k, extras[0]):
+                extras.pop(0); continue
+            for i in imagens_tema.ordenar_para_cena(cands, termos[k], usados)[:6]:
+                usados.add(i["title"])
+                destino = pasta / f"reel_img_{k:02d}.jpg"
+                try:
+                    _salvar(commons._req(i["url"]).content, destino)
+                except Exception as ex:
+                    print(f"  descartada {i['title'][:50]}: {ex}"); continue
+                if usar(k, {"arquivo": destino.name, "title": i["title"], "licenca": i["licenca"], "autor": i["autor"],
+                            "pagina": i["pagina"], "credito": _credito_commons(i), "origem": "commons",
+                            "cena": k, "termo": termos[k]}):
+                    print(f"  cena {k}: {i['title'][5:70]} · {i['licenca']} (nota {i['nota']:.0f})")
+                    break
+    for k in [k for k in range(n) if escolha[k] is None]:
+        if sem_ia: break
+        kick, texto = slides[k]
+        destino = pasta / f"reel_ia_{k:02d}.jpg"
+        try:
+            imagem_ia(prompt_ia(post, f"{termos[k]}. {texto}" if termos[k] else texto), destino, seed=1000 + k)
+            escolha[k] = {"arquivo": destino.name, "credito": "Ilustração gerada por IA", "origem": "ia", "cena": k, "termo": termos[k]}
+            print(f"  cena {k}: IA ← {texto[:50]}")
+        except Exception as ex:
+            print(f"  IA falhou ({texto[:40]}): {ex}")
+    idx.write_text(json.dumps([e for e in escolha if e and e.get("origem") != "post"], ensure_ascii=False, indent=2))
+    boas = [e for e in escolha if e]
+    if not boas:
+        return [{"arquivo": None, "credito": "", "origem": "selo"}] * n
+    # cena sem imagem: repete uma das imagens DO TEMA (nunca uma genérica)
+    return [e or boas[k % len(boas)] for k, e in enumerate(escolha)]
 
 
 # ---------------------------------------------------------------- slides
