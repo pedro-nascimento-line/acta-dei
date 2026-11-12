@@ -43,6 +43,9 @@ from playwright.sync_api import sync_playwright
 RAIZ = Path(__file__).resolve().parent.parent
 BRAND = RAIZ / "brand"
 RED, RED_DARK, CREAM, CHAR, GREY = "#A6192E", "#7A1020", "#F7F2E8", "#26221E", "#6B655E"
+# Vermelho-selo para TEXTO sobre fundo escuro (stories): o #A6192E some no carvão (contraste 2,1:1).
+# Mesma matiz, mais luz e traço mais grosso (peso 700) — contraste 4,3:1. Em fundo creme segue o RED.
+RED_VIVO = "#F0434F"
 
 
 def b64(p):
@@ -114,22 +117,22 @@ h1.small {{ font-size: 52px; }}
 .s-hero {{ position: relative; }}
 .s-hero img {{ width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }}
 .s-name {{ font-family: 'Cinzel'; font-weight: 700; font-size: 66px; line-height: 1.15; text-align: center; margin-top: 56px; }}
-.s-years {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 16px; }}
+.s-years {{ font-family: 'Cinzel'; font-weight: 700; font-size: 34px; letter-spacing: 5px; color: {RED_VIVO}; text-align: center; margin-top: 16px; }}
 .s-patron {{ font-size: 40px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 18px; }}
 .s-lines {{ margin: 40px auto 0; width: 900px; font-size: 42px; line-height: 1.4; }}
 .s-lines p {{ padding-left: 40px; position: relative; }}
-.s-lines p::before {{ content: ''; position: absolute; left: 0; top: 24px; width: 18px; height: 3px; background: {RED}; }}
-.s-kicker {{ font-family: 'Cinzel'; font-weight: 700; font-size: 32px; letter-spacing: 6px; color: {RED}; text-align: center; margin-top: 60px; }}
+.s-lines p::before {{ content: ''; position: absolute; left: 0; top: 24px; width: 18px; height: 3px; background: {RED_VIVO}; }}
+.s-kicker {{ font-family: 'Cinzel'; font-weight: 700; font-size: 32px; letter-spacing: 6px; color: {RED_VIVO}; text-align: center; margin-top: 60px; }}
 .s-text {{ font-size: 56px; line-height: 1.35; font-weight: 500; text-align: center; margin-top: 60px; }}
 .s-text_en {{ font-size: 40px; line-height: 1.35; text-align: center; color: #CFC7B8; margin-top: 50px; padding-top: 40px; border-top: 2px solid {RED}; }}
 .s-quote {{ font-size: 68px; line-height: 1.3; font-style: italic; text-align: center; margin-top: 140px; }}
-.s-author {{ font-family: 'Cinzel'; font-size: 34px; letter-spacing: 5px; color: {RED}; text-align: center; margin-top: 70px; }}
-.s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-size: 26px; letter-spacing: 6px; color: {RED}; }}
+.s-author {{ font-family: 'Cinzel'; font-weight: 700; font-size: 34px; letter-spacing: 5px; color: {RED_VIVO}; text-align: center; margin-top: 70px; }}
+.s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-weight: 700; font-size: 26px; letter-spacing: 6px; color: {RED_VIVO}; }}
 .s-cta {{ position: absolute; left: 0; right: 0; bottom: 410px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
 /* story da manhã v2: "Hoje na Igreja" */
 .s-date {{ font-size: 36px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 14px; }}
 .s-ev {{ width: 900px; margin: 44px auto 0; padding-top: 34px; border-top: 2px solid {RED}; text-align: center; }}
-.s-ev-k {{ font-family: 'Cinzel'; font-weight: 700; font-size: 28px; letter-spacing: 5px; color: {RED}; }}
+.s-ev-k {{ font-family: 'Cinzel'; font-weight: 700; font-size: 28px; letter-spacing: 5px; color: {RED_VIVO}; }}
 .s-ev-v {{ font-size: 46px; line-height: 1.3; font-style: italic; margin-top: 18px; }}
 .s-next {{ font-family: 'Cinzel'; font-size: 24px; letter-spacing: 4px; text-align: center; color: #CFC7B8; margin-top: 44px; }}
 .s-next b {{ color: {CREAM}; font-weight: 700; }}
