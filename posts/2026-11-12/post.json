@@ -34,10 +34,22 @@
     "Real Presence Association (therealpresence.org) — Eucharistic Miracle of Siena, 1730"
   ],
   "reel": [
-    "Em 1730, ladrões roubaram 351 hóstias consagradas em Siena. Quase trezentos anos depois, elas continuam intactas.",
-    "Foram achadas três dias depois, na caixa de esmolas de outra igreja, cobertas de pó. Voltaram em procissão à basílica.",
-    "Em 1914, com autorização de São Pio X, o químico Siro Grimaldi as analisou: sem fermentação, sem microrganismos.",
-    "A Santa Igreja Católica mantém o culto desde então. Em 2014, o arcebispo de Siena contou 225 hóstias inteiras."
+    {
+      "texto": "Em 1730, ladrões roubaram 351 hóstias consagradas em Siena. Quase trezentos anos depois, elas continuam intactas.",
+      "imagem": "Basilica of San Francesco Siena"
+    },
+    {
+      "texto": "Foram achadas três dias depois, na caixa de esmolas de outra igreja, cobertas de pó. Voltaram em procissão à basílica.",
+      "imagem": "Santa Maria in Provenzano"
+    },
+    {
+      "texto": "Em 1914, com autorização de São Pio X, o químico Siro Grimaldi as analisou: sem fermentação, sem microrganismos.",
+      "imagem": "Sacre Particole"
+    },
+    {
+      "texto": "A Santa Igreja Católica mantém o culto desde então. Em 2014, o arcebispo de Siena contou 225 hóstias inteiras.",
+      "imagem": "Cappella delle Sacre Particole"
+    }
   ],
   "evangelho": {
     "referencia": "Lucas 17,20-25",
@@ -78,5 +90,26 @@
       "citacao_en": "Where Eucharistic life flourishes, there ecclesial life flourishes too."
     }
   },
-  "imagem_credito": "Gryffindor stitched by Marku1988 This image was created with… · Wikimedia Commons · CC BY-SA 3.0"
+  "imagem_credito": "Gryffindor stitched by Marku1988 This image was created with… · Wikimedia Commons · CC BY-SA 3.0",
+  "imagens_reel": {
+    "arquivos": [
+      "File:Sacre Particole.jpg",
+      "File:Siena, basilica di S. Francesco. Cappella invernale delle Sacre Particole (transetto destro).jpg",
+      "File:Cappella estiva delle sacre particole, del marrina, 1504 (rifatta nel xix secolo, tranne il pavimento) 01.jpg"
+    ],
+    "categorias": [
+      "Interior of the Basilica of San Francesco (Siena)",
+      "Santa Maria in Provenzano (Siena)"
+    ],
+    "artigos": [
+      "it:Miracolo eucaristico di Siena",
+      "it:Basilica di San Francesco (Siena)",
+      "it:Collegiata di Santa Maria in Provenzano"
+    ],
+    "termos": [
+      "Sacre Particole",
+      "Santa Maria in Provenzano"
+    ],
+    "citacao": "Cappella delle Sacre Particole"
+  }
 }
