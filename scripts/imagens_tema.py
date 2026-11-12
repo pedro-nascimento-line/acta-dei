@@ -172,7 +172,7 @@ def ordenar_para_cena(cands, termo, usados=()):
     """Candidatos ainda não usados, do mais adequado para a cena (cita o termo da cena) ao menos adequado."""
     ch = chaves_de([termo]) if termo else []
     resto = [c for c in cands if c["title"] not in usados]
-    return sorted(resto, key=lambda c: -(c["nota"] + (25 * acertos(c, ch) if ch else 0)))
+    return sorted(resto, key=lambda c: -(c["nota"] + (60 * acertos(c, ch) if ch else 0)))
 
 
 if __name__ == "__main__":
