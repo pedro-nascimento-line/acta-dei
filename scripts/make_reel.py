@@ -37,6 +37,7 @@ VOZ = "pt-BR-AntonioNeural"
 W, H, FPS = 1080, 1920, 30
 ESCALA = 1.2  # renderiza maior para o zoom não borrar
 FADE_LEG = 0.7  # segundos que a legenda leva para ir de transparente a cheia
+STORY_MAX = 59.0  # story em vídeo pela API: até 60 s
 IA_URL = "https://image.pollinations.ai/prompt/"
 
 CSS_REEL = f"""
@@ -397,7 +398,7 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
         narr.append((audios, t_leg, com_voz, t_cursor))
     # fase 2: quadros e montagem
     from playwright.sync_api import sync_playwright
-    segs, total = [], 0.0
+    segs, ds, total = [], [], 0.0
     with sync_playwright() as pw:
         br = pw.chromium.launch()
         html_capa = f"<html><head><style>{render.CSS}{CSS_REEL}</style></head><body style='margin:0'>{plano[0][0]}</body></html>"
@@ -429,7 +430,7 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
                 ff(*entradas, "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
                    "-filter_complex", vf, "-map", "[v]", "-map", "3:a",
                    "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", seg)
-            segs.append(seg); total += d
+            segs.append(seg); ds.append(d); total += d
             print(f"  slide {i}: {d:.1f}s {'voz' if com_voz else 'sem voz'} · {imgs[i].get('arquivo') or 'selo'} · legenda aos {t_fade:.1f}s · {partes[0][0][:40]}")
         br.close()
     lista = tmp / "lista.txt"
@@ -445,10 +446,7 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
             vistos.add(c); creditos.append(c)
     if m:
         arq, e = m
-        # começa do início do canto (sem cortar a entrada da schola); se o canto for mais curto que o Reel, repete
-        ff("-i", concat, "-stream_loop", "-1", "-i", arq,
-           "-filter_complex", f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=0.18,afade=t=in:d=2,atrim=0:{total:.2f},afade=t=out:st={max(total-3,0):.2f}:d=3[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95[a]",
-           "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", saida)
+        mixar(concat, total, arq, saida)
         nome = e.get("nome") or e["title"].replace("File:", "").rsplit(".", 1)[0][:70]
         print(f"  música: {nome} · {e['licenca']}")
         creditos.append(f"Música: {nome} · Wikimedia Commons · {e['licenca']}")
@@ -456,8 +454,37 @@ def main(pasta, sem_voz=False, sem_musica=False, sem_ia=False):
         ff("-i", concat, "-c", "copy", "-movflags", "+faststart", saida)
         print("  sem música (estante vazia: rode scripts/fetch_music.py)")
     (pasta / "legenda_reel.txt").write_text(legenda_reel(post, itens, cit, autor, creditos) + "\n")
-    shutil.rmtree(tmp, ignore_errors=True)
     print(f"reel.mp4: {total:.1f}s, {saida.stat().st_size // 1000} kB, {len(segs)} slides")
+    # versão para o story das 18h (a API aceita story de no máximo 60 s): slides inteiros até 59 s,
+    # sem cortar frase no meio; se o Reel couber, é o próprio Reel
+    story = pasta / "story_reel.mp4"
+    k, acc = 0, 0.0
+    while k < len(ds) and acc + ds[k] <= STORY_MAX:
+        acc += ds[k]; k += 1
+    if k == len(ds):
+        shutil.copyfile(saida, story)
+    elif k > 0:
+        lista_s = tmp / "lista_story.txt"
+        lista_s.write_text("".join(f"file '{s_}'\n" for s_ in segs[:k]))
+        concat_s = tmp / "concat_story.mp4"
+        ff("-f", "concat", "-safe", "0", "-i", lista_s, "-c", "copy", concat_s)
+        if m:
+            mixar(concat_s, acc, m[0], story)
+        else:
+            ff("-i", concat_s, "-c", "copy", "-movflags", "+faststart", story)
+    else:
+        story.unlink(missing_ok=True)
+    if story.exists():
+        print(f"story_reel.mp4: {dur(story):.1f}s ({k} de {len(ds)} slides)")
+    shutil.rmtree(tmp, ignore_errors=True)
+
+
+def mixar(video, total, arq_musica, saida):
+    """Junta o canto ao vídeo: começa do início do canto (sem cortar a entrada da schola), repete se for curto,
+    volume baixo, fade de entrada e de saída."""
+    ff("-i", video, "-stream_loop", "-1", "-i", arq_musica,
+       "-filter_complex", f"[1:a]aformat=sample_rates=44100:channel_layouts=stereo,volume=0.18,afade=t=in:d=2,atrim=0:{total:.2f},afade=t=out:st={max(total-3,0):.2f}:d=3[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0,alimiter=limit=0.95[a]",
+       "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", saida)
 
 
 if __name__ == "__main__":

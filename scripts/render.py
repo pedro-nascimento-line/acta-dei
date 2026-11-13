@@ -129,6 +129,10 @@ h1.small {{ font-size: 52px; }}
 .s-author {{ font-family: 'Cinzel'; font-weight: 700; font-size: 34px; letter-spacing: 5px; color: {RED_VIVO}; text-align: center; margin-top: 70px; }}
 .s-foot {{ position: absolute; left: 0; right: 0; bottom: 330px; text-align: center; font-family: 'Cinzel'; font-weight: 700; font-size: 26px; letter-spacing: 6px; color: {RED_VIVO}; }}
 .s-cta {{ position: absolute; left: 0; right: 0; bottom: 410px; text-align: center; font-size: 34px; color: #CFC7B8; font-style: italic; }}
+/* story de divulgação: a arte do post do feed dentro do story (para os destaques) */
+.s-dv-art {{ display: block; width: 760px; margin: 34px auto 0; border-radius: 10px; box-shadow: 0 18px 60px rgba(0,0,0,.65); }}
+.s-dv-t {{ font-family: 'Cinzel'; font-weight: 700; font-size: 44px; line-height: 1.18; text-align: center; margin: 40px 40px 0; }}
+.s-dv-s {{ font-size: 34px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 12px; }}
 /* story da manhã v2: "Hoje na Igreja" */
 .s-date {{ font-size: 36px; font-style: italic; text-align: center; color: #CFC7B8; margin-top: 14px; }}
 .s-ev {{ width: 900px; margin: 44px auto 0; padding-top: 34px; border-top: 2px solid {RED}; text-align: center; }}
@@ -199,8 +203,7 @@ def paras(txt):
 def badge(status):
     if not status or status not in STATUS:
         return ""
-    pt, en = STATUS[status]
-    return f'<div class="badge">{pt}<small>{en}</small></div>'
+    return f'<div class="badge">{STATUS[status][0]}</div>'
 
 
 def foot(n, total):
@@ -318,6 +321,39 @@ def legenda_evangelho(ev, post, pasta):
     return "\n".join(partes).strip()
 
 
+def story_divulga(arte, kicker, titulo, sub):
+    """Story que repete no próprio perfil o post do feed (a API não tem o "compartilhar no story" do app):
+    a primeira arte do post, com o tipo em cima e o título embaixo. Fica no arquivo de stories para os destaques."""
+    return f"""<div class="page story">
+      <div class="s-wrap" style="padding-top:215px">
+        <img src="{AVATAR_DARK}" style="display:block;width:110px;margin:0 auto">
+        <div class="s-kicker" style="margin-top:22px">{esc(kicker)}</div>
+        <img class="s-dv-art" src="{data_uri(arte)}">
+        {f'<div class="s-dv-t">{esc(titulo)}</div>' if titulo else ''}<div class="s-dv-s" style="margin-top:44px">{esc(sub)}</div></div>
+      <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
+
+
+def stories_divulgacao(post, pasta):
+    """story_evangelho.jpg (6h, junto com o Evangelho) e story_feed.jpg (12h, junto com o carrossel)."""
+    out = []
+    ev = post.get("evangelho")
+    if ev and (pasta / "evangelho_01.jpg").exists():
+        out.append(("story_evangelho.jpg", story_divulga(pasta / "evangelho_01.jpg", "EVANGELHO DO DIA", "",
+                                                         "O versículo e o fato estão no post de hoje"), 1920))
+    if (pasta / "card_01.jpg").exists():
+        if post.get("tipo") == "santo":
+            k = "SANTO DO DIA"
+        elif post.get("status") == "investigacao":
+            k = "MILAGRE EM INVESTIGAÇÃO"
+        elif post.get("tipo") == "milagre":
+            k = "MILAGRE RECONHECIDO"
+        else:
+            k = "HOJE NO PERFIL"
+        out.append(("story_feed.jpg", story_divulga(pasta / "card_01.jpg", k, "",
+                                                    "O relato completo está no post de hoje"), 1920))
+    return out
+
+
 def story_tarde(s):
     return f"""<div class="page story">
       <div class="s-wrap" style="padding-top:420px"><div class="s-kicker">{esc(so_pt(s.get('kicker')) or 'UM DETALHE A MAIS')}</div>
@@ -358,6 +394,17 @@ def render(pasta):
 
     with sync_playwright() as pw:
         br = pw.chromium.launch()
+        _screenshots(br, htmls, pasta)
+        # 2ª passada: os stories de divulgação usam as artes recém-geradas (card_01, evangelho_01)
+        extras = stories_divulgacao(post, pasta)
+        _screenshots(br, extras, pasta)
+        htmls += extras
+        br.close()
+    print("gerados:", ", ".join(n for n, _, _ in htmls))
+    return [n for n, _, _ in htmls]
+
+
+def _screenshots(br, htmls, pasta):
         for nome, body, h in htmls:
             pg = br.new_page(viewport={"width": 1080, "height": h}, device_scale_factor=1)
             pg.set_content(f"<html><head><style>{CSS}</style></head><body>{body}</body></html>")
@@ -374,9 +421,6 @@ def render(pasta):
             pg.wait_for_timeout(100)
             pg.screenshot(path=str(pasta / nome), type="jpeg", quality=92)
             pg.close()
-        br.close()
-    print("gerados:", ", ".join(n for n, _, _ in htmls))
-    return [n for n, _, _ in htmls]
 
 
 if __name__ == "__main__":
