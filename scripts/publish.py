@@ -3,10 +3,11 @@
 
 Uso (no GitHub Actions):
   python3 scripts/publish.py --slot evangelho  # 6h BRT: Evangelho do dia (evangelho_01.jpg + evangelho_02.jpg, feed)
+                                               #   + story_evangelho.jpg (o post repetido no story, para os destaques)
   python3 scripts/publish.py --slot manha      # 7h BRT: story da manhã ("Hoje na Igreja")
-  python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags
+  python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags + story_feed.jpg
   python3 scripts/publish.py --slot tarde      # 13h BRT: story da tarde
-  python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
+  python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4) + story_reel.mp4 (≤ 59 s)
   python3 scripts/publish.py --slot noite      # 20h BRT: story da noite
   python3 scripts/publish.py --slot gatilho # slot lido de gatilho/publicar.txt (tarefas agendadas do Cowork)
   python3 scripts/publish.py --slot auto    # decide pelo horário UTC
@@ -150,6 +151,33 @@ def publicar_story(dia, pasta, meta, slot):
     return pub["id"]
 
 
+def publicar_story_divulgacao(dia, pasta, meta, arq_nome, chave, slot):
+    """Repete o post do feed no story (story_evangelho.jpg, story_feed.jpg, story_reel.mp4), para ficar no arquivo
+    de stories e poder ir para os destaques. Falha aqui não derruba o post do feed: fica registrada e a próxima
+    execução do dia tenta de novo."""
+    arq = pasta / arq_nome
+    if meta.get(chave) or not arq.exists():
+        return None
+    try:
+        u = f"{BASE}/posts/{dia}/{arq_nome}"
+        if not url_ok(u, tentativas=10):
+            raise RuntimeError(f"não acessível no Pages: {u}")
+        if arq.suffix == ".mp4":
+            c = api("POST", f"{USER}/media", media_type="STORIES", video_url=u)
+            esperar_container(c["id"], timeout=900)
+        else:
+            c = api("POST", f"{USER}/media", media_type="STORIES", image_url=u)
+            esperar_container(c["id"])
+        pub = api("POST", f"{USER}/media_publish", creation_id=c["id"])
+        meta[chave] = pub["id"]
+        log(slot, "story_divulgacao", pub["id"], "ok")
+        return pub["id"]
+    except Exception as e:
+        log(slot, "story_divulgacao", "", "falha", str(e))
+        print(f"  story de divulgação falhou ({arq_nome}): {e}")
+        return None
+
+
 def publicar_reel(dia, pasta, meta):
     arq = pasta / "reel.mp4"
     if not arq.exists():
@@ -190,22 +218,28 @@ def publicar_slot(s, dia, pasta, meta):
                 publicar_evangelho(dia, pasta, meta)
             else:
                 print("  sem evangelho_*.jpg hoje; pulando o Evangelho")
+        if meta.get("evangelho_id"):
+            publicar_story_divulgacao(dia, pasta, meta, "story_evangelho.jpg", "story_evangelho_id", s)
     elif s == "carrossel":
         if not meta.get("feed_id"):
             publicar_carrossel(dia, pasta, meta)
+        publicar_story_divulgacao(dia, pasta, meta, "story_feed.jpg", "story_feed_id", s)
     elif s == "reel":
         if not meta.get("reel_id"):
             if (pasta / "reel.mp4").exists():
                 publicar_reel(dia, pasta, meta)
             else:
                 print("  sem reel.mp4 hoje; pulando o reel")
+        if meta.get("reel_id"):
+            publicar_story_divulgacao(dia, pasta, meta, "story_reel.mp4", "story_reel_id", s)
     elif not meta.get(f"story_{s}_id"):
         publicar_story(dia, pasta, meta, s)
 
 
 ORDEM = ["evangelho", "manha", "carrossel", "tarde", "reel", "noite"]
-PECAS = {"evangelho": ["evangelho_id"], "manha": ["story_manha_id"], "carrossel": ["feed_id"],
-         "tarde": ["story_tarde_id"], "reel": ["reel_id"], "noite": ["story_noite_id"]}
+PECAS = {"evangelho": ["evangelho_id", "story_evangelho_id"], "manha": ["story_manha_id"],
+         "carrossel": ["feed_id", "story_feed_id"], "tarde": ["story_tarde_id"],
+         "reel": ["reel_id", "story_reel_id"], "noite": ["story_noite_id"]}
 
 
 def slot_auto():
@@ -256,7 +290,10 @@ def main():
     # (se o disparo do meio-dia atrasar ou falhar, o das 13h publica o carrossel antes do story da tarde).
     # Peças sem arquivo (sem evangelho_*.jpg ou sem reel.mp4) não contam como pendentes.
     alvo = [slot] if apenas else ORDEM[: ORDEM.index(slot) + 1]
-    existe = {"evangelho_id": bool(list(pasta.glob("evangelho_*.jpg"))), "reel_id": (pasta / "reel.mp4").exists()}
+    existe = {"evangelho_id": bool(list(pasta.glob("evangelho_*.jpg"))), "reel_id": (pasta / "reel.mp4").exists(),
+              "story_evangelho_id": (pasta / "story_evangelho.jpg").exists(),
+              "story_feed_id": (pasta / "story_feed.jpg").exists(),
+              "story_reel_id": (pasta / "story_reel.mp4").exists()}
     pendentes = [k for s_ in alvo for k in PECAS[s_] if not meta.get(k) and existe.get(k, True)]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return
