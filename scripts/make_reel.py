@@ -342,8 +342,6 @@ def legenda_reel(post, itens, cit, autor, creditos):
     if cit:
         linhas += ["", f"“{cit}”", f"— {autor}" if autor else ""]
     linhas += ["", "Fontes e relato completo no índice do link da bio."]
-    if post.get("titulo_en"):
-        linhas += ["", "· · ·", "", post["titulo_en"], "Sources in the link in bio."]
     if creditos:
         linhas += ["", "Imagens: " + "; ".join(creditos)]
     return "\n".join(l for l in linhas if l is not None)

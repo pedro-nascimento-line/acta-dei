@@ -42,7 +42,7 @@ def main():
         itens.append(f"""<article><h2>{html.escape(p['titulo'])}{badge}</h2>
 <div class="meta">{dia} · {html.escape(p.get('subtitulo',''))}{link}</div>
 <div class="cards">{cards}</div>
-<div><strong>Fontes · Sources</strong><ul>{fontes}</ul></div>
+<div><strong>Fontes</strong><ul>{fontes}</ul></div>
 <div class="meta">{html.escape(p.get('imagem_credito',''))}</div></article>""")
 
     n_ok = 0

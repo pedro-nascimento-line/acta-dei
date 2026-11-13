@@ -8,20 +8,20 @@ e hashtags_evangelho.txt (se ainda não existir).
 
 Bloco "evangelho" (post das 6h):
   "evangelho": {
-    "referencia": "João 2,13-22", "referencia_en": "John 2:13-22",
+    "referencia": "João 2,13-22",
     "versiculo": "Destruí este templo, e em três dias eu o reerguerei.",       # 1 versículo, ≤ 140 caracteres
-    "versiculo_en": "Destroy this temple, and in three days I will raise it up.",
     "celebracao": "Dedicação da Basílica de Latrão · Festa",                      # opcional; padrão: título do post
     "leituras": "Ez 47,1-2.8-9.12 · 1Cor 3,9c-11.16-17 · Jo 2,13-22",            # opcional
     "fato": "3 a 4 linhas que ancoram o Evangelho em data, lugar e história (≤ 480 caracteres)",
-    "fato_en": "…", "fato_fonte": "Vatican.va — …"
+    "fato_fonte": "Vatican.va — …"
   }
+
+Só português (público do Brasil): campos *_en antigos são ignorados e kickers "PT · EN" mostram só o PT.
 
 Formato do post.json (campos principais):
 {
   "tipo": "milagre" | "santo",
   "titulo": "Milagre Eucarístico de Lanciano",
-  "titulo_en": "The Eucharistic Miracle of Lanciano",
   "subtitulo": "Lanciano, Itália · século VIII",
   "status": "reconhecido" | "investigacao" | null,
   "imagem": "imagem.jpg",                       # relativo à pasta do post (baixada por fetch_image.py)
@@ -157,7 +157,7 @@ h1.small {{ font-size: 52px; }}
 DIAS_PT = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
 MESES_PT = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
 HASHTAGS_EVANGELHO = ("#evangelhododia #evangelho #liturgiadiaria #palavradedeus #santaigrejacatolica "
-                      "#gospeloftheday #dailygospel #catholic #catholicfaith #holycatholicchurch #actadei #mysteriumfidei")
+                      "#liturgiadodia #evangelhodehoje #igrejacatolica #fecatolica #catolicos #actadei #mysteriumfidei")
 
 
 def data_extenso(pasta):
@@ -217,26 +217,28 @@ def card_capa(post, total, pasta):
       <div class="band"><div class="rule"></div>
         <h1 class="{small}">{esc(post['titulo'])}</h1>
         <div class="sub">{esc(post.get('subtitulo',''))}</div>
-        <div class="sub_en">{esc(post.get('titulo_en',''))}</div>
       </div>
       <div class="credit">{esc(post.get('imagem_credito',''))}</div>
       {foot(1, total)}</div>"""
 
 
+def so_pt(k):
+    """Só português (o perfil é para o público do Brasil): 'O FATO · THE FACT' -> 'O FATO'."""
+    return (k or "").split(" · ")[0].strip()
+
+
 def card_texto(c, n, total):
-    en = f'<div class="body_en">{paras(c["texto_en"])}</div>' if c.get("texto_en") else ""
     return f"""<div class="page card"><div class="num">{n:02d}</div>
-      <div class="text"><div class="kicker">{esc(c.get('kicker',''))}</div>
-        <div class="body">{paras(c['texto'])}</div>{en}</div>{foot(n, total)}</div>"""
+      <div class="text"><div class="kicker">{esc(so_pt(c.get('kicker','')))}</div>
+        <div class="body">{paras(c['texto'])}</div></div>{foot(n, total)}</div>"""
 
 
 def card_decisao(post, n, total):
     fontes = "".join(f"<li>{esc(f)}</li>" for f in post.get("fontes", []))
-    en = f'<div class="body_en">{paras(post["decisao_en"])}</div>' if post.get("decisao_en") else ""
     return f"""<div class="page card"><div class="num">{n:02d}</div>
-      <div class="text"><div class="kicker">O QUE A SANTA IGREJA CATÓLICA DECIDIU · THE HOLY CATHOLIC CHURCH'S DECISION</div>
-        <div class="decisao">{paras(post['decisao'])}</div>{en}
-        <ul class="fontes"><li style="font-family:Cinzel;letter-spacing:3px;font-size:.8em;color:{RED}">FONTES · SOURCES</li>{fontes}</ul></div>
+      <div class="text"><div class="kicker">O QUE A SANTA IGREJA CATÓLICA DECIDIU</div>
+        <div class="decisao">{paras(post['decisao'])}</div>
+        <ul class="fontes"><li style="font-family:Cinzel;letter-spacing:3px;font-size:.8em;color:{RED}">FONTES</li>{fontes}</ul></div>
       {foot(n, total)}</div>"""
 
 
@@ -252,7 +254,7 @@ def story_manha(s, pasta, post=None):
           <div class="s-wrap">{hero}
             <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
             <div class="s-patron">{esc(s.get('padroeiro',''))}</div><div class="s-lines">{linhas}</div></div>
-          <div class="s-foot">SANTO DO DIA · SAINT OF THE DAY</div></div>"""
+          <div class="s-foot">SANTO DO DIA</div></div>"""
     data_pt, _ = data_extenso(pasta)
     hero = f'<div class="s-hero" style="height:600px;margin-top:40px">{img_tag(pasta / s["imagem"], 900 / 600)}</div>' if tem else '<div style="height:120px"></div>'
     linhas = "".join(f"<p>{esc(l)}</p>" for l in s.get("linhas", [])[:2])
@@ -262,7 +264,7 @@ def story_manha(s, pasta, post=None):
     return f"""<div class="page story">
       <div class="s-wrap" style="padding-top:80px">
         <img src="{AVATAR_DARK}" style="display:block;width:150px;margin:0 auto">
-        <div class="s-kicker" style="margin-top:30px">HOJE NA IGREJA · TODAY IN THE CHURCH</div>
+        <div class="s-kicker" style="margin-top:30px">HOJE NA IGREJA</div>
         <div class="s-date">{esc(data_pt.rsplit(' de ', 1)[0])}</div>
         {hero}
         <div class="s-name">{esc(s['nome'])}</div><div class="s-years">{esc(s.get('anos',''))}</div>
@@ -277,11 +279,11 @@ def evangelho_versiculo(ev, post, pasta):
     """Card 1 do Evangelho: o que a pessoa encaminha. Um versículo, a referência, a data e a celebração."""
     data_pt, _ = data_extenso(pasta)
     cel = ev.get("celebracao") or post.get("titulo", "")
-    en = f'<div class="ev-en">“{esc(ev["versiculo_en"])}”</div>' if ev.get("versiculo_en") else '<div style="height:150px"></div>'
-    ref_en = f'<div class="ev-ref-en">{esc(ev["referencia_en"]).upper()}</div>' if ev.get("referencia_en") else ""
+    en = '<div style="height:150px"></div>'
+    ref_en = ""
     return f"""<div class="page card ev">
       <img class="ev-avatar" src="{AVATAR}">
-      <div class="ev-kicker">EVANGELHO DO DIA · GOSPEL OF THE DAY</div>
+      <div class="ev-kicker">EVANGELHO DO DIA</div>
       <div class="ev-date">{esc(data_pt)}</div>
       <div class="ev-cel">{esc(cel).upper()}</div>
       <div class="ev-main"><div class="ev-mark">“</div>
@@ -294,10 +296,10 @@ def evangelho_versiculo(ev, post, pasta):
 def evangelho_fato(ev, post, pasta):
     """Card 2 do Evangelho: "O fato" — data, lugar e história que ancoram a leitura. Não é homilia."""
     cel = ev.get("celebracao") or post.get("titulo", "")
-    en = f'<div class="body_en">{paras(ev["fato_en"])}</div>' if ev.get("fato_en") else ""
-    fonte = f'<div class="ev-fonte"><b>FONTE · SOURCE</b><br>{esc(ev["fato_fonte"])}</div>' if ev.get("fato_fonte") else ""
+    en = ""
+    fonte = f'<div class="ev-fonte"><b>FONTE</b><br>{esc(ev["fato_fonte"])}</div>' if ev.get("fato_fonte") else ""
     return f"""<div class="page card"><div class="num">02</div>
-      <div class="text"><div class="kicker">O FATO · THE FACT</div>
+      <div class="text"><div class="kicker">O FATO</div>
         <div class="ev-sub">Evangelho de hoje: {esc(ev.get('referencia',''))} · {esc(cel)}</div>
         <div class="body">{paras(ev['fato'])}</div>{en}{fonte}</div>
       {foot(2, 2)}</div>"""
@@ -312,21 +314,15 @@ def legenda_evangelho(ev, post, pasta):
     if ev.get("fato_fonte"):
         partes += ["", f"Fonte: {ev['fato_fonte']}"]
     leitura = f"Leitura completa: {ev.get('referencia','')}" + (f" · Leituras do dia: {ev['leituras']}" if ev.get("leituras") else "")
-    partes += [leitura, "Índice de fontes no link da bio", "", "· · ·", ""]
-    if ev.get("versiculo_en"):
-        partes += [f"GOSPEL OF THE DAY · {ev.get('referencia_en') or ev.get('referencia','')}", f"“{ev['versiculo_en']}”"]
-    if ev.get("fato_en"):
-        partes += ["", ev["fato_en"].strip()]
-    partes += ["Sources index in the bio link"]
+    partes += [leitura, "Índice de fontes no link da bio"]
     return "\n".join(partes).strip()
 
 
 def story_tarde(s):
-    en = f'<div class="s-text_en">{esc(s["texto_en"])}</div>' if s.get("texto_en") else ""
     return f"""<div class="page story">
-      <div class="s-wrap" style="padding-top:420px"><div class="s-kicker">{esc(s.get('kicker','UM DETALHE A MAIS'))}</div>
-        <div class="s-text">{esc(s['texto'])}</div>{en}</div>
-      <div class="s-cta">O relato completo está no post de hoje · Full story in today's post</div>
+      <div class="s-wrap" style="padding-top:420px"><div class="s-kicker">{esc(so_pt(s.get('kicker')) or 'UM DETALHE A MAIS')}</div>
+        <div class="s-text">{esc(s['texto'])}</div></div>
+      <div class="s-cta">O relato completo está no post de hoje</div>
       <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
 
 
@@ -334,7 +330,7 @@ def story_noite(s):
     return f"""<div class="page story">
       <div class="s-wrap" style="padding-top:520px"><div class="s-quote">“{esc(s['citacao'])}”</div>
         <div class="s-author">{esc(s.get('autor',''))}</div>
-        {f'<div class="s-text_en" style="font-style:italic">“{esc(s["citacao_en"])}”</div>' if s.get('citacao_en') else ''}</div>
+</div>
       <div class="s-foot">ACTA DEI · MYSTERIUM FIDEI</div></div>"""
 
 
