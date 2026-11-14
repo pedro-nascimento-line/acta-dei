@@ -1,0 +1,104 @@
+{
+  "tipo": "milagre",
+  "id_milagre": "amsterdam",
+  "titulo": "A hóstia que não queimou: Amsterdã, 1345",
+  "subtitulo": "Amsterdã, Países Baixos · 15 de março de 1345",
+  "status": "reconhecido",
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Heilige Stede",
+  "imagem_busca": "Mirakel van Amsterdam",
+  "cards": [
+    {
+      "kicker": "O FATO",
+      "texto": "Na noite de 15 de março de 1345, segundo a tradição, um homem jazia gravemente doente numa casa da Kalverstraat, em Amsterdã. Chamou um sacerdote para receber os últimos sacramentos, inclusive a comunhão. Logo depois vomitou. Como era costume, o vômito foi lançado ao fogo da lareira.\n\nNa manhã seguinte, a hóstia foi encontrada intacta entre as cinzas. O sacerdote a guardou numa caixa e a levou à igreja paroquial, hoje a Oude Kerk. Por duas vezes, a hóstia reapareceu na casa da Kalverstraat. A notícia correu a cidade."
+    },
+    {
+      "kicker": "A INVESTIGAÇÃO",
+      "texto": "Em 1346, o bispo auxiliar de Utrecht, Nythardus, concedeu por carta quarenta dias de indulgência aos que visitassem o lugar. Um mês depois, o bispo de Utrecht, Jan van Arkel, escreveu ao clero da cidade sobre o Corpo do Senhor e autorizou procissões e a exposição pública do milagre.\n\nA casa virou capela: a Heilige Stede, o Lugar Santo, de 1347. Em 1452, um incêndio destruiu Amsterdã e a capela; a relíquia foi preservada. A cidade tornou-se centro de peregrinação, e a procissão anual do Milagre, a maior festa de Amsterdã."
+    },
+    {
+      "kicker": "A PROCISSÃO HOJE",
+      "texto": "Em 1578, a cidade passou ao protestantismo. A capela foi entregue ao culto reformado e a procissão, proibida. A hóstia desapareceu: seu paradeiro é desconhecido. Um pequeno grupo guardou a memória na igreja clandestina do Begijnhof, e fiéis isolados caminharam pela antiga rota.\n\nEm 1881, um grupo de leigos retomou o percurso em silêncio: a Stille Omgang. A capela foi demolida em 1908, sob protestos. Hoje, na noite de sábado da Semana do Milagre, milhares de peregrinos de todo o país percorrem a rota entre a meia-noite e as quatro da manhã, sem cantos nem orações em voz alta."
+    }
+  ],
+  "decisao": "O culto do Milagre de Amsterdã foi autorizado em 1346 pela Santa Igreja Católica: carta de indulgência do bispo auxiliar de Utrecht, Nythardus, e carta do bispo de Utrecht, Jan van Arkel, permitindo procissões e a exposição pública do milagre. A procissão silenciosa anual, a Stille Omgang, é organizada desde 1881 pelo Gezelschap van de Stille Omgang, com missas na capela do Begijnhof e a participação dos bispos dos Países Baixos. O caso integra o catálogo de milagres eucarísticos de São Carlo Acutis.",
+  "fontes": [
+    "Gezelschap van de Stille Omgang (stille-omgang.nl) — Het Mirakel van Amsterdam · De route",
+    "Arquidiocese de Utrecht (aartsbisdom.nl) — Brochure Stille Omgang, março de 2025",
+    "Diocese de Haarlem-Amsterdam (bisdomhaarlem-amsterdam.nl) — SamenKerk, 2016 · Caspers & Margry, The Miracle of Amsterdam (The Low Countries)",
+    "Catálogo dos Milagres Eucarísticos (miracolieucaristici.org) — ficha Amsterdã, Países Baixos, 1345"
+  ],
+  "reel": [
+    {
+      "kicker": "AMSTERDÃ, 1345",
+      "texto": "Em 1345, uma hóstia foi lançada ao fogo numa casa de Amsterdã. Na manhã seguinte, estava intacta entre as cinzas.",
+      "imagem": "Mirakel van Amsterdam"
+    },
+    {
+      "texto": "Um doente a tinha vomitado após a comunhão. O padre a levou à Oude Kerk, e por duas vezes ela voltou à casa.",
+      "imagem": "Oude Kerk Amsterdam"
+    },
+    {
+      "texto": "Em 1346, o bispo de Utrecht autorizou procissões. A casa virou capela, e Amsterdã, cidade de peregrinação.",
+      "imagem": "Heilige Stede"
+    },
+    {
+      "texto": "A hóstia se perdeu na Reforma, mas o culto ficou. Desde 1881, milhares caminham em silêncio pela rota do milagre.",
+      "imagem": "Stille Omgang"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "nl:Mirakel van Amsterdam",
+      "nl:Stille Omgang",
+      "en:Heilige Stede",
+      "nl:Begijnhofkapel (Amsterdam)"
+    ],
+    "categorias": [
+      "Stille Omgang",
+      "Heilige Stede (Amsterdam)",
+      "Begijnhofkapel (Amsterdam)",
+      "Oude Kerk (Amsterdam)"
+    ],
+    "termos": [
+      "Mirakel van Amsterdam",
+      "Stille Omgang",
+      "Heilige Stede Amsterdam"
+    ],
+    "citacao": "Begijnhofkapel Amsterdam"
+  },
+  "evangelho": {
+    "referencia": "Lucas 18,1-8",
+    "versiculo": "Mas o Filho do homem, quando vier, será que ainda vai encontrar fé sobre a terra?",
+    "celebracao": "Sábado da 32ª semana do Tempo Comum",
+    "leituras": "3Jo 5-8 · Sl 111(112) · Lc 18,1-8",
+    "fato": "Jesus conta a parábola de uma viúva que insiste diante de um juiz até obter justiça. O santo de hoje morreu numa missão desse tipo. Lourenço O'Toole, arcebispo de Dublin, atravessou o mar em 1180 para tratar com o rei Henrique II da Inglaterra. Adoeceu no caminho e morreu em Eu, na Normandia, em 14 de novembro de 1180. Antes do fim, soube que o rei atendera ao seu pedido.\n\nSeu túmulo está na colegiada de Eu. Honório III o canonizou em 1225. É o padroeiro de Dublin.",
+    "fato_fonte": "Catholic Encyclopedia (New Advent) — St. Laurence O'Toole · Vaticanstate.va — Saint of the day, 14 November"
+  },
+  "stories": {
+    "manha": {
+      "nome": "São Lourenço O'Toole",
+      "anos": "† 1180 · ARCEBISPO DE DUBLIN",
+      "padroeiro": "Padroeiro de Dublin · Martirológio Romano",
+      "linhas": [
+        "Aos dez anos foi refém do rei de Leinster; aos 26, abade de Glendalough; em 1162, arcebispo de Dublin.",
+        "Morreu em Eu, na Normandia, em 14 de novembro de 1180. Honório III o canonizou em 1225.",
+        "Seu coração, guardado na Christ Church de Dublin, foi roubado em 2012 e devolvido em 26 de abril de 2018."
+      ],
+      "imagem_wikipedia": "en:Lorcán Ua Tuathail",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Laurence O'Toole",
+        "Lorcán Ua Tuathail"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "Em 13 de junho de 2004, o bispo de Haarlem, Jozef Punt, levou o Santíssimo pelas ruas até o Begijnhof: a primeira procissão do Sacramento desde 1578."
+    },
+    "noite": {
+      "citacao": "A Eucaristia é a minha autoestrada para o Céu.",
+      "autor": "SÃO CARLO ACUTIS · AUTOR DO CATÁLOGO DOS MILAGRES EUCARÍSTICOS"
+    }
+  }
+}
