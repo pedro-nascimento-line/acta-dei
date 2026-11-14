@@ -1,21 +1,12 @@
 {
-  "gerado_em": "2026-11-13",
+  "gerado_em": "2026-11-14",
   "dias": [
-    {
-      "data": "2026-11-13",
-      "dia_semana": "sex",
-      "tipo": "santo",
-      "feed": "Santa Francisca Xavier Cabrini",
-      "id_milagre": null,
-      "santo_story": "Santa Francisca Xavier Cabrini",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-14",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "O Milagre de Amsterdã",
-      "id_milagre": "amsterdam",
+      "feed": "O Milagre de Faverney",
+      "id_milagre": "faverney",
       "santo_story": "São Lourenço O'Toole",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Nossa Senhora de Guadalupe",
       "id_milagre": null,
       "santo_story": "Nossa Senhora de Guadalupe",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-13",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "Santa Luzia, virgem e mártir",
+      "id_milagre": null,
+      "santo_story": "Santa Luzia, virgem e mártir",
       "tambem_hoje": []
     }
   ]
