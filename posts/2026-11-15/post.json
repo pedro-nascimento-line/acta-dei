@@ -1,0 +1,103 @@
+{
+  "tipo": "santo",
+  "titulo": "Santo Alberto Magno, o Doutor Universal",
+  "subtitulo": "Colônia, Alemanha · † 15 de novembro de 1280",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Albertus Magnus",
+  "imagem_busca": "Albertus Magnus Tommaso da Modena",
+  "cards": [
+    {
+      "kicker": "QUEM FOI",
+      "texto": "Alberto nasceu em Lauingen, às margens do Danúbio, na Suábia, no início do século XIII, em família de pequena nobreza. Jovem, foi estudar em Pádua, na Itália. Ali ouviu a pregação do Beato Jordão da Saxônia, sucessor de São Domingos, e em 1223 recebeu dele o hábito dominicano.\n\nEnsinou teologia nos conventos da Alemanha: Hildesheim, Freiburg, Ratisbona, Estrasburgo e Colônia. Em 1245 foi para Paris, onde se tornou mestre, o primeiro dominicano alemão a ocupar uma cátedra na universidade. Entre seus alunos estava um jovem napolitano: Tomás de Aquino."
+    },
+    {
+      "kicker": "O QUE FEZ",
+      "texto": "Em 1248 voltou a Colônia para fundar o estudo geral da Ordem, e levou Tomás consigo. Escreveu sobre tudo o que se sabia então: lógica, física, botânica, zoologia, minerais, astronomia, teologia. Observava a natureza e anotava o que via. Por isso o chamaram Doutor Universal. A edição de Paris de suas obras tem 38 volumes.\n\nFoi provincial da Alemanha em 1254. Em 1260 o papa Alexandre IV o fez bispo de Ratisbona; renunciou em 1262 e voltou aos livros. Em 1274, a caminho do Concílio de Lyon, soube da morte de Tomás. Disse que a luz da Santa Igreja Católica se apagara."
+    },
+    {
+      "kicker": "A MORTE E O TÚMULO",
+      "texto": "Alberto morreu em 15 de novembro de 1280, na cela do convento dominicano da Santa Cruz, em Colônia, e foi logo venerado pelos irmãos de hábito. Com o fechamento do convento, no século XIX, seus restos passaram à igreja românica de Santo André, no centro da cidade, onde repousam hoje num sarcófago na cripta.\n\nA fama de sábio nunca o deixou. Gregório XV o beatificou em 1622. Três séculos depois, Pio XI o canonizou e o declarou Doutor da Igreja no mesmo ato. Em 24 de março de 2010, Bento XVI lhe dedicou uma catequese: Santo Alberto mostra que entre fé e ciência não há oposição."
+    }
+  ],
+  "decisao": "Beatificado por Gregório XV em 1622. Canonizado por Pio XI em 16 de dezembro de 1931 e, no mesmo ato, declarado Doutor da Igreja. Em 1941, Pio XII o declarou padroeiro dos cultores das ciências naturais. Memória facultativa em 15 de novembro no Calendário Romano Geral; neste ano cede lugar ao 33º Domingo do Tempo Comum.",
+  "fontes": [
+    "Vatican.va — Bento XVI, Audiência geral sobre Santo Alberto Magno, 24 mar 2010",
+    "Vatican News — Santo do dia, 15 de novembro: S. Alberto Magno, bispo e doutor",
+    "Estado da Cidade do Vaticano (vaticanstate.va) — Saint of the day, 15 November",
+    "Catholic Encyclopedia (New Advent) — St. Albertus Magnus, 1907"
+  ],
+  "reel": [
+    {
+      "kicker": "COLÔNIA, 1280",
+      "texto": "Um frade do século treze escreveu sobre plantas, pedras e estrelas. Hoje é o padroeiro dos cientistas.",
+      "imagem": "Albertus Magnus Tommaso da Modena"
+    },
+    {
+      "texto": "Alberto nasceu em Lauingen, na Alemanha, por volta de 1200. Em 1223 virou dominicano. Ensinou em Paris e em Colônia.",
+      "imagem": "Albertus Magnus Denkmal Lauingen"
+    },
+    {
+      "texto": "Seu aluno mais famoso foi Tomás de Aquino. Foi bispo de Ratisbona por dois anos. Morreu em Colônia em 1280.",
+      "imagem": "St. Andreas Köln"
+    },
+    {
+      "texto": "Em 1931, Pio XI o canonizou e o declarou Doutor da Igreja. Em 1941, Pio XII o fez padroeiro das ciências naturais.",
+      "imagem": "Sarkophag Albertus Magnus St. Andreas Köln"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "de:Albertus Magnus",
+      "en:Albertus Magnus",
+      "de:St. Andreas (Köln)",
+      "de:Lauingen (Donau)"
+    ],
+    "categorias": [
+      "Albertus Magnus",
+      "St. Andreas (Köln)",
+      "Albertus-Magnus-Denkmal (Lauingen)",
+      "Crypt of St. Andreas (Köln)"
+    ],
+    "termos": [
+      "Albertus Magnus",
+      "Sankt Andreas Köln Krypta",
+      "Albertus Magnus Lauingen"
+    ],
+    "citacao": "St. Andreas Köln Innenraum"
+  },
+  "evangelho": {
+    "referencia": "Mateus 25,14-30",
+    "versiculo": "Muito bem, servo bom e fiel! Como foste fiel na administração de tão pouco, eu te confiarei muito mais.",
+    "celebracao": "33º Domingo do Tempo Comum · 10º Dia Mundial dos Pobres",
+    "leituras": "Pr 31,10-13.19-20.30-31 · Sl 127(128) · 1Ts 5,1-6 · Mt 25,14-30",
+    "fato": "Jesus conta a parábola dos talentos. Este domingo é o 10º Dia Mundial dos Pobres. O papa Francisco o instituiu em novembro de 2016, na carta Misericordia et misera, e o fixou no 33º domingo do Tempo Comum, o anterior à solenidade de Cristo Rei. A mensagem deste ano, assinada por Leão XIV em 13 de junho de 2026, tem por tema o Salmo 14: o Senhor é o refúgio do pobre.\n\nNo mesmo dia a Santa Igreja Católica lembra Santo Alberto Magno, morto em Colônia em 15 de novembro de 1280.",
+    "fato_fonte": "Vatican.va — Leão XIV, Mensagem para o X Dia Mundial dos Pobres, 13 jun 2026 · Arquidiocese de São Paulo — Folheto do 33º Domingo do Tempo Comum, Ano A"
+  },
+  "stories": {
+    "manha": {
+      "nome": "Santo Alberto Magno",
+      "anos": "† 1280 · BISPO E DOUTOR DA IGREJA",
+      "padroeiro": "Padroeiro dos cultores das ciências naturais · Hoje: 33º Domingo do Tempo Comum",
+      "linhas": [
+        "Dominicano desde 1223, mestre em Paris e em Colônia. Seu aluno mais célebre: Tomás de Aquino.",
+        "Escreveu sobre teologia, plantas, animais e estrelas. Por isso foi chamado Doutor Universal.",
+        "Morreu em Colônia em 15 de novembro de 1280. Pio XI o canonizou e o declarou Doutor da Igreja em 1931."
+      ],
+      "imagem_wikipedia": "en:Albertus Magnus",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Albertus Magnus",
+        "Albert der Große"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "Em 1248, Alberto levou de Paris a Colônia uma relíquia da Cruz, presente do rei Luís IX da França. Ela está hoje na igreja dominicana da Santa Cruz, em Colônia."
+    },
+    "noite": {
+      "citacao": "Santo Alberto demonstra que entre fé e ciência não existe oposição.",
+      "autor": "BENTO XVI · AUDIÊNCIA GERAL, 24 DE MARÇO DE 2010"
+    }
+  }
+}
