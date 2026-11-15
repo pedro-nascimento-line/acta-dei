@@ -4,6 +4,7 @@
   "subtitulo": "Colônia, Alemanha · † 15 de novembro de 1280",
   "status": null,
   "imagem": "imagem.jpg",
+  "imagem_commons": "File:Lauingen Albertus Magnus Denkmal 002-522.jpg",
   "imagem_wikipedia": "en:Albertus Magnus",
   "imagem_busca": "Albertus Magnus Tommaso da Modena",
   "cards": [
@@ -84,6 +85,7 @@
         "Escreveu sobre teologia, plantas, animais e estrelas. Por isso foi chamado Doutor Universal.",
         "Morreu em Colônia em 15 de novembro de 1280. Pio XI o canonizou e o declarou Doutor da Igreja em 1931."
       ],
+      "imagem_commons": "File:St. Andreas Köln - Krypta - Sarg Albertus Magnus-5076.jpg",
       "imagem_wikipedia": "en:Albertus Magnus",
       "imagem": "santo.jpg",
       "imagem_busca": [
@@ -99,6 +101,5 @@
       "citacao": "Santo Alberto demonstra que entre fé e ciência não existe oposição.",
       "autor": "BENTO XVI · AUDIÊNCIA GERAL, 24 DE MARÇO DE 2010"
     }
-  },
-  "imagem_credito": "Dietmar Rabich · Wikimedia Commons · CC BY-SA 4.0"
+  }
 }
