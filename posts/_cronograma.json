@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-14",
+  "gerado_em": "2026-11-15",
   "dias": [
-    {
-      "data": "2026-11-14",
-      "dia_semana": "sáb",
-      "tipo": "milagre",
-      "feed": "O Milagre de Faverney",
-      "id_milagre": "faverney",
-      "santo_story": "São Lourenço O'Toole",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-15",
       "dia_semana": "dom",
@@ -23,8 +14,8 @@
       "data": "2026-11-16",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
-      "id_milagre": "galvao_sandra",
+      "feed": "O Milagre de Faverney",
+      "id_milagre": "faverney",
       "santo_story": "Santa Margarida da Escócia; Santa Gertrudes",
       "tambem_hoje": []
     },
@@ -41,8 +32,8 @@
       "data": "2026-11-18",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
+      "id_milagre": "galvao_sandra",
       "santo_story": "Dedicação das Basílicas de São Pedro e São Paulo",
       "tambem_hoje": []
     },
@@ -97,8 +88,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Santa Luzia, virgem e mártir",
       "id_milagre": null,
       "santo_story": "Santa Luzia, virgem e mártir",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-14",
+      "dia_semana": "seg",
+      "tipo": "milagre",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
+      "santo_story": "São João da Cruz",
       "tambem_hoje": []
     }
   ]
