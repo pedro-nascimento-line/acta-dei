@@ -1,21 +1,12 @@
 {
-  "gerado_em": "2026-11-15",
+  "gerado_em": "2026-11-16",
   "dias": [
-    {
-      "data": "2026-11-15",
-      "dia_semana": "dom",
-      "tipo": "celebracao",
-      "feed": "Santo Alberto Magno",
-      "id_milagre": null,
-      "santo_story": "Santo Alberto Magno",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-16",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "O Milagre de Faverney",
-      "id_milagre": "faverney",
+      "feed": "Buenos Aires, 1996: a hóstia analisada",
+      "id_milagre": "buenos_aires",
       "santo_story": "Santa Margarida da Escócia; Santa Gertrudes",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Vanna Pironato e a canonização de Paulo VI",
       "id_milagre": "paulo6_pironato",
       "santo_story": "São João da Cruz",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-15",
+      "dia_semana": "ter",
+      "tipo": "santo",
+      "feed": "Santa Maria Crocifissa di Rosa",
+      "id_milagre": null,
+      "santo_story": "Santa Maria Crocifissa di Rosa",
       "tambem_hoje": []
     }
   ]
