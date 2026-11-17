@@ -1,0 +1,76 @@
+{
+  "id": "imaculada",
+  "titulo": "NOVENA DA IMACULADA CONCEIÇÃO",
+  "festa": "Solenidade da Imaculada Conceição · 8 de dezembro",
+  "periodo": "29 de novembro a 7 de dezembro",
+  "inicio": "2026-11-29",
+  "jaculatoria": "Ó Maria concebida sem pecado, rogai por nós que recorremos a vós.",
+  "jaculatoria_fonte": "Jaculatória da Medalha Milagrosa · Paris, 1830",
+  "oracao": {
+    "titulo": "Toda formosa",
+    "texto": [
+      "Sois toda formosa, ó Maria, e em vós não há mancha original.",
+      "Vossas vestes são brancas como a neve, e vosso rosto, como o sol.",
+      "Vós sois a glória de Jerusalém, a alegria de Israel, a honra do nosso povo.",
+      "Ó Maria, Virgem prudentíssima, Mãe clementíssima, rogai por nós, intercedei por nós junto a Nosso Senhor Jesus Cristo. Amém."
+    ],
+    "fonte": "Antífona “Tota pulchra es”, séc. IV · tradução Acta Dei"
+  },
+  "hashtags": "#novena #novenadaimaculada #imaculadaconceicao #nossasenhora #oracao #fecatolica #santaigrejacatolica #igrejacatolica #catolicos #medalhamilagrosa #actadei #mysteriumfidei",
+  "dias": [
+    {
+      "intencao": "Pela Santa Igreja Católica",
+      "titulo": "Uma festa de quinze séculos",
+      "meditacao": "Os cristãos do Oriente já celebravam a Concepção de Maria em 9 de dezembro, possivelmente desde o século V, na Síria. No Ocidente, em 1476, o papa Sisto IV aprovou a festa com missa e ofício próprios.\n\nEm 6 de dezembro de 1708, Clemente XI, pela bula Commissi Nobis Divinitus, fez do 8 de dezembro um dia santo para toda a Santa Igreja Católica. Este ano, a novena começa no mesmo dia que o Advento.",
+      "fontes": "Catholic Encyclopedia (New Advent), “Immaculate Conception” · Clemente XI, Commissi Nobis Divinitus (1708)"
+    },
+    {
+      "intencao": "Pelos doentes",
+      "titulo": "A medalha da Rue du Bac",
+      "meditacao": "Na noite de 27 de novembro de 1830, na capela das Filhas da Caridade, na Rue du Bac, em Paris, a noviça Catarina Labouré relatou ter visto Maria sobre um globo, com raios de luz saindo das mãos. Em volta, uma inscrição: “Ó Maria concebida sem pecado, rogai por nós que recorremos a vós.”\n\nAs primeiras medalhas foram cunhadas em 1832. As curas atribuídas a elas deram o nome popular: Medalha Milagrosa. Pio XII canonizou Catarina em 27 de julho de 1947.",
+      "fontes": "Capela de Nossa Senhora da Medalha Milagrosa, Paris · Vatican.va, canonização de Santa Catarina Labouré (1947)"
+    },
+    {
+      "intencao": "Pela pureza do coração",
+      "titulo": "“Eu sou a Imaculada Conceição”",
+      "meditacao": "Em 8 de dezembro de 1854, Pio IX definiu na bula Ineffabilis Deus que Maria foi preservada do pecado original desde o primeiro instante.\n\nQuatro anos depois, em 25 de março de 1858, em Lourdes, Bernadette Soubirous perguntou o nome da Senhora que via na gruta. Ouviu, no dialeto local: “Que soy era Immaculada Councepciou”. Bernadette, de 14 anos, não conhecia a expressão.",
+      "fontes": "Pio IX, Ineffabilis Deus (1854) · Santuário de Lourdes"
+    },
+    {
+      "intencao": "Pelos que estudam e ensinam",
+      "titulo": "A resposta de um franciscano",
+      "meditacao": "Por séculos, teólogos perguntaram como Maria poderia ter sido concebida sem pecado se Cristo é o redentor de todos. O franciscano João Duns Escoto, professor em Oxford, Cambridge e Paris por volta de 1300, propôs a resposta: ela foi redimida de forma antecipada, preservada do pecado em vista dos méritos de Cristo.\n\nEm 1854, Pio IX usou esse argumento na definição do dogma. João Paulo II beatificou Escoto em 20 de março de 1993.",
+      "fontes": "Vatican.va, Bento XVI, audiência geral de 7 de julho de 2010 · Pio IX, Ineffabilis Deus (1854)"
+    },
+    {
+      "intencao": "Pelo Brasil",
+      "titulo": "A imagem do rio Paraíba",
+      "meditacao": "Em outubro de 1717, os pescadores Domingos Garcia, Filipe Pedroso e João Alves lançaram a rede no rio Paraíba do Sul, perto de Guaratinguetá. Primeiro veio o corpo de uma pequena imagem de barro; depois, a cabeça. Era Nossa Senhora da Conceição.\n\nEm 16 de julho de 1930, Pio XI declarou Nossa Senhora da Conceição Aparecida padroeira principal do Brasil. A padroeira do país é a Imaculada.",
+      "fontes": "Santuário Nacional de Aparecida · Pio XI, decreto de 16 de julho de 1930"
+    },
+    {
+      "intencao": "Pelos que governam",
+      "titulo": "A rainha de Portugal",
+      "meditacao": "Em 25 de março de 1646, o rei D. João IV proclamou Nossa Senhora da Conceição padroeira de Portugal e ofereceu a coroa real à imagem de Vila Viçosa, consagrando o reino. Desde então, os reis portugueses deixaram de usar a coroa: ela passou a ser da Padroeira.\n\nA devoção atravessou o Atlântico, e Nossa Senhora da Conceição se tornou padroeira de muitas igrejas e vilas do Brasil colonial.",
+      "fontes": "Visit Portugal, Santuário de Nossa Senhora da Conceição de Vila Viçosa · RFM, “Imaculada Conceição: Rainha de Portugal desde 1646”"
+    },
+    {
+      "intencao": "Pelo Papa",
+      "titulo": "As flores da Piazza di Spagna",
+      "meditacao": "Em 8 de dezembro de 1857, três anos depois da definição do dogma, foi inaugurada em Roma, na Piazza di Spagna, a Coluna da Imaculada. Os bombeiros da cidade ajudaram a erguê-la. Todo 8 de dezembro, sobem a escada do caminhão e põem flores no braço da estátua.\n\nDesde 1958, quando João XXIII foi até lá pessoalmente, o Papa vai à coluna nesse dia para rezar e oferecer flores.",
+      "fontes": "Vatican News, homenagem à Imaculada na Piazza di Spagna · Turismo Roma, Solenidade da Imaculada Conceição"
+    },
+    {
+      "intencao": "Pelos que sofrem perseguição",
+      "titulo": "O cavaleiro da Imaculada",
+      "meditacao": "Em 16 de outubro de 1917, em Roma, o jovem frade franciscano Maximiliano Kolbe fundou a Milícia da Imaculada. Em 1941, prisioneiro em Auschwitz, ofereceu-se para morrer no lugar de Franciszek Gajowniczek, pai de família.\n\nMorreu em 14 de agosto de 1941, véspera da Assunção. João Paulo II o canonizou em 10 de outubro de 1982, na Praça de São Pedro. Gajowniczek estava presente.",
+      "fontes": "Vatican.va, homilia de canonização de São Maximiliano Kolbe (1982) · Milícia da Imaculada"
+    },
+    {
+      "intencao": "Pela sua intenção pessoal",
+      "titulo": "“Ave, cheia de graça”",
+      "meditacao": "Na Anunciação, o anjo saúda Maria: “Ave, cheia de graça” (Lc 1,28). A bula Ineffabilis Deus apoia o dogma nessa saudação e no anúncio do Gênesis sobre a inimizade entre a mulher e a serpente (Gn 3,15).\n\nAmanhã, 8 de dezembro, a Santa Igreja Católica celebra a solenidade da Imaculada Conceição. Hoje termina a novena.",
+      "fontes": "Pio IX, Ineffabilis Deus (1854) · Evangelho segundo São Lucas 1,28"
+    }
+  ]
+}
