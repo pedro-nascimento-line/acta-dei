@@ -1,0 +1,33 @@
+{
+  "_nota": "Complementos do mapa para milagres já publicados (os novos trazem esses campos no próprio post.json). coordenadas_aprox só entram se o Wikidata e a busca de endereço falharem. videos: ids do YouTube; o build confere se ainda existem e mostra o canal.",
+  "lanciano": {
+    "visitar": {"lugar": "Santuário do Milagre Eucarístico (Igreja de São Francisco)", "cidade": "Lanciano, Itália"},
+    "coordenadas_aprox": [42.2306, 14.3905],
+    "videos": ["rWJ1D3Rcj90", "-WrxqiFk1FA"]
+  },
+  "bolsena": {
+    "visitar": {"lugar": "Basílica de Santa Cristina, em Bolsena · Capela do Corporal, na Catedral de Orvieto", "cidade": "Bolsena e Orvieto, Itália"},
+    "coordenadas_aprox": [42.6446, 11.9864],
+    "videos": ["AjuoNCvHvpk", "OEq2JAszRWA"]
+  },
+  "santarem": {
+    "visitar": {"lugar": "Igreja do Santíssimo Milagre (Igreja de Santo Estêvão)", "cidade": "Santarém, Portugal"},
+    "coordenadas_aprox": [39.2363, -8.6851],
+    "videos": ["q7L41YxKjkY", "L-9GXfK5Jak"]
+  },
+  "siena": {
+    "visitar": {"lugar": "Basílica de São Francisco", "cidade": "Siena, Itália"},
+    "coordenadas_aprox": [43.3224, 11.3372],
+    "videos": ["Etfay5wvK54", "Uoh_FWfaVRE"]
+  },
+  "amsterdam": {
+    "visitar": {"lugar": "Begijnhof e o Rokin, onde ficava a capela Heilige Stede · procissão Stille Omgang, em março", "cidade": "Amsterdã, Países Baixos"},
+    "coordenadas_aprox": [52.3704, 4.8916],
+    "videos": ["2i2N9Mv2ehg", "8zCcAVvkQCc"]
+  },
+  "faverney": {
+    "visitar": {"lugar": "Abadia de Notre-Dame de Faverney", "cidade": "Faverney, França"},
+    "coordenadas_aprox": [47.7671, 6.1019],
+    "videos": ["xd4M-SpGUZY", "sKdmI00sOho"]
+  }
+}

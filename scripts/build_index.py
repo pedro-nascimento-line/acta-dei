@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Regenera index.html (GitHub Pages, link da bio): todos os posts com fontes clicáveis e status."""
-import csv, html, json
+import csv, html, json, sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 STATUS = {"reconhecido": "Reconhecido pela Santa Igreja Católica", "investigacao": "Em investigação pela Santa Igreja Católica"}
 
 CSS = """
@@ -20,10 +21,16 @@ article h2{font-family:Cinzel,serif;font-size:22px;margin:0 0 4px}
 ul{margin:8px 0 0;padding-left:20px}ul li{margin:2px 0}
 footer{text-align:center;color:var(--grey);font-size:16px;padding:40px 16px}
 a{color:var(--red)}
+a.mapa{display:inline-block;background:var(--red);color:var(--cream);text-decoration:none;font-family:Cinzel,serif;font-size:15px;letter-spacing:3px;padding:13px 22px;border-radius:5px}
 """
 
 
 def main():
+    try:  # mapa dos milagres + página de cada milagre (posts/mapa/)
+        import build_mapa
+        build_mapa.main()
+    except Exception as e:
+        print(f"mapa falhou: {e}")
     posts = []
     for pasta in sorted((RAIZ / "posts").glob("????-??-??"), reverse=True):
         pj = pasta / "post.json"
@@ -38,7 +45,9 @@ def main():
         cards = "".join(f'<img src="posts/{dia}/{c.name}" alt="">' for c in sorted((RAIZ / "posts" / dia).glob("card_*.jpg")))
         fontes = "".join(f"<li>{html.escape(f)}</li>" for f in p.get("fontes", []))
         badge = f'<span class="badge">{STATUS[p["status"]]}</span>' if p.get("status") in STATUS else ""
-        link = f' · <a href="https://www.instagram.com/p/{meta["feed_shortcode"]}/">ver no Instagram</a>' if meta.get("feed_shortcode") else ""
+        link = f' · <a href="{html.escape(meta["feed_permalink"])}">ver no Instagram</a>' if meta.get("feed_permalink") else ""
+        if p.get("tipo") == "milagre" and p.get("id_milagre") and (RAIZ / "posts/mapa" / f"{p['id_milagre']}.html").exists():
+            link += f' · <a href="posts/mapa/{p["id_milagre"]}.html">página do milagre</a>'
         itens.append(f"""<article><h2>{html.escape(p['titulo'])}{badge}</h2>
 <div class="meta">{dia} · {html.escape(p.get('subtitulo',''))}{link}</div>
 <div class="cards">{cards}</div>
@@ -52,7 +61,8 @@ def main():
 
     doc = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Acta Dei · Mysterium Fidei — índice de fontes</title><style>{CSS}</style></head><body>
-<header><img src="brand/logo_avatar_claro_1080.png" alt="Acta Dei"><h1>ACTA DEI</h1><p>Mysterium Fidei · Milagres reconhecidos pela Santa Igreja Católica, com data, lugar e testemunhas · {len(posts)} registros</p></header>
+<header><img src="brand/logo_avatar_claro_1080.png" alt="Acta Dei"><h1>ACTA DEI</h1><p>Mysterium Fidei · Milagres reconhecidos pela Santa Igreja Católica, com data, lugar e testemunhas · {len(posts)} registros</p>
+<p style="margin-top:22px"><a class="mapa" href="posts/mapa/index.html">✚ MAPA DOS MILAGRES</a></p></header>
 <main>{''.join(itens) or '<p style="text-align:center;color:var(--grey)">Os primeiros registros entram em breve.</p>'}</main>
 <footer>Cada registro cita as fontes oficiais consultadas. Imagens de domínio público ou Creative Commons (Wikimedia Commons), com crédito. · @actadei.oficial</footer>
 </body></html>"""
