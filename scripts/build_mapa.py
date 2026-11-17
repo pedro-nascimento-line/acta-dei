@@ -33,7 +33,8 @@ BASE_CSS = """
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--cream);color:var(--char);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.55}
 a{color:var(--red)}.cz{font-family:Cinzel,serif;letter-spacing:2px}
 .top{display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--char);color:var(--cream)}
-.top img{width:44px;height:44px}.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
+.top img{width:44px;height:44px;border-radius:50%}
+.leaflet-tile-pane{filter:grayscale(.75) sepia(.22) brightness(1.04) contrast(.92)}  /* mapa-base em tons da paleta */.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
 .top a{color:var(--cream);text-decoration:none}.top .dir{margin-left:auto;font-family:Cinzel,serif;font-size:13px;letter-spacing:2px}
 .badge{display:inline-block;background:var(--red);color:var(--cream);font-family:Cinzel,serif;font-size:11px;letter-spacing:2px;padding:4px 9px;border-radius:4px}
 .badge.inv{background:#7a6a55}
@@ -174,7 +175,7 @@ def preparar(m, cache):
 
 # ------------------------------------------------------------------ páginas
 def topo(raiz_rel, direita=""):
-    return (f'<div class="top"><a href="{raiz_rel}index.html"><img src="{raiz_rel}brand/logo_avatar_transparente.svg" alt=""></a>'
+    return (f'<div class="top"><a href="{raiz_rel}index.html"><img src="{raiz_rel}brand/logo_avatar_claro_1080.png" alt=""></a>'
             f'<div><b>ACTA DEI</b><br><span>Mapa dos milagres</span></div>{direita}</div>')
 
 
@@ -205,7 +206,7 @@ def pagina_milagre(m, todos):
     q = urllib.parse.quote_plus(f"{vis.get('lugar', '')} {vis.get('cidade', '')}".strip())
     lat, lon = (m["coord"] or [None, None])
     mini = (f'<div id="mini"></div><script>var mm=L.map("mini",{{scrollWheelZoom:false,zoomControl:true}}).setView([{lat},{lon}],15);'
-            f'L.tileLayer("https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png",{{attribution:"&copy; OpenStreetMap &copy; CARTO",subdomains:"abcd",maxZoom:19}}).addTo(mm);'
+            f'L.tileLayer("https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png",{{attribution:"&copy; OpenStreetMap",maxZoom:19}}).addTo(mm);'
             f'L.marker([{lat},{lon}],{{icon:CRUZ}}).addTo(mm);</script>') if lat is not None else ""
     outros = "".join(f'<a href="{o["id"]}.html">{esc(o["post"]["titulo"])}</a>' for o in todos if o["id"] != m["id"])
     css = BASE_CSS + """
@@ -283,12 +284,12 @@ def pagina_mapa(ms):
 {topo("../../", f'<span class="dir">{len(pontos)} MILAGRES</span>')}
 <div style="position:relative"><div id="mapa"></div><div class="leg">✚ Passe o mouse (ou toque) numa cruz · clique para abrir</div></div>
 <section class="lista"><h2>TODOS OS MILAGRES DO MAPA</h2>{lista}</section>
-<footer>Acta Dei · Mysterium Fidei · @actadei.oficial · Mapa: © OpenStreetMap, © CARTO</footer>
+<footer>Acta Dei · Mysterium Fidei · @actadei.oficial · Mapa: © colaboradores do OpenStreetMap</footer>
 <script>
 {CRUZ_JS}
 var P={json.dumps(pontos, ensure_ascii=False)};
 var mapa=L.map('mapa',{{worldCopyJump:true}});
-L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png',{{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19}}).addTo(mapa);
+L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',{{attribution:'&copy; OpenStreetMap',maxZoom:19}}).addTo(mapa);
 var hover=window.matchMedia('(hover: hover)').matches, b=[];
 function e(s){{return (s||'').replace(/[&<>"]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]}})}}
 P.forEach(function(p){{
