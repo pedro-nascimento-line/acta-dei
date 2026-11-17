@@ -1,0 +1,103 @@
+{
+  "tipo": "santo",
+  "titulo": "Santa Isabel da Hungria, a princesa dos pobres",
+  "subtitulo": "Marburgo, Alemanha · † 17 de novembro de 1231",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Elizabeth of Hungary",
+  "imagem_busca": "Elisabeth von Thüringen",
+  "cards": [
+    {
+      "kicker": "QUEM FOI",
+      "texto": "Isabel nasceu em 1207, filha do rei André II da Hungria e de Gertrudes de Andechs-Merânia. Aos quatro anos foi levada ao castelo de Wartburg, acima de Eisenach, na Turíngia, prometida ao herdeiro do landgrave. Em 1221, aos catorze, casou-se com Luís IV, de vinte e um.\n\nTiveram três filhos: Hermann, Sofia e Gertrudes. Luís governava a Turíngia e a deixava livre para o que fazia desde menina: descer do castelo com pão para os pobres. Em 1221 chegaram à Alemanha os primeiros franciscanos. Isabel os ouviu e adotou o ideal de pobreza de Francisco de Assis."
+    },
+    {
+      "kicker": "O QUE FEZ",
+      "texto": "Em 1226, Isabel levou ao Wartburg o pregador Conrado de Marburgo, que se tornou seu diretor espiritual, e com ele fundou um primeiro hospital ao pé do castelo. Em setembro de 1227, Luís morreu de febre em Otranto, na Itália, antes de embarcar na cruzada do imperador Frederico II. Ela tinha vinte anos e a terceira filha recém-nascida.\n\nDeixou a corte. Na Sexta-feira Santa de 1228 renunciou ao mundo nas mãos dos franciscanos e, no verão daquele ano, levantou em Marburgo um hospital, onde ela mesma lavava e alimentava os doentes. Morreu ali, na noite de 17 de novembro de 1231, com 24 anos."
+    },
+    {
+      "kicker": "A CANONIZAÇÃO",
+      "texto": "Conrado de Marburgo relatou ao papa Gregório IX o que vira. Os milagres no túmulo, na capela do hospital, atraíram peregrinos; em 1234 o hospital passou à Ordem Teutônica. Em maio de 1235, em Perúgia, Gregório IX a declarou santa, menos de quatro anos depois da morte.\n\nEm 14 de agosto de 1235 foi lançada a pedra fundamental da igreja de Santa Isabel, em Marburgo, sobre o túmulo. Em 1º de maio de 1236 o corpo foi elevado diante do imperador Frederico II. A igreja, consagrada em 1283, guarda o relicário do século XIII; as relíquias saíram dela em 1539, na Reforma."
+    }
+  ],
+  "decisao": "Canonizada por Gregório IX em maio de 1235, em Perúgia, quatro anos depois da morte. Memória obrigatória em 17 de novembro no Calendário Romano Geral. Padroeira da Ordem Terceira Regular de São Francisco e da Ordem Franciscana Secular, como lembrou Bento XVI na audiência geral de 20 de outubro de 2010.",
+  "fontes": [
+    "Vatican.va — Bento XVI, Audiência geral sobre Santa Isabel da Hungria, 20 out 2010",
+    "Catholic Encyclopedia (New Advent) — St. Elizabeth of Hungary, 1909",
+    "Universidade de Marburgo — Elisabeths Geschichte und ihre Verbindung zu Marburg, exposição virtual",
+    "Encyclopedia.com (New Catholic Encyclopedia) — Elizabeth of Hungary (Thuringia), St."
+  ],
+  "reel": [
+    {
+      "kicker": "MARBURGO, 1231",
+      "texto": "Uma princesa deixou o castelo para lavar doentes num hospital. Morreu aos vinte e quatro anos. Virou santa em quatro.",
+      "imagem": "Elisabeth von Thüringen"
+    },
+    {
+      "texto": "Isabel nasceu na Hungria em 1207. Aos catorze casou com Luís da Turíngia. Descia do Wartburg com pão para os pobres.",
+      "imagem": "Wartburg Eisenach"
+    },
+    {
+      "texto": "Viúva em 1227, fundou um hospital em Marburgo e cuidava dos doentes com as próprias mãos. Morreu em 1231.",
+      "imagem": "Elisabethkirche Marburg"
+    },
+    {
+      "texto": "Em 1235, o papa Gregório IX a declarou santa em Perúgia. Sobre o túmulo nasceu a igreja de Santa Isabel.",
+      "imagem": "Elisabethschrein Marburg"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "de:Elisabeth von Thüringen",
+      "en:Elizabeth of Hungary",
+      "de:Elisabethkirche (Marburg)",
+      "de:Wartburg"
+    ],
+    "categorias": [
+      "Elisabeth of Hungary",
+      "Elisabethkirche (Marburg)",
+      "Elisabethschrein",
+      "Wartburg"
+    ],
+    "termos": [
+      "Elisabeth von Thüringen",
+      "Elisabethkirche Marburg",
+      "Elisabethschrein"
+    ],
+    "citacao": "Elisabethkirche Marburg Innenraum"
+  },
+  "evangelho": {
+    "referencia": "Lucas 19,1-10",
+    "versiculo": "Com efeito, o Filho do Homem veio procurar e salvar o que estava perdido.",
+    "celebracao": "Santa Isabel da Hungria · Memória",
+    "leituras": "Ap 3,1-6.14-22 · Sl 14(15) · Lc 19,1-10",
+    "fato": "Jesus entra na casa de um rico de Jericó, que dá metade dos bens aos pobres. A Santa Igreja Católica lembra hoje Santa Isabel da Hungria: filha de rei, casada aos catorze com o landgrave da Turíngia, viúva aos vinte. Em 1228 fundou um hospital em Marburgo, na Alemanha, e lá cuidava dos doentes. Morreu em 17 de novembro de 1231, com 24 anos.\n\nGregório IX a canonizou em 1235. Sobre o túmulo, a Ordem Teutônica ergueu a igreja de Santa Isabel, consagrada em 1283.",
+    "fato_fonte": "Vatican.va — Bento XVI, Audiência geral, 20 out 2010 · Catholic Encyclopedia (New Advent) — St. Elizabeth of Hungary"
+  },
+  "stories": {
+    "manha": {
+      "nome": "Santa Isabel da Hungria",
+      "anos": "† 1231 · PRINCESA, VIÚVA E TERCIÁRIA FRANCISCANA",
+      "padroeiro": "Padroeira da Ordem Franciscana Secular · Memória obrigatória",
+      "linhas": [
+        "Filha do rei da Hungria, casou aos 14 com Luís da Turíngia. Descia do Wartburg com pão para os pobres.",
+        "Viúva aos 20, fundou um hospital em Marburgo e cuidava dos doentes. Morreu em 17 de novembro de 1231, aos 24.",
+        "Gregório IX a canonizou em 1235, em Perúgia. Sobre o túmulo ergueu-se a igreja de Santa Isabel."
+      ],
+      "imagem_wikipedia": "en:Elizabeth of Hungary",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Elisabeth von Thüringen",
+        "Elizabeth of Hungary"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "Em 1º de maio de 1236, o corpo de Isabel foi elevado em Marburgo diante do imperador Frederico II, o mesmo cuja cruzada levara seu marido a Otranto."
+    },
+    "noite": {
+      "citacao": "Entreguei-me totalmente a Deus e agora devo dar-lhe também a ti.",
+      "autor": "SANTA ISABEL DA HUNGRIA · AO MARIDO, 1227 (BENTO XVI, AUDIÊNCIA DE 20/10/2010)"
+    }
+  }
+}
