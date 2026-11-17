@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-16",
+  "gerado_em": "2026-11-17",
   "dias": [
-    {
-      "data": "2026-11-16",
-      "dia_semana": "seg",
-      "tipo": "milagre",
-      "feed": "Buenos Aires, 1996: a hóstia analisada",
-      "id_milagre": "buenos_aires",
-      "santo_story": "Santa Margarida da Escócia; Santa Gertrudes",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-17",
       "dia_semana": "ter",
@@ -23,8 +14,8 @@
       "data": "2026-11-18",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
-      "id_milagre": "galvao_sandra",
+      "feed": "Buenos Aires, 1996: a hóstia analisada",
+      "id_milagre": "buenos_aires",
       "santo_story": "Dedicação das Basílicas de São Pedro e São Paulo",
       "tambem_hoje": []
     },
@@ -79,8 +70,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
+      "id_milagre": "galvao_sandra",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -261,8 +252,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -273,6 +264,15 @@
       "feed": "Santa Maria Crocifissa di Rosa",
       "id_milagre": null,
       "santo_story": "Santa Maria Crocifissa di Rosa",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-16",
+      "dia_semana": "qua",
+      "tipo": "milagre",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
+      "santo_story": "Santa Adelaide",
       "tambem_hoje": []
     }
   ]
