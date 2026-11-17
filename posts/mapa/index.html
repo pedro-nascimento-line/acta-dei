@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mapa dos milagres · Acta Dei</title><meta name="description" content="Os milagres reconhecidos pela Santa Igreja Católica publicados pelo Acta Dei, no mapa.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+:root{--red:#A6192E;--red2:#F0434F;--cream:#F7F2E8;--char:#26221E;--grey:#6B655E;--line:#E2D8C6}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--cream);color:var(--char);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.55}
+a{color:var(--red)}.cz{font-family:Cinzel,serif;letter-spacing:2px}
+.top{display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--char);color:var(--cream)}
+.top img{width:44px;height:44px}.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
+.top a{color:var(--cream);text-decoration:none}.top .dir{margin-left:auto;font-family:Cinzel,serif;font-size:13px;letter-spacing:2px}
+.badge{display:inline-block;background:var(--red);color:var(--cream);font-family:Cinzel,serif;font-size:11px;letter-spacing:2px;padding:4px 9px;border-radius:4px}
+.badge.inv{background:#7a6a55}
+footer{text-align:center;color:var(--grey);font-size:16px;padding:40px 16px 60px}
+
+#mapa{height:calc(100vh - 72px);min-height:420px;background:#EDE7DB}
+.leaflet-popup-content-wrapper{border-radius:8px;padding:0;overflow:hidden;background:var(--cream)}.leaflet-popup-content{margin:0;width:260px!important}
+.card img{width:100%;height:140px;object-fit:cover;display:block}.card div{padding:10px 14px 12px;font-family:'Cormorant Garamond',serif}
+.card b{display:block;font-family:Cinzel,serif;font-size:14px;line-height:1.3;color:var(--char)}.card i{display:block;color:var(--grey);font-size:15px;margin:3px 0 6px}
+.card .badge{font-size:9px}.card .ver{display:block;margin-top:8px;font-family:Cinzel,serif;font-size:12px;letter-spacing:2px;color:var(--red)}
+.leaflet-container a.card{color:var(--char)}
+.cruz{background:none;border:0}.cruz svg{filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));transition:transform .15s}.cruz:hover svg{transform:scale(1.25)}
+.lista{max-width:900px;margin:0 auto;padding:30px 18px}.lista h2{font-family:Cinzel,serif;letter-spacing:3px;font-size:18px;color:var(--red)}
+.item{display:flex;gap:14px;align-items:center;padding:10px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--char)}
+.item img{width:84px;height:64px;object-fit:cover;flex:none}.item b{display:block;font-family:Cinzel,serif;font-size:15px}.item i{color:var(--grey);font-size:16px}
+.leg{position:absolute;z-index:500;left:12px;bottom:22px;background:rgba(247,242,232,.94);padding:8px 12px;border-radius:6px;font-size:15px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+</style></head><body>
+<div class="top"><a href="../../index.html"><img src="../../brand/logo_avatar_transparente.svg" alt=""></a><div><b>ACTA DEI</b><br><span>Mapa dos milagres</span></div><span class="dir">6 MILAGRES</span></div>
+<div style="position:relative"><div id="mapa"></div><div class="leg">✚ Passe o mouse (ou toque) numa cruz · clique para abrir</div></div>
+<section class="lista"><h2>TODOS OS MILAGRES DO MAPA</h2><a class="item" href="faverney.html"><img src="../2026-11-16/imagem.jpg" alt="" loading="lazy"><div><b>Faverney, 1608: o ostensório que não caiu</b><i>Faverney, França · 25 a 27 de maio de 1608</i></div></a><a class="item" href="amsterdam.html"><img src="../2026-11-14/imagem.jpg" alt="" loading="lazy"><div><b>A hóstia que não queimou: Amsterdã, 1345</b><i>Amsterdã, Países Baixos · 15 de março de 1345</i></div></a><a class="item" href="siena.html"><img src="../2026-11-12/imagem.jpg" alt="" loading="lazy"><div><b>As Hóstias de Siena, intactas desde 1730</b><i>Siena, Itália · 14 a 17 de agosto de 1730</i></div></a><a class="item" href="santarem.html"><img src="../2026-11-10/imagem.jpg" alt="" loading="lazy"><div><b>O Milagre Eucarístico de Santarém</b><i>Santarém, Portugal · século XIII (c. 1247)</i></div></a><a class="item" href="bolsena.html"><img src="../2026-11-06/imagem.jpg" alt="" loading="lazy"><div><b>O Milagre de Bolsena e o Corporal de Orvieto</b><i>Bolsena e Orvieto, Itália · 1263</i></div></a><a class="item" href="lanciano.html"><img src="../2026-11-05/principal.jpg" alt="" loading="lazy"><div><b>O Milagre Eucarístico de Lanciano</b><i>Lanciano, Itália · século VIII</i></div></a></section>
+<footer>Acta Dei · Mysterium Fidei · @actadei.oficial · Mapa: © OpenStreetMap, © CARTO</footer>
+<script>
+var CRUZ=L.divIcon({className:'cruz',iconSize:[26,34],iconAnchor:[13,30],popupAnchor:[0,-28],
+html:'<svg viewBox="0 0 26 34" width="26" height="34"><path d="M10 2h6v8h8v6h-8v16h-6V16H2v-6h8z" fill="#A6192E" stroke="#F7F2E8" stroke-width="2"/></svg>'});
+var P=[{"id": "lanciano", "t": "O Milagre Eucarístico de Lanciano", "s": "Lanciano, Itália · século VIII", "c": [42.23, 14.39], "f": "../2026-11-05/principal.jpg", "st": "reconhecido"}, {"id": "bolsena", "t": "O Milagre de Bolsena e o Corporal de Orvieto", "s": "Bolsena e Orvieto, Itália · 1263", "c": [42.6446, 11.9864], "f": "../2026-11-06/imagem.jpg", "st": "reconhecido"}, {"id": "santarem", "t": "O Milagre Eucarístico de Santarém", "s": "Santarém, Portugal · século XIII (c. 1247)", "c": [39.23636, -8.68671], "f": "../2026-11-10/imagem.jpg", "st": "reconhecido"}, {"id": "siena", "t": "As Hóstias de Siena, intactas desde 1730", "s": "Siena, Itália · 14 a 17 de agosto de 1730", "c": [43.32232, 11.33459], "f": "../2026-11-12/imagem.jpg", "st": "reconhecido"}, {"id": "amsterdam", "t": "A hóstia que não queimou: Amsterdã, 1345", "s": "Amsterdã, Países Baixos · 15 de março de 1345", "c": [52.37023, 4.89186], "f": "../2026-11-14/imagem.jpg", "st": "reconhecido"}, {"id": "faverney", "t": "Faverney, 1608: o ostensório que não caiu", "s": "Faverney, França · 25 a 27 de maio de 1608", "c": [47.76778, 6.10417], "f": "../2026-11-16/imagem.jpg", "st": "reconhecido"}];
+var mapa=L.map('mapa',{worldCopyJump:true});
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19}).addTo(mapa);
+var hover=window.matchMedia('(hover: hover)').matches, b=[];
+function e(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+P.forEach(function(p){
+  var st=p.st==='reconhecido'?'<span class="badge">Reconhecido</span>':(p.st==='investigacao'?'<span class="badge inv">Em investigação</span>':'');
+  var html='<a class="card" href="'+p.id+'.html" style="text-decoration:none">'+(p.f?'<img src="'+e(p.f)+'" alt="">':'')+'<div><b>'+e(p.t)+'</b><i>'+e(p.s)+'</i>'+st+'<span class="ver">VER DETALHES →</span></div></a>';
+  var mk=L.marker(p.c,{icon:CRUZ,title:p.t}).addTo(mapa).bindPopup(html,{closeButton:!hover,autoPan:true});
+  if(hover){mk.on('mouseover',function(){mk.openPopup()});mk.on('click',function(){location.href=p.id+'.html'});}
+  b.push(p.c);
+});
+if(b.length>1){mapa.fitBounds(b,{padding:[60,60],maxZoom:6})}else if(b.length){mapa.setView(b[0],6)}else{mapa.setView([42,12],4)}
+</script></body></html>
