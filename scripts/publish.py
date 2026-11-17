@@ -3,11 +3,10 @@
 
 Uso (no GitHub Actions):
   python3 scripts/publish.py --slot evangelho  # 6h BRT: Evangelho do dia (evangelho_01.jpg + evangelho_02.jpg, feed)
-                                               #   + story_evangelho.jpg (o post repetido no story, para os destaques)
   python3 scripts/publish.py --slot manha      # 7h BRT: story da manhã ("Hoje na Igreja")
-  python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags + story_feed.jpg
+  python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags
   python3 scripts/publish.py --slot tarde      # 13h BRT: story da tarde
-  python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4) + story_reel.mp4 (≤ 59 s)
+  python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
   python3 scripts/publish.py --slot noite      # 20h BRT: story da noite
   python3 scripts/publish.py --slot gatilho # slot lido de gatilho/publicar.txt (tarefas agendadas do Cowork)
   python3 scripts/publish.py --slot auto    # decide pelo horário UTC
@@ -39,6 +38,9 @@ BRT = ZoneInfo("America/Sao_Paulo")
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
 USER = os.environ.get("IG_USER_ID", "")
 BASE = os.environ.get("PAGES_BASE", "").rstrip("/")
+# Repetir no story cada post do feed (story_evangelho.jpg, story_feed.jpg, story_reel.mp4). Desligado em 17/11/2026:
+# o Pedro reposta manualmente pelo app. Para religar, troque para True.
+STORIES_DIVULGACAO = False
 
 
 def log(slot, tipo, ig_id, status, erro=""):
@@ -156,7 +158,7 @@ def publicar_story_divulgacao(dia, pasta, meta, arq_nome, chave, slot):
     de stories e poder ir para os destaques. Falha aqui não derruba o post do feed: fica registrada e a próxima
     execução do dia tenta de novo."""
     arq = pasta / arq_nome
-    if meta.get(chave) or not arq.exists():
+    if not STORIES_DIVULGACAO or meta.get(chave) or not arq.exists():
         return None
     try:
         u = f"{BASE}/posts/{dia}/{arq_nome}"
@@ -291,9 +293,9 @@ def main():
     # Peças sem arquivo (sem evangelho_*.jpg ou sem reel.mp4) não contam como pendentes.
     alvo = [slot] if apenas else ORDEM[: ORDEM.index(slot) + 1]
     existe = {"evangelho_id": bool(list(pasta.glob("evangelho_*.jpg"))), "reel_id": (pasta / "reel.mp4").exists(),
-              "story_evangelho_id": (pasta / "story_evangelho.jpg").exists(),
-              "story_feed_id": (pasta / "story_feed.jpg").exists(),
-              "story_reel_id": (pasta / "story_reel.mp4").exists()}
+              "story_evangelho_id": STORIES_DIVULGACAO and (pasta / "story_evangelho.jpg").exists(),
+              "story_feed_id": STORIES_DIVULGACAO and (pasta / "story_feed.jpg").exists(),
+              "story_reel_id": STORIES_DIVULGACAO and (pasta / "story_reel.mp4").exists()}
     pendentes = [k for s_ in alvo for k in PECAS[s_] if not meta.get(k) and existe.get(k, True)]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return
