@@ -7,7 +7,8 @@
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--cream);color:var(--char);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.55}
 a{color:var(--red)}.cz{font-family:Cinzel,serif;letter-spacing:2px}
 .top{display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--char);color:var(--cream)}
-.top img{width:44px;height:44px}.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
+.top img{width:44px;height:44px;border-radius:50%}
+.leaflet-tile-pane{filter:grayscale(.75) sepia(.22) brightness(1.04) contrast(.92)}  /* mapa-base em tons da paleta */.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
 .top a{color:var(--cream);text-decoration:none}.top .dir{margin-left:auto;font-family:Cinzel,serif;font-size:13px;letter-spacing:2px}
 .badge{display:inline-block;background:var(--red);color:var(--cream);font-family:Cinzel,serif;font-size:11px;letter-spacing:2px;padding:4px 9px;border-radius:4px}
 .badge.inv{background:#7a6a55}
@@ -34,7 +35,7 @@ h3{font-size:14px;letter-spacing:3px;color:var(--red);margin:26px 0 6px}
 ul.fontes{padding-left:20px}ul.fontes li{margin:4px 0}
 @media(max-width:600px){h1{font-size:27px}body{font-size:19px}}
 </style></head><body>
-<div class="top"><a href="../../index.html"><img src="../../brand/logo_avatar_transparente.svg" alt=""></a><div><b>ACTA DEI</b><br><span>Mapa dos milagres</span></div><a class="dir" href="index.html">← VOLTAR AO MAPA</a></div>
+<div class="top"><a href="../../index.html"><img src="../../brand/logo_avatar_claro_1080.png" alt=""></a><div><b>ACTA DEI</b><br><span>Mapa dos milagres</span></div><a class="dir" href="index.html">← VOLTAR AO MAPA</a></div>
 <main>
 <div class="hero"><img src="../2026-11-06/imagem.jpg" alt=""><small>RoyFokker · Wikimedia Commons · Public domain</small></div>
 <h1>O Milagre de Bolsena e o Corporal de Orvieto</h1><span class="badge">Reconhecido pela Santa Igreja Católica</span><div class="sub">Bolsena e Orvieto, Itália · 1263</div>
@@ -46,7 +47,7 @@ ul.fontes{padding-left:20px}ul.fontes li{margin:4px 0}
 <h2>COMO VISITAR</h2><p><b>Basílica de Santa Cristina, em Bolsena · Capela do Corporal, na Catedral de Orvieto</b><br>Bolsena e Orvieto, Itália</p>
 <a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica+de+Santa+Cristina%2C+em+Bolsena+%C2%B7+Capela+do+Corporal%2C+na+Catedral+de+Orvieto+Bolsena+e+Orvieto%2C+It%C3%A1lia" target="_blank" rel="noopener">ABRIR NO GOOGLE MAPS</a>
 <div id="mini"></div><script>var CRUZ=L.divIcon({className:'cruz',iconSize:[26,34],iconAnchor:[13,30],popupAnchor:[0,-28],
-html:'<svg viewBox="0 0 26 34" width="26" height="34"><path d="M10 2h6v8h8v6h-8v16h-6V16H2v-6h8z" fill="#A6192E" stroke="#F7F2E8" stroke-width="2"/></svg>'});var mm=L.map("mini",{scrollWheelZoom:false,zoomControl:true}).setView([42.6446,11.9864],15);L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{attribution:"&copy; OpenStreetMap &copy; CARTO",subdomains:"abcd",maxZoom:19}).addTo(mm);L.marker([42.6446,11.9864],{icon:CRUZ}).addTo(mm);</script>
+html:'<svg viewBox="0 0 26 34" width="26" height="34"><path d="M10 2h6v8h8v6h-8v16h-6V16H2v-6h8z" fill="#A6192E" stroke="#F7F2E8" stroke-width="2"/></svg>'});var mm=L.map("mini",{scrollWheelZoom:false,zoomControl:true}).setView([42.6446,11.9864],15);L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap",maxZoom:19}).addTo(mm);L.marker([42.6446,11.9864],{icon:CRUZ}).addTo(mm);</script>
 <h2>FONTES</h2><ul class="fontes"><li>Basílica de Santa Cristina, Bolsena — O Milagre Eucarístico (basilicasantacristina.it)</li><li>Vatican.va — Discurso de Paulo VI em Orvieto, 11 ago 1964 (VII centenário da Transiturus)</li><li>Urbano IV — bula Transiturus de hoc mundo, Orvieto, 11 ago 1264</li><li>Key to Umbria — Il Sacro Corporale e la Cappella del Corporale, Duomo di Orvieto</li></ul>
 <p style="margin-top:34px"><a class="btn" href="https://www.instagram.com/actadei.oficial/" target="_blank" rel="noopener">VER O POST NO INSTAGRAM</a><a class="btn sec" href="index.html">TODOS OS MILAGRES NO MAPA</a></p>
 <h2>OUTROS MILAGRES</h2><div class="outros"><a href="lanciano.html">O Milagre Eucarístico de Lanciano</a><a href="santarem.html">O Milagre Eucarístico de Santarém</a><a href="siena.html">As Hóstias de Siena, intactas desde 1730</a><a href="amsterdam.html">A hóstia que não queimou: Amsterdã, 1345</a><a href="faverney.html">Faverney, 1608: o ostensório que não caiu</a></div>
