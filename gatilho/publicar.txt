@@ -1,1 +1,1 @@
-2026-11-17 17:45 BRT · slot reel apenas · rodada sem publicação: regenera o mapa com o novo mapa-base
+2026-11-17 17:53 BRT · slot reel · gatilho agendado do Cowork
