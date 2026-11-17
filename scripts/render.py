@@ -399,9 +399,15 @@ def render(pasta):
         extras = stories_divulgacao(post, pasta)
         _screenshots(br, extras, pasta)
         htmls += extras
+        # novenas ativas no dia (data/novenas/*.json): carrossel de 4 cards publicado às 20h
+        try:
+            import novena
+            nov = novena.gerar(pasta, br)
+        except Exception as e:
+            print(f"  novena falhou: {e}"); nov = []
         br.close()
-    print("gerados:", ", ".join(n for n, _, _ in htmls))
-    return [n for n, _, _ in htmls]
+    print("gerados:", ", ".join([n for n, _, _ in htmls] + nov))
+    return [n for n, _, _ in htmls] + nov
 
 
 def _screenshots(br, htmls, pasta):

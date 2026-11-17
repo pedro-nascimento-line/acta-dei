@@ -7,7 +7,7 @@ Uso (no GitHub Actions):
   python3 scripts/publish.py --slot carrossel  # 12h BRT: carrossel do dia (card_*.jpg) + hashtags
   python3 scripts/publish.py --slot tarde      # 13h BRT: story da tarde
   python3 scripts/publish.py --slot reel       # 18h BRT: reel do dia (posts/<dia>/reel.mp4)
-  python3 scripts/publish.py --slot noite      # 20h BRT: story da noite
+  python3 scripts/publish.py --slot noite      # 20h BRT: story da noite + novena do dia (novena_<id>_*.jpg), se houver
   python3 scripts/publish.py --slot gatilho # slot lido de gatilho/publicar.txt (tarefas agendadas do Cowork)
   python3 scripts/publish.py --slot auto    # decide pelo horário UTC
   python3 scripts/publish.py --refresh-token
@@ -234,8 +234,20 @@ def publicar_slot(s, dia, pasta, meta):
                 print("  sem reel.mp4 hoje; pulando o reel")
         if meta.get("reel_id"):
             publicar_story_divulgacao(dia, pasta, meta, "story_reel.mp4", "story_reel_id", s)
+    elif s == "noite":
+        if not meta.get("story_noite_id"):
+            publicar_story(dia, pasta, meta, s)
+        for nid in novenas_do_dia(pasta):   # novena(s) do dia: carrossel no feed, logo depois do story
+            if not meta.get(f"novena_{nid}_id"):
+                publicar_imagens(dia, pasta, meta, f"novena_{nid}_*.jpg", f"legenda_novena_{nid}.txt",
+                                 f"hashtags_novena_{nid}.txt", f"novena_{nid}_id", "noite", "novena")
     elif not meta.get(f"story_{s}_id"):
         publicar_story(dia, pasta, meta, s)
+
+
+def novenas_do_dia(pasta):
+    """ids das novenas com cards gerados para o dia (novena_<id>_01.jpg), na ordem alfabética."""
+    return sorted(p.name[len("novena_"):-len("_01.jpg")] for p in pasta.glob("novena_*_01.jpg"))
 
 
 ORDEM = ["evangelho", "manha", "carrossel", "tarde", "reel", "noite"]
@@ -297,6 +309,8 @@ def main():
               "story_feed_id": STORIES_DIVULGACAO and (pasta / "story_feed.jpg").exists(),
               "story_reel_id": STORIES_DIVULGACAO and (pasta / "story_reel.mp4").exists()}
     pendentes = [k for s_ in alvo for k in PECAS[s_] if not meta.get(k) and existe.get(k, True)]
+    if "noite" in alvo:
+        pendentes += [f"novena_{n}_id" for n in novenas_do_dia(pasta) if not meta.get(f"novena_{n}_id")]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return
     print(f"{slot}: pendente -> {', '.join(pendentes)}")
