@@ -256,6 +256,32 @@ PECAS = {"evangelho": ["evangelho_id", "story_evangelho_id"], "manha": ["story_m
          "reel": ["reel_id", "story_reel_id"], "noite": ["story_noite_id"]}
 
 
+def permalink(media_id):
+    """Link público do post (para o mapa e o índice do site). Falha silenciosa: não é crítico."""
+    try:
+        return api("GET", media_id, fields="permalink").get("permalink")
+    except Exception as e:
+        print(f"  permalink de {media_id} indisponível: {e}")
+        return None
+
+
+def completar_permalinks(hoje, limite=10):
+    """Preenche feed_permalink nos meta.json de dias anteriores que ainda não têm (posts antigos)."""
+    n = 0
+    for mp in sorted((RAIZ / "posts").glob("????-??-??/meta.json"), reverse=True):
+        if n >= limite or mp.parent.name == hoje:
+            continue
+        try:
+            m = json.loads(mp.read_text())
+        except Exception:
+            continue
+        if m.get("feed_id") and not m.get("feed_permalink"):
+            link = permalink(m["feed_id"])
+            if link:
+                m["feed_permalink"] = link
+                mp.write_text(json.dumps(m, ensure_ascii=False, indent=2)); n += 1
+
+
 def slot_auto():
     h = dt.datetime.now(BRT).hour
     return ("evangelho" if h < 7 else "manha" if h < 11 else "carrossel" if h < 13 else
@@ -323,7 +349,10 @@ def main():
         except Exception as e:
             erro = str(e); log(slot, "-", "", f"tentativa_{tentativa}", erro)
             time.sleep(300)
+    if meta.get("feed_id") and not meta.get("feed_permalink"):
+        meta["feed_permalink"] = permalink(meta["feed_id"]) or ""
     meta_p.write_text(json.dumps(meta, ensure_ascii=False, indent=2))
+    completar_permalinks(a.dia)
     if erro:
         sys.exit(f"falhou após 3 tentativas: {erro}")
 
