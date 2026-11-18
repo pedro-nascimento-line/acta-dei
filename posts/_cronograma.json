@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-17",
+  "gerado_em": "2026-11-18",
   "dias": [
-    {
-      "data": "2026-11-17",
-      "dia_semana": "ter",
-      "tipo": "santo",
-      "feed": "Santa Isabel da Hungria",
-      "id_milagre": null,
-      "santo_story": "Santa Isabel da Hungria",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-18",
       "dia_semana": "qua",
@@ -106,8 +97,8 @@
       "data": "2026-11-28",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Nhá Chica: a beata mineira",
-      "id_milagre": "nha_chica",
+      "feed": "Kibeho, 1981: a única aparição aprovada na África",
+      "id_milagre": "kibeho",
       "santo_story": "Beata Nhá Chica (Francisca de Paula de Jesus)",
       "tambem_hoje": [
         "Santa Catarina Labouré"
@@ -126,8 +117,8 @@
       "data": "2026-11-30",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Kibeho, 1981: a única aparição aprovada na África",
-      "id_milagre": "kibeho",
+      "feed": "Santa Catarina Labouré: 57 anos depois",
+      "id_milagre": "laboure_corpo",
       "santo_story": "Santo André, apóstolo",
       "tambem_hoje": []
     },
@@ -252,8 +243,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -270,9 +261,18 @@
       "data": "2026-12-16",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "Santa Adelaide",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-17",
+      "dia_semana": "qui",
+      "tipo": "santo",
+      "feed": "São Lázaro de Betânia (tradição)",
+      "id_milagre": null,
+      "santo_story": "São Lázaro de Betânia (tradição)",
       "tambem_hoje": []
     }
   ]
