@@ -36,6 +36,7 @@ a{color:var(--red)}.cz{font-family:Cinzel,serif;letter-spacing:2px}
 .top img{width:44px;height:44px;border-radius:50%}
 .leaflet-tile-pane{filter:grayscale(.75) sepia(.22) brightness(1.04) contrast(.92)}  /* mapa-base em tons da paleta */.top b{font-family:Cinzel,serif;letter-spacing:3px;font-size:17px}.top span{font-style:italic;color:#CFC7B8;font-size:17px}
 .top a{color:var(--cream);text-decoration:none}.top .dir{margin-left:auto;font-family:Cinzel,serif;font-size:13px;letter-spacing:2px}
+@media(max-width:600px){.top span{display:none}.top .dir{font-size:11px;letter-spacing:1px}}
 .badge{display:inline-block;background:var(--red);color:var(--cream);font-family:Cinzel,serif;font-size:11px;letter-spacing:2px;padding:4px 9px;border-radius:4px}
 .badge.inv{background:#7a6a55}
 footer{text-align:center;color:var(--grey);font-size:16px;padding:40px 16px 60px}
