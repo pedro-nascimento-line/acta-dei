@@ -1,0 +1,103 @@
+{
+  "tipo": "santo",
+  "titulo": "São Roque González e os mártires do Caaró",
+  "subtitulo": "Caaró, Rio Grande do Sul · † 15 de novembro de 1628",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Roque González de Santa Cruz",
+  "imagem_busca": "Roque González de Santa Cruz",
+  "cards": [
+    {
+      "kicker": "QUEM FOI",
+      "texto": "Roque González de Santa Cruz nasceu em Assunção, no Paraguai, em 1576, filho de espanhóis. Ordenado padre, foi pároco da catedral de Assunção e, em 1609, vigário-geral da diocese. Em 9 de maio de 1609 entrou na Companhia de Jesus e pediu para trabalhar entre os guaranis.\n\nEm 1615 fundou a redução de Itapúa, origem de Encarnación, no Paraguai, e de Posadas, na Argentina. Vieram depois Concepción, em 1619, e Candelária, em 1627. Falava guarani, levantava igrejas com as próprias mãos e abria caminho onde não havia estradas."
+    },
+    {
+      "kicker": "O QUE FEZ",
+      "texto": "Em 1628, Roque avançou para o leste do rio Uruguai, onde hoje é o Rio Grande do Sul. Em 15 de agosto fundou a redução de Assunção do Ijuí e, em novembro, a de Todos os Santos do Caaró, com dois jesuítas espanhóis: Afonso Rodrigues, de Zamora, e João del Castillo, de Belmonte.\n\nO cacique Nheçu rejeitava a presença dos padres. Em 15 de novembro de 1628, enquanto Roque erguia um sino para a igreja do Caaró, homens do cacique o golpearam com um machado de pedra. Afonso Rodrigues correu para socorrê-lo e foi morto em seguida. Os corpos foram arrastados para a igreja, que foi incendiada."
+    },
+    {
+      "kicker": "O MARTÍRIO",
+      "texto": "Dois dias depois, em 17 de novembro, João del Castillo foi morto em Assunção do Ijuí. Afonso Rodrigues tinha 30 anos; João del Castillo, 32. Os restos foram recolhidos e levados à redução de Candelária e, mais tarde, à de Conceição.\n\nO fogo não consumiu o coração de Roque. A relíquia, guardada com o machado de pedra, foi levada a Roma e voltou ao Paraguai em 1960. Está na Capela dos Mártires do Colégio Cristo Rei, em Assunção, onde o Papa Francisco rezou em julho de 2015. Em Caibaté, no Rio Grande do Sul, o Santuário dos Santos Mártires do Caaró marca o lugar da morte."
+    }
+  ],
+  "decisao": "Pio XI reconheceu o martírio em 3 de dezembro de 1933 e beatificou os três em 28 de janeiro de 1934. João Paulo II os canonizou em 16 de maio de 1988, na missa do campo Ñu Guazú, em Assunção, e chamou Roque de primeiro santo do Paraguai. Memória em 19 de novembro no calendário próprio do Brasil.",
+  "fontes": [
+    "Vatican.va — João Paulo II, Homilia da missa de canonização, Assunção, 16 mai 1988",
+    "Vatican.va — João Paulo II, Carta decretal Nam si evangelizavero, 16 mai 1988",
+    "Encyclopedia.com (New Catholic Encyclopedia) — Paraguay, Jesuit Martyrs of, Ss.",
+    "ACI Prensa — San Roque González de Santa Cruz, santoral"
+  ],
+  "reel": [
+    {
+      "kicker": "CAARÓ, 1628",
+      "texto": "Queimaram o corpo do padre. O coração não ardeu. Quase quatrocentos anos depois, ele está numa capela em Assunção.",
+      "imagem": "Roque González de Santa Cruz"
+    },
+    {
+      "texto": "Roque González nasceu em Assunção, em 1576. Jesuíta, fundou reduções entre os guaranis do Paraguai e da Argentina.",
+      "imagem": "Ruinas de San Ignacio Miní"
+    },
+    {
+      "texto": "Em 1628, no Caaró, foi morto com um machado de pedra. Com ele caiu Afonso Rodrigues. João del Castillo, dois dias após.",
+      "imagem": "Santuário de Caaró"
+    },
+    {
+      "texto": "Em 16 de maio de 1988, em Assunção, João Paulo II declarou os três santos. O Brasil os celebra em 19 de novembro.",
+      "imagem": "Corazón de San Roque González de Santa Cruz"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "pt:Roque González de Santa Cruz",
+      "es:Roque González de Santa Cruz",
+      "en:Roque González de Santa Cruz",
+      "pt:Caibaté"
+    ],
+    "categorias": [
+      "Roque González de Santa Cruz",
+      "San Ignacio Miní",
+      "Caibaté",
+      "Jesuit Missions of the Guaranis"
+    ],
+    "termos": [
+      "Roque González de Santa Cruz",
+      "Santuário de Caaró",
+      "San Ignacio Miní"
+    ],
+    "citacao": "Ñu Guazú Juan Pablo II 1988"
+  },
+  "evangelho": {
+    "referencia": "Lucas 19,41-44",
+    "versiculo": "Se tu também compreendesses hoje o que te pode trazer a paz!",
+    "celebracao": "Santos Roque González, Afonso Rodrigues e João del Castillo · Memória",
+    "leituras": "Ap 5,1-10 · Sl 149 · Lc 19,41-44",
+    "fato": "Jesus chora diante de Jerusalém. No Monte das Oliveiras, o lugar que a tradição associa à cena recebeu em 1955 a capela Dominus Flevit, \"o Senhor chorou\", desenhada pelo arquiteto Antonio Barluzzi em forma de lágrima, sobre restos de um santuário bizantino com mosaicos do século VII.\n\nO santuário é confiado aos franciscanos da Custódia da Terra Santa. Pela janela atrás do altar, vê-se a cidade e o monte do Templo, destruído pelos romanos no ano 70.",
+    "fato_fonte": "Custodia Terrae Sanctae — Lenten pilgrimage to the sanctuary of Dominus Flevit, 27 fev 2013 · Vatican News — Palavra do dia, 19 nov 2026"
+  },
+  "stories": {
+    "manha": {
+      "nome": "São Roque González e companheiros",
+      "anos": "† 1628 · JESUÍTAS, MÁRTIRES DAS REDUÇÕES",
+      "padroeiro": "Memória no calendário próprio do Brasil · Também hoje: São Rafael Kalinowski",
+      "linhas": [
+        "Jesuíta nascido em Assunção em 1576, fundou reduções entre os guaranis. Morto no Caaró, RS, em 15/11/1628.",
+        "Afonso Rodrigues caiu com ele; João del Castillo, dois dias depois. O coração de Roque resistiu ao fogo.",
+        "Beatificados por Pio XI em 1934 e canonizados por João Paulo II em Assunção, em 16 de maio de 1988."
+      ],
+      "imagem_wikipedia": "en:Roque González de Santa Cruz",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Roque González de Santa Cruz",
+        "San Roque González de Santa Cruz"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "O coração de Roque e o machado de pedra do martírio estão na Capela dos Mártires do Colégio Cristo Rei, em Assunção. O Papa Francisco rezou ali em 2015."
+    },
+    "noite": {
+      "citacao": "Por amor a Deus e aos homens, derramaram seu sangue em terras americanas.",
+      "autor": "SÃO JOÃO PAULO II · HOMILIA DA CANONIZAÇÃO, ASSUNÇÃO, 16/5/1988"
+    }
+  }
+}
