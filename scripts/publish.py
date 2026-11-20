@@ -24,7 +24,8 @@ Variáveis de ambiente (Secrets do repositório):
 Regras: nunca publica duas vezes a mesma peça do mesmo dia (confere meta.json); cada execução publica o slot
 pedido e o que ficou pendente dos slots anteriores do dia (ordem: evangelho → manha → carrossel → tarde → reel → noite);
 peças sem arquivo (sem evangelho_*.jpg, sem reel.mp4) são puladas; espera as imagens estarem acessíveis no Pages;
-tenta até 3 vezes com 5 min de intervalo; grava tudo em log/publicacoes.csv.
+tenta até 3 vezes com 5 min de intervalo; antes de publicar no feed, confere se um post com a mesma legenda já saiu
+nas últimas 12 h (trava contra duplicata); grava tudo em log/publicacoes.csv.
 """
 import argparse, csv, datetime as dt, json, os, re, sys, time
 from pathlib import Path
@@ -41,6 +42,11 @@ BASE = os.environ.get("PAGES_BASE", "").rstrip("/")
 # Repetir no story cada post do feed (story_evangelho.jpg, story_feed.jpg, story_reel.mp4). Desligado em 17/11/2026:
 # o Pedro reposta manualmente pelo app. Para religar, troque para True.
 STORIES_DIVULGACAO = False
+# Stories do dia (manhã, tarde e noite). Desligados em 20/11/2026, depois da suspensão do perfil em 19/11: por ora só
+# saem Evangelho (6h), carrossel (12h) e Reel (18h), inclusive nos horários de reserva. Para religar, troque para True.
+STORIES = False
+# Novena do dia (carrossel extra às 20h). Desligada até o Pedro decidir se entra no ritmo reduzido.
+NOVENAS = False
 
 
 def log(slot, tipo, ig_id, status, erro=""):
@@ -86,6 +92,31 @@ def url_ok(url, tentativas=30, intervalo=30):
     return False
 
 
+def ja_publicado(legenda, meta, chave, slot, tipo, video=False):
+    """Trava contra duplicata: se um post com a mesma legenda saiu nas últimas 12 h (por exemplo, a API publicou mas a
+    resposta falhou e a execução tentou de novo), reaproveita o id em vez de publicar outra vez. Só compara com posts do
+    mesmo formato (vídeo com vídeo, imagem com imagem): o Reel pode ter a mesma legenda do carrossel do dia."""
+    try:
+        d = api("GET", f"{USER}/media", fields="id,caption,timestamp,media_type", limit="10")
+    except Exception as e:
+        print(f"  não deu para conferir os posts recentes: {e}")
+        return None
+    inicio = legenda.strip()[:120]
+    limite = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=12)
+    for m in d.get("data", []):
+        try:
+            quando = dt.datetime.strptime(m.get("timestamp", ""), "%Y-%m-%dT%H:%M:%S%z")
+        except ValueError:
+            continue
+        if (m.get("media_type") == "VIDEO") != video:
+            continue
+        if quando >= limite and (m.get("caption") or "").strip()[:120] == inicio:
+            meta[chave] = m["id"]
+            log(slot, tipo, m["id"], "ja_publicado")
+            return m["id"]
+    return None
+
+
 def publicar_carrossel(dia, pasta, meta):
     return publicar_imagens(dia, pasta, meta, "card_*.jpg", "legenda.txt", "hashtags.txt", "feed_id", "carrossel", "carrossel")
 
@@ -113,6 +144,8 @@ def publicar_imagens(dia, pasta, meta, padrao, legenda_arq, hashtags_arq, chave,
             legenda = legenda + "\n\n·\n" + " ".join(tags)
     if len(legenda) > 2200:
         raise RuntimeError(f"legenda com {len(legenda)} caracteres (limite 2200)")
+    if ja_publicado(legenda, meta, chave, slot, tipo):
+        return meta[chave]
     urls = [f"{BASE}/posts/{dia}/{c}" for c in cards]
     for u in urls:
         if not url_ok(u):
@@ -203,6 +236,8 @@ def publicar_reel(dia, pasta, meta):
         cu = f"{BASE}/posts/{dia}/reel_capa.jpg"
         if url_ok(cu, tentativas=4):
             extra = {"cover_url": cu}
+    if ja_publicado(legenda[:2200], meta, "reel_id", "reel", "reel", video=True):
+        return meta["reel_id"]
     c = api("POST", f"{USER}/media", media_type="REELS", video_url=u, caption=legenda[:2200],
             share_to_feed="true", **extra)
     esperar_container(c["id"], timeout=900)  # vídeo: a Meta transcodifica antes de liberar
@@ -235,13 +270,13 @@ def publicar_slot(s, dia, pasta, meta):
         if meta.get("reel_id"):
             publicar_story_divulgacao(dia, pasta, meta, "story_reel.mp4", "story_reel_id", s)
     elif s == "noite":
-        if not meta.get("story_noite_id"):
+        if STORIES and not meta.get("story_noite_id"):
             publicar_story(dia, pasta, meta, s)
-        for nid in novenas_do_dia(pasta):   # novena(s) do dia: carrossel no feed, logo depois do story
+        for nid in (novenas_do_dia(pasta) if NOVENAS else []):   # novena(s) do dia: carrossel no feed, logo depois do story
             if not meta.get(f"novena_{nid}_id"):
                 publicar_imagens(dia, pasta, meta, f"novena_{nid}_*.jpg", f"legenda_novena_{nid}.txt",
                                  f"hashtags_novena_{nid}.txt", f"novena_{nid}_id", "noite", "novena")
-    elif not meta.get(f"story_{s}_id"):
+    elif STORIES and not meta.get(f"story_{s}_id"):
         publicar_story(dia, pasta, meta, s)
 
 
@@ -333,9 +368,10 @@ def main():
     existe = {"evangelho_id": bool(list(pasta.glob("evangelho_*.jpg"))), "reel_id": (pasta / "reel.mp4").exists(),
               "story_evangelho_id": STORIES_DIVULGACAO and (pasta / "story_evangelho.jpg").exists(),
               "story_feed_id": STORIES_DIVULGACAO and (pasta / "story_feed.jpg").exists(),
-              "story_reel_id": STORIES_DIVULGACAO and (pasta / "story_reel.mp4").exists()}
+              "story_reel_id": STORIES_DIVULGACAO and (pasta / "story_reel.mp4").exists(),
+              "story_manha_id": STORIES, "story_tarde_id": STORIES, "story_noite_id": STORIES}
     pendentes = [k for s_ in alvo for k in PECAS[s_] if not meta.get(k) and existe.get(k, True)]
-    if "noite" in alvo:
+    if "noite" in alvo and NOVENAS:
         pendentes += [f"novena_{n}_id" for n in novenas_do_dia(pasta) if not meta.get(f"novena_{n}_id")]
     if not pendentes:
         print(f"{slot}: tudo já publicado"); return
