@@ -1,5 +1,5 @@
 {
- "gerada_em": "2026-11-19",
+ "gerada_em": "2026-11-20",
  "fila": [
   {
    "id": "buenos_aires",
@@ -8,10 +8,10 @@
    "data_sugerida": null
   },
   {
-   "id": "galvao_sandra",
+   "id": "paulo6_pironato",
    "tipo": "canonizacao",
-   "titulo": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
-   "data_sugerida": "05-11"
+   "titulo": "Vanna Pironato e a canonização de Paulo VI",
+   "data_sugerida": "05-29"
   },
   {
    "id": "rue_du_bac",
@@ -20,10 +20,10 @@
    "data_sugerida": "11-27"
   },
   {
-   "id": "paulo6_pironato",
+   "id": "escriva_nevado",
    "tipo": "canonizacao",
-   "titulo": "Vanna Pironato e a canonização de Paulo VI",
-   "data_sugerida": "05-29"
+   "titulo": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+   "data_sugerida": "06-26"
   },
   {
    "id": "dulce_claudia",
@@ -38,10 +38,10 @@
    "data_sugerida": "11-22"
   },
   {
-   "id": "escriva_nevado",
+   "id": "frassati_gutierrez",
    "tipo": "canonizacao",
-   "titulo": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-   "data_sugerida": "06-26"
+   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+   "data_sugerida": "07-04"
   },
   {
    "id": "lourdes_70",
@@ -56,10 +56,10 @@
    "data_sugerida": null
   },
   {
-   "id": "frassati_gutierrez",
+   "id": "martin_carmen",
    "tipo": "canonizacao",
-   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-   "data_sugerida": "07-04"
+   "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
+   "data_sugerida": "07-12"
   },
   {
    "id": "kibeho",
@@ -68,10 +68,10 @@
    "data_sugerida": "11-28"
   },
   {
-   "id": "martin_carmen",
+   "id": "stein_mccarthy",
    "tipo": "canonizacao",
-   "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
-   "data_sugerida": "07-12"
+   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
+   "data_sugerida": "08-09"
   },
   {
    "id": "madre_teresa_brasil",
@@ -86,10 +86,10 @@
    "data_sugerida": "11-28"
   },
   {
-   "id": "stein_mccarthy",
+   "id": "padre_pio_colella",
    "tipo": "canonizacao",
-   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
-   "data_sugerida": "08-09"
+   "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
+   "data_sugerida": "09-23"
   },
   {
    "id": "lourdes_69",
@@ -104,10 +104,10 @@
    "data_sugerida": null
   },
   {
-   "id": "padre_pio_colella",
+   "id": "faustina_pytel",
    "tipo": "canonizacao",
-   "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
-   "data_sugerida": "09-23"
+   "titulo": "Ronald Pytel: o coração que se refez",
+   "data_sugerida": "10-05"
   },
   {
    "id": "beauraing",
@@ -116,15 +116,15 @@
    "data_sugerida": "11-29"
   },
   {
-   "id": "faustina_pytel",
-   "tipo": "canonizacao",
-   "titulo": "Ronald Pytel: o coração que se refez",
-   "data_sugerida": "10-05"
-  },
-  {
    "id": "acutis_mattheus",
    "tipo": "canonizacao",
    "titulo": "Mattheus, de Campo Grande: o milagre de Carlo Acutis",
+   "data_sugerida": "10-12"
+  },
+  {
+   "id": "aparecida",
+   "tipo": "devocao",
+   "titulo": "Aparecida: a imagem encontrada no rio Paraíba",
    "data_sugerida": "10-12"
   },
   {
@@ -170,10 +170,10 @@
    "data_sugerida": null
   },
   {
-   "id": "aparecida",
-   "tipo": "devocao",
-   "titulo": "Aparecida: a imagem encontrada no rio Paraíba",
-   "data_sugerida": "10-12"
+   "id": "banneux",
+   "tipo": "aparicao",
+   "titulo": "Banneux, 1933: a Virgem dos Pobres",
+   "data_sugerida": "01-15"
   },
   {
    "id": "bernadette_corpo",
@@ -206,10 +206,10 @@
    "data_sugerida": null
   },
   {
-   "id": "banneux",
+   "id": "pontmain",
    "tipo": "aparicao",
-   "titulo": "Banneux, 1933: a Virgem dos Pobres",
-   "data_sugerida": "01-15"
+   "titulo": "Nossa Senhora de Pontmain",
+   "data_sugerida": "01-17"
   },
   {
    "id": "portillo_ureta",
@@ -218,10 +218,10 @@
    "data_sugerida": null
   },
   {
-   "id": "pontmain",
+   "id": "ratisbonne",
    "tipo": "aparicao",
-   "titulo": "Nossa Senhora de Pontmain",
-   "data_sugerida": "01-17"
+   "titulo": "A conversão de Alphonse Ratisbonne",
+   "data_sugerida": "01-20"
   },
   {
    "id": "zita_corpo",

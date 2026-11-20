@@ -1,17 +1,6 @@
 {
-  "gerado_em": "2026-11-19",
+  "gerado_em": "2026-11-20",
   "dias": [
-    {
-      "data": "2026-11-19",
-      "dia_semana": "qui",
-      "tipo": "santo",
-      "feed": "Santo Roque González e companheiros, mártires",
-      "id_milagre": null,
-      "santo_story": "Santo Roque González e companheiros, mártires",
-      "tambem_hoje": [
-        "São Rafael Kalinowski"
-      ]
-    },
     {
       "data": "2026-11-20",
       "dia_semana": "sex",
@@ -234,8 +223,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "As pílulas de Frei Galvão e a gestação de Sandra Grossi",
-      "id_milagre": "galvao_sandra",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -252,8 +241,8 @@
       "data": "2026-12-16",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+      "id_milagre": "escriva_nevado",
       "santo_story": "Santa Adelaide",
       "tambem_hoje": []
     },
@@ -273,6 +262,15 @@
       "feed": "Cláudia Cristiane: a hemorragia que parou",
       "id_milagre": "dulce_claudia",
       "santo_story": "São Gaciano de Tours",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-19",
+      "dia_semana": "sáb",
+      "tipo": "santo",
+      "feed": "Beato Urbano V, papa",
+      "id_milagre": null,
+      "santo_story": "Beato Urbano V, papa",
       "tambem_hoje": []
     }
   ]

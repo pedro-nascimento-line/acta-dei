@@ -1,0 +1,46 @@
+[
+  {
+    "arquivo": "reel_img_01.jpg",
+    "title": "File:Front of the Mosteiro da Luz in Sao Paulo.jpg",
+    "licenca": "CC0",
+    "autor": "Wilfredor",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AFront%20of%20the%20Mosteiro%20da%20Luz%20in%20Sao%20Paulo.jpg",
+    "credito": "Wilfredor · Wikimedia Commons · CC0",
+    "origem": "commons",
+    "cena": 1,
+    "termo": "Frei Galvão"
+  },
+  {
+    "arquivo": "reel_img_02.jpg",
+    "title": "File:Museu de Arte Sacra de São Paulo 14.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Eugenio Hansen, OFS",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AMuseu%20de%20Arte%20Sacra%20de%20S%C3%A3o%20Paulo%2014.jpg",
+    "credito": "Eugenio Hansen, OFS · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 2,
+    "termo": "Museu de Arte Sacra de São Paulo"
+  },
+  {
+    "arquivo": "reel_img_03.jpg",
+    "title": "File:Fachada do Museu de Arte Sacra e Mosteiro da Luz.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Marcos Ruocco Battistelli",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AFachada%20do%20Museu%20de%20Arte%20Sacra%20e%20Mosteiro%20da%20Luz.jpg",
+    "credito": "Marcos Ruocco Battistelli · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 3,
+    "termo": "Igreja do Mosteiro da Luz"
+  },
+  {
+    "arquivo": "reel_img_04.jpg",
+    "title": "File:Frei Galvão.JPG",
+    "licenca": "CC BY-SA 3.0",
+    "autor": "Eugenio Hansen, OFS",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AFrei%20Galv%C3%A3o.JPG",
+    "credito": "Eugenio Hansen, OFS · Wikimedia Commons · CC BY-SA 3.0",
+    "origem": "commons",
+    "cena": 4,
+    "termo": "Frei Galvão"
+  }
+]
