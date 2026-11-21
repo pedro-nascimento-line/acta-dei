@@ -45,7 +45,7 @@
     },
     {
       "texto": "Um texto antigo, o Protoevangelho de Tiago, conta que Maria foi levada ao Templo de Jerusalém aos três anos.",
-      "imagem": "Temple Mount"
+      "imagem": "Frescos from the Church of the Presentation of Virgin Mary in Kučevište"
     },
     {
       "texto": "No século seis, o imperador Justiniano ergueu junto ao Templo a basílica de Santa Maria Nova. A festa nasceu ali.",
@@ -74,7 +74,13 @@
       "Presentazione di Maria al Tempio",
       "Nea Church Jerusalem"
     ],
-    "citacao": "Presentation of the Virgin Giotto Scrovegni"
+    "citacao": "Presentation of the Virgin Giotto Scrovegni",
+    "arquivos": [
+      "File:Giotto - Scrovegni - -08- - Presentation of the Virgin in the Temple.jpg",
+      "File:Frescos from the Church of the Presentation of Virgin Mary in Kučevište 039.jpg",
+      "File:Presentation of the Virgin - Capella dei Scrovegni - Padua 2016.jpg",
+      "File:Presentation of the Virgin - Capella dei Scrovegni.jpg"
+    ]
   },
   "evangelho": {
     "referencia": "Mateus 12,46-50",
