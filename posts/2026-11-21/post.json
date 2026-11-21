@@ -1,0 +1,113 @@
+{
+  "tipo": "santo",
+  "titulo": "Apresentação de Nossa Senhora",
+  "subtitulo": "Jerusalém · memória de 21 de novembro",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Presentation of Mary",
+  "imagem_busca": [
+    "Presentation of the Virgin in the Temple Titian",
+    "Presentazione di Maria al Tempio",
+    "Presentation of Mary icon"
+  ],
+  "cards": [
+    {
+      "kicker": "A ORIGEM",
+      "texto": "A memória de 21 de novembro recorda Maria ainda criança, levada pelos pais ao Templo de Jerusalém para ser consagrada a Deus. O relato não está nos quatro Evangelhos. Vem de escritos apócrifos, sobretudo o Protoevangelho atribuído a Tiago, que fala da apresentação aos três anos de idade.\n\nO Protoevangelho é um dos mais antigos textos desse tipo, datado por historiadores antes do ano 200. A Santa Igreja Católica, segundo o Vatican News, não pretende realçar apenas o acontecimento, que não existe nos Evangelhos, mas o sentido da consagração de Maria."
+    },
+    {
+      "kicker": "O ORIENTE",
+      "texto": "A festa nasceu no Oriente, no século VI. A data recorda a dedicação da basílica de Santa Maria Nova, construída pelo imperador Justiniano I junto às ruínas do Templo de Jerusalém. A Catholic Encyclopedia aponta a Síria, terra dos apócrifos, como provável origem da celebração.\n\nNo Oriente cristão, a data tem lugar de destaque. É uma das doze grandes festas do ano litúrgico bizantino. Segundo a Catholic Encyclopedia, o cânon grego da festa foi composto por um autor chamado Jorge, por volta dos séculos VII e VIII."
+    },
+    {
+      "kicker": "A CHEGADA AO OCIDENTE",
+      "texto": "Na Itália, alguns mosteiros celebravam a festa já no século IX. A difusão veio no século XIV. Filipe de Mézières, nobre francês e chanceler do rei de Chipre, levou a celebração a Avinhão, na corte do papa Gregório XI, onde foi celebrada diante dos cardeais na década de 1370.\n\nDali passou à capela real de Paris e a cidades como Metz e Colônia. No século XV, o papa Sisto IV a acolheu nos livros litúrgicos de Roma, e a festa entrou no Missal Romano. Hoje figura no Calendário Romano Geral."
+    }
+  ],
+  "decisao": "No Calendário Romano Geral, a Apresentação de Nossa Senhora é memória obrigatória em 21 de novembro. Em 1974, Paulo VI tratou da data na exortação apostólica Marialis Cultus: apesar do conteúdo apócrifo, a celebração apresenta valores elevados e exemplares. Desde 1953, por desejo de Pio XII, o mesmo dia é o Dia das Monjas de Clausura.",
+  "fontes": [
+    "Vatican News — Apresentação de Nossa Senhora ao Templo / Nossa Senhora da Saúde (festas litúrgicas)",
+    "Estado da Cidade do Vaticano (vaticanstate.va) — 21 November, Presentation of the Blessed Virgin Mary",
+    "Catholic Encyclopedia (New Advent) — Presentation of the Blessed Virgin Mary, 1911",
+    "EWTN News — What do we know about the Presentation of Mary?, 21 nov 2024"
+  ],
+  "fontes_links": [
+    "https://www.vaticannews.va/pt/feriados-liturgicos/apresentacao-de-nossa-senhora-ao-templo---nossa-senhora-da-saude.html",
+    "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/3071-21-november-presentation-of-the-blessed-virgin-mary.html",
+    "https://www.newadvent.org/cathen/12400a.htm",
+    "https://www.ewtnnews.com/world/us/what-do-we-know-about-the-presentation-of-mary"
+  ],
+  "reel": [
+    {
+      "kicker": "21 DE NOVEMBRO",
+      "texto": "A cena lembrada hoje não está em nenhum dos quatro Evangelhos. Mesmo assim, é celebrada há quase mil e quinhentos anos.",
+      "imagem": "Presentation of the Virgin in the Temple (Titian)"
+    },
+    {
+      "texto": "Um texto antigo, o Protoevangelho de Tiago, conta que Maria foi levada ao Templo de Jerusalém aos três anos.",
+      "imagem": "Temple Mount"
+    },
+    {
+      "texto": "No século seis, o imperador Justiniano ergueu junto ao Templo a basílica de Santa Maria Nova. A festa nasceu ali.",
+      "imagem": "Nea Church"
+    },
+    {
+      "texto": "Chegou a Roma no século quinze. A Santa Igreja Católica a celebra como memória em todo dia vinte e um de novembro.",
+      "imagem": "Presentation of the Virgin (Giotto)"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "en:Presentation of Mary",
+      "it:Presentazione di Maria al Tempio",
+      "en:Nea Church",
+      "it:Presentazione della Vergine al Tempio (Tiziano)"
+    ],
+    "categorias": [
+      "Presentation of Mary",
+      "Nea Church",
+      "Presentation of the Virgin by Titian",
+      "Cappella degli Scrovegni - Presentation of the Virgin"
+    ],
+    "termos": [
+      "Presentation of the Virgin in the Temple",
+      "Presentazione di Maria al Tempio",
+      "Nea Church Jerusalem"
+    ],
+    "citacao": "Presentation of the Virgin Giotto Scrovegni"
+  },
+  "evangelho": {
+    "referencia": "Mateus 12,46-50",
+    "versiculo": "Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe.",
+    "celebracao": "Apresentação de Nossa Senhora · Memória",
+    "leituras": "Zc 2,14-17 · Lc 1,46-55 · Mt 12,46-50",
+    "fato": "Jesus diz que é sua mãe quem faz a vontade do Pai. A memória de hoje recorda Maria criança, levada ao Templo de Jerusalém. O episódio não está nos Evangelhos: vem do Protoevangelho de Tiago, texto apócrifo anterior ao ano 200.\n\nNo século VI, o imperador Justiniano ergueu junto às ruínas do Templo a basílica de Santa Maria Nova. A festa nasceu no Oriente a partir dessa dedicação.",
+    "fato_fonte": "Vatican News — Presentation of the Blessed Virgin Mary (liturgical holidays) · EWTN News — What do we know about the Presentation of Mary?, 21 nov 2024"
+  },
+  "stories": {
+    "manha": {
+      "nome": "Apresentação de Nossa Senhora",
+      "anos": "SÉCULO VI · MEMÓRIA",
+      "padroeiro": "Festa nascida no Oriente · Memória obrigatória no Calendário Romano Geral",
+      "linhas": [
+        "A tradição conta que Maria foi levada criança ao Templo de Jerusalém e consagrada a Deus.",
+        "O relato vem de um apócrifo; a festa nasceu da basílica que Justiniano ergueu junto ao Templo.",
+        "No Ocidente, chegou a Avinhão no século XIV e entrou no Missal Romano no século XV."
+      ],
+      "imagem_wikipedia": "en:Presentation of Mary",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Presentation of Mary icon",
+        "Presentation of the Virgin Giotto"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "Desde 1953, por desejo de Pio XII, 21 de novembro é também o Dia das Monjas de Clausura, dedicado à vida contemplativa."
+    },
+    "noite": {
+      "citacao": "Apesar do conteúdo apócrifo, a festa apresenta valores elevados e exemplares.",
+      "autor": "PAULO VI · MARIALIS CULTUS, 1974"
+    }
+  }
+}
