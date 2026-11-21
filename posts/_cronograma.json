@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-20",
+  "gerado_em": "2026-11-21",
   "dias": [
-    {
-      "data": "2026-11-20",
-      "dia_semana": "sex",
-      "tipo": "milagre",
-      "feed": "Santa Cecília e a escultura de Maderno",
-      "id_milagre": "cecilia_corpo",
-      "santo_story": "Santo Edmundo, rei e mártir",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-21",
       "dia_semana": "sáb",
@@ -41,8 +32,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Buenos Aires, 1996: a hóstia analisada",
-      "id_milagre": "buenos_aires",
+      "feed": "Santa Cecília e a escultura de Maderno",
+      "id_milagre": "cecilia_corpo",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -223,8 +214,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Buenos Aires, 1996: a hóstia analisada",
+      "id_milagre": "buenos_aires",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -241,8 +232,8 @@
       "data": "2026-12-16",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-      "id_milagre": "escriva_nevado",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
       "santo_story": "Santa Adelaide",
       "tambem_hoje": []
     },
@@ -259,8 +250,8 @@
       "data": "2026-12-18",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+      "id_milagre": "escriva_nevado",
       "santo_story": "São Gaciano de Tours",
       "tambem_hoje": []
     },
@@ -271,6 +262,15 @@
       "feed": "Beato Urbano V, papa",
       "id_milagre": null,
       "santo_story": "Beato Urbano V, papa",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-20",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "São Domingos de Silos",
+      "id_milagre": null,
+      "santo_story": "São Domingos de Silos",
       "tambem_hoje": []
     }
   ]

@@ -1,0 +1,46 @@
+[
+  {
+    "arquivo": "reel_img_01.jpg",
+    "title": "File:Bourbourelia.JPG",
+    "licenca": "CC BY-SA 3.0",
+    "autor": "Saintfevrier",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ABourbourelia.JPG",
+    "credito": "Saintfevrier · Wikimedia Commons · CC BY-SA 3.0",
+    "origem": "commons",
+    "cena": 1,
+    "termo": "Temple Mount"
+  },
+  {
+    "arquivo": "reel_img_02.jpg",
+    "title": "File:Presentation of the Virgin - Capella dei Scrovegni - Padua 2016.jpg",
+    "licenca": "Public domain",
+    "autor": "Giotto",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3APresentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg",
+    "credito": "Giotto · Wikimedia Commons · Public domain",
+    "origem": "commons",
+    "cena": 2,
+    "termo": "Nea Church"
+  },
+  {
+    "arquivo": "reel_img_03.jpg",
+    "title": "File:Giotto - Scrovegni - -08- - Presentation of the Virgin in the Temple.jpg",
+    "licenca": "Public domain",
+    "autor": "Giotto",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AGiotto%20-%20Scrovegni%20-%20-08-%20-%20Presentation%20of%20the%20Virgin%20in%20the%20Temple.jpg",
+    "credito": "Giotto · Wikimedia Commons · Public domain",
+    "origem": "commons",
+    "cena": 3,
+    "termo": "Presentation of the Virgin (Giotto)"
+  },
+  {
+    "arquivo": "reel_img_04.jpg",
+    "title": "File:Presentation of the Virgin - Capella dei Scrovegni.jpg",
+    "licenca": "Public domain",
+    "autor": "Giotto",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3APresentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni.jpg",
+    "credito": "Giotto · Wikimedia Commons · Public domain",
+    "origem": "commons",
+    "cena": 4,
+    "termo": "Presentation of the Virgin Giotto Scrovegni"
+  }
+]
