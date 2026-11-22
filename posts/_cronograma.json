@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-21",
+  "gerado_em": "2026-11-22",
   "dias": [
-    {
-      "data": "2026-11-21",
-      "dia_semana": "sáb",
-      "tipo": "santo",
-      "feed": "Apresentação de Nossa Senhora",
-      "id_milagre": null,
-      "santo_story": "Apresentação de Nossa Senhora",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-22",
       "dia_semana": "dom",
@@ -271,6 +262,15 @@
       "feed": "São Domingos de Silos",
       "id_milagre": null,
       "santo_story": "São Domingos de Silos",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-21",
+      "dia_semana": "seg",
+      "tipo": "santo",
+      "feed": "São Pedro Canísio",
+      "id_milagre": null,
+      "santo_story": "São Pedro Canísio",
       "tambem_hoje": []
     }
   ]
