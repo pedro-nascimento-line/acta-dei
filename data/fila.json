@@ -1,5 +1,5 @@
 {
- "gerada_em": "2026-11-22",
+ "gerada_em": "2026-11-23",
  "fila": [
   {
    "id": "buenos_aires",
@@ -32,10 +32,10 @@
    "data_sugerida": "08-13"
   },
   {
-   "id": "cecilia_corpo",
+   "id": "laboure_corpo",
    "tipo": "incorrupto",
-   "titulo": "Santa Cecília e a escultura de Maderno",
-   "data_sugerida": "11-22"
+   "titulo": "Santa Catarina Labouré: 57 anos depois",
+   "data_sugerida": "11-28"
   },
   {
    "id": "frassati_gutierrez",
@@ -80,10 +80,10 @@
    "data_sugerida": "09-05"
   },
   {
-   "id": "laboure_corpo",
+   "id": "xavier_corpo",
    "tipo": "incorrupto",
-   "titulo": "Santa Catarina Labouré: 57 anos depois",
-   "data_sugerida": "11-28"
+   "titulo": "São Francisco Xavier em Goa",
+   "data_sugerida": "12-03"
   },
   {
    "id": "padre_pio_colella",
@@ -128,10 +128,10 @@
    "data_sugerida": "10-12"
   },
   {
-   "id": "xavier_corpo",
+   "id": "bernadette_corpo",
    "tipo": "incorrupto",
-   "titulo": "São Francisco Xavier em Goa",
-   "data_sugerida": "12-03"
+   "titulo": "O corpo de Santa Bernadette",
+   "data_sugerida": "04-16"
   },
   {
    "id": "dulce_mauricio",
@@ -176,10 +176,10 @@
    "data_sugerida": "01-15"
   },
   {
-   "id": "bernadette_corpo",
+   "id": "zita_corpo",
    "tipo": "incorrupto",
-   "titulo": "O corpo de Santa Bernadette",
-   "data_sugerida": "04-16"
+   "titulo": "Santa Zita, 700 anos íntegra",
+   "data_sugerida": "04-27"
   },
   {
    "id": "madre_teresa_besra",
@@ -224,10 +224,10 @@
    "data_sugerida": "01-20"
   },
   {
-   "id": "zita_corpo",
+   "id": "charbel_corpo",
    "tipo": "incorrupto",
-   "titulo": "Santa Zita, 700 anos íntegra",
-   "data_sugerida": "04-27"
+   "titulo": "São Charbel: o corpo que exsudava",
+   "data_sugerida": "07-24"
   },
   {
    "id": "jp1_candela",

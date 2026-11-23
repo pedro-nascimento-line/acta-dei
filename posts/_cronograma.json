@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-22",
+  "gerado_em": "2026-11-23",
   "dias": [
-    {
-      "data": "2026-11-22",
-      "dia_semana": "dom",
-      "tipo": "celebracao",
-      "feed": "Santa Cecília, virgem e mártir",
-      "id_milagre": null,
-      "santo_story": "Santa Cecília, virgem e mártir",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-23",
       "dia_semana": "seg",
@@ -23,8 +14,8 @@
       "data": "2026-11-24",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Santa Cecília e a escultura de Maderno",
-      "id_milagre": "cecilia_corpo",
+      "feed": "Buenos Aires, 1996: a hóstia analisada",
+      "id_milagre": "buenos_aires",
       "santo_story": "Santo André Dung-Lac e companheiros, mártires",
       "tambem_hoje": []
     },
@@ -59,8 +50,8 @@
       "data": "2026-11-28",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Kibeho, 1981: a única aparição aprovada na África",
-      "id_milagre": "kibeho",
+      "feed": "Santa Catarina Labouré: 57 anos depois",
+      "id_milagre": "laboure_corpo",
       "santo_story": "Beata Nhá Chica (Francisca de Paula de Jesus)",
       "tambem_hoje": [
         "Santa Catarina Labouré"
@@ -79,8 +70,8 @@
       "data": "2026-11-30",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Santa Catarina Labouré: 57 anos depois",
-      "id_milagre": "laboure_corpo",
+      "feed": "Kibeho, 1981: a única aparição aprovada na África",
+      "id_milagre": "kibeho",
       "santo_story": "Santo André, apóstolo",
       "tambem_hoje": []
     },
@@ -97,8 +88,8 @@
       "data": "2026-12-02",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Beauraing, 1932–1933",
-      "id_milagre": "beauraing",
+      "feed": "São Francisco Xavier em Goa",
+      "id_milagre": "xavier_corpo",
       "santo_story": "Santa Bibiana",
       "tambem_hoje": []
     },
@@ -115,8 +106,8 @@
       "data": "2026-12-04",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "São Francisco Xavier em Goa",
-      "id_milagre": "xavier_corpo",
+      "feed": "Vanna Pironato e a canonização de Paulo VI",
+      "id_milagre": "paulo6_pironato",
       "santo_story": "São João Damasceno",
       "tambem_hoje": []
     },
@@ -205,8 +196,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Buenos Aires, 1996: a hóstia analisada",
-      "id_milagre": "buenos_aires",
+      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+      "id_milagre": "escriva_nevado",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -223,8 +214,8 @@
       "data": "2026-12-16",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "Santa Adelaide",
       "tambem_hoje": []
     },
@@ -241,8 +232,8 @@
       "data": "2026-12-18",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-      "id_milagre": "escriva_nevado",
+      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+      "id_milagre": "frassati_gutierrez",
       "santo_story": "São Gaciano de Tours",
       "tambem_hoje": []
     },
@@ -271,6 +262,15 @@
       "feed": "São Pedro Canísio",
       "id_milagre": null,
       "santo_story": "São Pedro Canísio",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-22",
+      "dia_semana": "ter",
+      "tipo": "milagre",
+      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
+      "id_milagre": "lourdes_70",
+      "santo_story": "Santa Francisca Xavier Cabrini (dia da morte)",
       "tambem_hoje": []
     }
   ]
