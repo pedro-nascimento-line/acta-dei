@@ -1,0 +1,112 @@
+{
+  "tipo": "santo",
+  "titulo": "São Clemente I, papa e mártir",
+  "subtitulo": "Roma, Itália · memória de 23 de novembro",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Pope Clement I",
+  "imagem_busca": [
+    "Pope Clement I",
+    "Saint Clement fresco San Clemente Rome",
+    "Basilica di San Clemente apse mosaic"
+  ],
+  "cards": [
+    {
+      "kicker": "QUEM FOI",
+      "texto": "Clemente viveu entre o fim do século I e o início do século II. Bento XVI o apresenta como bispo de Roma nos últimos anos do século I e terceiro sucessor de Pedro, depois de Lino e Anacleto. A Catholic Encyclopedia o chama de primeiro sucessor de Pedro de quem se sabe algo definido.\n\nSanto Irineu, bispo de Lyon, escreveu que Clemente viu os santos Apóstolos e conversou com eles. Tertuliano registra, por volta do ano 199, a tradição romana de que ele foi ordenado pelo próprio Pedro."
+    },
+    {
+      "kicker": "O QUE FEZ",
+      "texto": "Em Corinto, presbíteros haviam sido depostos por alguns jovens contestadores. Clemente escreveu em nome da comunidade cristã de Roma para restabelecer a paz e a unidade. Bento XVI situa a carta logo depois do ano 96: a resposta atrasou por causa da perseguição de Domiciano.\n\nA Carta aos Coríntios é o único escrito seguramente seu. Foi lida nas assembleias de Corinto por muitas gerações. Bento XVI a chamou de primeiro exercício do Primado romano depois da morte de São Pedro."
+    },
+    {
+      "kicker": "O MARTÍRIO",
+      "texto": "Relatos do século IV contam que, sob o imperador Trajano, Clemente foi exilado na Crimeia e forçado a trabalhar nas minas. Ali teria sido lançado ao Mar Negro amarrado a uma âncora. A Catholic Encyclopedia observa que a narrativa não é anterior ao século IV.\n\nPor volta de 868, São Cirilo, então na Crimeia, desenterrou ossos e uma âncora tidos como de Clemente e os levou a Roma. O papa Adriano II os depositou no altar-mor da Basílica de São Clemente, junto aos de Santo Inácio de Antioquia."
+    }
+  ],
+  "decisao": "As listas antigas dos bispos de Roma situam Clemente logo após os primeiros sucessores diretos de Pedro. Testemunhos dos séculos IV a VI o chamam de mártir. No calendário litúrgico, São Clemente I, papa e mártir, é memória facultativa em 23 de novembro, mesmo dia de São Columbano, abade. Suas relíquias são veneradas na Basílica de São Clemente, em Roma.",
+  "fontes": [
+    "Estado da Cidade do Vaticano (vaticanstate.va) — 23 November: Saint Clement, Pope",
+    "Vatican News — Saint of the day, 23 November: St. Clement I, Pope and Martyr",
+    "Santa Sé (vatican.va) — Bento XVI, audiência geral sobre Clemente de Roma, 7 mar 2007",
+    "Catholic Encyclopedia (New Advent) — Pope St. Clement I, 1908"
+  ],
+  "fontes_links": [
+    "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/3080-23-november-saint-clement-pope.html",
+    "https://www.vaticannews.va/en/saints/11/23.print.html",
+    "https://www.vatican.va/content/benedict-xvi/pt/audiences/2007/documents/hf_ben-xvi_aud_20070307.html",
+    "https://www.newadvent.org/cathen/04012c.htm"
+  ],
+  "reel": [
+    {
+      "kicker": "23 DE NOVEMBRO",
+      "texto": "Segundo relatos antigos, um papa foi lançado ao Mar Negro amarrado a uma âncora.",
+      "imagem": "Pope Clement I"
+    },
+    {
+      "texto": "Clemente foi o terceiro sucessor de Pedro. Santo Irineu escreveu que ele conheceu os Apóstolos.",
+      "imagem": "Basilica di San Clemente al Laterano"
+    },
+    {
+      "texto": "Pouco depois do ano noventa e seis, escreveu aos cristãos de Corinto para pôr fim a uma divisão.",
+      "imagem": "Frescos in the lower church of San Clemente"
+    },
+    {
+      "texto": "Suas relíquias estão em Roma, na Basílica de São Clemente. A Santa Igreja Católica o celebra hoje.",
+      "imagem": "Translation of the relics of Saint Clement fresco"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "it:Papa Clemente I",
+      "it:Basilica di San Clemente al Laterano",
+      "en:Pope Clement I",
+      "en:First Epistle of Clement"
+    ],
+    "categorias": [
+      "Clement I",
+      "San Clemente (Rome)",
+      "Lower church of San Clemente (Rome)"
+    ],
+    "termos": [
+      "Saint Clement anchor",
+      "San Clemente Roma affresco",
+      "Translation of the relics of Saint Clement"
+    ],
+    "citacao": "Pope Clement I icon"
+  },
+  "evangelho": {
+    "referencia": "Lucas 21,1-4",
+    "versiculo": "Em verdade vos digo que essa pobre viúva ofertou mais do que todos.",
+    "celebracao": "Segunda-feira da 34ª semana do Tempo Comum · São Clemente I, papa e mártir · Memória facultativa",
+    "leituras": "Ap 14,1-3.4b-5 · Sl 23(24) · Lc 21,1-4",
+    "fato": "Jesus observa as ofertas no Templo de Jerusalém e destaca a viúva que deu tudo o que tinha. O santo de hoje, Clemente I, foi bispo de Roma nos últimos anos do século I, terceiro sucessor de Pedro.\n\nLogo depois do ano 96, escreveu aos cristãos de Corinto, divididos. Na audiência de 7 de março de 2007, Bento XVI apontou a causa da crise: o enfraquecimento da caridade.",
+    "fato_fonte": "Santa Sé (vatican.va) — Bento XVI, audiência geral de 7 mar 2007 · Opus Dei — Evangelho da 2ª feira da 34ª semana do Tempo Comum"
+  },
+  "stories": {
+    "manha": {
+      "nome": "São Clemente I",
+      "anos": "SÉCULO I · PAPA E MÁRTIR",
+      "padroeiro": "Terceiro sucessor de Pedro · Também hoje: São Columbano, abade",
+      "linhas": [
+        "Relatos do século IV contam que foi lançado ao Mar Negro amarrado a uma âncora.",
+        "Terceiro sucessor de Pedro, conheceu os Apóstolos, segundo Santo Irineu.",
+        "Logo depois do ano 96, escreveu aos cristãos de Corinto para restabelecer a paz."
+      ],
+      "imagem_wikipedia": "en:Pope Clement I",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Pope Clement I",
+        "Saint Clement fresco San Clemente Rome"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "Segundo Bento XVI, a carta de Clemente aos Coríntios é o primeiro texto cristão a usar a palavra grega laikós: leigo."
+    },
+    "noite": {
+      "citacao": "Realizemos, portanto, tudo o que a santidade exige.",
+      "autor": "SÃO CLEMENTE I · CARTA AOS CORÍNTIOS, 30"
+    }
+  }
+}
