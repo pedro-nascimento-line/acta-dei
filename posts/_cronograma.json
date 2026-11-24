@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-23",
+  "gerado_em": "2026-11-24",
   "dias": [
-    {
-      "data": "2026-11-23",
-      "dia_semana": "seg",
-      "tipo": "santo",
-      "feed": "São Clemente I, papa; São Columbano",
-      "id_milagre": null,
-      "santo_story": "São Clemente I, papa; São Columbano",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-24",
       "dia_semana": "ter",
@@ -106,8 +97,8 @@
       "data": "2026-12-04",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Vanna Pironato e a canonização de Paulo VI",
-      "id_milagre": "paulo6_pironato",
+      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
+      "id_milagre": "escriva_nevado",
       "santo_story": "São João Damasceno",
       "tambem_hoje": []
     },
@@ -196,8 +187,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-      "id_milagre": "escriva_nevado",
+      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+      "id_milagre": "frassati_gutierrez",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -232,8 +223,8 @@
       "data": "2026-12-18",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-      "id_milagre": "frassati_gutierrez",
+      "feed": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
+      "id_milagre": "martin_carmen",
       "santo_story": "São Gaciano de Tours",
       "tambem_hoje": []
     },
@@ -271,6 +262,15 @@
       "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
       "id_milagre": "lourdes_70",
       "santo_story": "Santa Francisca Xavier Cabrini (dia da morte)",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-23",
+      "dia_semana": "qua",
+      "tipo": "santo",
+      "feed": "São João Câncio",
+      "id_milagre": null,
+      "santo_story": "São João Câncio",
       "tambem_hoje": []
     }
   ]
