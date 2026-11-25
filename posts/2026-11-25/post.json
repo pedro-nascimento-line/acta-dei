@@ -1,0 +1,112 @@
+{
+  "tipo": "santo",
+  "titulo": "Santa Catarina de Alexandria, virgem e mártir",
+  "subtitulo": "Alexandria, Egito · memória de 25 de novembro",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Catherine of Alexandria",
+  "imagem_busca": [
+    "Saint Catherine of Alexandria Caravaggio",
+    "Disputation of Saint Catherine Pinturicchio",
+    "Catherine of Alexandria icon Sinai"
+  ],
+  "cards": [
+    {
+      "kicker": "QUEM FOI",
+      "texto": "Segundo a tradição, Catarina era uma jovem de família nobre de Alexandria, no Egito, conhecida pela beleza e pelo estudo. A Catholic Encyclopedia, de 1908, registra que ela tinha apenas dezoito anos quando enfrentou o imperador. Não há data de nascimento conhecida.\n\nO Estado da Cidade do Vaticano situa o martírio por volta do ano 305. O perseguidor seria Maxêncio ou, mais provavelmente, Maximino Daia. As fontes antigas divergem no nome. A festa é celebrada em 25 de novembro no Ocidente e no Oriente."
+    },
+    {
+      "kicker": "O QUE FEZ",
+      "texto": "Durante uma celebração pública em Alexandria, Catarina recusou os ritos pagãos e exortou o imperador a reconhecer Cristo. Ele convocou sábios para convencê-la. Vatican News fala em cinquenta filósofos. A Catholic Encyclopedia, em numerosos estudiosos.\n\nSegundo a tradição, ela venceu o debate, e os encarregados de persuadi-la se converteram ao cristianismo. A EWTN registra que os filósofos foram queimados por ordem do imperador. A Catholic Encyclopedia diz que foram executados em seguida."
+    },
+    {
+      "kicker": "O MARTÍRIO",
+      "texto": "O imperador a condenou à morte numa roda com pontas. Segundo a tradição, a roda se partiu quando ela foi amarrada. Catarina foi então decapitada. A EWTN acrescenta que a esposa do imperador e um alto oficial, Porfírio, também se converteram e foram mortos.\n\nOs Atos da santa narram que anjos levaram seu corpo ao Monte Sinai. Lá, segundo a EWTN, o imperador Justiniano construiu um mosteiro em 527. A Catholic Encyclopedia observa que os primeiros peregrinos do Sinai não mencionam essa tradição."
+    }
+  ],
+  "decisao": "A Santa Igreja Católica celebra Santa Catarina de Alexandria, virgem e mártir, em 25 de novembro, como memória facultativa do calendário romano. A Catholic Encyclopedia considera lendária boa parte do relato, mas afirma que a existência da santa não está em dúvida. É contada entre os Catorze Santos Auxiliares e é padroeira de filósofos, estudantes e pregadores. Os dominicanos a adotaram como protetora.",
+  "fontes": [
+    "Estado da Cidade do Vaticano (vaticanstate.va) — 25 November: Catherine of Alexandria, Virgin and Martyr",
+    "Vatican News — Saint of the day, 25 November",
+    "Catholic Encyclopedia (New Advent) — St. Catherine of Alexandria, 1908",
+    "EWTN — St. Catherine of Alexandria"
+  ],
+  "fontes_links": [
+    "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/3085-25-november-catherine-of-alexandria-virgin-and-martyr.html",
+    "https://www.vaticannews.va/en/saints/11/25.print.html",
+    "https://www.newadvent.org/cathen/03445a.htm",
+    "https://www.ewtn.com/catholicism/saints/catherine-of-alexandria-516"
+  ],
+  "reel": [
+    {
+      "kicker": "25 DE NOVEMBRO",
+      "texto": "Diz a tradição que uma jovem de dezoito anos venceu num debate os sábios do imperador.",
+      "imagem": "Saint Catherine of Alexandria Caravaggio"
+    },
+    {
+      "texto": "Catarina era de família nobre de Alexandria, no Egito. Morreu mártir por volta do ano trezentos e cinco.",
+      "imagem": "Disputa di santa Caterina d'Alessandria (Pinturicchio)"
+    },
+    {
+      "texto": "Condenada a uma roda com pontas, viu a roda se partir, segundo a tradição. Foi então decapitada.",
+      "imagem": "Martyrdom of Saint Catherine of Alexandria"
+    },
+    {
+      "texto": "Um mosteiro no Monte Sinai leva o seu nome. A Santa Igreja Católica a celebra hoje.",
+      "imagem": "Saint Catherine's Monastery"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "it:Caterina d'Alessandria",
+      "en:Catherine of Alexandria",
+      "en:Saint Catherine's Monastery",
+      "it:Appartamento Borgia"
+    ],
+    "categorias": [
+      "Catherine of Alexandria",
+      "Saint Catherine's Monastery",
+      "Martyrdom of Saint Catherine of Alexandria"
+    ],
+    "termos": [
+      "Disputation of Saint Catherine",
+      "Saint Catherine of Alexandria wheel",
+      "Saint Catherine's Monastery Sinai"
+    ],
+    "citacao": "Saint Catherine of Alexandria icon Sinai"
+  },
+  "evangelho": {
+    "referencia": "Lucas 21,12-19",
+    "versiculo": "É permanecendo firmes que ireis ganhar a vida!",
+    "celebracao": "Quarta-feira da 34ª semana do Tempo Comum · Santa Catarina de Alexandria, virgem e mártir · Memória facultativa",
+    "leituras": "Ap 15,1-4 · Sl 97(98) · Lc 21,12-19",
+    "fato": "Jesus promete aos discípulos palavras que nenhum adversário poderá rebater. A Santa Igreja Católica lembra hoje Santa Catarina de Alexandria, jovem de família nobre do Egito, martirizada por volta do ano 305.\n\nSegundo a tradição, ela enfrentou num debate os sábios reunidos pelo imperador e os converteu. Condenada à roda com pontas, foi decapitada. É padroeira de filósofos e estudantes.",
+    "fato_fonte": "Estado da Cidade do Vaticano (vaticanstate.va) — 25 November: Catherine of Alexandria · Vatican News — Palavra do dia, 25 nov 2026"
+  },
+  "stories": {
+    "manha": {
+      "nome": "Santa Catarina de Alexandria",
+      "anos": "† c. 305 · VIRGEM E MÁRTIR",
+      "padroeiro": "Padroeira de filósofos, estudantes e pregadores",
+      "linhas": [
+        "Segundo a tradição, venceu num debate os sábios reunidos pelo imperador.",
+        "Diz a tradição que a roda com pontas se partiu. Catarina foi então decapitada.",
+        "Um mosteiro no Monte Sinai, construído no século VI, leva hoje o seu nome."
+      ],
+      "imagem_wikipedia": "en:Catherine of Alexandria",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Saint Catherine of Alexandria Caravaggio",
+        "Catherine of Alexandria icon Sinai"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "A EWTN registra que a voz de Santa Catarina foi uma das vozes celestes ouvidas por Santa Joana d'Arc."
+    },
+    "noite": {
+      "citacao": "Eu vos darei palavras tão acertadas, que nenhum dos inimigos vos poderá resistir ou rebater.",
+      "autor": "EVANGELHO DO DIA · LUCAS 21,15"
+    }
+  }
+}
