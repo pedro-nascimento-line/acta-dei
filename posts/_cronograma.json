@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-25",
+  "gerado_em": "2026-11-26",
   "dias": [
-    {
-      "data": "2026-11-25",
-      "dia_semana": "qua",
-      "tipo": "santo",
-      "feed": "Santa Catarina de Alexandria",
-      "id_milagre": null,
-      "santo_story": "Santa Catarina de Alexandria",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-26",
       "dia_semana": "qui",
@@ -178,8 +169,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-      "id_milagre": "escriva_nevado",
+      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+      "id_milagre": "frassati_gutierrez",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -196,8 +187,8 @@
       "data": "2026-12-16",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-      "id_milagre": "frassati_gutierrez",
+      "feed": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
+      "id_milagre": "martin_carmen",
       "santo_story": "Santa Adelaide",
       "tambem_hoje": []
     },
@@ -250,8 +241,8 @@
       "data": "2026-12-22",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
-      "id_milagre": "martin_carmen",
+      "feed": "Benedicta McCarthy e a canonização de Edith Stein",
+      "id_milagre": "stein_mccarthy",
       "santo_story": "Santa Francisca Xavier Cabrini (dia da morte)",
       "tambem_hoje": []
     },
@@ -271,6 +262,15 @@
       "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
       "id_milagre": "lourdes_70",
       "santo_story": "Santos Antepassados de Jesus",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-25",
+      "dia_semana": "sex",
+      "tipo": "celebracao",
+      "feed": "Natal do Senhor",
+      "id_milagre": null,
+      "santo_story": "Natal do Senhor",
       "tambem_hoje": []
     }
   ]

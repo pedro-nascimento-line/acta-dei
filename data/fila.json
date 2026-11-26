@@ -1,5 +1,5 @@
 {
- "gerada_em": "2026-11-25",
+ "gerada_em": "2026-11-26",
  "fila": [
   {
    "id": "buenos_aires",
@@ -8,10 +8,10 @@
    "data_sugerida": null
   },
   {
-   "id": "escriva_nevado",
+   "id": "frassati_gutierrez",
    "tipo": "canonizacao",
-   "titulo": "Manuel Nevado: a radiodermatite e a canonização de São Josemaria",
-   "data_sugerida": "06-26"
+   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
+   "data_sugerida": "07-04"
   },
   {
    "id": "rue_du_bac",
@@ -20,10 +20,10 @@
    "data_sugerida": "11-27"
   },
   {
-   "id": "frassati_gutierrez",
+   "id": "martin_carmen",
    "tipo": "canonizacao",
-   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-   "data_sugerida": "07-04"
+   "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
+   "data_sugerida": "07-12"
   },
   {
    "id": "dulce_claudia",
@@ -38,10 +38,10 @@
    "data_sugerida": "11-28"
   },
   {
-   "id": "martin_carmen",
+   "id": "stein_mccarthy",
    "tipo": "canonizacao",
-   "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
-   "data_sugerida": "07-12"
+   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
+   "data_sugerida": "08-09"
   },
   {
    "id": "lourdes_70",
@@ -56,10 +56,10 @@
    "data_sugerida": null
   },
   {
-   "id": "stein_mccarthy",
+   "id": "madre_teresa_brasil",
    "tipo": "canonizacao",
-   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
-   "data_sugerida": "08-09"
+   "titulo": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
+   "data_sugerida": "09-05"
   },
   {
    "id": "kibeho",
@@ -68,10 +68,10 @@
    "data_sugerida": "11-28"
   },
   {
-   "id": "madre_teresa_brasil",
+   "id": "padre_pio_colella",
    "tipo": "canonizacao",
-   "titulo": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
-   "data_sugerida": "09-05"
+   "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
+   "data_sugerida": "09-23"
   },
   {
    "id": "acutis_mattheus",
@@ -86,10 +86,10 @@
    "data_sugerida": "12-03"
   },
   {
-   "id": "padre_pio_colella",
+   "id": "faustina_pytel",
    "tipo": "canonizacao",
-   "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
-   "data_sugerida": "09-23"
+   "titulo": "Ronald Pytel: o coração que se refez",
+   "data_sugerida": "10-05"
   },
   {
    "id": "lourdes_69",
@@ -104,10 +104,10 @@
    "data_sugerida": null
   },
   {
-   "id": "faustina_pytel",
+   "id": "dulce_mauricio",
    "tipo": "canonizacao",
-   "titulo": "Ronald Pytel: o coração que se refez",
-   "data_sugerida": "10-05"
+   "titulo": "Maurício Bruno: a visão recuperada e a primeira santa brasileira",
+   "data_sugerida": "10-13"
   },
   {
    "id": "beauraing",
@@ -116,10 +116,10 @@
    "data_sugerida": "11-29"
   },
   {
-   "id": "dulce_mauricio",
+   "id": "jp2_floribeth",
    "tipo": "canonizacao",
-   "titulo": "Maurício Bruno: a visão recuperada e a primeira santa brasileira",
-   "data_sugerida": "10-13"
+   "titulo": "A cura de Floribeth Mora e a canonização de João Paulo II",
+   "data_sugerida": "10-22"
   },
   {
    "id": "aparecida",
@@ -134,10 +134,10 @@
    "data_sugerida": "04-16"
   },
   {
-   "id": "jp2_floribeth",
+   "id": "jp2_simon_pierre",
    "tipo": "canonizacao",
-   "titulo": "A cura de Floribeth Mora e a canonização de João Paulo II",
-   "data_sugerida": "10-22"
+   "titulo": "Irmã Marie Simon-Pierre: Parkinson e a beatificação de João Paulo II",
+   "data_sugerida": null
   },
   {
    "id": "lourdes_67",
@@ -152,9 +152,9 @@
    "data_sugerida": null
   },
   {
-   "id": "jp2_simon_pierre",
+   "id": "madre_teresa_besra",
    "tipo": "canonizacao",
-   "titulo": "Irmã Marie Simon-Pierre: Parkinson e a beatificação de João Paulo II",
+   "titulo": "Monica Besra e a beatificação de Madre Teresa",
    "data_sugerida": null
   },
   {
@@ -164,9 +164,9 @@
    "data_sugerida": "12-12"
   },
   {
-   "id": "madre_teresa_besra",
+   "id": "acutis_valeria",
    "tipo": "canonizacao",
-   "titulo": "Monica Besra e a beatificação de Madre Teresa",
+   "titulo": "Valeria Valverde e a canonização de Carlo Acutis",
    "data_sugerida": null
   },
   {
@@ -182,9 +182,9 @@
    "data_sugerida": "04-27"
   },
   {
-   "id": "acutis_valeria",
+   "id": "portillo_ureta",
    "tipo": "canonizacao",
-   "titulo": "Valeria Valverde e a canonização de Carlo Acutis",
+   "titulo": "José Ignacio Ureta: o bebê chileno e o Beato Álvaro del Portillo",
    "data_sugerida": null
   },
   {
@@ -200,9 +200,9 @@
    "data_sugerida": null
   },
   {
-   "id": "portillo_ureta",
+   "id": "jp1_candela",
    "tipo": "canonizacao",
-   "titulo": "José Ignacio Ureta: o bebê chileno e o Beato Álvaro del Portillo",
+   "titulo": "Candela Giarda e a beatificação de João Paulo I",
    "data_sugerida": null
   },
   {
@@ -212,9 +212,9 @@
    "data_sugerida": "01-17"
   },
   {
-   "id": "jp1_candela",
+   "id": "sheen_engstrom",
    "tipo": "canonizacao",
-   "titulo": "Candela Giarda e a beatificação de João Paulo I",
+   "titulo": "James Fulton Engstrom: 61 minutos sem batimentos",
    "data_sugerida": null
   },
   {
@@ -230,10 +230,10 @@
    "data_sugerida": "07-24"
   },
   {
-   "id": "sheen_engstrom",
-   "tipo": "canonizacao",
-   "titulo": "James Fulton Engstrom: 61 minutos sem batimentos",
-   "data_sugerida": null
+   "id": "lourdes",
+   "tipo": "aparicao",
+   "titulo": "Lourdes, 1858: as dezoito aparições",
+   "data_sugerida": "02-11"
   },
   {
    "id": "lourdes_65",

@@ -1,0 +1,46 @@
+[
+  {
+    "arquivo": "reel_img_01.jpg",
+    "title": "File:Almendralejo aerial.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "kallerna",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AAlmendralejo%20aerial.jpg",
+    "credito": "kallerna · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 1,
+    "termo": "Almendralejo"
+  },
+  {
+    "arquivo": "reel_img_02.jpg",
+    "title": "File:Detail autel Jose Maria Escriva de Balaguer Peterskirche Vienna.jpg",
+    "licenca": "CC0",
+    "autor": "Jebulon",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ADetail%20autel%20Jose%20Maria%20Escriva%20de%20Balaguer%20Peterskirche%20Vienna.jpg",
+    "credito": "Jebulon · Wikimedia Commons · CC0",
+    "origem": "commons",
+    "cena": 2,
+    "termo": "Palazzo delle Congregazioni"
+  },
+  {
+    "arquivo": "reel_img_03.jpg",
+    "title": "File:Escrivá siblings (1921).jpg",
+    "licenca": "CC BY-SA 2.0",
+    "autor": "Unknown photographer",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AEscriv%C3%A1%20siblings%20%281921%29.jpg",
+    "credito": "Unknown photographer · Wikimedia Commons · CC BY-SA 2.0",
+    "origem": "commons",
+    "cena": 3,
+    "termo": "Piazza San Pietro"
+  },
+  {
+    "arquivo": "reel_img_04.jpg",
+    "title": "File:Monasterio de Fitero 09.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "JLVwiki",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3AMonasterio%20de%20Fitero%2009.jpg",
+    "credito": "JLVwiki · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 4,
+    "termo": "Josemaría Escrivá"
+  }
+]
