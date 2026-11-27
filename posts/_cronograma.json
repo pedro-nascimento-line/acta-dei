@@ -1,15 +1,6 @@
 {
-  "gerado_em": "2026-11-26",
+  "gerado_em": "2026-11-27",
   "dias": [
-    {
-      "data": "2026-11-26",
-      "dia_semana": "qui",
-      "tipo": "milagre",
-      "feed": "Rue du Bac e a Medalha Milagrosa",
-      "id_milagre": "rue_du_bac",
-      "santo_story": "São Leonardo de Porto Maurício",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-27",
       "dia_semana": "sex",
@@ -23,8 +14,8 @@
       "data": "2026-11-28",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Santa Catarina Labouré: 57 anos depois",
-      "id_milagre": "laboure_corpo",
+      "feed": "Rue du Bac e a Medalha Milagrosa",
+      "id_milagre": "rue_du_bac",
       "santo_story": "Beata Nhá Chica (Francisca de Paula de Jesus)",
       "tambem_hoje": [
         "Santa Catarina Labouré"
@@ -43,8 +34,8 @@
       "data": "2026-11-30",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Kibeho, 1981: a única aparição aprovada na África",
-      "id_milagre": "kibeho",
+      "feed": "Santa Catarina Labouré: 57 anos depois",
+      "id_milagre": "laboure_corpo",
       "santo_story": "Santo André, apóstolo",
       "tambem_hoje": []
     },
@@ -271,6 +262,15 @@
       "feed": "Natal do Senhor",
       "id_milagre": null,
       "santo_story": "Natal do Senhor",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-26",
+      "dia_semana": "sáb",
+      "tipo": "milagre",
+      "feed": "Tixtla, 2006",
+      "id_milagre": "tixtla",
+      "santo_story": "Santo Estêvão, primeiro mártir",
       "tambem_hoje": []
     }
   ]
