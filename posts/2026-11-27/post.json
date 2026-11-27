@@ -1,0 +1,112 @@
+{
+  "tipo": "santo",
+  "titulo": "Nossa Senhora da Medalha Milagrosa",
+  "subtitulo": "Paris, França · aparição de 27 de novembro de 1830",
+  "status": null,
+  "imagem": "imagem.jpg",
+  "imagem_wikipedia": "en:Miraculous Medal",
+  "imagem_busca": [
+    "Miraculous Medal",
+    "Médaille miraculeuse",
+    "Chapelle Notre-Dame-de-la-Médaille-Miraculeuse"
+  ],
+  "cards": [
+    {
+      "kicker": "AS APARIÇÕES",
+      "texto": "Em 1830, Catarina Labouré tinha 24 anos e acabava de começar o noviciado nas Filhas da Caridade, na casa-mãe da congregação, em Paris. Ela relatou três aparições da Virgem Maria naquele ano. A primeira, na noite de 18 para 19 de julho, na capela do convento.\n\nA segunda foi em 27 de novembro de 1830, um sábado, véspera do primeiro domingo do Advento. Segundo a Catholic Encyclopedia, Maria apareceu de pé sobre um globo. Dos anéis em seus dedos saíam raios de luz, símbolo das graças dadas a quem as pede."
+    },
+    {
+      "kicker": "A MEDALHA",
+      "texto": "Em torno da figura, num quadro oval, havia uma inscrição em letras de ouro: \"Ó Maria, concebida sem pecado, rogai por nós que recorremos a vós\". No verso, a letra M encimada por uma cruz, os Corações de Jesus e de Maria e doze estrelas.\n\nCatarina relatou um pedido: mandar cunhar uma medalha segundo aquele modelo. \"As pessoas que a usarem irão receber grandes graças\", registrou ela. A referência a Maria concebida sem pecado antecede em 24 anos o dogma da Imaculada Conceição, proclamado em 1854."
+    },
+    {
+      "kicker": "A INVESTIGAÇÃO",
+      "texto": "Catarina contou as visões apenas ao seu diretor espiritual, o padre Aladel. Ele levou o caso a dom Hyacinthe-Louis de Quélen, arcebispo de Paris, que aprovou a medalha depois de cuidadoso exame. As primeiras peças foram cunhadas em 1832 e distribuídas em Paris.\n\nO povo passou a chamá-la de Medalha Milagrosa. Em 1836, uma investigação canônica aberta em Paris declarou autênticas as aparições. Catarina seguiu anônima e viveu 46 anos num asilo-hospital nos arredores da cidade. Morreu em 31 de dezembro de 1876, aos 70 anos."
+    }
+  ],
+  "decisao": "Em 23 de julho de 1894, após exame da Sagrada Congregação dos Ritos, Leão XIII instituiu a festa da Manifestação da Virgem Imaculada sob o título da Medalha Milagrosa, com Ofício e Missa próprios, em 27 de novembro. Pio XII canonizou Catarina Labouré em 27 de julho de 1947. Seu corpo está na capela da Rue du Bac, em Paris.",
+  "fontes": [
+    "Catholic Encyclopedia (New Advent) — Miraculous Medal, 1911",
+    "Vatican News — Dia da Medalha Milagrosa e devoção a N.S. das Graças, 27 nov 2018",
+    "ACI Digital — Esta é a história da \"medalha milagrosa\" que comemora 190 anos, 21 jul 2020",
+    "Opus Dei — Nossa Senhora da Medalha Milagrosa"
+  ],
+  "fontes_links": [
+    "https://www.newadvent.org/cathen/10115a.htm",
+    "https://www.vaticannews.va/pt/igreja/news/2018-11/medalha-milagrosa-nossa-senhora-das-gracas.html",
+    "https://www.acidigital.com/noticia/45198/esta-e-a-historia-da-",
+    "https://opusdei.org/pt-br/article/nossa-senhora-da-medalha-milagrosa/"
+  ],
+  "reel": [
+    {
+      "kicker": "PARIS, 1830",
+      "texto": "Uma noviça de vinte e quatro anos disse ter recebido da Virgem Maria o desenho de uma medalha.",
+      "imagem": "Médaille miraculeuse"
+    },
+    {
+      "texto": "Foi em vinte e sete de novembro de mil oitocentos e trinta, na capela das Filhas da Caridade, na Rue du Bac.",
+      "imagem": "Chapelle Notre-Dame-de-la-Médaille-Miraculeuse"
+    },
+    {
+      "texto": "O arcebispo de Paris aprovou a medalha. Em mil oitocentos e trinta e seis, as aparições foram declaradas autênticas.",
+      "imagem": "Catherine Labouré"
+    },
+    {
+      "texto": "A Santa Igreja Católica canonizou Catarina Labouré em mil novecentos e quarenta e sete. Seu corpo está na mesma capela.",
+      "imagem": "Chapelle Notre-Dame-de-la-Médaille-Miraculeuse, Paris"
+    }
+  ],
+  "imagens_reel": {
+    "artigos": [
+      "fr:Médaille miraculeuse",
+      "fr:Chapelle Notre-Dame-de-la-Médaille-Miraculeuse",
+      "fr:Catherine Labouré",
+      "en:Miraculous Medal"
+    ],
+    "categorias": [
+      "Miraculous Medal",
+      "Chapelle Notre-Dame-de-la-Médaille-Miraculeuse",
+      "Catherine Labouré"
+    ],
+    "termos": [
+      "Médaille miraculeuse",
+      "Chapelle de la Médaille Miraculeuse rue du Bac",
+      "Catherine Labouré"
+    ],
+    "citacao": "Miraculous Medal"
+  },
+  "evangelho": {
+    "referencia": "Lucas 21,29-33",
+    "versiculo": "O céu e a terra passarão, mas as minhas palavras não hão de passar.",
+    "celebracao": "Sexta-feira da 34ª semana do Tempo Comum",
+    "leituras": "Ap 20,1-4.11–21,2 · Sl 83(84) · Lc 21,29-33",
+    "fato": "Jesus fala da figueira que brota e do Reino que está perto. O trecho é lido nos últimos dias do ano litúrgico. No domingo, 29 de novembro, começa o Advento.\n\nEm 1830, o 27 de novembro caiu num sábado, também véspera do primeiro domingo do Advento. Naquele dia, em Paris, a noviça Catarina Labouré relatou a aparição que deu origem à Medalha Milagrosa.",
+    "fato_fonte": "Vatican News — Palavra do dia, 27 nov 2026 · Opus Dei — Nossa Senhora da Medalha Milagrosa"
+  },
+  "stories": {
+    "manha": {
+      "nome": "Nossa Senhora das Graças",
+      "anos": "PARIS, 1830 · MEDALHA MILAGROSA",
+      "padroeiro": "Aparições a Santa Catarina Labouré · Festa instituída por Leão XIII em 1894",
+      "linhas": [
+        "Em 27 de novembro de 1830, uma noviça de Paris relatou ter recebido da Virgem o modelo de uma medalha.",
+        "Em 1836, uma investigação canônica em Paris declarou autênticas as aparições.",
+        "A vidente, Catarina Labouré, foi canonizada por Pio XII em 1947."
+      ],
+      "imagem_wikipedia": "en:Miraculous Medal",
+      "imagem": "santo.jpg",
+      "imagem_busca": [
+        "Miraculous Medal",
+        "Catherine Labouré"
+      ]
+    },
+    "tarde": {
+      "kicker": "UM DETALHE A MAIS",
+      "texto": "O corpo de Santa Catarina Labouré repousa sob vidro, no altar lateral da capela do número 140 da Rue du Bac, em Paris."
+    },
+    "noite": {
+      "citacao": "Ó Maria, concebida sem pecado, rogai por nós que recorremos a vós.",
+      "autor": "INSCRIÇÃO DA MEDALHA · PARIS, 1830"
+    }
+  }
+}
