@@ -1,0 +1,46 @@
+[
+  {
+    "arquivo": "reel_img_01.jpg",
+    "title": "File:3294TorinoDuomoInside.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Geobia",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3A3294TorinoDuomoInside.jpg",
+    "credito": "Geobia · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 1,
+    "termo": "Duomo di Torino"
+  },
+  {
+    "arquivo": "reel_img_02.jpg",
+    "title": "File:Torino, palazzo reale (04).jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Gianni Careddu",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ATorino%2C%20palazzo%20reale%20%2804%29.jpg",
+    "credito": "Gianni Careddu · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 2,
+    "termo": "Palazzo delle Congregazioni"
+  },
+  {
+    "arquivo": "reel_img_03.jpg",
+    "title": "File:Cappella della Sacra Sindone from Piazza San Giovanni Turin.jpg",
+    "licenca": "CC BY 4.0",
+    "autor": "Marie-Lan Taÿ Pamart",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3ACappella%20della%20Sacra%20Sindone%20from%20Piazza%20San%20Giovanni%20Turin.jpg",
+    "credito": "Marie-Lan Taÿ Pamart · Wikimedia Commons · CC BY 4.0",
+    "origem": "commons",
+    "cena": 3,
+    "termo": "Piazza San Pietro"
+  },
+  {
+    "arquivo": "reel_img_04.jpg",
+    "title": "File:3295TorinoDuomoInside.jpg",
+    "licenca": "CC BY-SA 4.0",
+    "autor": "Geobia",
+    "pagina": "https://commons.wikimedia.org/wiki/File%3A3295TorinoDuomoInside.jpg",
+    "credito": "Geobia · Wikimedia Commons · CC BY-SA 4.0",
+    "origem": "commons",
+    "cena": 4,
+    "termo": "Pier Giorgio Frassati"
+  }
+]

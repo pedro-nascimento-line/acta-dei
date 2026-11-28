@@ -1,21 +1,12 @@
 {
-  "gerado_em": "2026-11-27",
+  "gerado_em": "2026-11-28",
   "dias": [
-    {
-      "data": "2026-11-27",
-      "dia_semana": "sex",
-      "tipo": "santo",
-      "feed": "Nossa Senhora da Medalha Milagrosa",
-      "id_milagre": null,
-      "santo_story": "Nossa Senhora da Medalha Milagrosa",
-      "tambem_hoje": []
-    },
     {
       "data": "2026-11-28",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Rue du Bac e a Medalha Milagrosa",
-      "id_milagre": "rue_du_bac",
+      "feed": "Kibeho, 1981: a única aparição aprovada na África",
+      "id_milagre": "kibeho",
       "santo_story": "Beata Nhá Chica (Francisca de Paula de Jesus)",
       "tambem_hoje": [
         "Santa Catarina Labouré"
@@ -52,8 +43,8 @@
       "data": "2026-12-02",
       "dia_semana": "qua",
       "tipo": "milagre",
-      "feed": "São Francisco Xavier em Goa",
-      "id_milagre": "xavier_corpo",
+      "feed": "Beauraing, 1932–1933",
+      "id_milagre": "beauraing",
       "santo_story": "Santa Bibiana",
       "tambem_hoje": []
     },
@@ -70,8 +61,8 @@
       "data": "2026-12-04",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Buenos Aires, 1996: a hóstia analisada",
-      "id_milagre": "buenos_aires",
+      "feed": "São Francisco Xavier em Goa",
+      "id_milagre": "xavier_corpo",
       "santo_story": "São João Damasceno",
       "tambem_hoje": []
     },
@@ -160,8 +151,8 @@
       "data": "2026-12-14",
       "dia_semana": "seg",
       "tipo": "milagre",
-      "feed": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-      "id_milagre": "frassati_gutierrez",
+      "feed": "Buenos Aires, 1996: a hóstia analisada",
+      "id_milagre": "buenos_aires",
       "santo_story": "São João da Cruz",
       "tambem_hoje": []
     },
@@ -196,8 +187,8 @@
       "data": "2026-12-18",
       "dia_semana": "sex",
       "tipo": "milagre",
-      "feed": "Cláudia Cristiane: a hemorragia que parou",
-      "id_milagre": "dulce_claudia",
+      "feed": "Benedicta McCarthy e a canonização de Edith Stein",
+      "id_milagre": "stein_mccarthy",
       "santo_story": "São Gaciano de Tours",
       "tambem_hoje": []
     },
@@ -232,8 +223,8 @@
       "data": "2026-12-22",
       "dia_semana": "ter",
       "tipo": "milagre",
-      "feed": "Benedicta McCarthy e a canonização de Edith Stein",
-      "id_milagre": "stein_mccarthy",
+      "feed": "Cláudia Cristiane: a hemorragia que parou",
+      "id_milagre": "dulce_claudia",
       "santo_story": "Santa Francisca Xavier Cabrini (dia da morte)",
       "tambem_hoje": []
     },
@@ -250,8 +241,8 @@
       "data": "2026-12-24",
       "dia_semana": "qui",
       "tipo": "milagre",
-      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
-      "id_milagre": "lourdes_70",
+      "feed": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
+      "id_milagre": "madre_teresa_brasil",
       "santo_story": "Santos Antepassados de Jesus",
       "tambem_hoje": []
     },
@@ -268,9 +259,18 @@
       "data": "2026-12-26",
       "dia_semana": "sáb",
       "tipo": "milagre",
-      "feed": "Tixtla, 2006",
-      "id_milagre": "tixtla",
+      "feed": "Lourdes, cura nº 70: Irmã Bernadette Moriau",
+      "id_milagre": "lourdes_70",
       "santo_story": "Santo Estêvão, primeiro mártir",
+      "tambem_hoje": []
+    },
+    {
+      "data": "2026-12-27",
+      "dia_semana": "dom",
+      "tipo": "celebracao",
+      "feed": "São João, apóstolo e evangelista",
+      "id_milagre": null,
+      "santo_story": "São João, apóstolo e evangelista",
       "tambem_hoje": []
     }
   ]

@@ -1,5 +1,5 @@
 {
- "gerada_em": "2026-11-27",
+ "gerada_em": "2026-11-28",
  "fila": [
   {
    "id": "buenos_aires",
@@ -8,22 +8,22 @@
    "data_sugerida": null
   },
   {
-   "id": "frassati_gutierrez",
-   "tipo": "canonizacao",
-   "titulo": "Juan Manuel Gutiérrez e a canonização de Pier Giorgio Frassati",
-   "data_sugerida": "07-04"
-  },
-  {
-   "id": "rue_du_bac",
-   "tipo": "aparicao",
-   "titulo": "Rue du Bac e a Medalha Milagrosa",
-   "data_sugerida": "11-27"
-  },
-  {
    "id": "martin_carmen",
    "tipo": "canonizacao",
    "titulo": "Carmen, de Valência: o milagre dos pais de Santa Teresinha",
    "data_sugerida": "07-12"
+  },
+  {
+   "id": "kibeho",
+   "tipo": "aparicao",
+   "titulo": "Kibeho, 1981: a única aparição aprovada na África",
+   "data_sugerida": "11-28"
+  },
+  {
+   "id": "stein_mccarthy",
+   "tipo": "canonizacao",
+   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
+   "data_sugerida": "08-09"
   },
   {
    "id": "dulce_claudia",
@@ -38,10 +38,10 @@
    "data_sugerida": "11-28"
   },
   {
-   "id": "stein_mccarthy",
+   "id": "madre_teresa_brasil",
    "tipo": "canonizacao",
-   "titulo": "Benedicta McCarthy e a canonização de Edith Stein",
-   "data_sugerida": "08-09"
+   "titulo": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
+   "data_sugerida": "09-05"
   },
   {
    "id": "lourdes_70",
@@ -56,22 +56,22 @@
    "data_sugerida": null
   },
   {
-   "id": "madre_teresa_brasil",
-   "tipo": "canonizacao",
-   "titulo": "Marcilio Andrino: o milagre brasileiro de Madre Teresa",
-   "data_sugerida": "09-05"
-  },
-  {
-   "id": "kibeho",
-   "tipo": "aparicao",
-   "titulo": "Kibeho, 1981: a única aparição aprovada na África",
-   "data_sugerida": "11-28"
-  },
-  {
    "id": "padre_pio_colella",
    "tipo": "canonizacao",
    "titulo": "Matteo Pio Colella e a canonização de Padre Pio",
    "data_sugerida": "09-23"
+  },
+  {
+   "id": "beauraing",
+   "tipo": "aparicao",
+   "titulo": "Beauraing, 1932–1933",
+   "data_sugerida": "11-29"
+  },
+  {
+   "id": "faustina_pytel",
+   "tipo": "canonizacao",
+   "titulo": "Ronald Pytel: o coração que se refez",
+   "data_sugerida": "10-05"
   },
   {
    "id": "acutis_mattheus",
@@ -86,10 +86,10 @@
    "data_sugerida": "12-03"
   },
   {
-   "id": "faustina_pytel",
+   "id": "dulce_mauricio",
    "tipo": "canonizacao",
-   "titulo": "Ronald Pytel: o coração que se refez",
-   "data_sugerida": "10-05"
+   "titulo": "Maurício Bruno: a visão recuperada e a primeira santa brasileira",
+   "data_sugerida": "10-13"
   },
   {
    "id": "lourdes_69",
@@ -104,22 +104,22 @@
    "data_sugerida": null
   },
   {
-   "id": "dulce_mauricio",
-   "tipo": "canonizacao",
-   "titulo": "Maurício Bruno: a visão recuperada e a primeira santa brasileira",
-   "data_sugerida": "10-13"
-  },
-  {
-   "id": "beauraing",
-   "tipo": "aparicao",
-   "titulo": "Beauraing, 1932–1933",
-   "data_sugerida": "11-29"
-  },
-  {
    "id": "jp2_floribeth",
    "tipo": "canonizacao",
    "titulo": "A cura de Floribeth Mora e a canonização de João Paulo II",
    "data_sugerida": "10-22"
+  },
+  {
+   "id": "guadalupe",
+   "tipo": "aparicao",
+   "titulo": "Nossa Senhora de Guadalupe e a tilma de Juan Diego",
+   "data_sugerida": "12-12"
+  },
+  {
+   "id": "jp2_simon_pierre",
+   "tipo": "canonizacao",
+   "titulo": "Irmã Marie Simon-Pierre: Parkinson e a beatificação de João Paulo II",
+   "data_sugerida": null
   },
   {
    "id": "aparecida",
@@ -134,9 +134,9 @@
    "data_sugerida": "04-16"
   },
   {
-   "id": "jp2_simon_pierre",
+   "id": "madre_teresa_besra",
    "tipo": "canonizacao",
-   "titulo": "Irmã Marie Simon-Pierre: Parkinson e a beatificação de João Paulo II",
+   "titulo": "Monica Besra e a beatificação de Madre Teresa",
    "data_sugerida": null
   },
   {
@@ -152,18 +152,6 @@
    "data_sugerida": null
   },
   {
-   "id": "madre_teresa_besra",
-   "tipo": "canonizacao",
-   "titulo": "Monica Besra e a beatificação de Madre Teresa",
-   "data_sugerida": null
-  },
-  {
-   "id": "guadalupe",
-   "tipo": "aparicao",
-   "titulo": "Nossa Senhora de Guadalupe e a tilma de Juan Diego",
-   "data_sugerida": "12-12"
-  },
-  {
    "id": "acutis_valeria",
    "tipo": "canonizacao",
    "titulo": "Valeria Valverde e a canonização de Carlo Acutis",
@@ -176,15 +164,27 @@
    "data_sugerida": "01-15"
   },
   {
+   "id": "portillo_ureta",
+   "tipo": "canonizacao",
+   "titulo": "José Ignacio Ureta: o bebê chileno e o Beato Álvaro del Portillo",
+   "data_sugerida": null
+  },
+  {
+   "id": "pontmain",
+   "tipo": "aparicao",
+   "titulo": "Nossa Senhora de Pontmain",
+   "data_sugerida": "01-17"
+  },
+  {
    "id": "zita_corpo",
    "tipo": "incorrupto",
    "titulo": "Santa Zita, 700 anos íntegra",
    "data_sugerida": "04-27"
   },
   {
-   "id": "portillo_ureta",
+   "id": "jp1_candela",
    "tipo": "canonizacao",
-   "titulo": "José Ignacio Ureta: o bebê chileno e o Beato Álvaro del Portillo",
+   "titulo": "Candela Giarda e a beatificação de João Paulo I",
    "data_sugerida": null
   },
   {
@@ -200,18 +200,6 @@
    "data_sugerida": null
   },
   {
-   "id": "jp1_candela",
-   "tipo": "canonizacao",
-   "titulo": "Candela Giarda e a beatificação de João Paulo I",
-   "data_sugerida": null
-  },
-  {
-   "id": "pontmain",
-   "tipo": "aparicao",
-   "titulo": "Nossa Senhora de Pontmain",
-   "data_sugerida": "01-17"
-  },
-  {
    "id": "sheen_engstrom",
    "tipo": "canonizacao",
    "titulo": "James Fulton Engstrom: 61 minutos sem batimentos",
@@ -224,16 +212,28 @@
    "data_sugerida": "01-20"
   },
   {
+   "id": "lourdes",
+   "tipo": "aparicao",
+   "titulo": "Lourdes, 1858: as dezoito aparições",
+   "data_sugerida": "02-11"
+  },
+  {
+   "id": "laus",
+   "tipo": "aparicao",
+   "titulo": "Nossa Senhora do Laus",
+   "data_sugerida": "05-04"
+  },
+  {
    "id": "charbel_corpo",
    "tipo": "incorrupto",
    "titulo": "São Charbel: o corpo que exsudava",
    "data_sugerida": "07-24"
   },
   {
-   "id": "lourdes",
+   "id": "fatima",
    "tipo": "aparicao",
-   "titulo": "Lourdes, 1858: as dezoito aparições",
-   "data_sugerida": "02-11"
+   "titulo": "Fátima, 1917, e o Milagre do Sol",
+   "data_sugerida": "05-13"
   },
   {
    "id": "lourdes_65",
